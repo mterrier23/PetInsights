@@ -1,0 +1,48 @@
+Contact Info
+	
+Email
+	School: terriems@mail.uc.edu
+	Personal: mailyst1223@gmail.com
+LinkedIn
+	https://www.linkedin.com/in/mailys-terrier/
+	
+Co-op or Work Experience
+------------------------
+	1st Co-op || Jan 2018 - May 2018
+		Software Developer at TechSolve Inc.
+			- Enhanced the functionalities and capabilities of a data management software related to IoT according to customer needs.
+			- Maintained a C++ and C# version of said software.
+		
+	2nd Co-op || Aug 2018 - Dec 2018
+		Software Developer at Worldpay
+			- Added features to the billing process of payment transactions to support the usage of gift cards and Mastercard credit cards.
+			- Led my own feature and handled six user stories every two-week sprint while performing Agile Development Methodologies.
+			- Tools used include Java, SQL, and Oracle databases.
+		
+	3rd Co-op || May 2019 - Aug 2019	
+		Software Engineer + Project Manager at Microsoft
+			- As Project Manager, researched and designed solutions to reduce the 10% of candidates who do not complete the reimbursement process with Microsoft, averaging 300 USD each.
+			- Partnered across teams to drive awareness and clarity and to build support of the project among stakeholders and engineering teams.
+			- Developed the solution, with a focus on authentication and front-end development, to enhance and unify the candidate reimbursement experience and work towards the One Microsoft vision.
+		
+		
+	4th Co-op || Feb 2020 - Aug 2020
+		Data Analyst + Project Manager at Mitsubishi FUSO, Daimler
+			- Worked with various local and global teams to enable customer data collection of ADAS Emergency Braking events from all FUSO vehicles for analysis. Only customers who have complied with data-sharing will be included.
+			- Performed data analysis using Power BI to identify ADAS event hotspots and improve testing routes by targeting these hotspots.
+			- Found that we are able to detect quality issues early and reduce testing efforts as the collective mileage that is driven by the customers is 100x more than what we cover in testing. Higher exposure to performance issues.
+
+Skills/Expertise Areas
+I have experience in front-end and back-end development, along with database manipulation. 
+
+Areas of Interest
+Through my internships, I have become interested in figuring out how to best store data (database management). I also am interested in full-stack development, because as much as I enjoy front-end development and UX, I also like to be involved in the connecting point between this and the back-end.
+
+If I didn't go into Computer Science, I would have pursued a veterinarian degree as I have a huge love for animals. However, over time I realized that I can still use my computer science degree to make positive changes to animals' lives.
+
+A subject area I haven't yet explored but am very interested in is IoT. I would love to do a project related to wearable technology!
+
+
+Type of Project Sought
+Animal-related, IoT-related, Customer-focused projects.
+
