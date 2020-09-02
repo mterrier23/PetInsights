@@ -1,0 +1,20 @@
+Explain the project in your own words:
+
+	PetInsights is a project that will allow us to bridge the gap between animal shelters and people who are looking to adopt.
+	This project is especially useful during covid-19 times, where social distancing is key. Through this applications, animal shelters and their volunteers can provide a lot of detailed information on the animals they have available that will help potential adopters figure out which animal is a best fit for them. Things like behavior, personality, energy-level, size, etc. will help families choose a pet that will be adjust well to their family. This will help reduce pets being returned or abandoned due to "not being what [they] expected." 
+	
+	On another hand, the process of adopting at shelters is typically time-consuming since one has to drive to each shelter individually and see the animals in a stressful environment (unless they take them out on a walk or play-field). This application will allow the person to browse through available dogs from various shelters from the comfort of their own home.
+
+How your college experience will help you with this (highlight on courses):
+	My Software Engineering course with Nan Niu was very useful for this as I learned concepts related to creating a multi-page application. I'm also planning to take a User Interaction, Website Management, and Database Management course this upcoming fall, and I hope the contents I learn from these courses will greatly help me create an amazing application.
+	
+	
+How your project will leverage your experiences (highlight on co-op):
+	This project will require database management, which I have a little bit of familiarity from previous co-ops. Project Management will also be incredibly important for this project, and I have spent my last two co-ops in semi-project management roles, so I believe those experiences will be of use here.
+
+What motivates you to do this project:
+	If I didn't go into Computer Science, I would have gone for a veterinarian degree as I love animals and I love doing what I can to help them. Since I'm pursuing Computer Science instead, I figured using my skills in this degree to help animals is also a wonderful idea! Bridging my two worlds together with this project!
+
+What's your preliminary approach/research?
+	I volunteered at various animal shelters and foster animal programs so I'm familiar with the issues that animal shelters face in regards to exposure and returned animals. I've also researched other apps and websites that create a virtual animal-adoption experience, so along with my own ideas, I've decided to include aspects of these applications that I liked into this project.
+
