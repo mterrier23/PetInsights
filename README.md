@@ -1,6 +1,6 @@
-# Pet Insight
+# PetInsight
 
-Pet Insight is a crowd-sourced web application that will help support local animal shelters for temporary and long term adoptions. It has two focus areas - shelter organization and customers/users. It provides a way for people to connect with different shelters near them, and provide them the help they need (donations/volunteering). The most unique feature about Pet Insight is that it allows users who have met the animals to leave comments about them so those interested in adoption will have an easier time finding the perfect pet for their home!
+PetInsight is a crowd-sourced web application that will help support local animal shelters for temporary and long term adoptions. It has two focus areas - shelter organization and customers/users. It provides a way for people to connect with different shelters near them, and provide them the help they need (donations/volunteering). The most unique feature about PetInsight is that it allows users who have met the animals to leave comments about them so those interested in adoption will have an easier time finding the perfect pet for their home!
 
 <em>Project done by Tosha Bapat, Maïlys Terrier and Pavni Bakhshi.
 Advised by Dr. Nan Niu.</em>
