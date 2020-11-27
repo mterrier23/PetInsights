@@ -22,7 +22,7 @@ Advised by Dr. Nan Niu.</em>
 [11]: https://github.com/mterrier23/PetInsights/tree/master/Project%20Report/DesignDiagrams
 [4]: https://github.com/mterrier23/PetInsights/tree/master/Project%20Report/Milestones%2C%20Timeline%2C%20Effort%20Matrix
 [5]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/Project%20Constraints.md
-[6]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/ProjectPresentation.mp4
+[6]: https://docs.google.com/presentation/d/1Gy6DCWhOjE2iJGElW2_49zUsKKXQ_7DmXo7aEqvGyrA/edit?usp=sharing
 [7]: https://github.com/mterrier23/PetInsights/tree/master/Project%20Report/Self%20Assessments
 [8]: https://github.com/mterrier23/PetInsights/tree/master/Project%20Report/Biographies
 [9]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/Expense%20Report.md
