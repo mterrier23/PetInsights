@@ -3,18 +3,18 @@ adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
 Button;obj\Debug\90\res\layout\activity_main.xml
-cache-path;C:\Users\Mailys Surface Pro\Documents\Project\PetInsights\PetInsightsv2\PetInsightsv2\obj\Debug\90\lp\36\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+cache-path;C:\Users\Mailys Surface Pro\Documents\Project\PetInsights\PetInsightsv2\PetInsightsv2\obj\Debug\90\lp\45\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 color;obj\Debug\90\res\values\colors.xml
 color;obj\Debug\90\res\values\ic_launcher_background.xml
-external-cache-path;C:\Users\Mailys Surface Pro\Documents\Project\PetInsights\PetInsightsv2\PetInsightsv2\obj\Debug\90\lp\36\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-cache-path;C:\Users\Mailys Surface Pro\Documents\Project\PetInsights\PetInsightsv2\PetInsightsv2\obj\Debug\90\lp\45\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 external-files-path;obj\Debug\90\res\xml\file_paths.xml
-external-path;C:\Users\Mailys Surface Pro\Documents\Project\PetInsights\PetInsightsv2\PetInsightsv2\obj\Debug\90\lp\36\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-path;C:\Users\Mailys Surface Pro\Documents\Project\PetInsights\PetInsightsv2\PetInsightsv2\obj\Debug\90\lp\45\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
 ImageView;obj\Debug\90\res\layout\activity_main.xml
 item;obj\Debug\90\res\values\styles.xml
 LinearLayout;obj\Debug\90\res\layout\activity_main.xml
-paths;C:\Users\Mailys Surface Pro\Documents\Project\PetInsights\PetInsightsv2\PetInsightsv2\obj\Debug\90\lp\36\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+paths;C:\Users\Mailys Surface Pro\Documents\Project\PetInsights\PetInsightsv2\PetInsightsv2\obj\Debug\90\lp\45\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 paths;obj\Debug\90\res\xml\file_paths.xml
 resources;obj\Debug\90\res\values\colors.xml
 resources;obj\Debug\90\res\values\ic_launcher_background.xml
