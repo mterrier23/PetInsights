@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">PetInsights</string>
+    <string name="action_settings">Settings</string>
+	<string name="EnteraPhoneword">Enter a Phoneword</string>
+	<string name="DogList">Dog List</string>
+	<!--
+	<plurals name="numberOfTasks">
+		
+      As a developer, you should always supply "one" and "other"
+      strings. Your translators will know which strings are actually
+      needed for their language.
+  
+		<item quantity="one">There is %d task left.</item>
+		<item quantity="other">There are %d tasks still to do.</item>
+	</plurals>
+	-->
+</resources>

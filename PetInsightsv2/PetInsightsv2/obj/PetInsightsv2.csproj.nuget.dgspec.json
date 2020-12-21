@@ -1,0 +1,66 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsightsv2\\PetInsightsv2\\PetInsightsv2.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsightsv2\\PetInsightsv2\\PetInsightsv2.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsightsv2\\PetInsightsv2\\PetInsightsv2.csproj",
+        "projectName": "PetInsightsv2",
+        "projectPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsightsv2\\PetInsightsv2\\PetInsightsv2.csproj",
+        "packagesPath": "C:\\Users\\Mailys Surface Pro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsightsv2\\PetInsightsv2\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Mailys Surface Pro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "monoandroid90"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "monoandroid90": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "monoandroid90": {
+          "dependencies": {
+            "Xam.Plugin.Media": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Xamarin.Android.Support.Core.Utils": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.CustomTabs": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Android.Support.Design": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.5.3.2, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}
