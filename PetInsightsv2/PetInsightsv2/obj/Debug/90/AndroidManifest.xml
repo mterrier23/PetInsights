@@ -18,6 +18,7 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+    <activity android:label="@string/app_name" android:theme="@style/AppTheme" android:name="crc649b2e3c528f32827f.AddContentActivity" />
     <activity android:configChanges="orientation|screenSize|uiMode" android:name="crc646957603ea1820544.MediaPickerActivity" />
     <service android:name="crc64396a3fe5f8138e3f.KeepAliveService" />
     <receiver android:enabled="true" android:exported="false" android:label="Essentials Battery Broadcast Receiver" android:name="crc64a0e0a82d0db9a07d.BatteryBroadcastReceiver" />
