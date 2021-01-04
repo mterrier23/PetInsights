@@ -1,0 +1,6 @@
+1. Size (i.e. small, medium, large)
+2. Breed (***how do we show this?***)
+3. Sex
+4. Age range
+5. Date added to shelter/app
+6. Personality / key words (from the comments left by others)
