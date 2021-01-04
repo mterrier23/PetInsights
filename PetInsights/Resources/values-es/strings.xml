@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<resources>
-	<string name="app_name">PetInsights</string>
-	<string name="action_settings">Escenario</string>
-	<string name="EnteraPhoneword">Ingrese una palabra telefonica</string>
-	<string name="DogList">Historia de los traduciones</string>
-</resources>

@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<resources>
-	<string name="app_name">PetInsights</string>
-	<string name="action_settings">Parametres</string>
-	<string name="EnteraPhoneword">Entrez un telemot</string>
-	<string name="DogList">Histoire de traduciones</string>
-</resources>
