@@ -3748,11 +3748,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsightsv2\\PetInsightsv2\\PetInsightsv2.csproj",
+      "projectUniqueName": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_Code\\PetInsightsv2.csproj",
       "projectName": "PetInsightsv2",
-      "projectPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsightsv2\\PetInsightsv2\\PetInsightsv2.csproj",
+      "projectPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_Code\\PetInsightsv2.csproj",
       "packagesPath": "C:\\Users\\Mailys Surface Pro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsightsv2\\PetInsightsv2\\obj\\",
+      "outputPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_Code\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

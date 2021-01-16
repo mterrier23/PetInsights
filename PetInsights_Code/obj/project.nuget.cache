@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aqJz8QkcTz6vT4R2Qkj7cygDB0dBnS98HFNhzDBpLpBF58f7Uw2lvCFt3mBrVaCyVZawtjyOOMZDetIIBOk2MQ==",
+  "dgSpecHash": "yk2DywcAeRzZi3MXUNr50zdWhqZ0VXzIVeNshCfP+B9IbVyT5nwt+fAzJ5NJsWgRaDfZf4R37IwnOliP9VuyAQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsightsv2\\PetInsightsv2\\PetInsightsv2.csproj",
+  "projectFilePath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_Code\\PetInsightsv2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mailys Surface Pro\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
