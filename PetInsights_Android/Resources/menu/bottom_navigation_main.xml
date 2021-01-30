@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_home"
+        android:enabled="true"
+        android:icon="@mipmap/ic_search"
+        android:title="@string/menu_search"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_fave"
+        android:enabled="true"
+        android:icon="@mipmap/ic_star_border"
+        android:title="@string/menu_fave"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_breed"
+        android:enabled="true"
+        android:icon="@mipmap/ic_pets"
+        android:title="@string/menu_breed"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_profile"
+        android:enabled="true"
+        android:icon="@mipmap/ic_person_outline"
+        android:title="@string/menu_profile"
+        app:showAsAction="ifRoom" />
+</menu>

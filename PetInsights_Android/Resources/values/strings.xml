@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PetInsightsv2</string>
+    <string name="action_settings">Settings</string>
+	<string name="menu_search">Search</string>
+	<string name="menu_profile">Profile</string>
+	<string name="menu_breed">Breed</string>
+	<string name="menu_fave">Favorites</string>
+	<string name="fave_main_tmp">Here is the main page for Favorites</string>
+	<string name="profile_main_tmp">Here is the main page for Profile</string>
+	<string name="breed_main_tmp">Here is the main page for Breeds</string>
+	<string name="search_main_tmp">Here is the main page for Search</string>
+	<string name="mapkey">AIzaSyAGjwwLq7xu9ub4KurBTlrlTTBPBemAQCQ</string>
+</resources>

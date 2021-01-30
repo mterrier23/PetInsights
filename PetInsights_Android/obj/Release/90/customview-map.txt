@@ -1,0 +1,30 @@
+adaptive-icon;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher.xml
+adaptive-icon;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
+background;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher.xml
+background;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
+Button;obj\Release\90\res\layout\activity_main.xml
+Button;obj\Release\90\res\layout\add_content.xml
+cache-path;C:\Users\Mailys Surface Pro\Documents\Project\PetInsights\PetInsights_Code\obj\Release\90\lp\45\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+color;obj\Release\90\res\values\colors.xml
+color;obj\Release\90\res\values\ic_launcher_background.xml
+external-cache-path;C:\Users\Mailys Surface Pro\Documents\Project\PetInsights\PetInsights_Code\obj\Release\90\lp\45\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-files-path;obj\Release\90\res\xml\file_paths.xml
+external-path;C:\Users\Mailys Surface Pro\Documents\Project\PetInsights\PetInsights_Code\obj\Release\90\lp\45\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+foreground;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher.xml
+foreground;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
+GridView;obj\Release\90\res\layout\activity_main.xml
+ImageView;obj\Release\90\res\layout\activity_main.xml
+ImageView;obj\Release\90\res\layout\add_content.xml
+item;obj\Release\90\res\layout\bottom_navigation_main.xml
+item;obj\Release\90\res\values\styles.xml
+LinearLayout;obj\Release\90\res\layout\activity_main.xml
+LinearLayout;obj\Release\90\res\layout\add_content.xml
+menu;obj\Release\90\res\layout\bottom_navigation_main.xml
+paths;C:\Users\Mailys Surface Pro\Documents\Project\PetInsights\PetInsights_Code\obj\Release\90\lp\45\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+paths;obj\Release\90\res\xml\file_paths.xml
+resources;obj\Release\90\res\values\colors.xml
+resources;obj\Release\90\res\values\ic_launcher_background.xml
+resources;obj\Release\90\res\values\strings.xml
+resources;obj\Release\90\res\values\styles.xml
+string;obj\Release\90\res\values\strings.xml
+style;obj\Release\90\res\values\styles.xml

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:petinsights_all="clr-namespace:PetInsights_all"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            BarBackgroundColor="White"
+            SelectedTabColor="LightBlue"
+            UnselectedTabColor ="LightGray"
+            x:Class="PetInsights_all.MainTabbed">
+  <!--Pages can be added as references or inline-->
+    <NavigationPage Title="Search" IconImageSource="ic_search.png">
+        <x:Arguments>
+            <petinsights_all:MainSearch />
+        </x:Arguments>
+    </NavigationPage>
+    <petinsights_all:MainFaves/>
+    <petinsights_all:MainBreeds/>
+    <petinsights_all:MainProfile/>
+
+
+</TabbedPage>
