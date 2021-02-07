@@ -15,7 +15,8 @@ Advised by Dr. Nan Niu.</em>
 7. [Self-Assessments][7]
 8. [Professional Biographies][8]
 9. [Budget][9]
-10. [Appendix][10]
+10. [User Manual] [10]
+11. [Appendix][11]
 
 [2]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/PetInsight%20Project%20Proposal.docx
 [3]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/UserStories.md
@@ -26,4 +27,5 @@ Advised by Dr. Nan Niu.</em>
 [7]: https://github.com/mterrier23/PetInsights/tree/master/Project%20Report/Self%20Assessments
 [8]: https://github.com/mterrier23/PetInsights/tree/master/Project%20Report/Biographies
 [9]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/Expense%20Report.md
-[10]: https://github.com/mterrier23/PetInsights/tree/master/Project%20Report/Appendix
+[10]: https://docs.google.com/document/d/1ffzDfesRYpptUuVpmgqXOfXqrOoaYPrhtVMRdbpDhbw/edit?usp=sharing
+[11]: https://github.com/mterrier23/PetInsights/tree/master/Project%20Report/Appendix
