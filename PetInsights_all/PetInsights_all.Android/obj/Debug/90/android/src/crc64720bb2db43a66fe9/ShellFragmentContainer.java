@@ -26,6 +26,14 @@ public class ShellFragmentContainer
 	}
 
 
+	public ShellFragmentContainer (int p0)
+	{
+		super (p0);
+		if (getClass () == ShellFragmentContainer.class)
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.AppCompat.ShellFragmentContainer, Xamarin.Forms.Platform.Android", "System.Int32, mscorlib", this, new java.lang.Object[] { p0 });
+	}
+
+
 	public android.view.View onCreateView (android.view.LayoutInflater p0, android.view.ViewGroup p1, android.os.Bundle p2)
 	{
 		return n_onCreateView (p0, p1, p2);

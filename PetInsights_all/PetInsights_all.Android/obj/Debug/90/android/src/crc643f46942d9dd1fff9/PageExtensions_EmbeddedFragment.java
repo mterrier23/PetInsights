@@ -2,7 +2,7 @@ package crc643f46942d9dd1fff9;
 
 
 public class PageExtensions_EmbeddedFragment
-	extends android.support.v4.app.Fragment
+	extends androidx.fragment.app.Fragment
 	implements
 		mono.android.IGCUserPeer
 {
@@ -21,6 +21,14 @@ public class PageExtensions_EmbeddedFragment
 		super ();
 		if (getClass () == PageExtensions_EmbeddedFragment.class)
 			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.PageExtensions+EmbeddedFragment, Xamarin.Forms.Platform.Android", "", this, new java.lang.Object[] {  });
+	}
+
+
+	public PageExtensions_EmbeddedFragment (int p0)
+	{
+		super (p0);
+		if (getClass () == PageExtensions_EmbeddedFragment.class)
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.PageExtensions+EmbeddedFragment, Xamarin.Forms.Platform.Android", "System.Int32, mscorlib", this, new java.lang.Object[] { p0 });
 	}
 
 

@@ -2,10 +2,10 @@ package crc643f46942d9dd1fff9;
 
 
 public class MasterDetailRenderer
-	extends android.support.v4.widget.DrawerLayout
+	extends androidx.drawerlayout.widget.DrawerLayout
 	implements
 		mono.android.IGCUserPeer,
-		android.support.v4.widget.DrawerLayout.DrawerListener
+		androidx.drawerlayout.widget.DrawerLayout.DrawerListener
 {
 /** @hide */
 	public static final String __md_methods;
@@ -14,10 +14,10 @@ public class MasterDetailRenderer
 			"n_onAttachedToWindow:()V:GetOnAttachedToWindowHandler\n" +
 			"n_onDetachedFromWindow:()V:GetOnDetachedFromWindowHandler\n" +
 			"n_onLayout:(ZIIII)V:GetOnLayout_ZIIIIHandler\n" +
-			"n_onDrawerClosed:(Landroid/view/View;)V:GetOnDrawerClosed_Landroid_view_View_Handler:Android.Support.V4.Widget.DrawerLayout/IDrawerListenerInvoker, Xamarin.Android.Support.DrawerLayout\n" +
-			"n_onDrawerOpened:(Landroid/view/View;)V:GetOnDrawerOpened_Landroid_view_View_Handler:Android.Support.V4.Widget.DrawerLayout/IDrawerListenerInvoker, Xamarin.Android.Support.DrawerLayout\n" +
-			"n_onDrawerSlide:(Landroid/view/View;F)V:GetOnDrawerSlide_Landroid_view_View_FHandler:Android.Support.V4.Widget.DrawerLayout/IDrawerListenerInvoker, Xamarin.Android.Support.DrawerLayout\n" +
-			"n_onDrawerStateChanged:(I)V:GetOnDrawerStateChanged_IHandler:Android.Support.V4.Widget.DrawerLayout/IDrawerListenerInvoker, Xamarin.Android.Support.DrawerLayout\n" +
+			"n_onDrawerClosed:(Landroid/view/View;)V:GetOnDrawerClosed_Landroid_view_View_Handler:AndroidX.DrawerLayout.Widget.DrawerLayout/IDrawerListenerInvoker, Xamarin.AndroidX.DrawerLayout\n" +
+			"n_onDrawerOpened:(Landroid/view/View;)V:GetOnDrawerOpened_Landroid_view_View_Handler:AndroidX.DrawerLayout.Widget.DrawerLayout/IDrawerListenerInvoker, Xamarin.AndroidX.DrawerLayout\n" +
+			"n_onDrawerSlide:(Landroid/view/View;F)V:GetOnDrawerSlide_Landroid_view_View_FHandler:AndroidX.DrawerLayout.Widget.DrawerLayout/IDrawerListenerInvoker, Xamarin.AndroidX.DrawerLayout\n" +
+			"n_onDrawerStateChanged:(I)V:GetOnDrawerStateChanged_IHandler:AndroidX.DrawerLayout.Widget.DrawerLayout/IDrawerListenerInvoker, Xamarin.AndroidX.DrawerLayout\n" +
 			"";
 		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.MasterDetailRenderer, Xamarin.Forms.Platform.Android", MasterDetailRenderer.class, __md_methods);
 	}

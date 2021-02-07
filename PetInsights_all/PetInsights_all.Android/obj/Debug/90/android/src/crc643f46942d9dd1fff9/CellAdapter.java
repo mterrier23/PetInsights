@@ -8,7 +8,7 @@ public abstract class CellAdapter
 		android.widget.AdapterView.OnItemLongClickListener,
 		android.view.ActionMode.Callback,
 		android.widget.AdapterView.OnItemClickListener,
-		android.support.v7.view.ActionMode.Callback
+		androidx.appcompat.view.ActionMode.Callback
 {
 /** @hide */
 	public static final String __md_methods;
@@ -20,10 +20,10 @@ public abstract class CellAdapter
 			"n_onDestroyActionMode:(Landroid/view/ActionMode;)V:GetOnDestroyActionMode_Landroid_view_ActionMode_Handler:Android.Views.ActionMode/ICallbackInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"n_onPrepareActionMode:(Landroid/view/ActionMode;Landroid/view/Menu;)Z:GetOnPrepareActionMode_Landroid_view_ActionMode_Landroid_view_Menu_Handler:Android.Views.ActionMode/ICallbackInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"n_onItemClick:(Landroid/widget/AdapterView;Landroid/view/View;IJ)V:GetOnItemClick_Landroid_widget_AdapterView_Landroid_view_View_IJHandler:Android.Widget.AdapterView/IOnItemClickListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
-			"n_onActionItemClicked:(Landroid/support/v7/view/ActionMode;Landroid/view/MenuItem;)Z:GetOnActionItemClicked_Landroid_support_v7_view_ActionMode_Landroid_view_MenuItem_Handler:Android.Support.V7.View.ActionMode/ICallbackInvoker, Xamarin.Android.Support.v7.AppCompat\n" +
-			"n_onCreateActionMode:(Landroid/support/v7/view/ActionMode;Landroid/view/Menu;)Z:GetOnCreateActionMode_Landroid_support_v7_view_ActionMode_Landroid_view_Menu_Handler:Android.Support.V7.View.ActionMode/ICallbackInvoker, Xamarin.Android.Support.v7.AppCompat\n" +
-			"n_onDestroyActionMode:(Landroid/support/v7/view/ActionMode;)V:GetOnDestroyActionMode_Landroid_support_v7_view_ActionMode_Handler:Android.Support.V7.View.ActionMode/ICallbackInvoker, Xamarin.Android.Support.v7.AppCompat\n" +
-			"n_onPrepareActionMode:(Landroid/support/v7/view/ActionMode;Landroid/view/Menu;)Z:GetOnPrepareActionMode_Landroid_support_v7_view_ActionMode_Landroid_view_Menu_Handler:Android.Support.V7.View.ActionMode/ICallbackInvoker, Xamarin.Android.Support.v7.AppCompat\n" +
+			"n_onActionItemClicked:(Landroidx/appcompat/view/ActionMode;Landroid/view/MenuItem;)Z:GetOnActionItemClicked_Landroidx_appcompat_view_ActionMode_Landroid_view_MenuItem_Handler:AndroidX.AppCompat.View.ActionMode/ICallbackInvoker, Xamarin.AndroidX.AppCompat\n" +
+			"n_onCreateActionMode:(Landroidx/appcompat/view/ActionMode;Landroid/view/Menu;)Z:GetOnCreateActionMode_Landroidx_appcompat_view_ActionMode_Landroid_view_Menu_Handler:AndroidX.AppCompat.View.ActionMode/ICallbackInvoker, Xamarin.AndroidX.AppCompat\n" +
+			"n_onDestroyActionMode:(Landroidx/appcompat/view/ActionMode;)V:GetOnDestroyActionMode_Landroidx_appcompat_view_ActionMode_Handler:AndroidX.AppCompat.View.ActionMode/ICallbackInvoker, Xamarin.AndroidX.AppCompat\n" +
+			"n_onPrepareActionMode:(Landroidx/appcompat/view/ActionMode;Landroid/view/Menu;)Z:GetOnPrepareActionMode_Landroidx_appcompat_view_ActionMode_Landroid_view_Menu_Handler:AndroidX.AppCompat.View.ActionMode/ICallbackInvoker, Xamarin.AndroidX.AppCompat\n" +
 			"";
 		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.CellAdapter, Xamarin.Forms.Platform.Android", CellAdapter.class, __md_methods);
 	}
@@ -92,36 +92,36 @@ public abstract class CellAdapter
 	private native void n_onItemClick (android.widget.AdapterView p0, android.view.View p1, int p2, long p3);
 
 
-	public boolean onActionItemClicked (android.support.v7.view.ActionMode p0, android.view.MenuItem p1)
+	public boolean onActionItemClicked (androidx.appcompat.view.ActionMode p0, android.view.MenuItem p1)
 	{
 		return n_onActionItemClicked (p0, p1);
 	}
 
-	private native boolean n_onActionItemClicked (android.support.v7.view.ActionMode p0, android.view.MenuItem p1);
+	private native boolean n_onActionItemClicked (androidx.appcompat.view.ActionMode p0, android.view.MenuItem p1);
 
 
-	public boolean onCreateActionMode (android.support.v7.view.ActionMode p0, android.view.Menu p1)
+	public boolean onCreateActionMode (androidx.appcompat.view.ActionMode p0, android.view.Menu p1)
 	{
 		return n_onCreateActionMode (p0, p1);
 	}
 
-	private native boolean n_onCreateActionMode (android.support.v7.view.ActionMode p0, android.view.Menu p1);
+	private native boolean n_onCreateActionMode (androidx.appcompat.view.ActionMode p0, android.view.Menu p1);
 
 
-	public void onDestroyActionMode (android.support.v7.view.ActionMode p0)
+	public void onDestroyActionMode (androidx.appcompat.view.ActionMode p0)
 	{
 		n_onDestroyActionMode (p0);
 	}
 
-	private native void n_onDestroyActionMode (android.support.v7.view.ActionMode p0);
+	private native void n_onDestroyActionMode (androidx.appcompat.view.ActionMode p0);
 
 
-	public boolean onPrepareActionMode (android.support.v7.view.ActionMode p0, android.view.Menu p1)
+	public boolean onPrepareActionMode (androidx.appcompat.view.ActionMode p0, android.view.Menu p1)
 	{
 		return n_onPrepareActionMode (p0, p1);
 	}
 
-	private native boolean n_onPrepareActionMode (android.support.v7.view.ActionMode p0, android.view.Menu p1);
+	private native boolean n_onPrepareActionMode (androidx.appcompat.view.ActionMode p0, android.view.Menu p1);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

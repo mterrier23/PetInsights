@@ -2,10 +2,10 @@ package crc643f46942d9dd1fff9;
 
 
 public class RefreshViewRenderer
-	extends android.support.v4.widget.SwipeRefreshLayout
+	extends androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 	implements
 		mono.android.IGCUserPeer,
-		android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener
+		androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
 {
 /** @hide */
 	public static final String __md_methods;
@@ -15,7 +15,7 @@ public class RefreshViewRenderer
 			"n_setRefreshing:(Z)V:GetSetRefreshing_ZHandler\n" +
 			"n_canChildScrollUp:()Z:GetCanChildScrollUpHandler\n" +
 			"n_onLayout:(ZIIII)V:GetOnLayout_ZIIIIHandler\n" +
-			"n_onRefresh:()V:GetOnRefreshHandler:Android.Support.V4.Widget.SwipeRefreshLayout/IOnRefreshListenerInvoker, Xamarin.Android.Support.SwipeRefreshLayout\n" +
+			"n_onRefresh:()V:GetOnRefreshHandler:AndroidX.SwipeRefreshLayout.Widget.SwipeRefreshLayout/IOnRefreshListenerInvoker, Xamarin.AndroidX.SwipeRefreshLayout\n" +
 			"";
 		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.RefreshViewRenderer, Xamarin.Forms.Platform.Android", RefreshViewRenderer.class, __md_methods);
 	}

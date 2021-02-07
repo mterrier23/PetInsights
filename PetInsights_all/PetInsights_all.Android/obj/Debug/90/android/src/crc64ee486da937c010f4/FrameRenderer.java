@@ -2,7 +2,7 @@ package crc64ee486da937c010f4;
 
 
 public class FrameRenderer
-	extends android.support.v7.widget.CardView
+	extends androidx.cardview.widget.CardView
 	implements
 		mono.android.IGCUserPeer
 {

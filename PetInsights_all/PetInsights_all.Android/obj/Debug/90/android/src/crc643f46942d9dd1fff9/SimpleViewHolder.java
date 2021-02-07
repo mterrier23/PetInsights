@@ -2,7 +2,7 @@ package crc643f46942d9dd1fff9;
 
 
 public class SimpleViewHolder
-	extends android.support.v7.widget.RecyclerView.ViewHolder
+	extends androidx.recyclerview.widget.RecyclerView.ViewHolder
 	implements
 		mono.android.IGCUserPeer
 {

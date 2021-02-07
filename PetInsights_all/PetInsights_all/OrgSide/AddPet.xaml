@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PetInsights_all.OrgSide.AddPet"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+            <Label Margin="0,0,0,10" Text="Enter Pet Information" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+            <Entry x:Name="name" Placeholder="Pet Name" BackgroundColor="Black"></Entry>
+            <Entry x:Name="age" Placeholder="Pet Age" BackgroundColor="Black"></Entry>
+            <Image x:Name="imgChoosen" HeightRequest="200"></Image>
+            <Button x:Name="btnSelectPic" Text="Select Picture" BackgroundColor="DodgerBlue" Clicked="btnSelectPic_Clicked" TextColor="White">
+            </Button>
+            <Button x:Name="btnTakePic" Text="Take Picture" BackgroundColor="DodgerBlue" Clicked="btnTakePic_Clicked" TextColor="White">
+            </Button>
+            <ActivityIndicator x:Name="uploadIndicator" IsVisible="False" IsRunning="False" Color="DodgerBlue" />
+            <Button Text="Upload Image" Clicked="btnUpload_Clicked" x:Name="btnUpload" BackgroundColor="Blue" TextColor="White" />
+            <Button Text="Add Pet" Clicked="BtnAdd_Clicked" x:Name="btnAddPet" BackgroundColor="Blue" TextColor="White" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage> 

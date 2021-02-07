@@ -2,7 +2,7 @@ package crc643f46942d9dd1fff9;
 
 
 public class NongreedySnapHelper_InitialScrollListener
-	extends android.support.v7.widget.RecyclerView.OnScrollListener
+	extends androidx.recyclerview.widget.RecyclerView.OnScrollListener
 	implements
 		mono.android.IGCUserPeer
 {
@@ -10,7 +10,7 @@ public class NongreedySnapHelper_InitialScrollListener
 	public static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_onScrolled:(Landroid/support/v7/widget/RecyclerView;II)V:GetOnScrolled_Landroid_support_v7_widget_RecyclerView_IIHandler\n" +
+			"n_onScrolled:(Landroidx/recyclerview/widget/RecyclerView;II)V:GetOnScrolled_Landroidx_recyclerview_widget_RecyclerView_IIHandler\n" +
 			"";
 		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.NongreedySnapHelper+InitialScrollListener, Xamarin.Forms.Platform.Android", NongreedySnapHelper_InitialScrollListener.class, __md_methods);
 	}
@@ -31,12 +31,12 @@ public class NongreedySnapHelper_InitialScrollListener
 	}
 
 
-	public void onScrolled (android.support.v7.widget.RecyclerView p0, int p1, int p2)
+	public void onScrolled (androidx.recyclerview.widget.RecyclerView p0, int p1, int p2)
 	{
 		n_onScrolled (p0, p1, p2);
 	}
 
-	private native void n_onScrolled (android.support.v7.widget.RecyclerView p0, int p1, int p2);
+	private native void n_onScrolled (androidx.recyclerview.widget.RecyclerView p0, int p1, int p2);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

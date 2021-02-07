@@ -5,7 +5,7 @@ public class ListViewRenderer
 	extends crc643f46942d9dd1fff9.ViewRenderer_2
 	implements
 		mono.android.IGCUserPeer,
-		android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener
+		androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
 {
 /** @hide */
 	public static final String __md_methods;
@@ -14,7 +14,7 @@ public class ListViewRenderer
 			"n_onAttachedToWindow:()V:GetOnAttachedToWindowHandler\n" +
 			"n_onDetachedFromWindow:()V:GetOnDetachedFromWindowHandler\n" +
 			"n_onLayout:(ZIIII)V:GetOnLayout_ZIIIIHandler\n" +
-			"n_onRefresh:()V:GetOnRefreshHandler:Android.Support.V4.Widget.SwipeRefreshLayout/IOnRefreshListenerInvoker, Xamarin.Android.Support.SwipeRefreshLayout\n" +
+			"n_onRefresh:()V:GetOnRefreshHandler:AndroidX.SwipeRefreshLayout.Widget.SwipeRefreshLayout/IOnRefreshListenerInvoker, Xamarin.AndroidX.SwipeRefreshLayout\n" +
 			"";
 		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.ListViewRenderer, Xamarin.Forms.Platform.Android", ListViewRenderer.class, __md_methods);
 	}

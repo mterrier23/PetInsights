@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PetInsights_all.SearchViews.MainSearch"
+             BackgroundColor="orange">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Main Search Page" TextColor="Black" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+            <Button Text="Show Pets on Map" BackgroundColor="Blue" Clicked="PetMapButton_OnClicked" VerticalOptions="CenterAndExpand">
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -2,10 +2,10 @@ package crc643f46942d9dd1fff9;
 
 
 public class ShellSectionRenderer
-	extends android.support.v4.app.Fragment
+	extends androidx.fragment.app.Fragment
 	implements
 		mono.android.IGCUserPeer,
-		android.support.v4.view.ViewPager.OnPageChangeListener,
+		androidx.viewpager.widget.ViewPager.OnPageChangeListener,
 		android.view.View.OnClickListener
 {
 /** @hide */
@@ -14,9 +14,9 @@ public class ShellSectionRenderer
 		__md_methods = 
 			"n_onCreateView:(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;:GetOnCreateView_Landroid_view_LayoutInflater_Landroid_view_ViewGroup_Landroid_os_Bundle_Handler\n" +
 			"n_onDestroy:()V:GetOnDestroyHandler\n" +
-			"n_onPageScrollStateChanged:(I)V:GetOnPageScrollStateChanged_IHandler:Android.Support.V4.View.ViewPager/IOnPageChangeListenerInvoker, Xamarin.Android.Support.ViewPager\n" +
-			"n_onPageScrolled:(IFI)V:GetOnPageScrolled_IFIHandler:Android.Support.V4.View.ViewPager/IOnPageChangeListenerInvoker, Xamarin.Android.Support.ViewPager\n" +
-			"n_onPageSelected:(I)V:GetOnPageSelected_IHandler:Android.Support.V4.View.ViewPager/IOnPageChangeListenerInvoker, Xamarin.Android.Support.ViewPager\n" +
+			"n_onPageScrollStateChanged:(I)V:GetOnPageScrollStateChanged_IHandler:AndroidX.ViewPager.Widget.ViewPager/IOnPageChangeListenerInvoker, Xamarin.AndroidX.ViewPager\n" +
+			"n_onPageScrolled:(IFI)V:GetOnPageScrolled_IFIHandler:AndroidX.ViewPager.Widget.ViewPager/IOnPageChangeListenerInvoker, Xamarin.AndroidX.ViewPager\n" +
+			"n_onPageSelected:(I)V:GetOnPageSelected_IHandler:AndroidX.ViewPager.Widget.ViewPager/IOnPageChangeListenerInvoker, Xamarin.AndroidX.ViewPager\n" +
 			"n_onClick:(Landroid/view/View;)V:GetOnClick_Landroid_view_View_Handler:Android.Views.View/IOnClickListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"";
 		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.ShellSectionRenderer, Xamarin.Forms.Platform.Android", ShellSectionRenderer.class, __md_methods);
@@ -28,6 +28,14 @@ public class ShellSectionRenderer
 		super ();
 		if (getClass () == ShellSectionRenderer.class)
 			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.ShellSectionRenderer, Xamarin.Forms.Platform.Android", "", this, new java.lang.Object[] {  });
+	}
+
+
+	public ShellSectionRenderer (int p0)
+	{
+		super (p0);
+		if (getClass () == ShellSectionRenderer.class)
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.ShellSectionRenderer, Xamarin.Forms.Platform.Android", "System.Int32, mscorlib", this, new java.lang.Object[] { p0 });
 	}
 
 

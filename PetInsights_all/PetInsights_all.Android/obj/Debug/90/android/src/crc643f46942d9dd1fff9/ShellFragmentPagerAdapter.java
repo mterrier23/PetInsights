@@ -2,7 +2,7 @@ package crc643f46942d9dd1fff9;
 
 
 public class ShellFragmentPagerAdapter
-	extends android.support.v4.app.FragmentPagerAdapter
+	extends androidx.fragment.app.FragmentPagerAdapter
 	implements
 		mono.android.IGCUserPeer
 {
@@ -11,7 +11,7 @@ public class ShellFragmentPagerAdapter
 	static {
 		__md_methods = 
 			"n_getCount:()I:GetGetCountHandler\n" +
-			"n_getItem:(I)Landroid/support/v4/app/Fragment;:GetGetItem_IHandler\n" +
+			"n_getItem:(I)Landroidx/fragment/app/Fragment;:GetGetItem_IHandler\n" +
 			"n_getItemId:(I)J:GetGetItemId_IHandler\n" +
 			"n_getItemPosition:(Ljava/lang/Object;)I:GetGetItemPosition_Ljava_lang_Object_Handler\n" +
 			"n_getPageTitle:(I)Ljava/lang/CharSequence;:GetGetPageTitle_IHandler\n" +
@@ -21,11 +21,19 @@ public class ShellFragmentPagerAdapter
 	}
 
 
-	public ShellFragmentPagerAdapter (android.support.v4.app.FragmentManager p0)
+	public ShellFragmentPagerAdapter (androidx.fragment.app.FragmentManager p0)
 	{
 		super (p0);
 		if (getClass () == ShellFragmentPagerAdapter.class)
-			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.ShellFragmentPagerAdapter, Xamarin.Forms.Platform.Android", "Android.Support.V4.App.FragmentManager, Xamarin.Android.Support.Fragment", this, new java.lang.Object[] { p0 });
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.ShellFragmentPagerAdapter, Xamarin.Forms.Platform.Android", "AndroidX.Fragment.App.FragmentManager, Xamarin.AndroidX.Fragment", this, new java.lang.Object[] { p0 });
+	}
+
+
+	public ShellFragmentPagerAdapter (androidx.fragment.app.FragmentManager p0, int p1)
+	{
+		super (p0, p1);
+		if (getClass () == ShellFragmentPagerAdapter.class)
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.ShellFragmentPagerAdapter, Xamarin.Forms.Platform.Android", "AndroidX.Fragment.App.FragmentManager, Xamarin.AndroidX.Fragment:System.Int32, mscorlib", this, new java.lang.Object[] { p0, p1 });
 	}
 
 
@@ -37,12 +45,12 @@ public class ShellFragmentPagerAdapter
 	private native int n_getCount ();
 
 
-	public android.support.v4.app.Fragment getItem (int p0)
+	public androidx.fragment.app.Fragment getItem (int p0)
 	{
 		return n_getItem (p0);
 	}
 
-	private native android.support.v4.app.Fragment n_getItem (int p0);
+	private native androidx.fragment.app.Fragment n_getItem (int p0);
 
 
 	public long getItemId (int p0)

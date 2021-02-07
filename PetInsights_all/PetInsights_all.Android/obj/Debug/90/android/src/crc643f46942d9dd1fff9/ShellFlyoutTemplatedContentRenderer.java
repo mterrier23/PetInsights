@@ -5,13 +5,13 @@ public class ShellFlyoutTemplatedContentRenderer
 	extends java.lang.Object
 	implements
 		mono.android.IGCUserPeer,
-		android.support.design.widget.AppBarLayout.OnOffsetChangedListener
+		com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener
 {
 /** @hide */
 	public static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_onOffsetChanged:(Landroid/support/design/widget/AppBarLayout;I)V:GetOnOffsetChanged_Landroid_support_design_widget_AppBarLayout_IHandler:Android.Support.Design.Widget.AppBarLayout/IOnOffsetChangedListenerInvoker, Xamarin.Android.Support.Design\n" +
+			"n_onOffsetChanged:(Lcom/google/android/material/appbar/AppBarLayout;I)V:GetOnOffsetChanged_Lcom_google_android_material_appbar_AppBarLayout_IHandler:Google.Android.Material.AppBar.AppBarLayout/IOnOffsetChangedListenerInvoker, Xamarin.Google.Android.Material\n" +
 			"";
 		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.ShellFlyoutTemplatedContentRenderer, Xamarin.Forms.Platform.Android", ShellFlyoutTemplatedContentRenderer.class, __md_methods);
 	}
@@ -25,12 +25,12 @@ public class ShellFlyoutTemplatedContentRenderer
 	}
 
 
-	public void onOffsetChanged (android.support.design.widget.AppBarLayout p0, int p1)
+	public void onOffsetChanged (com.google.android.material.appbar.AppBarLayout p0, int p1)
 	{
 		n_onOffsetChanged (p0, p1);
 	}
 
-	private native void n_onOffsetChanged (android.support.design.widget.AppBarLayout p0, int p1);
+	private native void n_onOffsetChanged (com.google.android.material.appbar.AppBarLayout p0, int p1);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

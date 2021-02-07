@@ -10,8 +10,8 @@ public class StartSnapHelper
 	public static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_calculateDistanceToFinalSnap:(Landroid/support/v7/widget/RecyclerView$LayoutManager;Landroid/view/View;)[I:GetCalculateDistanceToFinalSnap_Landroid_support_v7_widget_RecyclerView_LayoutManager_Landroid_view_View_Handler\n" +
-			"n_findSnapView:(Landroid/support/v7/widget/RecyclerView$LayoutManager;)Landroid/view/View;:GetFindSnapView_Landroid_support_v7_widget_RecyclerView_LayoutManager_Handler\n" +
+			"n_calculateDistanceToFinalSnap:(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;Landroid/view/View;)[I:GetCalculateDistanceToFinalSnap_Landroidx_recyclerview_widget_RecyclerView_LayoutManager_Landroid_view_View_Handler\n" +
+			"n_findSnapView:(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)Landroid/view/View;:GetFindSnapView_Landroidx_recyclerview_widget_RecyclerView_LayoutManager_Handler\n" +
 			"";
 		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.StartSnapHelper, Xamarin.Forms.Platform.Android", StartSnapHelper.class, __md_methods);
 	}
@@ -25,20 +25,20 @@ public class StartSnapHelper
 	}
 
 
-	public int[] calculateDistanceToFinalSnap (android.support.v7.widget.RecyclerView.LayoutManager p0, android.view.View p1)
+	public int[] calculateDistanceToFinalSnap (androidx.recyclerview.widget.RecyclerView.LayoutManager p0, android.view.View p1)
 	{
 		return n_calculateDistanceToFinalSnap (p0, p1);
 	}
 
-	private native int[] n_calculateDistanceToFinalSnap (android.support.v7.widget.RecyclerView.LayoutManager p0, android.view.View p1);
+	private native int[] n_calculateDistanceToFinalSnap (androidx.recyclerview.widget.RecyclerView.LayoutManager p0, android.view.View p1);
 
 
-	public android.view.View findSnapView (android.support.v7.widget.RecyclerView.LayoutManager p0)
+	public android.view.View findSnapView (androidx.recyclerview.widget.RecyclerView.LayoutManager p0)
 	{
 		return n_findSnapView (p0);
 	}
 
-	private native android.view.View n_findSnapView (android.support.v7.widget.RecyclerView.LayoutManager p0);
+	private native android.view.View n_findSnapView (androidx.recyclerview.widget.RecyclerView.LayoutManager p0);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

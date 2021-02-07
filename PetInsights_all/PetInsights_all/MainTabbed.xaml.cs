@@ -14,18 +14,7 @@ namespace PetInsights_all
     {
         public MainTabbed()
         {
-            Console.WriteLine("arrived to maintabbed");
-            InitializeComponent(); // NOTE - was here originally, testing without
-           /* NavigationPage navigationPage = new NavigationPage(new MainSearch());
-            navigationPage.IconImageSource = "ic_search.png"; // NOTE - might be repeat?
-            navigationPage.Title = "Search"; // NOTE - might be repeat?
-
-            Children.Add(navigationPage);
-            Children.Add(new MainFaves());
-            Children.Add(new MainBreeds());
-            Children.Add(new MainProfile()); */
-           // all the above is already in the xaml (I THINK !!!)
-
+            InitializeComponent();
         }
     }
 }

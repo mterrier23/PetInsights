@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetInsights_all.Android", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetInsights_all.iOS", "PetInsights_all.iOS\PetInsights_all.iOS.csproj", "{FD035B15-64E1-4F55-B0E8-72B827EE3ED3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetInsights_all", "PetInsights_all\PetInsights_all.csproj", "{2337511E-0361-4C22-B0A2-95425ED5D232}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetInsights_all", "PetInsights_all\PetInsights_all.csproj", "{2337511E-0361-4C22-B0A2-95425ED5D232}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using PetInsights_all.Model;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,12 +16,10 @@ namespace PetInsights_all
         {
             InitializeComponent();
         }
+       
         private async void FindPetsButton_OnClicked(object sender, EventArgs e)
         {
-            Console.WriteLine("pressing findbets button");
-
-            await Navigation.PushModalAsync(new MainTabbed());
-            //await Navigation.PushAsync(new MainTabbed()); // NOTE - change this bc don't need navigation for this page
+            await Navigation.PushModalAsync(new MainTabbed()); // NOTE - change this bc don't need navigation for this page
         }
     }
 }

@@ -10,8 +10,8 @@ public class SelectableItemsViewAdapter_2
 	public static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_onBindViewHolder:(Landroid/support/v7/widget/RecyclerView$ViewHolder;I)V:GetOnBindViewHolder_Landroid_support_v7_widget_RecyclerView_ViewHolder_IHandler\n" +
-			"n_onViewRecycled:(Landroid/support/v7/widget/RecyclerView$ViewHolder;)V:GetOnViewRecycled_Landroid_support_v7_widget_RecyclerView_ViewHolder_Handler\n" +
+			"n_onBindViewHolder:(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V:GetOnBindViewHolder_Landroidx_recyclerview_widget_RecyclerView_ViewHolder_IHandler\n" +
+			"n_onViewRecycled:(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V:GetOnViewRecycled_Landroidx_recyclerview_widget_RecyclerView_ViewHolder_Handler\n" +
 			"";
 		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.SelectableItemsViewAdapter`2, Xamarin.Forms.Platform.Android", SelectableItemsViewAdapter_2.class, __md_methods);
 	}
@@ -25,20 +25,20 @@ public class SelectableItemsViewAdapter_2
 	}
 
 
-	public void onBindViewHolder (android.support.v7.widget.RecyclerView.ViewHolder p0, int p1)
+	public void onBindViewHolder (androidx.recyclerview.widget.RecyclerView.ViewHolder p0, int p1)
 	{
 		n_onBindViewHolder (p0, p1);
 	}
 
-	private native void n_onBindViewHolder (android.support.v7.widget.RecyclerView.ViewHolder p0, int p1);
+	private native void n_onBindViewHolder (androidx.recyclerview.widget.RecyclerView.ViewHolder p0, int p1);
 
 
-	public void onViewRecycled (android.support.v7.widget.RecyclerView.ViewHolder p0)
+	public void onViewRecycled (androidx.recyclerview.widget.RecyclerView.ViewHolder p0)
 	{
 		n_onViewRecycled (p0);
 	}
 
-	private native void n_onViewRecycled (android.support.v7.widget.RecyclerView.ViewHolder p0);
+	private native void n_onViewRecycled (androidx.recyclerview.widget.RecyclerView.ViewHolder p0);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

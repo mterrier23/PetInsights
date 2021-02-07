@@ -10,7 +10,7 @@ public class CarouselViewRenderer_CarouselViewOnScrollListener
 	public static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_onScrollStateChanged:(Landroid/support/v7/widget/RecyclerView;I)V:GetOnScrollStateChanged_Landroid_support_v7_widget_RecyclerView_IHandler\n" +
+			"n_onScrollStateChanged:(Landroidx/recyclerview/widget/RecyclerView;I)V:GetOnScrollStateChanged_Landroidx_recyclerview_widget_RecyclerView_IHandler\n" +
 			"";
 		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.CarouselViewRenderer+CarouselViewOnScrollListener, Xamarin.Forms.Platform.Android", CarouselViewRenderer_CarouselViewOnScrollListener.class, __md_methods);
 	}
@@ -24,12 +24,12 @@ public class CarouselViewRenderer_CarouselViewOnScrollListener
 	}
 
 
-	public void onScrollStateChanged (android.support.v7.widget.RecyclerView p0, int p1)
+	public void onScrollStateChanged (androidx.recyclerview.widget.RecyclerView p0, int p1)
 	{
 		n_onScrollStateChanged (p0, p1);
 	}
 
-	private native void n_onScrollStateChanged (android.support.v7.widget.RecyclerView p0, int p1);
+	private native void n_onScrollStateChanged (androidx.recyclerview.widget.RecyclerView p0, int p1);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PetInsights_all.Search.PetDetailsPage"
+             BackgroundColor="green"
+             Title="{Binding Name}">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image x:Name="ImgIcon" Source="{Binding ImgIcon}"/>
+            <Entry x:Name="Name" Text="{Binding Name}" IsReadOnly="True" BackgroundColor="Gray"/>
+            <Entry x:Name="Age" Text="{Binding Age}" IsReadOnly="False" BackgroundColor="Gray"/>
+            <Button Text="Update" Clicked="BtnUpdate_Pet"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

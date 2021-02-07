@@ -1,11 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.petinsights_all">
-    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.petinsights_all" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="29" />
 	<application android:label="PetInsights_all.Android" android:theme="@style/MainTheme">
 		<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyAGjwwLq7xu9ub4KurBTlrlTTBPBemAQCQ" />
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 		<uses-library android:name="org.apache.http.legacy" android:required="false" />
+		<provider android:name="android.support.v4.content.FileProvider"
+				android:authorities="com.companyname.petinsights_all.fileprovider"
+				android:exported="false"
+				android:grantUriPermissions="true">
+			<meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+				android:resource="@xml/file_paths"></meta-data>
+		</provider>
 	</application>
+
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.CAMERA" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />

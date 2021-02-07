@@ -2,7 +2,7 @@ package crc643f46942d9dd1fff9;
 
 
 public class ListViewRenderer_SwipeRefreshLayoutWithFixedNestedScrolling
-	extends android.support.v4.widget.SwipeRefreshLayout
+	extends androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 	implements
 		mono.android.IGCUserPeer
 {

@@ -2,7 +2,7 @@ package crc64ee486da937c010f4;
 
 
 public class ButtonRenderer
-	extends android.support.v7.widget.AppCompatButton
+	extends androidx.appcompat.widget.AppCompatButton
 	implements
 		mono.android.IGCUserPeer,
 		android.view.View.OnAttachStateChangeListener,

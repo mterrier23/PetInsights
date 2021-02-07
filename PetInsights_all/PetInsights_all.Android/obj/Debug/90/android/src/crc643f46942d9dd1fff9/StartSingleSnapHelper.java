@@ -10,7 +10,7 @@ public class StartSingleSnapHelper
 	public static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_calculateDistanceToFinalSnap:(Landroid/support/v7/widget/RecyclerView$LayoutManager;Landroid/view/View;)[I:GetCalculateDistanceToFinalSnap_Landroid_support_v7_widget_RecyclerView_LayoutManager_Landroid_view_View_Handler\n" +
+			"n_calculateDistanceToFinalSnap:(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;Landroid/view/View;)[I:GetCalculateDistanceToFinalSnap_Landroidx_recyclerview_widget_RecyclerView_LayoutManager_Landroid_view_View_Handler\n" +
 			"";
 		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.StartSingleSnapHelper, Xamarin.Forms.Platform.Android", StartSingleSnapHelper.class, __md_methods);
 	}
@@ -24,12 +24,12 @@ public class StartSingleSnapHelper
 	}
 
 
-	public int[] calculateDistanceToFinalSnap (android.support.v7.widget.RecyclerView.LayoutManager p0, android.view.View p1)
+	public int[] calculateDistanceToFinalSnap (androidx.recyclerview.widget.RecyclerView.LayoutManager p0, android.view.View p1)
 	{
 		return n_calculateDistanceToFinalSnap (p0, p1);
 	}
 
-	private native int[] n_calculateDistanceToFinalSnap (android.support.v7.widget.RecyclerView.LayoutManager p0, android.view.View p1);
+	private native int[] n_calculateDistanceToFinalSnap (androidx.recyclerview.widget.RecyclerView.LayoutManager p0, android.view.View p1);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
