@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace PetInsights_all.ProfileViews
+namespace PetInsights_all
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainProfile : ContentPage
     {
         public MainProfile()
         {
-            //InitializeComponent();
+            InitializeComponent();
         }
     }
 }

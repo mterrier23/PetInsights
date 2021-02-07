@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace PetInsights_all.BreedsViews
+namespace PetInsights_all
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainBreeds : ContentPage
     {
         public MainBreeds()
         {
-            //InitializeComponent();
+            InitializeComponent();
         }
     }
 }

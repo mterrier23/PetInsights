@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PetInsights_all.PetListView"
-             BackgroundColor="orange">
+             BackgroundColor="white">
     <StackLayout>
         <Label Text="PetList View" TextColor="Black" HorizontalOptions="Center"></Label>
         <ListView Grid.Row="1"

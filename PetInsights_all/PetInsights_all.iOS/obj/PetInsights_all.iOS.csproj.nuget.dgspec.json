@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all.iOS\\PetInsights_all.iOS.csproj": {}
+    "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights_new\\PetInsights_all\\PetInsights_all.iOS\\PetInsights_all.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all.iOS\\PetInsights_all.iOS.csproj": {
+    "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights_new\\PetInsights_all\\PetInsights_all.iOS\\PetInsights_all.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all.iOS\\PetInsights_all.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights_new\\PetInsights_all\\PetInsights_all.iOS\\PetInsights_all.iOS.csproj",
         "projectName": "PetInsights_all.iOS",
-        "projectPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all.iOS\\PetInsights_all.iOS.csproj",
+        "projectPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights_new\\PetInsights_all\\PetInsights_all.iOS\\PetInsights_all.iOS.csproj",
         "packagesPath": "C:\\Users\\Mailys Surface Pro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all.iOS\\obj\\",
+        "outputPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights_new\\PetInsights_all\\PetInsights_all.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all\\PetInsights_all.csproj": {
-                "projectPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all\\PetInsights_all.csproj"
+              "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights_new\\PetInsights_all\\PetInsights_all\\PetInsights_all.csproj": {
+                "projectPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights_new\\PetInsights_all\\PetInsights_all\\PetInsights_all.csproj"
               }
             }
           }
@@ -65,14 +65,14 @@
         }
       }
     },
-    "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all\\PetInsights_all.csproj": {
+    "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights_new\\PetInsights_all\\PetInsights_all\\PetInsights_all.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all\\PetInsights_all.csproj",
+        "projectUniqueName": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights_new\\PetInsights_all\\PetInsights_all\\PetInsights_all.csproj",
         "projectName": "PetInsights_all",
-        "projectPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all\\PetInsights_all.csproj",
+        "projectPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights_new\\PetInsights_all\\PetInsights_all\\PetInsights_all.csproj",
         "packagesPath": "C:\\Users\\Mailys Surface Pro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all\\obj\\",
+        "outputPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights_new\\PetInsights_all\\PetInsights_all\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

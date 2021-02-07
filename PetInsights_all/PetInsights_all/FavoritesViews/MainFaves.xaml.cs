@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace PetInsights_all.FavoritesViews
+namespace PetInsights_all
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainFaves : ContentPage
     {
         public MainFaves()
         {
-            //InitializeComponent();
+            InitializeComponent();
         }
     }
 }

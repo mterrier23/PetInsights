@@ -138,3 +138,13 @@ C:\Users\Mailys Surface Pro\Documents\Project\PetInsights\PetInsights_all\PetIns
 C:\Users\Mailys Surface Pro\Documents\Project\PetInsights\PetInsights_all\PetInsights_all.iOS\obj\iPhone\Debug\PetInsights_all.iOS.csproj.CopyComplete
 C:\Users\Mailys Surface Pro\Documents\Project\PetInsights\PetInsights_all\PetInsights_all.iOS\obj\iPhone\Debug\PetInsights_all.iOS.exe
 C:\Users\Mailys Surface Pro\Documents\Project\PetInsights\PetInsights_all\PetInsights_all.iOS\obj\iPhone\Debug\PetInsights_all.iOS.pdb
+C:\Users\Mailys Surface Pro\Documents\Project\PetInsights_new\PetInsights_all\PetInsights_all.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\Mailys Surface Pro\Documents\Project\PetInsights_new\PetInsights_all\PetInsights_all.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
+C:\Users\Mailys Surface Pro\Documents\Project\PetInsights_new\PetInsights_all\PetInsights_all.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\Mailys Surface Pro\Documents\Project\PetInsights_new\PetInsights_all\PetInsights_all.iOS\obj\iPhone\Debug\coremlc\_PartialAppManifest.items
+C:\Users\Mailys Surface Pro\Documents\Project\PetInsights_new\PetInsights_all\PetInsights_all.iOS\obj\iPhone\Debug\coremlc\_BundleResourceWithLogicalName.items
+C:\Users\Mailys Surface Pro\Documents\Project\PetInsights_new\PetInsights_all\PetInsights_all.iOS\obj\iPhone\Debug\optimized\
+C:\Users\Mailys Surface Pro\Documents\Project\PetInsights_new\PetInsights_all\PetInsights_all.iOS\obj\iPhone\Debug\PetInsights_all.iOS.csprojAssemblyReference.cache
+C:\Users\Mailys Surface Pro\Documents\Project\PetInsights_new\PetInsights_all\PetInsights_all.iOS\obj\iPhone\Debug\PetInsights_all.iOS.csproj.CoreCompileInputs.cache
+C:\Users\Mailys Surface Pro\Documents\Project\PetInsights_new\PetInsights_all\PetInsights_all.iOS\obj\iPhone\Debug\PetInsights_all.iOS.exe
+C:\Users\Mailys Surface Pro\Documents\Project\PetInsights_new\PetInsights_all\PetInsights_all.iOS\obj\iPhone\Debug\PetInsights_all.iOS.pdb

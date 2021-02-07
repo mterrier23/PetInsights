@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5ZEmijLWecE10ecA2z9RhGDmSwOQl0ZrASUQZp0+hv6/25t5f38q/aeDlLx79kqYRXRkbrIJPckQHgnu9uq2yw==",
+  "dgSpecHash": "x0Zfl743GEoCetaKsGc7bpoCjEVM7uhr3++var7oZrgQS320KAx4Vk+NL0/IXUhvdIJWh1LaIGR8tIbjS1oMvg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all.iOS\\PetInsights_all.iOS.csproj",
+  "projectFilePath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights_new\\PetInsights_all\\PetInsights_all.iOS\\PetInsights_all.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mailys Surface Pro\\.nuget\\packages\\firebasedatabase.net\\4.0.5\\firebasedatabase.net.4.0.5.nupkg.sha512",
     "C:\\Users\\Mailys Surface Pro\\.nuget\\packages\\firebasestorage.net\\1.0.3\\firebasestorage.net.1.0.3.nupkg.sha512",

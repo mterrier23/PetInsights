@@ -3235,11 +3235,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all.Android\\PetInsights_all.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights_new\\PetInsights_all\\PetInsights_all.Android\\PetInsights_all.Android.csproj",
       "projectName": "PetInsights_all.Android",
-      "projectPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all.Android\\PetInsights_all.Android.csproj",
+      "projectPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights_new\\PetInsights_all\\PetInsights_all.Android\\PetInsights_all.Android.csproj",
       "packagesPath": "C:\\Users\\Mailys Surface Pro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all.Android\\obj\\",
+      "outputPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights_new\\PetInsights_all\\PetInsights_all.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -3260,8 +3260,8 @@
       "frameworks": {
         "monoandroid10.0": {
           "projectReferences": {
-            "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all\\PetInsights_all.csproj": {
-              "projectPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all\\PetInsights_all.csproj"
+            "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights_new\\PetInsights_all\\PetInsights_all\\PetInsights_all.csproj": {
+              "projectPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights_new\\PetInsights_all\\PetInsights_all\\PetInsights_all.csproj"
             }
           }
         }

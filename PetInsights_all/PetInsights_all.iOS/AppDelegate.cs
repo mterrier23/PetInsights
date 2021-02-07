@@ -23,7 +23,6 @@ namespace PetInsights_all.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            Firebase.Core.App.Configure();
             Xamarin.FormsGoogleMaps.Init("AIzaSyAGjwwLq7xu9ub4KurBTlrlTTBPBemAQCQ"); // For Google Maps
             LoadApplication(new App());
 

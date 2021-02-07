@@ -26,7 +26,7 @@ namespace PetInsights_all.OrgSide
         public AddPet()
         {
             InitializeComponent();
-            BindingContext = new PetsViewModel();
+            //BindingContext = new PetsViewModel();
             imgChoosen.Source = ImageSource.FromResource("ic_pets.png"); // NOTE - CHANGE THIS
             services = new DBFirebase();
         }

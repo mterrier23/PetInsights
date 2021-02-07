@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eEtBFoIVYj0D6IBjdf76xQTNC1KB39XFnyGuHWSfQYadtATbwa5hQL9cnbSTu0IKGtWZFthY5P0YsDn2fiMRXA==",
+  "dgSpecHash": "UkHtfuqM5Xcr3eS3hYIu5w63j6Ru9OGc1Pu+VLyA3ma7yQ+CIVH3JCAW2HmKgidgeNd7stcmlzGGYxH1Zzp3lw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all.Android\\PetInsights_all.Android.csproj",
+  "projectFilePath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights_new\\PetInsights_all\\PetInsights_all.Android\\PetInsights_all.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mailys Surface Pro\\.nuget\\packages\\firebasedatabase.net\\4.0.5\\firebasedatabase.net.4.0.5.nupkg.sha512",
     "C:\\Users\\Mailys Surface Pro\\.nuget\\packages\\firebasestorage.net\\1.0.3\\firebasestorage.net.1.0.3.nupkg.sha512",
