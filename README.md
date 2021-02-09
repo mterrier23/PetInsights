@@ -27,5 +27,5 @@ Advised by Dr. Nan Niu.</em>
 [7]: https://github.com/mterrier23/PetInsights/tree/master/Project%20Report/Self%20Assessments
 [8]: https://github.com/mterrier23/PetInsights/tree/master/Project%20Report/Biographies
 [9]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/Expense%20Report.md
-[10]: https://docs.google.com/document/d/1ffzDfesRYpptUuVpmgqXOfXqrOoaYPrhtVMRdbpDhbw/edit?usp=sharing
+[10]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/User%20Docs%20-%20Asgn%232.pdf
 [11]: https://github.com/mterrier23/PetInsights/tree/master/Project%20Report/Appendix
