@@ -3229,39 +3229,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mailys Surface Pro\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "/Users/tosha/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights_new\\PetInsights_all\\PetInsights_all.Android\\PetInsights_all.Android.csproj",
+      "projectUniqueName": "/Users/tosha/PetInsights/PetInsights/PetInsights_all/PetInsights_all.Android/PetInsights_all.Android.csproj",
       "projectName": "PetInsights_all.Android",
-      "projectPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights_new\\PetInsights_all\\PetInsights_all.Android\\PetInsights_all.Android.csproj",
-      "packagesPath": "C:\\Users\\Mailys Surface Pro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights_new\\PetInsights_all\\PetInsights_all.Android\\obj\\",
+      "projectPath": "/Users/tosha/PetInsights/PetInsights/PetInsights_all/PetInsights_all.Android/PetInsights_all.Android.csproj",
+      "packagesPath": "/Users/tosha/.nuget/packages/",
+      "outputPath": "/Users/tosha/PetInsights/PetInsights/PetInsights_all/PetInsights_all.Android/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Mailys Surface Pro\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/Users/tosha/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "monoandroid10.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "monoandroid10.0": {
           "projectReferences": {
-            "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights_new\\PetInsights_all\\PetInsights_all\\PetInsights_all.csproj": {
-              "projectPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights_new\\PetInsights_all\\PetInsights_all\\PetInsights_all.csproj"
+            "/Users/tosha/PetInsights/PetInsights/PetInsights_all/PetInsights_all/PetInsights_all.csproj": {
+              "projectPath": "/Users/tosha/PetInsights/PetInsights/PetInsights_all/PetInsights_all/PetInsights_all.csproj"
             }
           }
         }
@@ -3335,7 +3328,7 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package downgrade: Xamarin.GooglePlayServices.Basement from 117.5.0 to 117.2.1. Reference the package directly from the project to select a different version. \r\n PetInsights_all.Android -> Xamarin.Firebase.Database 119.6.0 -> Xamarin.GooglePlayServices.Basement (>= 117.5.0) \r\n PetInsights_all.Android -> Xamarin.GooglePlayServices.Basement (>= 117.2.1)",
+      "message": "Detected package downgrade: Xamarin.GooglePlayServices.Basement from 117.5.0 to 117.2.1. Reference the package directly from the project to select a different version. \n PetInsights_all.Android -> Xamarin.Firebase.Database 119.6.0 -> Xamarin.GooglePlayServices.Basement (>= 117.5.0) \n PetInsights_all.Android -> Xamarin.GooglePlayServices.Basement (>= 117.2.1)",
       "libraryId": "Xamarin.GooglePlayServices.Basement",
       "targetGraphs": [
         "MonoAndroid,Version=v10.0"
@@ -3345,7 +3338,7 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package downgrade: Xamarin.GooglePlayServices.Base from 117.5.0 to 117.2.1. Reference the package directly from the project to select a different version. \r\n PetInsights_all.Android -> Xamarin.Firebase.Database 119.6.0 -> Xamarin.GooglePlayServices.Base (>= 117.5.0) \r\n PetInsights_all.Android -> Xamarin.GooglePlayServices.Base (>= 117.2.1)",
+      "message": "Detected package downgrade: Xamarin.GooglePlayServices.Base from 117.5.0 to 117.2.1. Reference the package directly from the project to select a different version. \n PetInsights_all.Android -> Xamarin.Firebase.Database 119.6.0 -> Xamarin.GooglePlayServices.Base (>= 117.5.0) \n PetInsights_all.Android -> Xamarin.GooglePlayServices.Base (>= 117.2.1)",
       "libraryId": "Xamarin.GooglePlayServices.Base",
       "targetGraphs": [
         "MonoAndroid,Version=v10.0"

@@ -1642,31 +1642,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mailys Surface Pro\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "/Users/tosha/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights_new\\PetInsights_all\\PetInsights_all\\PetInsights_all.csproj",
+      "projectUniqueName": "/Users/tosha/PetInsights/PetInsights/PetInsights_all/PetInsights_all/PetInsights_all.csproj",
       "projectName": "PetInsights_all",
-      "projectPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights_new\\PetInsights_all\\PetInsights_all\\PetInsights_all.csproj",
-      "packagesPath": "C:\\Users\\Mailys Surface Pro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights_new\\PetInsights_all\\PetInsights_all\\obj\\",
+      "projectPath": "/Users/tosha/PetInsights/PetInsights/PetInsights_all/PetInsights_all/PetInsights_all.csproj",
+      "packagesPath": "/Users/tosha/.nuget/packages/",
+      "outputPath": "/Users/tosha/PetInsights/PetInsights/PetInsights_all/PetInsights_all/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Mailys Surface Pro\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/Users/tosha/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1730,7 +1723,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
       }
     }
   }
