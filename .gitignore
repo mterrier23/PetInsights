@@ -154,6 +154,31 @@ packages/
 *.exe
 *.pdb
 
+#Specific Files For Testing
+PetInsights_all/PetInsights_all.Android/bin/Debug/PetInsights_all.Android.dll
+PetInsights_all/PetInsights_all.Android/bin/Debug/PetInsights_all.Android.pdb
+PetInsights_all/PetInsights_all.Android/bin/Debug/PetInsights_all.dll
+PetInsights_all/PetInsights_all.Android/bin/Debug/PetInsights_all.pdb
+PetInsights_all/PetInsights_all.Android/bin/Debug/com.companyname.petinsights_all-Signed.apk
+PetInsights_all/PetInsights_all.Android/bin/Debug/com.companyname.petinsights_all.apk
+PetInsights_all/PetInsights_all.Android/obj/PetInsights_all.Android.csproj.nuget.dgspec.json
+PetInsights_all/PetInsights_all.Android/obj/project.nuget.cache
+PetInsights_all/PetInsights_all.iOS/obj/PetInsights_all.iOS.csproj.nuget.dgspec.json
+PetInsights_all/PetInsights_all.iOS/obj/iPhone/Debug/PetInsights_all.iOS.csprojAssemblyReference.cache
+PetInsights_all/PetInsights_all.iOS/obj/project.nuget.cache
+PetInsights_all/PetInsights_all/bin/Debug/netstandard2.0/PetInsights_all.dll
+PetInsights_all/PetInsights_all/bin/Debug/netstandard2.0/PetInsights_all.pdb
+PetInsights_all/PetInsights_all/bin/Debug/netstandard2.0/ref/PetInsights_all.dll
+PetInsights_all/PetInsights_all/obj/Debug/netstandard2.0/PetInsights_all.csproj.CoreCompileInputs.cache
+PetInsights_all/PetInsights_all/obj/Debug/netstandard2.0/PetInsights_all.csproj.FileListAbsolute.txt
+PetInsights_all/PetInsights_all/obj/Debug/netstandard2.0/PetInsights_all.csprojAssemblyReference.cache
+PetInsights_all/PetInsights_all/obj/Debug/netstandard2.0/PetInsights_all.dll
+PetInsights_all/PetInsights_all/obj/Debug/netstandard2.0/PetInsights_all.pdb
+PetInsights_all/PetInsights_all/obj/Debug/netstandard2.0/ref/PetInsights_all.dll
+PetInsights_all/PetInsights_all/obj/PetInsights_all.csproj.nuget.dgspec.json
+PetInsights_all/PetInsights_all/obj/project.assets.json
+PetInsights_all/PetInsights_all/obj/project.nuget.cache
+
 # Windows Azure Build Output
 csx/
 *.build.csdef

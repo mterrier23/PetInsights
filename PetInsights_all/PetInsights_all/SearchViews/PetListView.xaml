@@ -1,38 +1,66 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PetInsights_all.PetListView"
-             BackgroundColor="white">
-    <StackLayout>
-        <Label Text="PetList View" TextColor="Black" HorizontalOptions="Center"></Label>
-        <ListView Grid.Row="1"
-                      x:Name="lstPets"
-                      ItemsSource="{Binding Pets}"
-                      ItemTapped="OnItemSelected"
-                      BackgroundColor="WhiteSmoke"
-                      HasUnevenRows="True">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Grid Padding="4" Margin="4">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="2*"></RowDefinition>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="1*"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                            <Frame IsClippedToBounds="True" Grid.Row="0" Grid.Column="0" HasShadow="True" Padding="0" BackgroundColor="White">
-                                <StackLayout Orientation="Horizontal">
-                                    <BoxView VerticalOptions="Center" HeightRequest="90" WidthRequest="6"></BoxView>
-                                    <Image Source="{Binding ImgIcon}" HeightRequest="100" VerticalOptions="Center" HorizontalOptions="Center"></Image>
-                                    <Label Text="{Binding Name}" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black"/>
-                                    <Label Text="{Binding Age}" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black"/>
-                                </StackLayout>
-                            </Frame>
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </StackLayout>
+             x:Class="PetInsights_all.PetListView">
+
+    <CollectionView ItemsSource="{Binding Pets}"
+                    x:Name="lstPets">
+        <CollectionView.ItemsLayout>
+            <GridItemsLayout Orientation="Vertical"
+                             Span="2"
+                             
+                             VerticalItemSpacing="10"
+                             HorizontalItemSpacing="10">
+            </GridItemsLayout>
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+
+                    <Frame Padding="15"
+                           Margin="10"
+                           HasShadow="True">
+                           
+           <StackLayout>
+               <Image HeightRequest="120" Source="{Binding ImgIcon}" Aspect="AspectFill" BackgroundColor="LightGray"></Image>
+               <StackLayout Orientation="Horizontal">
+                   <Label Text="{Binding Name}"
+                     HorizontalOptions="StartAndExpand"
+                     FontSize="24"
+                     TextColor="Black"
+                     VerticalTextAlignment="End"
+                     FontAttributes="Bold"></Label>
+
+                   <Label Text="x mi."
+                          HorizontalOptions="End"
+                          FontSize="16"
+                          TextColor="DarkSlateBlue"
+                          Margin="0,5,0,0"
+                          FontAttributes="Bold"
+                          ></Label>
+
+               </StackLayout>
+              <StackLayout Orientation="Horizontal">
+               <Label Text="Breed Binding"
+                      HorizontalOptions="StartAndExpand"
+                      TextColor="Black"
+                      FontSize="Small"></Label>
+
+                
+              <!-- Gender ICON
+                  <Image Source="femaleicon.png"
+                     HeightRequest="18"
+                     ></Image>-->
+              </StackLayout>
+
+               <Label Text="{Binding Age, StringFormat='Age: {0:F0}'}"
+                       TextColor="Black"
+                       FontSize="Small"></Label>
+           </StackLayout>
+
+       </Frame>    
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+
+
+    </CollectionView>
 </ContentPage>
