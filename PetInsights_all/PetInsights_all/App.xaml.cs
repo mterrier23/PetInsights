@@ -10,9 +10,15 @@ namespace PetInsights_all
         {
             //InitializeComponent(); // was here originally
 
-            //MainPage = new GetLocation(); // causes errors
-            MainPage = new NavigationPage(new GetLocation()); // previously was working fine
-            // possible going to have errors here due to update student stuff
+            // If user previously used app, we skip location page
+            if (Application.Current.Properties["UserLocation"] == null)
+            {
+                MainPage = new NavigationPage(new GetLocation()); // previously was working fine
+            }
+            else
+            {
+                MainPage = new NavigationPage(new MainTabbed()); // testing
+            }
 
             // NOTE - test making MainTabbed the mainpage, and putting GetLocation modally on top
         }

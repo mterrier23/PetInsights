@@ -6,7 +6,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Main Search Page" TextColor="Black" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-            <Entry x:Name="location" Placeholder="{Binding Location}" BackgroundColor="Black"></Entry>
+            <Entry x:Name="location" Text ="{Binding Location}" TextColor="White" Placeholder="{Binding Location}" BackgroundColor="Black"></Entry>
             <Button Text="Show Pets on Map" BackgroundColor="Blue" Clicked="PetMapButton_OnClicked" VerticalOptions="CenterAndExpand">
             </Button>
             <Button Text="Show Pets in List" BackgroundColor="Blue" Clicked="PetListButton_OnClicked" VerticalOptions="CenterAndExpand">

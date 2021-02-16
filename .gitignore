@@ -154,6 +154,12 @@ packages/
 *.exe
 *.pdb
 
+#API references
+PetInsights_all/PetInsights_all.Android/Resources/values/strings.xml
+PetInsights_all/PetInsights_all.Android/google-services.json
+PetInsights_all/PetInsights_all.iOS/GoogleService-Info.plist
+
+
 #Specific Files For Testing
 PetInsights_all/PetInsights_all.Android/bin/Debug/PetInsights_all.Android.dll
 PetInsights_all/PetInsights_all.Android/bin/Debug/PetInsights_all.Android.pdb

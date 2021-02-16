@@ -29,8 +29,18 @@ namespace PetInsights_all
                 realZip = ConfirmLocation(location.Text);
                 location.Text = string.Empty;
             }
-            // location.Text save as cached varible
-            //updateDistanceonPets(location.Text);      // testing 
+            // Saves data to user's device (from https://stackoverflow.com/questions/31655327/how-can-i-save-some-user-data-locally-on-my-xamarin-forms-app)
+            Application.Current.Properties["UserLocation"] = location.Text;
+            await Application.Current.SavePropertiesAsync();
+
+            // TO DO : ADD CODE TO SEE IF THIS PROPERTY ALREADY EXISTS, AND IF SO, SKIP THE GETLOCATION PAGE!!
+
+            // To access the data on a different page, use:
+            // var value = Application.Current.Properties["UserLocation"].ToString();
+
+
+            // Might implement later -- still researching solution
+            //updateDistanceonPets(location.Text);      
             location.Text = string.Empty;
             await Navigation.PushModalAsync(new MainTabbed());
         }
