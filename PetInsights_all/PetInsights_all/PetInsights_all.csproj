@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="FirebaseTutorial.xaml">
+    <EmbeddedResource Update="Archive\FirebaseTutorial.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="GetLocation.xaml">

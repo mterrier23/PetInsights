@@ -15,7 +15,6 @@ namespace PetInsights_all
     {
         public MainSearch()
         {
-            Console.WriteLine("in mainsearch");
             InitializeComponent();
         }
         async void PetMapButton_OnClicked(object sender, EventArgs e)

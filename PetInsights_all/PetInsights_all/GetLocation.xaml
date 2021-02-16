@@ -5,9 +5,10 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="LightGray">
             <Label TextColor="Black" Text="Enter your ZipCode" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-            <Entry  />
+            <Entry x:Name="location" BackgroundColor="Black"></Entry>
             <Button Text="Find Pets" BackgroundColor="Blue" Clicked="FindPetsButton_OnClicked">
             </Button>
+            <Button Text="I'm an Org Rep" TextColor="Black" Clicked="GoToOrgSite"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

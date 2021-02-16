@@ -60,7 +60,6 @@ C:\Users\Mailys Surface Pro\Documents\Project\PetInsights_new\PetInsights_all\Pe
 C:\Users\Mailys Surface Pro\Documents\Project\PetInsights_new\PetInsights_all\PetInsights_all\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\Mailys Surface Pro\Documents\Project\PetInsights_new\PetInsights_all\PetInsights_all\obj\Debug\netstandard2.0\BreedsViews\MainBreeds.xaml.g.cs
 C:\Users\Mailys Surface Pro\Documents\Project\PetInsights_new\PetInsights_all\PetInsights_all\obj\Debug\netstandard2.0\FavoritesViews\MainFaves.xaml.g.cs
-C:\Users\Mailys Surface Pro\Documents\Project\PetInsights_new\PetInsights_all\PetInsights_all\obj\Debug\netstandard2.0\FirebaseTutorial.xaml.g.cs
 C:\Users\Mailys Surface Pro\Documents\Project\PetInsights_new\PetInsights_all\PetInsights_all\obj\Debug\netstandard2.0\GetLocation.xaml.g.cs
 C:\Users\Mailys Surface Pro\Documents\Project\PetInsights_new\PetInsights_all\PetInsights_all\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 C:\Users\Mailys Surface Pro\Documents\Project\PetInsights_new\PetInsights_all\PetInsights_all\obj\Debug\netstandard2.0\MainTabbed.xaml.g.cs
@@ -77,3 +76,4 @@ C:\Users\Mailys Surface Pro\Documents\Project\PetInsights_new\PetInsights_all\Pe
 C:\Users\Mailys Surface Pro\Documents\Project\PetInsights_new\PetInsights_all\PetInsights_all\obj\Debug\netstandard2.0\PetInsights_all.dll
 C:\Users\Mailys Surface Pro\Documents\Project\PetInsights_new\PetInsights_all\PetInsights_all\obj\Debug\netstandard2.0\ref\PetInsights_all.dll
 C:\Users\Mailys Surface Pro\Documents\Project\PetInsights_new\PetInsights_all\PetInsights_all\obj\Debug\netstandard2.0\PetInsights_all.pdb
+C:\Users\Mailys Surface Pro\Documents\Project\PetInsights_new\PetInsights_all\PetInsights_all\obj\Debug\netstandard2.0\Archive\FirebaseTutorial.xaml.g.cs

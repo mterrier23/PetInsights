@@ -35,7 +35,7 @@ namespace PetInsights_all.ViewModel
         public PetsViewModel()
         {
             services = new DBFirebase();
-            Pets = services.getPets();
+            Pets = services.getPets(); // NOTE - change here
             AddPetCommand = new Command(async () => await addPetAsync(ImgIcon, Name, Age));
         }
 

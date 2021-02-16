@@ -23,7 +23,7 @@ namespace PetInsights_all.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            Xamarin.FormsGoogleMaps.Init("AIzaSyAGjwwLq7xu9ub4KurBTlrlTTBPBemAQCQ"); // For Google Maps
+            Xamarin.FormsGoogleMaps.Init("AIzaSyADF0ZvCrVDnEveoNFn1xQf2x5BWaIoY7U"); // For Google Maps
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

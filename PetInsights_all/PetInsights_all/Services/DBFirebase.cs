@@ -16,6 +16,7 @@ namespace PetInsights_all.Services
     {
         FirebaseClient client;
         FirebaseStorage firebaseStorage;
+        //string curUser; // can be used for user login stuff
 
         public DBFirebase()
         {
@@ -30,6 +31,15 @@ namespace PetInsights_all.Services
                 .Child("pets")
                 .AsObservable<Pet>()
                 .AsObservableCollection();
+
+            // Example of querying with firebase
+           /* var users =  client
+              .Child("pets")
+              .OrderBy("regdate")
+              .StartAt("2019-01-05")
+              .EndAt("2019-01-10")
+              .OnceAsync<User>();
+           */
 
             return petData;
         }
@@ -65,5 +75,30 @@ namespace PetInsights_all.Services
                 .PutAsync(fileStream);
             return imageUrl;    // NOTE -- its this imageUrl that we want to save into the db
         }
+
+        // Below code can be used for creating real user
+        /*
+         * public async Task AddTempUser(string location)
+        {
+            TempUser tu = new TempUser() { Location = location};
+            var newuser = await client
+                .Child("tmpusers")
+                .PostAsync(tu);
+            curUser = newuser.Key;
+            //Console.WriteLine(:New Firebase id is " + newuser.Key);
+        }
+        
+        public string GetDBLocation()
+        {
+            Console.WriteLine("In getdblocation");
+            string myLoc = "";
+            var petData = client
+                .Child(curUser)
+                .Child("Location");
+            Console.WriteLine("petdata = " + petData);
+            return myLoc;
+        }
+        */
+
     }
 }
