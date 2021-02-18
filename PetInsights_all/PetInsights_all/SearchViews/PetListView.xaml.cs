@@ -31,11 +31,13 @@ namespace PetInsights_all
 
         public async void OnItemSelected(object sender, ItemTappedEventArgs args)
         {
+            Console.WriteLine("on Item Selected");
             var pet = args.Item as Pet;
             if (pet == null) return;
 
             await Navigation.PushAsync(new PetDetailsPage(pet));
             lstPets.SelectedItem = null;
         }
+
     }
 }

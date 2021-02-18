@@ -32,9 +32,6 @@ namespace PetInsights_all
             // Saves data to user's device (from https://stackoverflow.com/questions/31655327/how-can-i-save-some-user-data-locally-on-my-xamarin-forms-app)
             Application.Current.Properties["UserLocation"] = location.Text;
             await Application.Current.SavePropertiesAsync();
-
-            // TO DO : ADD CODE TO SEE IF THIS PROPERTY ALREADY EXISTS, AND IF SO, SKIP THE GETLOCATION PAGE!!
-
             // To access the data on a different page, use:
             // var value = Application.Current.Properties["UserLocation"].ToString();
 
