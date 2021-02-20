@@ -36,6 +36,10 @@ namespace PetInsights_all.ViewModel
         {
             services = new DBFirebase();
             Pets = services.getPets(); // NOTE - change here
+            if (Pets != null)
+                Console.WriteLine("pets isn't null");
+            else Console.WriteLine("pets is null");
+            // NOTE - pets isn't null!
             AddPetCommand = new Command(async () => await addPetAsync(ImgIcon, Name, Age));
         }
 

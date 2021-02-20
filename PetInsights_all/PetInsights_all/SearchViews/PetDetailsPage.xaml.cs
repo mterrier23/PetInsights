@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PetInsights_all.Model;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using PetInsights_all.SearchViews;
 
 namespace PetInsights_all.Search
 {
@@ -15,20 +15,26 @@ namespace PetInsights_all.Search
     public partial class PetDetailsPage : ContentPage
     {
         DBFirebase services;
-        public PetDetailsPage(Pet pet)
+        Pet pet;
+        public PetDetailsPage(Pet _pet)
         {
             InitializeComponent();
-            BindingContext = pet;
+            pet = _pet;
+            BindingContext = _pet;
             services = new DBFirebase();
         }
 
         public async void BtnUpdate_Pet(object sender, EventArgs e)
         {
-            Console.WriteLine("******pressed button but before update pet call ****");
             await services.UpdatePet(
                 Name.Text, int.Parse(Age.Text));
-            Console.WriteLine("After update pet function call");
             await Navigation.PopAsync();
+        }
+
+        public async void BtnAddComment(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AddCommentPage(pet));
+            //await Navigation.PopAsync();
         }
     }
 }

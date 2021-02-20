@@ -19,8 +19,8 @@ namespace PetInsights_all
         public PetListView()
         {
             InitializeComponent();
-
             BindingContext = new PetsViewModel();
+            Console.WriteLine("In pet list view");
         }
 
      

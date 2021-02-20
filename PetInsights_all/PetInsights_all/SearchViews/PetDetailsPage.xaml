@@ -5,11 +5,14 @@
              BackgroundColor="white"
              Title="{Binding Name}">
     <ContentPage.Content>
-        <StackLayout>
-            <Image x:Name="ImgIcon" Source="{Binding ImgIcon}"/>
-            <Entry x:Name="Name" Text="{Binding Name}" IsReadOnly="True" BackgroundColor="Gray"/>
-            <Entry x:Name="Age" Text="{Binding Age}" IsReadOnly="False" BackgroundColor="Gray"/>
-            <Button Text="Update" Clicked="BtnUpdate_Pet"/>
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <Image x:Name="ImgIcon" Source="{Binding ImgIcon}"/>
+                <Entry x:Name="Name" Text="{Binding Name}" IsReadOnly="True" BackgroundColor="Gray"/>
+                <Entry x:Name="Age" Text="{Binding Age}" IsReadOnly="False" BackgroundColor="Gray"/>
+                <Button Text="Add Comment" Clicked="BtnAddComment"/>
+                <Button Text="Update" Clicked="BtnUpdate_Pet"/>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

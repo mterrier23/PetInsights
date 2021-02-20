@@ -12,7 +12,7 @@ namespace PetInsights_all
     public class FirebaseHelper_old
     {
         FirebaseClient firebase = new FirebaseClient("https://petinsights-4dc78.firebaseio.com");
-
+        /*
         public async Task<List<Pet>> GetAllPets()
         {
 
@@ -62,6 +62,7 @@ namespace PetInsights_all
             await firebase.Child("pets").Child(toDeletePet.Key).DeleteAsync();
 
         }
+        */
     }
 
 }

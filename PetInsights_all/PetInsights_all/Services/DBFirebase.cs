@@ -16,7 +16,6 @@ namespace PetInsights_all.Services
     {
         FirebaseClient client;
         FirebaseStorage firebaseStorage;
-        //string curUser; // can be used for user login stuff
 
         public DBFirebase()
         {
@@ -27,6 +26,7 @@ namespace PetInsights_all.Services
         // to retrieve data from database
         public ObservableCollection<Pet> getPets()
         {
+            Console.WriteLine("in get Pets");
             var petData = client
                 .Child("pets")
                 .AsObservable<Pet>()
@@ -44,12 +44,31 @@ namespace PetInsights_all.Services
             return petData;
         }
 
-        public async Task AddPetTask(string name, int age, string imgIcon)
+        public async Task<Pet> AddPetTask(string name, int age, string imgIcon)
         {
-            Pet p = new Pet() { ImgIcon = imgIcon, Name = name, Age = age };
-            await client
+            List<string> comments = new List<string>();
+            Pet p = new Pet();
+            var newPet = await client
                 .Child("pets")
                 .PostAsync(p);
+            string curPetKey = newPet.Key;
+
+            p.ImgIcon = imgIcon;
+            p.Name = name;
+            p.Age = age;
+            p.PetId = curPetKey;
+            p.Comments = comments;
+
+            Console.WriteLine("pet key = " + curPetKey);
+            await client
+                 .Child("pets")
+                 .Child(newPet.Key)
+                 .PutAsync(p);    
+            return p;
+
+            // NOTE: this code is making two calls to the DB to insert one pet... not at all the most effective, but all I can think of so far with peptId stuff.
+            // NOTE: instead of using firebase's genreated id, we could also create our own id generator and won't have to dea w this double call anymore
+
         }
 
 
@@ -60,6 +79,8 @@ namespace PetInsights_all.Services
                 .OnceAsync<Pet>()).FirstOrDefault
                 (a => a.Object.Name == name);
 
+            // NOTE : NEED TO CHANGE THIS WITH ID INSTEAD
+
             Pet p = new Pet() { Name = name, Age = age };
             await client
                 .Child("pets")
@@ -69,11 +90,22 @@ namespace PetInsights_all.Services
 
         public async Task<string> UploadFile(Stream fileStream, string fileName)
         {
+            Console.WriteLine("in db upload file");
             var imageUrl = await firebaseStorage
                 .Child("postImages")
                 .Child(fileName)
                 .PutAsync(fileStream);
             return imageUrl;    // NOTE -- its this imageUrl that we want to save into the db
+        }
+
+        public async Task AddPetComment(Pet pet, string comment)
+        {
+            List<string> comments = pet.Comments;
+            comments.Add(comment);
+
+            await client
+                .Child($"pets/{pet.PetId}/Comments")
+                .PutAsync(comments);
         }
 
         // Below code can be used for creating real user

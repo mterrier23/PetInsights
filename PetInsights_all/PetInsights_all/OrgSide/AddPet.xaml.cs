@@ -12,14 +12,14 @@ using System.Diagnostics;
 using System.IO;
 using PetInsights_all.Services;
 using PetInsights_all.ViewModel;
-
+using PetInsights_all.Model;
+using PetInsights_all.Search;
 
 namespace PetInsights_all.OrgSide
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddPet : ContentPage
     {
-
         private DBFirebase services;
         MediaFile file;
         string url;
@@ -34,14 +34,16 @@ namespace PetInsights_all.OrgSide
 
         private async void btnTakePic_Clicked(object sender, EventArgs e)
         {
-            var photo = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
+            // NOTE - testing with shared file variable (assuming we can only upload one image here)
+
+            file = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
             {
                 PhotoSize = PhotoSize.Medium,
-                CompressionQuality = 40, /* percentage */
+                CompressionQuality = 40, // percentage 
             });
 
-            if (photo != null)
-                imgChoosen.Source = ImageSource.FromStream(() => { return photo.GetStream(); });
+            if (file != null)
+                imgChoosen.Source = ImageSource.FromStream(() => { return file.GetStream(); });
         }
 
         private async void btnSelectPic_Clicked(object sender, EventArgs e)
@@ -68,12 +70,15 @@ namespace PetInsights_all.OrgSide
             }
         }
 
+        // NOTE: added url line into addPet -- upload image button isn't needed anymore
+        /*
         private async void btnUpload_Clicked(object sender, EventArgs e)
         {
-            Busy(); // NOTE - DIDN'T GET PAST THIS POINT
+            Busy();
             url = await services.UploadFile(file.GetStream(), Path.GetFileName(file.Path));
             NotBusy();
         }
+        */
 
         public void Busy()
         {
@@ -81,7 +86,7 @@ namespace PetInsights_all.OrgSide
             uploadIndicator.IsRunning = true;
             btnSelectPic.IsEnabled = false;
             btnTakePic.IsEnabled = false;
-            btnUpload.IsEnabled = false;
+            //btnUpload.IsEnabled = false;
         }
 
         public void NotBusy()
@@ -90,22 +95,28 @@ namespace PetInsights_all.OrgSide
             uploadIndicator.IsRunning = false;
             btnSelectPic.IsEnabled = true;
             btnTakePic.IsEnabled = true;
-            btnUpload.IsEnabled = true;
+            //btnUpload.IsEnabled = true;
         }
 
         private async void BtnAdd_Clicked(object sender, EventArgs e)
         {
-             await services.AddPetTask(name.Text, Convert.ToInt32(age.Text), url);
-             name.Text = string.Empty;
-             age.Text = string.Empty;
-             imgChoosen.Source = ImageSource.FromResource("ic_pets.png"); // NOTE - CHANGE THIS
-             await DisplayAlert("Success", "Pet Added Successfully", "OK");
+            Busy();
+            url = await services.UploadFile(file.GetStream(), Path.GetFileName(file.Path));
+            Pet p = await services.AddPetTask(name.Text, Convert.ToInt32(age.Text), url);
+            
+            name.Text = string.Empty;
+            age.Text = string.Empty;
+            imgChoosen.Source = ImageSource.FromResource("ic_pets.png"); // NOTE - CHANGE THIS
+            NotBusy();
+            await DisplayAlert("Success", "Pet Added Successfully", "OK");
+            await Navigation.PushAsync(new PetDetailsPage(p));
+
 
             // now we need to update list of pets -- check if it doesn't do it automatically
             /* var allPets = services.getPets();
              lstPets.ItemsSource = allPets; 
             */
-            
+
         }
     }
     }

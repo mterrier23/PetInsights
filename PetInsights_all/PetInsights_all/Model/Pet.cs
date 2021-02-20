@@ -11,7 +11,10 @@ namespace PetInsights_all.Model
         public string ImgIcon { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
-        public int PetId { get; set; }
+        public string PetId { get; set; }
+
+        public List<string> Comments { get; set; }
+
 
         // NOTE - enter other fields of the table here
     }

@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Text.RegularExpressions;
 using PetInsights_all.OrgSide;
+using PetInsights_all.SearchViews;
 
 namespace PetInsights_all
 {
@@ -51,20 +52,19 @@ namespace PetInsights_all
             Application.Current.SavePropertiesAsync();
         }
 
-        // find out how to do binding location stuff
         async void PetMapButton_OnClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new PetMapView()); // NOTE - change this bc don't need navigation for this page
+            await Navigation.PushAsync(new PetMapView()); 
         }
 
         async void PetListButton_OnClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new PetListView()); // NOTE - change this bc don't need navigation for this page
+            await Navigation.PushAsync(new PetListView()); 
         }
 
         async void AddPetButton_OnClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AddPet()); // NOTE - change this bc don't need navigation for this page
+            await Navigation.PushAsync(new AddPet()); 
         }
 
 

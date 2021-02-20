@@ -14,7 +14,7 @@
             <Button x:Name="btnTakePic" Text="Take Picture" BackgroundColor="DodgerBlue" Clicked="btnTakePic_Clicked" TextColor="White">
             </Button>
             <ActivityIndicator x:Name="uploadIndicator" IsVisible="False" IsRunning="False" Color="DodgerBlue" />
-            <Button Text="Upload Image" Clicked="btnUpload_Clicked" x:Name="btnUpload" BackgroundColor="Blue" TextColor="White" />
+            <!--Button Text="(OLD)Upload Image" Clicked="btnUpload_Clicked" x:Name="btnUpload" BackgroundColor="Blue" TextColor="White" />-->
             <Button Text="Add Pet" Clicked="BtnAdd_Clicked" x:Name="btnAddPet" BackgroundColor="Blue" TextColor="White" />
         </StackLayout>
     </ContentPage.Content>
