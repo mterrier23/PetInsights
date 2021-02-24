@@ -47,6 +47,7 @@ namespace PetInsights_all.Services
         public async Task<Pet> AddPetTask(string name, int age, string imgIcon)
         {
             List<string> comments = new List<string>();
+            comments.Add("");   // NOTE: temporary solution to comments section not showing up otherwise
             Pet p = new Pet();
             var newPet = await client
                 .Child("pets")
@@ -100,12 +101,25 @@ namespace PetInsights_all.Services
 
         public async Task AddPetComment(Pet pet, string comment)
         {
-            List<string> comments = pet.Comments;
-            comments.Add(comment);
+            try
+            {
+                List<string> comments = pet.Comments;
+                comments.Add(comment);
 
-            await client
-                .Child($"pets/{pet.PetId}/Comments")
-                .PutAsync(comments);
+                /* await client
+                     .Child($"pets/{pet.PetId}/Comments")
+                     .PutAsync(comments);
+                */ // this might still work
+
+                await client
+                    .Child($"pets/{pet.PetId}")
+                    .Child("Comments")
+                    .PutAsync(comments);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("comment error = " + e);
+            }
         }
 
         // Below code can be used for creating real user
