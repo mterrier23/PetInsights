@@ -16,12 +16,16 @@ namespace PetInsights_all.Search
     {
         DBFirebase services;
         Pet pet;
+
         public PetDetailsPage(Pet _pet)
         {
             InitializeComponent();
             pet = _pet;
             BindingContext = _pet;
             services = new DBFirebase();
+            var comments = _pet.Comments;
+            var topComments = comments.Take(5).ToList();
+            lstComments.ItemsSource = topComments;
         }
 
         public async void BtnUpdate_Pet(object sender, EventArgs e)
