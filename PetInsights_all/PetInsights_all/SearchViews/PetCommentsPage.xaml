@@ -1,17 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PetInsights_all.Search.PetDetailsPage"
+             x:Class="PetInsights_all.SearchViews.PetCommentsPage"
              BackgroundColor="white"
              Title="{Binding Name}">
     <ContentPage.Content>
-       <ScrollView>
+        <ScrollView>
             <StackLayout>
-                <Image x:Name="ImgIcon" Source="{Binding ImgIcon}"/>
-                <Entry x:Name="Name" Text="{Binding Name}" IsReadOnly="True" BackgroundColor="Gray"/>
-                <Entry x:Name="Age" Text="{Binding Age}" IsReadOnly="False" BackgroundColor="Gray"/>
-                <Button Text="Add Comment" Clicked="BtnAddComment"/>
-                <Button Text="Update" Clicked="BtnUpdate_Pet"/>
                 <Label Text="Comments" TextColor="Black" HorizontalOptions="Center"></Label>
                 <ListView x:Name="lstComments" ItemsSource="{Binding Comments}"
                   HorizontalOptions="FillAndExpand">
@@ -21,7 +16,6 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <Button Text="See All" Clicked="BtnSeeComments"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

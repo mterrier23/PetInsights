@@ -40,5 +40,11 @@ namespace PetInsights_all.Search
             await Navigation.PushAsync(new AddCommentPage(pet));
             //await Navigation.PopAsync();
         }
+
+        public async void BtnSeeComments(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PetCommentsPage(pet));
+            //await Navigation.PopAsync();
+        }
     }
 }
