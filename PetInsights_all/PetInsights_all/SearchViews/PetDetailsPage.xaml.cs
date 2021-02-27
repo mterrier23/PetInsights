@@ -30,9 +30,11 @@ namespace PetInsights_all.Search
 
         public async void BtnUpdate_Pet(object sender, EventArgs e)
         {
+            /*
             await services.UpdatePet(
                 Name.Text, int.Parse(Age.Text));
             await Navigation.PopAsync();
+            */
         }
 
         public async void BtnAddComment(object sender, EventArgs e)
