@@ -59,8 +59,8 @@ namespace PetInsights_all
 
         async void PetListButton_OnClicked(object sender, EventArgs e)
         {
-            //await Navigation.PushAsync(new PetListView()); 
-            await Navigation.PushAsync(new templist());
+            await Navigation.PushAsync(new PetListView()); 
+            //await Navigation.PushAsync(new templist());
         }
 
         async void AddPetButton_OnClicked(object sender, EventArgs e)

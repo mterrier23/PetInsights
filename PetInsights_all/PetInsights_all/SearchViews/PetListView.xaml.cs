@@ -29,15 +29,31 @@ namespace PetInsights_all
             await Navigation.PopAsync();
         }
 
-        public async void OnItemSelected(object sender, ItemTappedEventArgs args)
+
+        public async void OnTapGesture(object sender, EventArgs e)
+        {
+            Console.WriteLine("Tap Success!");
+            await Navigation.PopAsync();
+            //await Navigation.PushAsync(new PetDetailsPage(pet))
+        }
+
+        async void lstPets_SelectionChanged(System.Object sender, Xamarin.Forms.SelectionChangedEventArgs e)
         {
             Console.WriteLine("on Item Selected");
-            var pet = args.Item as Pet;
-            if (pet == null) return;
+
+            var pet = e.CurrentSelection.First() as Pet;
+            Console.WriteLine(pet.Name);
+
+            if (pet == null)
+            {
+                Console.WriteLine("Pet is Null");
+                return;
+            }
 
             await Navigation.PushAsync(new PetDetailsPage(pet));
-            lstPets.SelectedItem = null;
+         
         }
+        
 
     }
 }
