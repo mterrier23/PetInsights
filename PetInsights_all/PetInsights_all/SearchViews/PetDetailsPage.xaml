@@ -71,7 +71,7 @@
                     </Grid.ColumnDefinitions>
                     <Button Grid.Column="0" Text="Leave a Comment"  Clicked="BtnAddComment" FontSize="Micro"></Button>
                     <Label Grid.Column="1" Text="|" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center"></Label>
-                    <Button Grid.Column="2" Text="Add Photo" />
+                    <Button Grid.Column="2" Text="Add Photo" Clicked="BtnAddMedia"></Button>
                     <Label Grid.Column="3" Text="|" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center"></Label>
                     <Button Grid.Column="4" Text="Favorite"/>
                 </Grid>

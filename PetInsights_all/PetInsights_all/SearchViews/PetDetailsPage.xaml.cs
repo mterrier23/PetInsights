@@ -43,6 +43,12 @@ namespace PetInsights_all.Search
             //await Navigation.PopAsync();
         }
 
+        public async void BtnAddMedia(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AddMediaPage());
+            //await Navigation.PopAsync();
+        }
+
         public async void BtnSeeComments(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new PetCommentsPage(pet));
