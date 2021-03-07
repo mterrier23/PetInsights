@@ -2100,39 +2100,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mailys Surface Pro\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "/Users/tosha/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all.iOS\\PetInsights_all.iOS.csproj",
+      "projectUniqueName": "/Users/tosha/PetInsights/PetInsights/PetInsights_all/PetInsights_all.iOS/PetInsights_all.iOS.csproj",
       "projectName": "PetInsights_all.iOS",
-      "projectPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all.iOS\\PetInsights_all.iOS.csproj",
-      "packagesPath": "C:\\Users\\Mailys Surface Pro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all.iOS\\obj\\",
+      "projectPath": "/Users/tosha/PetInsights/PetInsights/PetInsights_all/PetInsights_all.iOS/PetInsights_all.iOS.csproj",
+      "packagesPath": "/Users/tosha/.nuget/packages/",
+      "outputPath": "/Users/tosha/PetInsights/PetInsights/PetInsights_all/PetInsights_all.iOS/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Mailys Surface Pro\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/Users/tosha/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all\\PetInsights_all.csproj": {
-              "projectPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all\\PetInsights_all.csproj"
+            "/Users/tosha/PetInsights/PetInsights/PetInsights_all/PetInsights_all/PetInsights_all.csproj": {
+              "projectPath": "/Users/tosha/PetInsights/PetInsights/PetInsights_all/PetInsights_all/PetInsights_all.csproj"
             }
           }
         }
