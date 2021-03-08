@@ -12,6 +12,7 @@ namespace PetInsights_all.Model
         public string Name { get; set; }
         public int Age { get; set; }
         public string PetId { get; set; }
+        public List<string> Media { get; set; }
 
         public List<string> Comments { get; set; }
 

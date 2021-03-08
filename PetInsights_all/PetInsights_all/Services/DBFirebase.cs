@@ -48,6 +48,8 @@ namespace PetInsights_all.Services
         {
             List<string> comments = new List<string>();
             comments.Add("");   // NOTE: temporary solution to comments section not showing up otherwise
+            List<string> media = new List<string>();
+            media.Add(imgIcon);
             Pet p = new Pet();
             var newPet = await client
                 .Child("pets")
@@ -59,6 +61,7 @@ namespace PetInsights_all.Services
             p.Age = age;
             p.PetId = curPetKey;
             p.Comments = comments;
+            p.Media = media;
 
             Console.WriteLine("pet key = " + curPetKey);
             await client
@@ -91,13 +94,23 @@ namespace PetInsights_all.Services
 
         public async Task<string> UploadFile(Stream fileStream, string fileName)
         {
-            Console.WriteLine("in db upload file");
-            var imageUrl = await firebaseStorage
-                .Child("postImages")
-                .Child(fileName)
-                .PutAsync(fileStream);
-            return imageUrl;    // NOTE -- its this imageUrl that we want to save into the db
+            try
+            {
+                Console.WriteLine("**filenname = " + fileName);
+                var imageUrl = await firebaseStorage
+                    .Child("postImages")
+                    .Child(fileName)
+                    .PutAsync(fileStream);
+                Console.WriteLine("**upload url = " + imageUrl);
+                return imageUrl;    // NOTE -- its this imageUrl that we want to save into the db
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Upload error = " + e);
+                return "";
+            }
         }
+
 
         public async Task AddPetComment(Pet pet, string comment)
         {
@@ -115,6 +128,31 @@ namespace PetInsights_all.Services
                     .Child($"pets/{pet.PetId}")
                     .Child("Comments")
                     .PutAsync(comments);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("comment error = " + e);
+            }
+        }
+
+        public async Task AddPetMedia(Pet pet, List<string> urls)
+        {
+            try
+            {
+                Console.WriteLine("**in add pet media");
+                List<string> media = pet.Media;
+                Console.WriteLine("**prev media = " + pet.Media.Count);
+                // NOTE url string size is 0.. why ? 
+                foreach (string url in urls) {
+                    Console.WriteLine("**adding a new media url");
+                    media.Add(url);
+                }
+                Console.WriteLine("media size = " + media.Count);
+                pet.Media = media;
+                await client
+                    .Child($"pets/{pet.PetId}")
+                    .Child("Media")
+                    .PutAsync(media);
             }
             catch (Exception e)
             {

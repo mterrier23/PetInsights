@@ -1,9 +1,11 @@
-﻿using PetInsights_all.Services;
+﻿using PetInsights_all.Model;
+using PetInsights_all.Services;
 using Plugin.Media;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -13,15 +15,17 @@ namespace PetInsights_all.SearchViews
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddMediaPage : ContentPage
     {
-        List<string> _images;
-        public AddMediaPage()
+        DBFirebase service;
+        List<Stream> _imgStreams;
+        List<string> urls;
+        Pet pet;
+        public AddMediaPage(Pet _pet)
         {
             InitializeComponent();
-
-            MessagingCenter.Subscribe<App, List<string>>((App)Xamarin.Forms.Application.Current, "ImagesSelectedAndroid", (s, images) =>
-            {
-                _images = images;
-            });
+            pet = _pet;
+            service = new DBFirebase();
+            _imgStreams = new List<Stream>();
+            urls = new List<string>();
             Device.BeginInvokeOnMainThread(async () => await AskForPermissions());
         }
         
@@ -53,7 +57,6 @@ namespace PetInsights_all.SearchViews
                         //If we have selected images, put them into the carousel view.
                         if (images.Count > 0)
                         {
-                            _images = images;
                             ImgCarouselView.ItemsSource = images;
                             InfoText.IsVisible = true; //InfoText is optional
                         }
@@ -65,29 +68,32 @@ namespace PetInsights_all.SearchViews
                     Console.WriteLine("***Knows device is android");
                     DependencyService.Get<IMediaService>().OpenGallery();
 
-                    //MessagingCenter.Unsubscribe<App, List<string>>((App)Xamarin.Forms.Application.Current, "ImagesSelectedAndroid");
-                   // MessagingCenter.Subscribe<App, List<string>>((App)Xamarin.Forms.Application.Current, "ImagesSelectedAndroid", async (s, images) =>
                     MessagingCenter.Subscribe<List<string>>(this, "ImagesSelectedAndroid", (images) => 
                     {
                         //If we have selected images, put them into the carousel view.
                         Console.WriteLine("***image count= " + images.Count);
                         if (images.Count > 0)
                         {
-                            _images = images;
                             ImgCarouselView.ItemsSource = images;
                             InfoText.IsVisible = true; //InfoText is optional
                         }
                     });
-                    //MessagingCenter.Unsubscribe<App, List<string>>((App)Xamarin.Forms.Application.Current, "ImagesSelectedAndroid");
-                    Console.WriteLine("**end of function");
+
+                    MessagingCenter.Subscribe<List<Stream>>(this, "ImagesStreamAndroid", (imgStream) =>
+                    {
+                        //If we have selected images, put them into the carousel view.
+                        if (imgStream.Count > 0)
+                        {
+                            _imgStreams = imgStream;
+                        }
+                    });
+
                 }
             }
             else
             {
                 await DisplayAlert("Permission Denied!", "\nPlease go to your app settings and enable permissions.", "Ok");
             }
-            //Console.WriteLine("***_image count= " + _images.Count); // null pointer
-            //ImgCarouselView.ItemsSource = _images;
         }
 
         
@@ -95,35 +101,34 @@ namespace PetInsights_all.SearchViews
         {
             // Get the list of images we have selected.
             List<string> imagePaths = ImgCarouselView.ItemsSource as List<string>;
+            Console.WriteLine("**img streams = " + _imgStreams.Count); // NOTE -   works !!!
+            //ImgCarouselView.ItemsSource = 
 
             // If user is using Android, compress the images. (Optional)
             if (Device.RuntimePlatform == Device.Android)
             {
                 imagePaths = CompressAllImages(imagePaths);
-            }
-
-            Console.WriteLine("***In the upload button");
-            // url = await services.UploadFile(file.GetStream(), Path.GetFileName(file.Path));
-
-
-          
+            }      
 
             // Change info text. (Optional)
-            InfoText.Text = "Uploading to Azure Blob Storage...";
+            InfoText.Text = "Uploading to Firebase...";
 
-            // Upload all the selected images to Azure Blob Storage.
-            int count = 1;
-            foreach (string img in imagePaths)
+            for (int i = 0; i < imagePaths.Count; i++)
             {
-                // Retrieve reference to a blob named "newphoto#.jpg".
-               /* CloudBlockBlob blockBlob = container.GetBlockBlobReference("newphoto" + count + ".jpg");
-
-                // Create the "newphoto#.jpg" blob with the current image in our list.
-                await blockBlob.UploadFromFileAsync(img);
-               */
-
-                count++;
+                Console.WriteLine("**running for count " + i);
+                Console.WriteLine("**stream = " + _imgStreams[i].ToString());
+                Console.WriteLine("**Image path before = " + imagePaths[i]);
+                Console.WriteLine("**Image path after = " + Path.GetFileName(imagePaths[i]));
+                System.IO.Stream str = _imgStreams[i];
+                Console.WriteLine("**str = " + str.ToString());
+                string path = Path.GetFileName(imagePaths[i]) + ".jpg";
+                string url = (await service.UploadFile(str, path));
+                // WORKS WORKS WORKS BUT JUST LOADS FOREVER FLKJSDF
+                Console.WriteLine("**url = " + url);
+                urls.Add(url);
             }
+
+            await service.AddPetMedia(pet, urls);
 
             // Change info text. (Optional)
             InfoText.Text = "Upload complete.";
@@ -204,6 +209,7 @@ namespace PetInsights_all.SearchViews
         {
             base.OnDisappearing();
             MessagingCenter.Unsubscribe<App, List<string>>((App)Xamarin.Forms.Application.Current, "ImagesSelectedAndroid");
+            MessagingCenter.Unsubscribe<App, List<Stream>>((App)Xamarin.Forms.Application.Current, "ImagesStreamAndroid");
             MessagingCenter.Unsubscribe<App, List<string>>((App)Xamarin.Forms.Application.Current, "ImagesSelectediOS");
             GC.Collect();
         }

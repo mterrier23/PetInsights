@@ -14,6 +14,7 @@ using Android.Database;
 using Android.Provider;
 using CarouselView.FormsPlugin.Droid;
 using Xamarin.Forms;
+using System.IO;
 
 namespace PetInsights_all.Droid
 {
@@ -55,6 +56,7 @@ namespace PetInsights_all.Droid
             if (requestCode == OPENGALLERYCODE && resultCode == Result.Ok)
             {
                 List<string> images = new List<string>();
+                List<Stream> imgStream = new List<Stream>();
 
                 if (data != null)
                 {
@@ -68,9 +70,14 @@ namespace PetInsights_all.Droid
                             Android.Net.Uri uri = item.Uri;
                             var path = GetRealPathFromURI(uri);
 
+                            byte[] file = File.ReadAllBytes(path);
+                            System.IO.Stream strm = new MemoryStream(file);
+
+                            Console.WriteLine("**android file path = " + path);
 
                             if (path != null)
                             {
+                                imgStream.Add(strm);
                                 images.Add(path);
                             }
                         }
@@ -80,18 +87,20 @@ namespace PetInsights_all.Droid
                         Android.Net.Uri uri = data.Data;
                         var path = GetRealPathFromURI(uri);
 
+                        byte[] file = File.ReadAllBytes(path);
+                        System.IO.Stream strm = new MemoryStream(file);
+                        //Stream strm = ContentResolver.OpenInputStream(uri);
+
                         if (path != null)
                         {
+                            imgStream.Add(strm);
                             images.Add(path);
                         }
                     }
 
                     //Send our images to the carousel view.
-                    //MessagingCenter.Send<App, List<string>>((App)Xamarin.Forms.Application.Current, "ImagesSelectedAndroid", images);
-                    MessagingCenter.Send(images, "ImagesSelectedAndroid");  // TEST
-                    // NOTE - images are for sure here
-                    Console.WriteLine("**Images = " + images.Count);
-                    Console.WriteLine("**Sent message");
+                    MessagingCenter.Send(imgStream, "ImagesStreamAndroid"); // New test
+                    MessagingCenter.Send(images, "ImagesSelectedAndroid");  
                 }
             }
         }

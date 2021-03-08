@@ -22,6 +22,7 @@ namespace PetInsights_all.Search
             InitializeComponent();
             pet = _pet;
             BindingContext = _pet;
+            Console.WriteLine("**pet imgsource = " + _pet.ImgIcon);
             services = new DBFirebase();
             var comments = _pet.Comments;
             var topComments = comments.Take(5).ToList();
@@ -45,7 +46,7 @@ namespace PetInsights_all.Search
 
         public async void BtnAddMedia(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AddMediaPage());
+            await Navigation.PushAsync(new AddMediaPage(pet));
             //await Navigation.PopAsync();
         }
 

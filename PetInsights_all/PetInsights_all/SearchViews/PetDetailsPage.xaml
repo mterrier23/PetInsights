@@ -8,11 +8,11 @@
         <ScrollView>
             <StackLayout Margin="20">
                 <Image x:Name="ImgIcon" Source="{Binding ImgIcon}" HeightRequest="400"/>
-                <CarouselView x:Name="TheCarousel" ItemsSource="{Binding Comments}" IndicatorView="indicatorView"
+                <CarouselView x:Name="TheCarousel" ItemsSource="{Binding Media}" IndicatorView="indicatorView"
                               HeightRequest="100">
                     <CarouselView.ItemTemplate>
                         <DataTemplate>
-                            <Label Text="{Binding .}" TextColor="Black"/>
+                            <Image Source="{Binding .}"/>
                         </DataTemplate>
                     </CarouselView.ItemTemplate>
                 </CarouselView>

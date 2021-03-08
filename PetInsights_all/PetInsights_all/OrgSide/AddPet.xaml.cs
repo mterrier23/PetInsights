@@ -101,6 +101,9 @@ namespace PetInsights_all.OrgSide
         private async void BtnAdd_Clicked(object sender, EventArgs e)
         {
             Busy();
+            Console.WriteLine("**filestream = " + file.GetStream().ToString());
+            Console.WriteLine("** add pet file path before = " + file.Path);
+            Console.WriteLine("** add pet file path after = " + Path.GetFileName(file.Path));
             url = await services.UploadFile(file.GetStream(), Path.GetFileName(file.Path));
             Pet p = await services.AddPetTask(name.Text, Convert.ToInt32(age.Text), url);
             
