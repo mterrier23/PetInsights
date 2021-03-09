@@ -6,16 +6,30 @@
     <ContentPage.Content>
         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
             <Label Margin="0,0,0,10" Text="Enter Pet Information" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".3*" />
+                    <ColumnDefinition Width=".3*" />
+                    <ColumnDefinition Width=".3*" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="dogButton" Grid.Column="0" BackgroundColor="{Binding dogBackgroundColor}" Text="Dog" Clicked="PetTypeBtnClicked" BindingContext="dog"/>
+                <Button x:Name="catButton" Grid.Column="1" BackgroundColor="{Binding catBackgroundColor}" Text="Cat" Clicked="PetTypeBtnClicked" BindingContext="cat"/>
+                <Button x:Name="exoticButton" Grid.Column="2" BackgroundColor="{Binding exoticBackgroundColor}" Text="Exotic" Clicked="PetTypeBtnClicked" BindingContext="exotic"/>
+            </Grid>
             <Entry x:Name="name" Placeholder="Pet Name" BackgroundColor="Black"></Entry>
             <Entry x:Name="age" Placeholder="Pet Age" BackgroundColor="Black"></Entry>
-            <Image x:Name="imgChoosen" HeightRequest="200"></Image>
+            <Entry x:Name="sex" Placeholder="Pet Sex" BackgroundColor="Black"></Entry>
+            <Grid Margin="20,35,20,20" BackgroundColor="Red">
+                <Label Text="By default, a Grid contains one row and one column." />
+            </Grid>
+            <!--<Image x:Name="imgChoosen" HeightRequest="200"></Image>-->
             <Button x:Name="btnSelectPic" Text="Select Picture" BackgroundColor="DodgerBlue" Clicked="btnSelectPic_Clicked" TextColor="White">
             </Button>
             <Button x:Name="btnTakePic" Text="Take Picture" BackgroundColor="DodgerBlue" Clicked="btnTakePic_Clicked" TextColor="White">
             </Button>
             <ActivityIndicator x:Name="uploadIndicator" IsVisible="False" IsRunning="False" Color="DodgerBlue" />
             <!--Button Text="(OLD)Upload Image" Clicked="btnUpload_Clicked" x:Name="btnUpload" BackgroundColor="Blue" TextColor="White" />-->
-            <Button Text="Add Pet" Clicked="BtnAdd_Clicked" x:Name="btnAddPet" BackgroundColor="Blue" TextColor="White" />
+            <Button Text="Add Pet" Clicked="BtnNextPage_Clicked" x:Name="btnAddPet" BackgroundColor="Blue" TextColor="White" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage> 

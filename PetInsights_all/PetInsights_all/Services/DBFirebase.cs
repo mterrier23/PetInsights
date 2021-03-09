@@ -44,26 +44,59 @@ namespace PetInsights_all.Services
             return petData;
         }
 
-        public async Task<Pet> AddPetTask(string name, int age, string imgIcon)
+
+        /* AddPetTask(
+                petType,
+                name,
+                age,
+                sex,
+                url,
+                breed.Text,
+                size.Text,
+                medicalCondition.Text,
+                medicalConditionDetails.Text,
+                personality.Text,
+                pottyTrained.Text,
+                apartmentFriendly.Text
+        */
+
+        // Keep in mind that some of the items (breed and onwards) may be null -- but should be initialized to Not Known (check if functioning NOTE )
+        public async Task<Pet> AddPetTask(string petType, string name, int age, string sex, string imageIcon, 
+                                            string breed, string size, string medicalCondition, string medicalConditionDetails, 
+                                            string _personalities, string pottyTrained, string apartmentFriendly)
         {
             List<string> comments = new List<string>();
             comments.Add("");   // NOTE: temporary solution to comments section not showing up otherwise
             List<string> media = new List<string>();
-            media.Add(imgIcon);
+
+            List<string> personalities = new List<string>();
+            //personalities = ExtractPersonalityList(_personalities);
+            personalities.Add(_personalities); 
+            // NOTE - for testing purposes, not yet separating the strings
+
+            media.Add(imageIcon);
             Pet p = new Pet();
             var newPet = await client
                 .Child("pets")
                 .PostAsync(p);
             string curPetKey = newPet.Key;
 
-            p.ImgIcon = imgIcon;
+            p.PetType = petType;
             p.Name = name;
             p.Age = age;
+            p.Sex = sex;
+            p.ImgIcon = imageIcon;
+            p.Breed = breed;
+            p.Size = size;
+            p.MedicalCondition = medicalCondition;
+            p.MedicalConditionDetails = medicalConditionDetails;
+            p.Personality = personalities;
+            p.PottyTrained = pottyTrained;
+            p.ApartmentFriendly = apartmentFriendly;
             p.PetId = curPetKey;
             p.Comments = comments;
             p.Media = media;
 
-            Console.WriteLine("pet key = " + curPetKey);
             await client
                  .Child("pets")
                  .Child(newPet.Key)
@@ -75,6 +108,14 @@ namespace PetInsights_all.Services
 
         }
 
+
+        // NOTE: maybe move this logic into AddPet2
+        public List<string> ExtractPersonalityList(string personalityList)
+        {
+            List<string> personalities = new List<string>();
+            // add functionality to read the personalityList and separate the comments using the stated deliminator
+            return personalities;
+        }
 
         public async Task UpdatePet(string name, int age)
         {
