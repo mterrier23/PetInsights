@@ -8,7 +8,17 @@
         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
             <Label Margin="0,0,0,10" Text="Optional Information" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
             <Entry x:Name="breed" Placeholder="Pet Breed" BackgroundColor="Black"></Entry>
-            <Entry x:Name="size" Placeholder="Pet Size" BackgroundColor="Black"></Entry>
+            <Label x:Name="size" Text="Pet Size" TextColor="Black"></Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".3*" />
+                    <ColumnDefinition Width=".3*" />
+                    <ColumnDefinition Width=".3*" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="smallBtn" Grid.Column="0" BackgroundColor="{Binding smallBackgroundColor}" Text="Small" Clicked="PetSizeBtnClicked" BindingContext="small"/>
+                <Button x:Name="mediumBtn" Grid.Column="1" BackgroundColor="{Binding mediumBackgroundColor}" Text="Medium" Clicked="PetSizeBtnClicked" BindingContext="medium"/>
+                <Button x:Name="largeBtn" Grid.Column="2" BackgroundColor="{Binding largeBackgroundColor}" Text="Large" Clicked="PetSizeBtnClicked" BindingContext="large"/>
+            </Grid>
             <Entry x:Name="medicalCondition" Placeholder="Has a Medical Condition" BackgroundColor="Black"></Entry>
             <Entry x:Name="medicalConditionDetails" Placeholder="Please enter details of the medical condition" BackgroundColor="Black"></Entry>
             <Entry x:Name="personality" Placeholder="Please enter traits separated by ," BackgroundColor="Black"></Entry>

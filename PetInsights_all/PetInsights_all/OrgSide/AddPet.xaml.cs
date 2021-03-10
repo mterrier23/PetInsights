@@ -34,6 +34,9 @@ namespace PetInsights_all.OrgSide
             services = new DBFirebase();
 
 
+            // Next Page button disabled until everything filled out -- logic still isn't thought through
+            //btnAddPet.IsEnabled = false;
+
             // initialize the button colors
             dogButton.BackgroundColor = Color.LightGray;
             catButton.BackgroundColor = Color.LightGray;
@@ -136,7 +139,7 @@ namespace PetInsights_all.OrgSide
             }
         }
 
-        // data  = 333;
+       
 
         private async void BtnNextPage_Clicked(object sender, EventArgs e)
         {

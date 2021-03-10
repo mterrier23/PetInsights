@@ -26,6 +26,7 @@ namespace PetInsights_all.OrgSide
         string name;
         int age;
         string sex;
+        string _petSize;
         MediaFile file;
 
 
@@ -41,6 +42,11 @@ namespace PetInsights_all.OrgSide
             age = _age;
             sex = _sex;
             file = _file;
+
+            // initialize the button colors
+            smallBtn.BackgroundColor = Color.LightGray;
+            mediumBtn.BackgroundColor = Color.LightGray;
+            largeBtn.BackgroundColor = Color.LightGray;
         }
 
 
@@ -55,7 +61,7 @@ namespace PetInsights_all.OrgSide
                 sex,
                 url,
                 breed.Text,
-                size.Text,
+                _petSize,
                 medicalCondition.Text,
                 medicalConditionDetails.Text,
                 personality.Text,
@@ -74,6 +80,37 @@ namespace PetInsights_all.OrgSide
             */
 
         }
+
+        private async void PetSizeBtnClicked(object sender, EventArgs e)
+        {
+            string buttonName = ((Button)sender).BindingContext as string; // potential binding contexts = small, medium, large
+
+            if ((sender as Button).BackgroundColor == Color.LightGray)
+            {
+                (sender as Button).BackgroundColor = Color.Blue;
+                _petSize = buttonName;
+                if (buttonName != smallBtn.BindingContext as string)
+                {
+                    smallBtn.BackgroundColor = Color.LightGray;
+                }
+                if (buttonName != mediumBtn.BindingContext as string)
+                {
+                    mediumBtn.BackgroundColor = Color.LightGray;
+                }
+                if (buttonName != largeBtn.BindingContext as string)
+                {
+                    largeBtn.BackgroundColor = Color.LightGray;
+                }
+            }
+            else if ((sender as Button).BackgroundColor == Color.Blue)
+            {
+                (sender as Button).BackgroundColor = Color.LightGray;
+                _petSize = null;
+            }
+            Console.WriteLine("**Current pet size == " + _petSize);
+        }
+
+
 
         public void Busy()
         {
