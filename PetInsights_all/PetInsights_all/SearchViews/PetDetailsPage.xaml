@@ -46,7 +46,7 @@
                     </Grid.RowDefinitions>
                     <Label  Grid.Row="0" Grid.Column="0" Text="Breed: " 
                             FontSize="Medium" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
-                    <Label  Grid.Row="0" Grid.Column="1" Text="{Binding Trained}"
+                    <Label  Grid.Row="0" Grid.Column="1" Text="{Binding Breed}"
                             FontSize="Medium" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
                     <Label  Grid.Row="1" Grid.Column="0" Text="Age"
                             FontSize="Medium" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>

@@ -20,13 +20,14 @@ namespace PetInsights_all.Model
         public string AgeRange { get; set; } // i.e. 6m-1y, 1-2y (find the formatting that's more readable)
         public string Sex { get; set; } // Male, Female, Unknown
         public string Address { get; set; } // city or zip
+        public string Affiliation { get; set; } // default to the org's or fosters name
         public List<string> Media { get; set; } // so far includes image urls
         public List<string> Comments { get; set; }
 
         public bool Hypoallergenic; // base this value off of the breed
         public bool Sheds; // base this value off of the breed
 
-        public string _Breed = NotKnown;    //Make Default "Not Known", only overwrite if we know
+        private string _Breed = NotKnown;    //Make Default "Not Known", only overwrite if we know
         public string Breed
         {
             get
@@ -39,7 +40,7 @@ namespace PetInsights_all.Model
             }
         }
 
-        public string _MedicalCondition = NotKnown; // Yes, No, Not Known, default to Not Known
+        private string _MedicalCondition = NotKnown; // Yes, No, Not Known, default to Not Known
         public string MedicalCondition
         {
             get
@@ -52,7 +53,7 @@ namespace PetInsights_all.Model
             }
         }
 
-        public string _MedicalConditionDetails = NotKnown; // describe the medical condition if true
+        private string _MedicalConditionDetails = NotKnown; // describe the medical condition if true
         public string MedicalConditionDetails
         {
             get
@@ -65,7 +66,7 @@ namespace PetInsights_all.Model
             }
         }
 
-        public string _Size = NotKnown; // small, medium, big, default to "Not Known"
+        private string _Size = NotKnown; // small, medium, big, default to "Not Known"
         public string Size
         {
             get
@@ -79,9 +80,9 @@ namespace PetInsights_all.Model
         }
 
         public List<string> Personality { get; set; } // collection of the following: Energetic, Friendly to children, Friendly to other pets, Calm, protective, Traumatized, Cuddly, Nervous, Reactive
-                                                        // if List Count == 0, don't display
+                                                      // if List Count == 0, don't display
 
-        public string _Trained = NotKnown; // Yes, No, Not Known  -- unclear on what kind of training we're talking about though
+        private string _Trained = NotKnown; // Yes, No, Not Known  -- unclear on what kind of training we're talking about though
         public string Trained
         {
             get
@@ -94,7 +95,7 @@ namespace PetInsights_all.Model
             }
         }
 
-        public string _PottyTrained = NotKnown; // Yes, No, Not Known 
+        private string _PottyTrained = NotKnown; // Yes, No, Not Known 
         public string PottyTrained
         {
             get
@@ -108,7 +109,7 @@ namespace PetInsights_all.Model
         }
 
 
-        public string _Maintenance = NotKnown; // High, Low, Moderate (like if it required frequent vet visits i.e. some breeds need eye drops, some breeds need their ear hair plucked, etc.
+        private string _Maintenance = NotKnown; // High, Low, Moderate (like if it required frequent vet visits i.e. some breeds need eye drops, some breeds need their ear hair plucked, etc.
         public string Maintenance
         {
             get
@@ -121,7 +122,7 @@ namespace PetInsights_all.Model
             }
         }
 
-        public string _ApartmentFriendly = NotKnown;
+        private string _ApartmentFriendly = NotKnown;
         public string ApartmentFriendly
         {
             get

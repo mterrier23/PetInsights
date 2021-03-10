@@ -2,10 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PetInsights_all.OrgSide.AddPet"
-             BackgroundColor="White">
+             BackgroundColor="White"
+             Title="Enter Pet Information">
     <ContentPage.Content>
         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
-            <Label Margin="0,0,0,10" Text="Enter Pet Information" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width=".3*" />
@@ -19,10 +19,7 @@
             <Entry x:Name="name" Placeholder="Pet Name" BackgroundColor="Black"></Entry>
             <Entry x:Name="age" Placeholder="Pet Age" BackgroundColor="Black"></Entry>
             <Entry x:Name="sex" Placeholder="Pet Sex" BackgroundColor="Black"></Entry>
-            <Grid Margin="20,35,20,20" BackgroundColor="Red">
-                <Label Text="By default, a Grid contains one row and one column." />
-            </Grid>
-            <!--<Image x:Name="imgChoosen" HeightRequest="200"></Image>-->
+            <Image x:Name="imgChoosen" HeightRequest="200"></Image>
             <Button x:Name="btnSelectPic" Text="Select Picture" BackgroundColor="DodgerBlue" Clicked="btnSelectPic_Clicked" TextColor="White">
             </Button>
             <Button x:Name="btnTakePic" Text="Take Picture" BackgroundColor="DodgerBlue" Clicked="btnTakePic_Clicked" TextColor="White">

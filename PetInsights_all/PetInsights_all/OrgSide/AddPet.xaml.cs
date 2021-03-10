@@ -28,7 +28,9 @@ namespace PetInsights_all.OrgSide
         {
             InitializeComponent();
             Console.WriteLine("in add pet");
-            //imgChoosen.Source = ImageSource.FromResource("ic_pets.png"); // NOTE - CHANGE THIS
+            if (ImageSource.FromResource("ic_pets.png") != null)
+                Console.WriteLine("img is not null");
+            imgChoosen.Source = ImageSource.FromResource("ic_pets.png"); // NOTE - CHANGE THIS
             services = new DBFirebase();
 
 
@@ -49,8 +51,8 @@ namespace PetInsights_all.OrgSide
                 CompressionQuality = 40, // percentage 
             });
 
-            //if (file != null)
-                //imgChoosen.Source = ImageSource.FromStream(() => { return file.GetStream(); });
+            if (file != null)
+                imgChoosen.Source = ImageSource.FromStream(() => { return file.GetStream(); });
         }
 
         private async void btnSelectPic_Clicked(object sender, EventArgs e)
@@ -65,12 +67,12 @@ namespace PetInsights_all.OrgSide
                 });
                 if (file == null)
                     return;
-                /*imgChoosen.Source = ImageSource.FromStream(() =>
+                imgChoosen.Source = ImageSource.FromStream(() =>
                 {
                     var imageStram = file.GetStream();
                     return imageStram;
-                })
-                */
+                });
+                
             }
             catch (Exception ex)
             {

@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PetInsights_all.OrgSide.AddPet2"
-             BackgroundColor="White">
+             BackgroundColor="White"
+             Title="Enter Optional Pet Information">
     <ContentPage.Content>
         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
             <Label Margin="0,0,0,10" Text="Optional Information" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>

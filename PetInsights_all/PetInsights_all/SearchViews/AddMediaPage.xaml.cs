@@ -142,6 +142,7 @@ namespace PetInsights_all.SearchViews
             {
                 GMMultiImagePicker.Current.ClearFileDirectory();
             }
+            await Navigation.PopAsync();
         }
 
         /// <summary>
