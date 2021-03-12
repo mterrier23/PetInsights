@@ -57,7 +57,7 @@ namespace PetInsights_all.SearchViews
                         //If we have selected images, put them into the carousel view.
                         if (images.Count > 0)
                         {
-                            ImgCarouselView.ItemsSource = images;
+                            ImgCarouselView.ItemsSource = images;   // NOTE -- ideally have them compressed before we reach this point!!
                             InfoText.IsVisible = true; //InfoText is optional
                         }
                     });
@@ -74,7 +74,7 @@ namespace PetInsights_all.SearchViews
                         Console.WriteLine("***image count= " + images.Count);
                         if (images.Count > 0)
                         {
-                            ImgCarouselView.ItemsSource = images;
+                            ImgCarouselView.ItemsSource = images;   // NOTE -- ideally have them compressed before reaching this point !!
                             InfoText.IsVisible = true; //InfoText is optional
                         }
                     });
@@ -157,9 +157,13 @@ namespace PetInsights_all.SearchViews
             List<string> compressedImages = new List<string>();
             foreach (string path in totalImages)
             {
-                compressedImages.Add(DependencyService.Get<ICompressImages>().CompressImage(path));
+                Console.WriteLine("**image before compression path = " + path);
+                string newpath = DependencyService.Get<ICompressImages>().CompressImage(path);
+                compressedImages.Add(newpath);
+                Console.WriteLine("**compressed image path = " + newpath);
                 displayCount++;
             }
+            Console.WriteLine("**returning compressed images");
             return compressedImages;
         }
 

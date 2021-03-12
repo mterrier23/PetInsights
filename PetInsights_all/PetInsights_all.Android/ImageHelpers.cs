@@ -21,12 +21,16 @@ namespace PetInsights_all.Droid.Helpers
 
             var file = new Java.IO.File(fileDir, fileName);
             System.IO.File.WriteAllBytes(file.Path, imageByte);
-
+            Console.WriteLine("** in saveFile, new file path = " + file.Path);
             return file.Path;
         }
 
         public string CompressImage(string path)
         {
+            Console.WriteLine("**inCompress Image");
+            Console.WriteLine("**path is = " + path);
+            string fileexe = System.IO.Path.GetExtension(path);
+            Console.WriteLine("**extension is = "+ fileexe);
             byte[] imageBytes;
 
             //Get the bitmap.
@@ -34,7 +38,7 @@ namespace PetInsights_all.Droid.Helpers
 
             //Set imageSize and imageCompression parameters.
             var imageSize = .86;
-            var imageCompression = 67;
+            var imageCompression = 15; // NOTE - was 67 - to test compression factors
 
             //Resize it and then compress it to Jpeg.
             var width = (originalImage.Width * imageSize);
@@ -43,7 +47,13 @@ namespace PetInsights_all.Droid.Helpers
 
             using (MemoryStream ms = new MemoryStream())
             {
-                scaledImage.Compress(Bitmap.CompressFormat.Jpeg, imageCompression, ms);
+                if (fileexe == ".jpg")
+                {
+                    Console.WriteLine("**image is jpg");
+                    scaledImage.Compress(Bitmap.CompressFormat.Jpeg, imageCompression, ms);
+                }
+                else if (fileexe == ".png")
+                    scaledImage.Compress(Bitmap.CompressFormat.Png, imageCompression, ms);
                 imageBytes = ms.ToArray();
             }
 

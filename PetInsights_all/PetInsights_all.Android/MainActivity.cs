@@ -15,6 +15,7 @@ using Android.Provider;
 using CarouselView.FormsPlugin.Droid;
 using Xamarin.Forms;
 using System.IO;
+using Android.Graphics;
 
 namespace PetInsights_all.Droid
 {
@@ -52,6 +53,7 @@ namespace PetInsights_all.Droid
         {
             base.OnActivityResult(requestCode, resultCode, data);
 
+
             //If we are calling multiple image selection, enter into here and return photos and their filepaths.
             if (requestCode == OPENGALLERYCODE && resultCode == Result.Ok)
             {
@@ -68,9 +70,14 @@ namespace PetInsights_all.Droid
                         {
                             ClipData.Item item = clipData.GetItemAt(i);
                             Android.Net.Uri uri = item.Uri;
+
                             var path = GetRealPathFromURI(uri);
 
-                            byte[] file = File.ReadAllBytes(path);
+
+                            // TESTING RESIZE !!
+                            byte[] file = this.Resize(uri, path, 60, 60);
+
+                            //byte[] file = File.ReadAllBytes(path);
                             System.IO.Stream strm = new MemoryStream(file);
 
                             Console.WriteLine("**android file path = " + path);
@@ -87,9 +94,13 @@ namespace PetInsights_all.Droid
                         Android.Net.Uri uri = data.Data;
                         var path = GetRealPathFromURI(uri);
 
-                        byte[] file = File.ReadAllBytes(path);
+
+                        // TESTING RESIZE !!
+                        byte[] file = this.Resize(uri, path, 60, 60);
+
+                        // byte[] file = File.ReadAllBytes(path);
                         System.IO.Stream strm = new MemoryStream(file);
-                        //Stream strm = ContentResolver.OpenInputStream(uri);
+
 
                         if (path != null)
                         {
@@ -103,6 +114,75 @@ namespace PetInsights_all.Droid
                     MessagingCenter.Send(images, "ImagesSelectedAndroid");  
                 }
             }
+        }
+
+
+
+        // TEST -- compress the images
+        private byte[] Resize(Android.Net.Uri uri, string path, float maxWidth, float maxHeight)
+        {
+            Console.WriteLine("**entering the resize function");
+            /*
+            var scale = 1;
+            using (var rawStream = this.ContentResolver.OpenInputStream(uri))
+            using (var options = new BitmapFactory.Options { InJustDecodeBounds = true })
+            {
+                BitmapFactory.DecodeStream(rawStream, null, options);
+
+                while (options.OutWidth / scale / 2 > maxWidth ||
+                      options.OutHeight / scale / 2 > maxHeight)
+                {
+                    scale *= 2;
+                }
+            }
+            */
+
+
+            // NOTE -- where does this f come from? 
+            /*
+            using (var bitmap = BitmapFactory.DecodeFile(path))
+            {
+                var memoryStream = new MemoryStream();
+                if (fileexe == "png")
+                    bitmap.Compress(Bitmap.CompressFormat.Png, 10, memoryStream);
+                else if (fileexe == "jpg")
+                {
+                    Console.WriteLine("**in resize function and image is jpg");
+                    bitmap.Compress(Bitmap.CompressFormat.Jpeg, 10, memoryStream);
+                }
+                memoryStream.Position = 0;
+
+                return memoryStream;
+            }*/
+
+            string fileexe = System.IO.Path.GetExtension(path);
+            byte[] imageBytes;
+
+            //Get the bitmap.
+            var originalImage = BitmapFactory.DecodeFile(path);
+
+            //Set imageSize and imageCompression parameters.
+            var imageSize = .86;
+            var imageCompression = 15; // NOTE - was 67 - to test compression factors
+
+            //Resize it and then compress it to Jpeg.
+            var width = (originalImage.Width * imageSize);
+            var height = (originalImage.Height * imageSize);
+            var scaledImage = Bitmap.CreateScaledBitmap(originalImage, (int)width, (int)height, true);
+
+
+            using (MemoryStream ms = new MemoryStream())
+            {
+                if (fileexe == ".jpg")
+                {
+                    Console.WriteLine("**image is jpg");
+                    scaledImage.Compress(Bitmap.CompressFormat.Jpeg, imageCompression, ms);
+                }
+                else if (fileexe == ".png")
+                    scaledImage.Compress(Bitmap.CompressFormat.Png, imageCompression, ms);
+                imageBytes = ms.ToArray();
+            }
+            return imageBytes;
         }
 
         /// <summary>
