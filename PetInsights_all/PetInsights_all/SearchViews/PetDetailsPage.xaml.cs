@@ -16,6 +16,7 @@ namespace PetInsights_all.Search
     {
         DBFirebase services;
         Pet pet;
+         
 
         public PetDetailsPage(Pet _pet)
         {
@@ -27,6 +28,27 @@ namespace PetInsights_all.Search
             var comments = _pet.Comments;
             var topComments = comments.Take(5).ToList();
             lstComments.ItemsSource = topComments;
+
+            // Note - have to check user data if they've already favorited this pet or not
+            faveImage.Source = "@drawable/star_empty.png";
+        }
+
+        void OnFavoritesTapped(object sender, EventArgs args)
+        {
+            try
+            {
+                Console.WriteLine("fav button tapped");
+                Console.WriteLine("faveImage source = " + faveImage.Source.ToString());
+                // NOTE - if this doesn't work, just base off of the user's fave table for this pet
+                if (faveImage.Source.ToString() == "File: @drawable/star_empty.png")
+                    faveImage.Source = "@drawable/star_filled.png";
+                else if (faveImage.Source.ToString() == "File: @drawable/star_filled.png")
+                    faveImage.Source = "@drawable/star_empty.png";
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public async void BtnUpdate_Pet(object sender, EventArgs e)

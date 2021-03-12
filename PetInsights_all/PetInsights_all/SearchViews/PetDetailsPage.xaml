@@ -7,9 +7,8 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Margin="20">
-                <Image x:Name="ImgIcon" Source="{Binding ImgIcon}" HeightRequest="400"/>
                 <CarouselView x:Name="TheCarousel" ItemsSource="{Binding Media}" IndicatorView="indicatorView"
-                              HeightRequest="100">
+                              HeightRequest="400">
                     <CarouselView.ItemTemplate>
                         <DataTemplate>
                             <Image Source="{Binding .}"/>
@@ -22,21 +21,26 @@
                    HorizontalOptions="Center" />
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100" />
-                        <ColumnDefinition Width="50" />
-                        <ColumnDefinition Width="50" />
-                        <ColumnDefinition Width="50" />
-                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width=".5*" />
+                        <ColumnDefinition Width=".25*" />
+                        <ColumnDefinition Width=".25*" />
                     </Grid.ColumnDefinitions>
-                    <Label  Grid.Column="0" Text="{Binding Name}" FontAttributes="Bold"  VerticalOptions="Center"
-                            FontSize="Title" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
-                    <Button Grid.Column="3" Text="S" />
-                    <Button Grid.Column="4" Text="F" HorizontalOptions="End"/>
+                    <Label  Grid.Column="0" Text="{Binding Name}" FontAttributes="Bold" 
+                            FontSize="Title" TextColor="Black"></Label>
+                    <Button x:Name= "sharePet" Grid.Column="1" Text="S" />
+                    <Image x:Name="faveImage" Grid.Column="2" Source="{Binding favImage}">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="OnFavoritesTapped"
+                                NumberOfTapsRequired="1" />
+                        </Image.GestureRecognizers>
+                    </Image>
                 </Grid>
+                
                 <Grid  Padding="0,0,0,20">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100" />
-                        <ColumnDefinition Width="50*" />
+                        <ColumnDefinition Width=".3*" />
+                        <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition />

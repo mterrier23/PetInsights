@@ -137,6 +137,24 @@
   <ItemGroup>
     <AndroidResource Include="Resources\values\strings.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\star_filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\star_filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\star_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\star_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\star_filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\star_empty.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
