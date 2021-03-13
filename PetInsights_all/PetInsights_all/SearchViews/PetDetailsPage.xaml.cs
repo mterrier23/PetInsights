@@ -8,6 +8,8 @@ using PetInsights_all.Model;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using PetInsights_all.SearchViews;
+using PetInsights_all.ViewModel;
+using System.Collections.ObjectModel;
 
 namespace PetInsights_all.Search
 {
@@ -16,30 +18,36 @@ namespace PetInsights_all.Search
     {
         DBFirebase services;
         Pet pet;
-         
+        ObservableCollection<Pet> allPets;
 
-        public PetDetailsPage(Pet _pet)
-        {
+        public PetDetailsPage(Pet _pet, ObservableCollection<Pet> petList)
+        {     
             InitializeComponent();
+
             pet = _pet;
-            BindingContext = _pet;
-            Console.WriteLine("**pet imgsource = " + _pet.ImgIcon);
-            services = new DBFirebase();
-            var comments = _pet.Comments;
-            var topComments = comments.Take(5).ToList();
+            allPets = petList;
+
+            // Page UI components:
+            BindingContext = pet;
+            Title = pet.Name + " - " + pet.Affiliation;
+            shelteredWithLabel.Text = "See who else is sheltered with " + pet.Name + "...";
+            var comments = pet.Comments;
+            var topComments = comments.Take(5).ToList();    // limits to only the top five comments
             lstComments.ItemsSource = topComments;
 
-            // Note - have to check user data if they've already favorited this pet or not
+            // TODO - have to check user data if they've already favorited this pet or not
             faveImage.Source = "@drawable/star_empty.png";
+
+            // Get filtered list of pets for shared affiliation
+            services = new DBFirebase();
+            lstSharedPets.ItemsSource = services.GetAffiliatedPets(petList, pet);
         }
 
         void OnFavoritesTapped(object sender, EventArgs args)
         {
             try
             {
-                Console.WriteLine("fav button tapped");
-                Console.WriteLine("faveImage source = " + faveImage.Source.ToString());
-                // NOTE - if this doesn't work, just base off of the user's fave table for this pet
+                // NOTE - once user table works, base these values off of user's preference and re-assign in DB each time
                 if (faveImage.Source.ToString() == "File: @drawable/star_empty.png")
                     faveImage.Source = "@drawable/star_filled.png";
                 else if (faveImage.Source.ToString() == "File: @drawable/star_filled.png")
@@ -50,6 +58,23 @@ namespace PetInsights_all.Search
                 throw ex;
             }
         }
+
+        async void lstPets_SelectionChanged(System.Object sender, Xamarin.Forms.SelectionChangedEventArgs e)
+        {
+            var tpet = e.CurrentSelection.First() as Pet;
+            Console.WriteLine("shared pet clicked = "+tpet.Name);
+
+            if (tpet == null)
+            {
+                Console.WriteLine("Pet is Null");
+                return;
+            }
+
+            // NOTE maybe need to do a PopAsync first
+            await Navigation.PushAsync(new PetDetailsPage(tpet, allPets));
+
+        }
+
 
         public async void BtnUpdate_Pet(object sender, EventArgs e)
         {

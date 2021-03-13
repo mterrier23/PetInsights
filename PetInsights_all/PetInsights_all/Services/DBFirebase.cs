@@ -16,22 +16,32 @@ namespace PetInsights_all.Services
     {
         FirebaseClient client;
         FirebaseStorage firebaseStorage;
+        ObservableCollection<Pet> _pets;
+
+        // NOTE - temporary values for testing
+        //string _ageRange = "0 - 6 months";
+        string _address = "Hamilton, Ohio";
+        string _hypoallergenic = "No";
+        string _sheds = "Yes";
+        string _maintenance = "Moderate";
+        string _affiliation = "Animal Friends Humane Society";
 
         public DBFirebase()
         {
             client = new FirebaseClient("https://petinsights-4dc78-default-rtdb.firebaseio.com/");
             firebaseStorage = new FirebaseStorage("petinsights-4dc78.appspot.com");
+            _pets = new ObservableCollection<Pet>();
         }
 
         // to retrieve data from database
         public ObservableCollection<Pet> getPets()
         {
-            Console.WriteLine("in get Pets");
             var petData = client
                 .Child("pets")
                 .AsObservable<Pet>()
                 .AsObservableCollection();
 
+            //_pets = petData;
             // Example of querying with firebase
            /* var users =  client
               .Child("pets")
@@ -44,33 +54,32 @@ namespace PetInsights_all.Services
             return petData;
         }
 
+        public ObservableCollection<Pet> GetAffiliatedPets(ObservableCollection<Pet> petList, Pet _pet)
+        {
+            ObservableCollection<Pet> _sharedpets = new ObservableCollection<Pet>();
+            foreach (Pet pet in petList)
+            {
+                if (pet.Affiliation == _pet.Affiliation && pet.Name != _pet.Name)
+                {
+                    _sharedpets.Add(pet);
+                }
+            }
+            return _sharedpets;
+        }
 
-        /* AddPetTask(
-                petType,
-                name,
-                age,
-                sex,
-                url,
-                breed.Text,
-                size.Text,
-                medicalCondition.Text,
-                medicalConditionDetails.Text,
-                personality.Text,
-                pottyTrained.Text,
-                apartmentFriendly.Text
-        */
 
+  
         // Keep in mind that some of the items (breed and onwards) may be null -- but should be initialized to Not Known (check if functioning NOTE )
         public async Task<Pet> AddPetTask(string petType, string name, int age, string sex, string imageIcon, 
                                             string breed, string size, string medicalCondition, string medicalConditionDetails, 
                                             string _personalities, string pottyTrained, string apartmentFriendly)
         {
             List<string> comments = new List<string>();
-            comments.Add("");   // NOTE: temporary solution to comments section not showing up otherwise
+            comments.Add("");   // NOTE: temporary solution to comments section not showing up otherwise - need to display from count 1+
             List<string> media = new List<string>();
 
             List<string> personalities = new List<string>();
-            //personalities = ExtractPersonalityList(_personalities);
+            //personalities = ExtractPersonalityList(_personalities);       // TO IMPLEMENT
             personalities.Add(_personalities); 
             // NOTE - for testing purposes, not yet separating the strings
 
@@ -97,6 +106,16 @@ namespace PetInsights_all.Services
             p.Comments = comments;
             p.Media = media;
 
+            // autopopulated fields:
+            p.AgeRange = getAgeRange(age);
+            p.Address = _address;
+            p.Hypoallergenic = _hypoallergenic;
+            p.Sheds = _sheds;
+            p.Maintenance = _maintenance;
+            p.Affiliation = _affiliation;
+
+
+
             await client
                  .Child("pets")
                  .Child(newPet.Key)
@@ -106,6 +125,28 @@ namespace PetInsights_all.Services
             // NOTE: this code is making two calls to the DB to insert one pet... not at all the most effective, but all I can think of so far with peptId stuff.
             // NOTE: instead of using firebase's genreated id, we could also create our own id generator and won't have to dea w this double call anymore
 
+        }
+
+        private string getAgeRange(int age)
+        {
+            string rng = "";
+            if (age >= 0 && age <= .5)
+            {
+                rng = "0 - 6 months"; // puppy/kitten
+            }
+            else if (age > .5 && age <= 2)
+            {
+                rng = "6 months - 2 years"; // young
+            }
+            else if (age > 2 && age <= 8)
+            {
+                rng = "2 years - 8 years"; // middle age
+            }
+            else if (age > 8)
+            {
+                rng = "8 years +"; // senior
+            }
+            return rng;
         }
 
 
@@ -124,8 +165,6 @@ namespace PetInsights_all.Services
                 .OnceAsync<Pet>()).FirstOrDefault
                 (a => a.Object.Name == name);
 
-            // NOTE : NEED TO CHANGE THIS WITH ID INSTEAD
-
             Pet p = new Pet() { Name = name, Age = age };
             await client
                 .Child("pets")
@@ -137,13 +176,11 @@ namespace PetInsights_all.Services
         {
             try
             {
-                Console.WriteLine("**filenname = " + fileName);
                 var imageUrl = await firebaseStorage
                     .Child("postImages")
                     .Child(fileName)
                     .PutAsync(fileStream);
-                Console.WriteLine("**upload url = " + imageUrl);
-                return imageUrl;    // NOTE -- its this imageUrl that we want to save into the db
+                return imageUrl;    // the imageUrl we want to save into the db
             }
             catch (Exception e)
             {
@@ -160,11 +197,6 @@ namespace PetInsights_all.Services
                 List<string> comments = pet.Comments;
                 comments.Add(comment);
 
-                /* await client
-                     .Child($"pets/{pet.PetId}/Comments")
-                     .PutAsync(comments);
-                */ // this might still work
-
                 await client
                     .Child($"pets/{pet.PetId}")
                     .Child("Comments")
@@ -180,15 +212,11 @@ namespace PetInsights_all.Services
         {
             try
             {
-                Console.WriteLine("**in add pet media");
                 List<string> media = pet.Media;
-                Console.WriteLine("**prev media = " + pet.Media.Count);
                 // NOTE url string size is 0.. why ? 
                 foreach (string url in urls) {
-                    Console.WriteLine("**adding a new media url");
                     media.Add(url);
                 }
-                Console.WriteLine("media size = " + media.Count);
                 pet.Media = media;
                 await client
                     .Child($"pets/{pet.PetId}")

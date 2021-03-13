@@ -31,7 +31,6 @@ namespace PetInsights_all.SearchViews
         
         private async void SelectImagesButton_Clicked(object sender, EventArgs e)
         {
-            Console.WriteLine("**SelectImages clicked");
             //Check users permissions.
             var storagePermissions = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Storage);
             var photoPermissions = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Photos);
@@ -65,13 +64,11 @@ namespace PetInsights_all.SearchViews
                 //If we are on Android, call IMediaService.
                 else if (Device.RuntimePlatform == Device.Android)
                 {
-                    Console.WriteLine("***Knows device is android");
                     DependencyService.Get<IMediaService>().OpenGallery();
 
                     MessagingCenter.Subscribe<List<string>>(this, "ImagesSelectedAndroid", (images) => 
                     {
                         //If we have selected images, put them into the carousel view.
-                        Console.WriteLine("***image count= " + images.Count);
                         if (images.Count > 0)
                         {
                             ImgCarouselView.ItemsSource = images;   // NOTE -- ideally have them compressed before reaching this point !!
@@ -101,8 +98,6 @@ namespace PetInsights_all.SearchViews
         {
             // Get the list of images we have selected.
             List<string> imagePaths = ImgCarouselView.ItemsSource as List<string>;
-            Console.WriteLine("**img streams = " + _imgStreams.Count); // NOTE -   works !!!
-            //ImgCarouselView.ItemsSource = 
 
             // If user is using Android, compress the images. (Optional)
             if (Device.RuntimePlatform == Device.Android)
@@ -115,16 +110,9 @@ namespace PetInsights_all.SearchViews
 
             for (int i = 0; i < imagePaths.Count; i++)
             {
-                Console.WriteLine("**running for count " + i);
-                Console.WriteLine("**stream = " + _imgStreams[i].ToString());
-                Console.WriteLine("**Image path before = " + imagePaths[i]);
-                Console.WriteLine("**Image path after = " + Path.GetFileName(imagePaths[i]));
                 System.IO.Stream str = _imgStreams[i];
-                Console.WriteLine("**str = " + str.ToString());
                 string path = Path.GetFileName(imagePaths[i]) + ".jpg";
                 string url = (await service.UploadFile(str, path));
-                // WORKS WORKS WORKS BUT JUST LOADS FOREVER FLKJSDF
-                Console.WriteLine("**url = " + url);
                 urls.Add(url);
             }
 
@@ -157,13 +145,10 @@ namespace PetInsights_all.SearchViews
             List<string> compressedImages = new List<string>();
             foreach (string path in totalImages)
             {
-                Console.WriteLine("**image before compression path = " + path);
                 string newpath = DependencyService.Get<ICompressImages>().CompressImage(path);
                 compressedImages.Add(newpath);
-                Console.WriteLine("**compressed image path = " + newpath);
                 displayCount++;
             }
-            Console.WriteLine("**returning compressed images");
             return compressedImages;
         }
 

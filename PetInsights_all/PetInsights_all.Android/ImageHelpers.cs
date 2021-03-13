@@ -21,16 +21,12 @@ namespace PetInsights_all.Droid.Helpers
 
             var file = new Java.IO.File(fileDir, fileName);
             System.IO.File.WriteAllBytes(file.Path, imageByte);
-            Console.WriteLine("** in saveFile, new file path = " + file.Path);
             return file.Path;
         }
 
         public string CompressImage(string path)
         {
-            Console.WriteLine("**inCompress Image");
-            Console.WriteLine("**path is = " + path);
             string fileexe = System.IO.Path.GetExtension(path);
-            Console.WriteLine("**extension is = "+ fileexe);
             byte[] imageBytes;
 
             //Get the bitmap.
@@ -49,7 +45,6 @@ namespace PetInsights_all.Droid.Helpers
             {
                 if (fileexe == ".jpg")
                 {
-                    Console.WriteLine("**image is jpg");
                     scaledImage.Compress(Bitmap.CompressFormat.Jpeg, imageCompression, ms);
                 }
                 else if (fileexe == ".png")

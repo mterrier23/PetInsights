@@ -27,10 +27,7 @@ namespace PetInsights_all.OrgSide
         public AddPet()
         {
             InitializeComponent();
-            Console.WriteLine("in add pet");
-            if (ImageSource.FromResource("ic_pets.png") != null)
-                Console.WriteLine("img is not null");
-            imgChoosen.Source = ImageSource.FromResource("ic_pets.png"); // NOTE - CHANGE THIS
+            imgChoosen.Source = "%drawable/ic_pets.png";
             services = new DBFirebase();
 
 
@@ -46,8 +43,7 @@ namespace PetInsights_all.OrgSide
 
         private async void btnTakePic_Clicked(object sender, EventArgs e)
         {
-            // NOTE - testing with shared file variable (assuming we can only upload one image here)
-
+            // NOTE - assuming we can only upload one image here
             file = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
             {
                 PhotoSize = PhotoSize.Medium,
@@ -66,7 +62,7 @@ namespace PetInsights_all.OrgSide
                 file = await CrossMedia.Current.PickPhotoAsync(new PickMediaOptions
                 {
                     PhotoSize = PhotoSize.Medium,
-                    CompressionQuality = 40, /* percentage */
+                    CompressionQuality = 40, // percentage 
                 });
                 if (file == null)
                     return;
@@ -82,16 +78,6 @@ namespace PetInsights_all.OrgSide
                 Debug.WriteLine(ex.Message);
             }
         }
-
-        // NOTE: added url line into addPet -- upload image button isn't needed anymore
-        /*
-        private async void btnUpload_Clicked(object sender, EventArgs e)
-        {
-            Busy();
-            url = await services.UploadFile(file.GetStream(), Path.GetFileName(file.Path));
-            NotBusy();
-        }
-        */
 
         public void Busy()
         {
@@ -114,7 +100,7 @@ namespace PetInsights_all.OrgSide
         private async void PetTypeBtnClicked(object sender, EventArgs e)
         {
             string buttonName = ((Button)sender).BindingContext as string; // potential binding contexts = dog, cat, exotic
-            //dogButton.BindingContext;
+
             if ((sender as Button).BackgroundColor == Color.LightGray)
             {
                 (sender as Button).BackgroundColor = Color.Blue;
@@ -143,28 +129,9 @@ namespace PetInsights_all.OrgSide
 
         private async void BtnNextPage_Clicked(object sender, EventArgs e)
         {
-            // MOVE THE FOLLOWING TO THE NEXT ADDPET2 !!
-            //Busy();
-            //url = await services.UploadFile(file.GetStream(), Path.GetFileName(file.Path));
-            //Pet p = await services.AddPetTask(name.Text, Convert.ToInt32(age.Text), url);
-            //name.Text = string.Empty;
-            //age.Text = string.Empty;
-            //imgChoosen.Source = ImageSource.FromResource("ic_pets.png"); // NOTE - CHANGE THIS
-            //NotBusy();
-            //await DisplayAlert("Success", "Pet Added Successfully", "OK");  // move to addpet2
-
-            Console.WriteLine("**Sending the following details: "+ _petType + ", "+name.Text+", "+ Convert.ToInt32(age.Text)+", "+sex.Text+" and file");
-
             await Navigation.PushAsync(new AddPet2(_petType, name.Text, Convert.ToInt32(age.Text), sex.Text, file));
-            //await Navigation.PushAsync(new PetDetailsPage(p));
-
-
-            // now we need to update list of pets -- check if it doesn't do it automatically
-            /* var allPets = services.getPets();
-             lstPets.ItemsSource = allPets; 
-            */
 
         }
     }
-    }
+}
 

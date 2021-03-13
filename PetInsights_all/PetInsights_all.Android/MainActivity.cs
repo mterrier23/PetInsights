@@ -80,8 +80,6 @@ namespace PetInsights_all.Droid
                             //byte[] file = File.ReadAllBytes(path);
                             System.IO.Stream strm = new MemoryStream(file);
 
-                            Console.WriteLine("**android file path = " + path);
-
                             if (path != null)
                             {
                                 imgStream.Add(strm);
@@ -118,42 +116,9 @@ namespace PetInsights_all.Droid
 
 
 
-        // TEST -- compress the images
+        // Compresses the image for quicker upload and retrieval
         private byte[] Resize(Android.Net.Uri uri, string path, float maxWidth, float maxHeight)
-        {
-            Console.WriteLine("**entering the resize function");
-            /*
-            var scale = 1;
-            using (var rawStream = this.ContentResolver.OpenInputStream(uri))
-            using (var options = new BitmapFactory.Options { InJustDecodeBounds = true })
-            {
-                BitmapFactory.DecodeStream(rawStream, null, options);
-
-                while (options.OutWidth / scale / 2 > maxWidth ||
-                      options.OutHeight / scale / 2 > maxHeight)
-                {
-                    scale *= 2;
-                }
-            }
-            */
-
-
-            // NOTE -- where does this f come from? 
-            /*
-            using (var bitmap = BitmapFactory.DecodeFile(path))
-            {
-                var memoryStream = new MemoryStream();
-                if (fileexe == "png")
-                    bitmap.Compress(Bitmap.CompressFormat.Png, 10, memoryStream);
-                else if (fileexe == "jpg")
-                {
-                    Console.WriteLine("**in resize function and image is jpg");
-                    bitmap.Compress(Bitmap.CompressFormat.Jpeg, 10, memoryStream);
-                }
-                memoryStream.Position = 0;
-
-                return memoryStream;
-            }*/
+        {           
 
             string fileexe = System.IO.Path.GetExtension(path);
             byte[] imageBytes;
@@ -175,7 +140,6 @@ namespace PetInsights_all.Droid
             {
                 if (fileexe == ".jpg")
                 {
-                    Console.WriteLine("**image is jpg");
                     scaledImage.Compress(Bitmap.CompressFormat.Jpeg, imageCompression, ms);
                 }
                 else if (fileexe == ".png")

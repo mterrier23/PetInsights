@@ -81,7 +81,7 @@
                 </Grid>
                 <Button Text="Update" Clicked="BtnUpdate_Pet"></Button>
                 <Label Text="Comments" TextColor="Black" FontSize="Medium" HorizontalOptions="Start"></Label>
-                <ListView x:Name="lstComments" ItemsSource="{Binding Comments}" Margin="0,20,0,0"
+                <ListView x:Name="lstComments" ItemsSource="{Binding Comments}" Margin="0,20,0,0" HeightRequest="200"
                   HorizontalOptions="FillAndExpand" SeparatorVisibility="Default">
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -97,6 +97,33 @@
                     </ListView.ItemTemplate>
                 </ListView>
                 <Button Text="See All" Clicked="BtnSeeComments"/>
+                <Label x:Name="shelteredWithLabel" TextColor="Black" FontSize="Medium"></Label>
+                <CollectionView Grid.Column="0" ItemsSource="{Binding SharedPets}"
+                    x:Name="lstSharedPets"
+                    SelectionMode="Single"
+                    SelectionChanged="lstPets_SelectionChanged">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="10" HorizontalItemSpacing="10"></GridItemsLayout>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame Padding="15" Margin="10" HasShadow="True">
+                                    <StackLayout>
+                                        <Image HeightRequest="120" Source="{Binding ImgIcon}" Aspect="AspectFill"></Image>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition />
+                                            <ColumnDefinition />
+                                        </Grid.ColumnDefinitions>
+                                        <Label Grid.Column="0" Text="{Binding Name}" FontSize="Medium" VerticalTextAlignment="End" TextColor="Black"
+                                                FontAttributes="Bold"></Label>
+                                        <Label Grid.Column="1" Text="{Binding Age, StringFormat='Age {0:F0}'}" VerticalTextAlignment="End" HorizontalTextAlignment="End" TextColor="Black" FontSize="Small"></Label>
+                                    </Grid>
+                                </StackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

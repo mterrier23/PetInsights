@@ -72,7 +72,7 @@ namespace PetInsights_all.OrgSide
             NotBusy();
             await DisplayAlert("Success", "Pet Added Successfully", "OK"); 
 
-            await Navigation.PushAsync(new PetDetailsPage(p));
+            await Navigation.PushAsync(new PetDetailsPage(p, null));    // NOTE - confusing here on what to do, test with null
 
             // now we need to update list of pets -- check if it doesn't do it automatically
             /* var allPets = services.getPets();
@@ -107,7 +107,6 @@ namespace PetInsights_all.OrgSide
                 (sender as Button).BackgroundColor = Color.LightGray;
                 _petSize = null;
             }
-            Console.WriteLine("**Current pet size == " + _petSize);
         }
 
 

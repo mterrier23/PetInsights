@@ -24,8 +24,31 @@ namespace PetInsights_all.Model
         public List<string> Media { get; set; } // so far includes image urls
         public List<string> Comments { get; set; }
 
-        public bool Hypoallergenic; // base this value off of the breed
-        public bool Sheds; // base this value off of the breed
+        private string _Hypoallergenic = NotKnown; // base this value off of the breed
+        public string Hypoallergenic
+        {
+            get
+            {
+                return _Hypoallergenic;
+            }
+            set
+            {
+                _Hypoallergenic = value;
+            }
+        }
+
+        private string _Sheds = NotKnown; // base this value off of the breed
+        public string Sheds
+        {
+            get
+            {
+                return _Sheds;
+            }
+            set
+            {
+                _Sheds = value;
+            }
+        }
 
         private string _Breed = NotKnown;    //Make Default "Not Known", only overwrite if we know
         public string Breed

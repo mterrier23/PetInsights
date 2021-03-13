@@ -20,7 +20,6 @@ namespace PetInsights_all
         {
             InitializeComponent();
             BindingContext = new PetsViewModel();
-            Console.WriteLine("In pet list view");
         }
 
      
@@ -30,6 +29,7 @@ namespace PetInsights_all
         }
 
 
+        // NOTE - not being used, could be helpful elsewhere though
         public async void OnTapGesture(object sender, EventArgs e)
         {
             Console.WriteLine("Tap Success!");
@@ -39,10 +39,9 @@ namespace PetInsights_all
 
         async void lstPets_SelectionChanged(System.Object sender, Xamarin.Forms.SelectionChangedEventArgs e)
         {
-            Console.WriteLine("on Item Selected");
+            ObservableCollection<Pet> petList = lstPets.ItemsSource as ObservableCollection<Pet>;
 
             var pet = e.CurrentSelection.First() as Pet;
-            Console.WriteLine(pet.Name);
 
             if (pet == null)
             {
@@ -50,10 +49,7 @@ namespace PetInsights_all
                 return;
             }
 
-            await Navigation.PushAsync(new PetDetailsPage(pet));
-         
+            await Navigation.PushAsync(new PetDetailsPage(pet, petList));
         }
-        
-
     }
 }
