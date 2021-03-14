@@ -45,7 +45,8 @@ namespace PetInsights_all.Search
             Title = pet.Name + " - " + pet.Affiliation;
             shelteredWithLabel.Text = "See who else is sheltered with " + pet.Name + "...";
             var comments = pet.Comments;
-            var topComments = comments.Take(5).ToList();    // limits to only the top five comments
+            var topComments = comments.Take(6).ToList();    // limits to only the top five comments
+            topComments.RemoveAt(0);    // bc first is blank
             lstComments.ItemsSource = topComments;
 
             // TODO - have to check user data if they've already favorited this pet or not
