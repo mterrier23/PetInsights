@@ -3,10 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PetInsights_all.OrgSide.OrgSignInPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Log in to your org!!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+            <Label Margin="0, 50, 0, 0" Text="Organization Name" FontSize="Large"  FontAttributes="Bold"></Label>
+            <Entry x:Name="orgName" Placeholder="Organization Name" BackgroundColor="Black"></Entry>
+            <Label Text="Access Code" FontSize="Medium" FontAttributes="Bold"></Label>
+            <Entry x:Name="accessCode" Placeholder="Please enter your access code" BackgroundColor="Black"></Entry>
+            <Button Margin="0, 20, 0, 0" x:Name="btnLogin" Text="Login" BackgroundColor="DodgerBlue" Clicked="btnLogin_Clicked" TextColor="White">
+            </Button>
+            <Label Margin="0, 200, 0, 0" Text="Don't have your organization registered yet?" FontSize="Small" ></Label>
+            <Button x:Name="btnRegister" Text="Register for Free" BackgroundColor="DodgerBlue" TextColor="White">
+            </Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

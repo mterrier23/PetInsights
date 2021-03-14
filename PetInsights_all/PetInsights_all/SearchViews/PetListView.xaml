@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PetInsights_all.PetListView"
-             x:Name="TileView">
+             x:Name="TileView"
+             Title="Pet Results">
 
-    <CollectionView ItemsSource="{Binding Pets}"
+    <CollectionView Margin="10, 20, 10, 20" ItemsSource="{Binding Pets}"
                     x:Name="lstPets"
                     SelectionMode="Single"
                     SelectionChanged="lstPets_SelectionChanged">

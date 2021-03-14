@@ -17,9 +17,9 @@ namespace PetInsights_all.OrgSide
             InitializeComponent();
         }
 
-        async void OnBackButtonClicked(object sender, EventArgs e)
+        async void btnLogin_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PopAsync();
+            await Application.Current.MainPage.Navigation.PushAsync(new OrgPetView());
         }
     }
 }

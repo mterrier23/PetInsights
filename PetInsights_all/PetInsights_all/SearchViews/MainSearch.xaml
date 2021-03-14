@@ -13,6 +13,7 @@
             </Button>
             <Button Text="Add Pet (for testing)" BackgroundColor="Blue" Clicked="AddPetButton_OnClicked" VerticalOptions="CenterAndExpand">
             </Button>
+            <Button Text="I'm an Org Rep" TextColor="Black" FontSize="Small" Clicked="GoToOrgSite"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
