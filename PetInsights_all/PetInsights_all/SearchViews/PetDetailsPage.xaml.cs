@@ -25,7 +25,20 @@ namespace PetInsights_all.Search
             InitializeComponent();
 
             pet = _pet;
-            allPets = petList;
+            if (petList != null)
+            {
+                allPets = petList;
+            }
+            else
+            {   
+                // Came from AddPet logic, so need to remove the two "Add Pet Details" pages
+                for (var counter = 0; counter < 2; counter++)
+                {
+                    Application.Current.MainPage.Navigation.RemovePage(Application.Current.MainPage.Navigation.NavigationStack[Application.Current.MainPage.Navigation.NavigationStack.Count - 1]);
+                }
+            }
+
+
 
             // Page UI components:
             BindingContext = pet;
@@ -40,7 +53,8 @@ namespace PetInsights_all.Search
 
             // Get filtered list of pets for shared affiliation
             services = new DBFirebase();
-            lstSharedPets.ItemsSource = services.GetAffiliatedPets(petList, pet);
+            if (petList != null)
+                lstSharedPets.ItemsSource = services.GetAffiliatedPets(petList, pet);
         }
 
         void OnFavoritesTapped(object sender, EventArgs args)
@@ -62,7 +76,6 @@ namespace PetInsights_all.Search
         async void lstPets_SelectionChanged(System.Object sender, Xamarin.Forms.SelectionChangedEventArgs e)
         {
             var tpet = e.CurrentSelection.First() as Pet;
-            Console.WriteLine("shared pet clicked = "+tpet.Name);
 
             if (tpet == null)
             {
@@ -70,7 +83,6 @@ namespace PetInsights_all.Search
                 return;
             }
 
-            // NOTE maybe need to do a PopAsync first
             await Navigation.PushAsync(new PetDetailsPage(tpet, allPets));
 
         }
@@ -100,7 +112,7 @@ namespace PetInsights_all.Search
         public async void BtnSeeComments(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new PetCommentsPage(pet));
-            //await Navigation.PopAsync();
         }
+
     }
 }

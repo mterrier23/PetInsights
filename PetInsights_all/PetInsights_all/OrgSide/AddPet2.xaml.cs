@@ -70,9 +70,24 @@ namespace PetInsights_all.OrgSide
                 ); ;
 
             NotBusy();
-            await DisplayAlert("Success", "Pet Added Successfully", "OK"); 
 
-            await Navigation.PushAsync(new PetDetailsPage(p, null));    // NOTE - confusing here on what to do, test with null
+            // TODO - prettify this alert
+            var result = await DisplayAlert(null,
+                        "Pet added successfully!",
+                        "Add another", "View my pets");
+
+            // true for view my pets, false for add another
+            if (!result)
+            {
+                // View my Pets
+                await Application.Current.MainPage.Navigation.PushAsync(new PetDetailsPage(p, null));
+            }
+            if (result)
+            {
+                // Add another pet
+                await Application.Current.MainPage.Navigation.PopAsync();
+            }
+            //await Application.Current.MainPage.Navigation.PushAsync(new PetDetailsPage(p, null)); 
 
             // now we need to update list of pets -- check if it doesn't do it automatically
             /* var allPets = services.getPets();

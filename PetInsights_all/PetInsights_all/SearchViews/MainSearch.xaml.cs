@@ -54,18 +54,18 @@ namespace PetInsights_all
 
         async void PetMapButton_OnClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new PetMapView()); 
+            await Application.Current.MainPage.Navigation.PushAsync(new PetMapView()); 
         }
 
         async void PetListButton_OnClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new PetListView()); 
-            //await Navigation.PushAsync(new templist());
+            await Application.Current.MainPage.Navigation.PushAsync(new PetListView());
+            //await Application.Current.MainPage.Navigation.PushAsync(new templist());
         }
 
         async void AddPetButton_OnClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AddPet()); 
+            await Application.Current.MainPage.Navigation.PushAsync(new AddPet()); 
         }
 
 

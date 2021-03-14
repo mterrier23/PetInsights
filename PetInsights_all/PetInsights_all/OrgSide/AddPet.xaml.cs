@@ -34,7 +34,7 @@ namespace PetInsights_all.OrgSide
             // Next Page button disabled until everything filled out -- logic still isn't thought through
             //btnAddPet.IsEnabled = false;
 
-            // initialize the button colors
+            // initialize the UI
             dogButton.BackgroundColor = Color.LightGray;
             catButton.BackgroundColor = Color.LightGray;
             exoticButton.BackgroundColor = Color.LightGray;
@@ -129,8 +129,16 @@ namespace PetInsights_all.OrgSide
 
         private async void BtnNextPage_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AddPet2(_petType, name.Text, Convert.ToInt32(age.Text), sex.Text, file));
+            await Application.Current.MainPage.Navigation.PushAsync(new AddPet2(_petType, name.Text, Convert.ToInt32(age.Text), sex.Text, file));
 
+            // Reset page entries
+            dogButton.BackgroundColor = Color.LightGray;
+            catButton.BackgroundColor = Color.LightGray;
+            exoticButton.BackgroundColor = Color.LightGray;
+            name.Text = string.Empty;
+            age.Text = string.Empty;
+            sex.Text = string.Empty;
+            imgChoosen.Source = "%drawable/ic_pets.png";
         }
     }
 }

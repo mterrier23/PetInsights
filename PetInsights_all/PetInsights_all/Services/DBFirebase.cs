@@ -213,7 +213,6 @@ namespace PetInsights_all.Services
             try
             {
                 List<string> media = pet.Media;
-                // NOTE url string size is 0.. why ? 
                 foreach (string url in urls) {
                     media.Add(url);
                 }

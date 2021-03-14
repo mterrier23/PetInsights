@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Text.RegularExpressions;
 using Xamarin.Essentials;
+using PetInsights_all.OrgSide;
 
 namespace PetInsights_all
 {
@@ -36,15 +37,15 @@ namespace PetInsights_all
             // var value = Application.Current.Properties["UserLocation"].ToString();
 
 
-            // Might implement later -- still researching solution
+            // TODO Might implement later -- still researching solution
             //updateDistanceonPets(location.Text);      
             location.Text = string.Empty;
-            await Navigation.PushModalAsync(new MainTabbed());
+            await Application.Current.MainPage.Navigation.PushAsync(new MainTabbed()); // NOTE - was pushmodalasync
         }
 
         private bool ConfirmLocation(string location)
         {
-            // NOTE - found this regex online
+            // Regex found online
             if (Regex.IsMatch(location, "^[0-9]{5}(?:-[0-9]{4})?$"))
                 return true;
             else
@@ -63,7 +64,7 @@ namespace PetInsights_all
 
         private async void GoToOrgSite(object sender, EventArgs e)
         {
-            // Logic for going to Org Site
+            await Application.Current.MainPage.Navigation.PushAsync(new OrgSignInPage());    // NOTE -- was PushModalAsync
         }
     }
 }

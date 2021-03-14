@@ -27,7 +27,7 @@ namespace PetInsights_all.SearchViews
         {
             string comment = Comment.Text;
             await services.AddPetComment(pet, comment);
-            await Navigation.PopAsync();
+            await Application.Current.MainPage.Navigation.PopAsync();
         }
         
     }

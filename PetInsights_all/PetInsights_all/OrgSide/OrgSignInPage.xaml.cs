@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace PetInsights_all
+namespace PetInsights_all.OrgSide
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PetMapView : ContentPage
+    public partial class OrgSignInPage : ContentPage
     {
-        public PetMapView()
+        public OrgSignInPage()
         {
             InitializeComponent();
         }
 
-        // NOTE - only for Android Hardware button (not the software one)
         async void OnBackButtonClicked(object sender, EventArgs e)
         {
             await Navigation.PopAsync();

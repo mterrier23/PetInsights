@@ -20,7 +20,7 @@ namespace PetInsights_all.SearchViews
         }
         async void OnBackButtonClicked(object sender, EventArgs e)
         {
-            await Navigation.PopAsync();
+            await Application.Current.MainPage.Navigation.PopAsync();
         }
     }
 }
