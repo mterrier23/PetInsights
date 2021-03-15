@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="PetInsights_all.SearchViews.FilterModal">
+    <ContentPage.Content>
+        <Frame Padding="10"
+               Margin="30"
+               BackgroundColor="AntiqueWhite">
+            <StackLayout>
+             
+                <Label Text="SEARCH RADIUS"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       FontSize="Medium"></Label>
+                <Label Text="Adjust search radius by moving the slider."
+                       FontSize="Small"
+                       TextColor="LightSlateGray"></Label>
+                <Slider></Slider>
+                <Label Text="GENDER"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       FontSize="Medium"></Label>
+                <Label Text="Select what genders of pets you are interested in."
+                       FontSize="Small"
+                       TextColor="LightSlateGray"></Label>
+                <StackLayout Orientation="Horizontal">
+                    <CheckBox IsChecked="True"></CheckBox> <!--Add bindings/>function for this to make database calls-->
+                    <Label Text="Male"></Label>
+                    <CheckBox IsChecked="True"></CheckBox>
+                    <Label Text="Female"></Label>
+                </StackLayout>
+          
+
+            </StackLayout>
+      
+            
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>
