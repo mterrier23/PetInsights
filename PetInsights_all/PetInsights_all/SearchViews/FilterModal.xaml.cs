@@ -35,28 +35,25 @@ namespace PetInsights_all.SearchViews
             if (Male.IsChecked && !Female.IsChecked)
             {
                 genderflag = "Male";
-                changeStatus = true;
             }
 
             else if (Female.IsChecked && !Male.IsChecked)
             {
-                genderflag = "";
-                changeStatus = true;
+                genderflag = "Female";
             }
 
             else
             {
                 genderflag = "Both";
-                changeStatus = true;
             }
-           
+
+            changeStatus = true;
 
         }
-    
 
-    async void OnDismissButtonClicked(object sender, EventArgs args)
+
+        async void OnDismissButtonClicked(object sender, EventArgs args)
         {
-            //ObservableCollection<Pet> filtered = filteredPets(_allPets, 1);
             if (changeStatus == true)
             {
                 MessagingCenter.Send<FilterModal, string>(this, "selectionChanged", genderflag);
