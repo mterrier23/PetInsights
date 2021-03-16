@@ -9,23 +9,65 @@ using Xamarin.Forms.Xaml;
 using PetInsights_all.ViewModel;
 using PetInsights_all.Search;
 using System.Collections.ObjectModel;
+using PetInsights_all.SearchViews;
 
 namespace PetInsights_all
+
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PetListView : ContentPage
     {
+        ObservableCollection<Pet> allPets = new ObservableCollection<Pet>();
+        bool newFlag;
+        int check = 0;
+
 
         public PetListView()
         {
             InitializeComponent();
             BindingContext = new PetsViewModel();
+            newFlag = true;
+            //ObservableCollection<Pet> allPets = lstPets.ItemsSource as ObservableCollection<Pet>;
+
+
+            MessagingCenter.Subscribe<FilterModal,string>(this, "selectionChanged", (sender, genderflag) =>
+            {
+                Console.WriteLine("The MESSAGE WORKED!");
+                lstPets.ItemsSource = filterPets(genderflag);
+            });
+            
         }
 
-     
+
+
+        public ObservableCollection<Pet> filterPets(string gender)
+        {
+            ObservableCollection<Pet> filteredList = new ObservableCollection<Pet>();
+            foreach (Pet pet in allPets)
+            {
+                if (pet.Sex == gender)
+                {
+                    filteredList.Add(pet);
+                }
+            }
+            return filteredList;
+
+        }
+
+
         async void OnBackButtonClicked(object sender, EventArgs e)
         {
             await Navigation.PopAsync();
+        }
+
+        async void OnFilterButtonClicked(object sender, EventArgs e)
+        {
+            if (newFlag == true)
+            {
+                allPets = lstPets.ItemsSource as ObservableCollection<Pet>;
+                newFlag = false;
+            }
+            await Navigation.PushModalAsync(new FilterModal(allPets));
         }
 
 

@@ -1,30 +1,71 @@
-﻿using System;
+﻿using PetInsights_all.Model;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+using PetInsights_all.ViewModel;
+using PetInsights_all.Search;
+using System.Collections.ObjectModel;
+using PetInsights_all.SearchViews;
 
 
 namespace PetInsights_all.SearchViews
 {
     public partial class FilterModal : ContentPage
     {
-        public FilterModal()
+        string genderflag;
+        bool changeStatus;
+        ObservableCollection<Pet> filtered;
+        ObservableCollection<Pet> _allPets;
+
+
+        public FilterModal(ObservableCollection<Pet> allPets)
         {
+            _allPets = allPets;
             InitializeComponent();
         }
 
+        
 
         void OnSelectionChange(object sender, CheckedChangedEventArgs args)
         {
-            var chkbox = (CheckBox)sender;
-            Console.WriteLine(chkbox.ClassId);
+            if (Male.IsChecked && !Female.IsChecked)
+            {
+                genderflag = "Male";
+                changeStatus = true;
+            }
+
+            else if (Female.IsChecked && !Male.IsChecked)
+            {
+                genderflag = "Female";
+                changeStatus = true;
+            }
+
+            else
+            {
+                changeStatus = false;
+            }
+           
 
         }
+    
 
-
-        async void OnDismissButtonClicked(object sender, EventArgs args)
+    async void OnDismissButtonClicked(object sender, EventArgs args)
         {
-            Console.WriteLine(args);
+            //ObservableCollection<Pet> filtered = filteredPets(_allPets, 1);
+            if (changeStatus == true)
+            {
+                MessagingCenter.Send<FilterModal, string>(this, "selectionChanged", genderflag);
+            }
+            
             await Navigation.PopModalAsync();
         }
+
+
+
+
     }
 }

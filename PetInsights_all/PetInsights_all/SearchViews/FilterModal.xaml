@@ -22,13 +22,37 @@
                        FontSize="Small"
                        TextColor="LightSlateGray"></Label>
                 <StackLayout Orientation="Horizontal">
-                    <CheckBox IsChecked="True"></CheckBox> <!--Add bindings/>function for this to make database calls-->
+                    <CheckBox IsChecked="True"
+                              x:Name="Male"
+                              CheckedChanged="OnSelectionChange"></CheckBox> 
                     <Label Text="Male"></Label>
-                    <CheckBox IsChecked="True"></CheckBox>
+                    <CheckBox IsChecked="True"
+                              x:Name="Female"
+                              CheckedChanged="OnSelectionChange"></CheckBox>
                     <Label Text="Female"></Label>
                 </StackLayout>
-          
 
+                <Label Text="ANIMAL TYPE"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       FontSize="Medium"></Label>
+                <Label Text="Select what animals you are interested in."
+                       FontSize="Small"
+                       TextColor="LightSlateGray"></Label>
+                <StackLayout Orientation="Horizontal">
+                    <CheckBox IsChecked="True"></CheckBox>
+                    <Label Text="Dogs"></Label>
+                    <CheckBox IsChecked="True"></CheckBox>
+                    <Label Text="Cats"></Label>
+                    <CheckBox IsChecked="True"></CheckBox>
+                    <Label Text="Exotic"></Label>
+                </StackLayout>
+          
+                <Button Text="Filter Results"
+                        TextTransform="Uppercase"
+                        BackgroundColor="Orange"
+                        TextColor="White"
+                        Clicked="OnDismissButtonClicked"> </Button>
             </StackLayout>
       
             

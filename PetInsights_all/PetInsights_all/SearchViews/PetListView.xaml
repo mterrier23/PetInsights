@@ -4,6 +4,20 @@
              x:Class="PetInsights_all.PetListView"
              x:Name="TileView"
              Title="Pet Results">
+    <StackLayout>
+
+        <Frame BackgroundColor="White"
+               HeightRequest="30"
+               CornerRadius="30"
+               Margin="10">
+               
+            <ImageButton Source="ic_searchfilter.png"
+                         Aspect="AspectFit"
+                         Clicked="OnFilterButtonClicked"
+                         BackgroundColor="White"></ImageButton>
+
+        </Frame>
+        
 
     <CollectionView Margin="10, 20, 10, 20" ItemsSource="{Binding Pets}"
                     x:Name="lstPets"
@@ -67,4 +81,5 @@
 
 
     </CollectionView>
+   </StackLayout>
 </ContentPage>
