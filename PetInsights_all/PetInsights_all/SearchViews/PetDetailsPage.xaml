@@ -81,8 +81,11 @@
                 </Grid>
                 <Button Text="Update" Clicked="BtnUpdate_Pet"></Button>
                 <Label Text="Comments" TextColor="Black" FontSize="Medium" HorizontalOptions="Start"></Label>
-                <ListView x:Name="lstComments" ItemsSource="{Binding Comments}" Margin="0,20,0,0" HeightRequest="200"
-                  HorizontalOptions="FillAndExpand" SeparatorVisibility="Default">
+                <StackLayout HeightRequest="50">
+                    <Label x:Name="hasNoComments" Text="This pet has no comments yet" TextColor="Black" IsVisible="{Binding ifHasComments}"/>
+                </StackLayout>
+                <ListView x:Name="lstComments" ItemsSource="{Binding Comments}" Margin="0,-30,0,0" IsVisible="{Binding showComments}" HeightRequest="200"
+                  SeparatorVisibility="Default" IsEnabled = "false">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -96,7 +99,7 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <Button Text="See All" Clicked="BtnSeeComments"/>
+                <Button x:Name="SeeComments" IsVisible="{Binding isVisibleBtn}" Text="See All" Clicked="BtnSeeComments"/>
                 <Label x:Name="shelteredWithLabel" TextColor="Black" FontSize="Medium"></Label>
                 <CollectionView Grid.Column="0" ItemsSource="{Binding SharedPets}"
                     x:Name="lstSharedPets"

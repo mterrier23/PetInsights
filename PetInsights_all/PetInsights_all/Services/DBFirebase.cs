@@ -74,9 +74,12 @@ namespace PetInsights_all.Services
                                             string breed, string size, string medicalCondition, string medicalConditionDetails, 
                                             string _personalities, string pottyTrained, string apartmentFriendly)
         {
-            List<string> comments = new List<string>();
+            ObservableCollection<string> comments = new ObservableCollection<string>();
+            //List<string> comments = new List<string>();
             comments.Add("");   // NOTE: temporary solution to comments section not showing up otherwise - need to display from count 1+
-            List<string> media = new List<string>();
+
+            ObservableCollection<string> media = new ObservableCollection<string>();
+            //List<string> media = new List<string>();
 
             List<string> personalities = new List<string>();
             //personalities = ExtractPersonalityList(_personalities);       // TO IMPLEMENT
@@ -194,8 +197,16 @@ namespace PetInsights_all.Services
         {
             try
             {
-                List<string> comments = pet.Comments;
+                ObservableCollection<string> comments = pet.Comments;
+                if(comments.Count == 1 && comments[0].Equals(""))
+                {
+                    Console.WriteLine("in db removing blank comment string ");
+                    comments.Remove("");
+                }
+                //List<string> comments = pet.Comments;
                 comments.Add(comment);
+
+                pet.Comments = comments;
 
                 await client
                     .Child($"pets/{pet.PetId}")
@@ -212,7 +223,8 @@ namespace PetInsights_all.Services
         {
             try
             {
-                List<string> media = pet.Media;
+                ObservableCollection<string> media = pet.Media;
+                //List<string> media = pet.Media;
                 foreach (string url in urls) {
                     media.Add(url);
                 }

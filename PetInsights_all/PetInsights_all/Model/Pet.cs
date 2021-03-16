@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using MvvmHelpers;
 using System.Text;
 
 namespace PetInsights_all.Model
 {
-    public class Pet
+    public class Pet : BaseViewModel
     {
 
         private static string NotKnown = "Not Known";  // move to strings.xml for localization
@@ -20,8 +22,34 @@ namespace PetInsights_all.Model
         public string Sex { get; set; } // Male, Female, Unknown
         public string Address { get; set; } // city or zip
         public string Affiliation { get; set; } // default to the org's or fosters name
-        public List<string> Media { get; set; } // so far includes image urls
-        public List<string> Comments { get; set; }
+      //  public List<string> Media { get; set; } // so far includes image urls
+      //  public List<string> Comments { get; set; }
+
+        
+        private ObservableCollection<string> _media = new ObservableCollection<string>();
+
+        public ObservableCollection<string> Media
+        {
+            get { return _media; }
+            set
+            {
+                _media = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private ObservableCollection<string> _comments = new ObservableCollection<string>();
+
+        public ObservableCollection<string> Comments
+        {
+            get { return _comments; }
+            set
+            {
+                _comments = value;
+                OnPropertyChanged();
+            }
+        }
+        
 
         private string _Hypoallergenic = NotKnown; // base this value off of the breed
         public string Hypoallergenic

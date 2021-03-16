@@ -44,10 +44,30 @@ namespace PetInsights_all.Search
             BindingContext = pet;
             Title = pet.Name + " - " + pet.Affiliation;
             shelteredWithLabel.Text = "See who else is sheltered with " + pet.Name + "...";
-            var comments = pet.Comments;
-            var topComments = comments.Take(6).ToList();    // limits to only the top five comments
-            topComments.RemoveAt(0);    // bc first is blank
-            lstComments.ItemsSource = topComments;
+           // var comments = pet.Comments;
+            //var topComments = comments.Take(6).ToList();    // limits to only the top five comments
+            //topComments.RemoveAt(0);    // bc first is blank
+            //lstComments.ItemsSource = topComments;
+
+            if (pet.Comments.Count == 1 && pet.Comments[0].Equals(""))
+            {
+                Console.WriteLine("comments count  = 1 and is blank");
+                hasNoComments.IsVisible = true;
+                lstComments.IsVisible = false;
+                SeeComments.IsVisible = false;
+            }
+            else
+            {
+                hasNoComments.IsVisible = false;
+                lstComments.IsVisible = true;
+                if (pet.Comments.Count > 4)
+                    SeeComments.IsVisible = true;
+                else
+                    SeeComments.IsVisible = false;
+                lstComments.ItemsSource = pet.Comments;
+            }
+            // NOTE - isENabled = false makes it not scrollable (but not sure what our desired behavior is)
+            //else lstComments.ItemsSource = pet.Comments; // size wise this is fine, but need to remove the first blank!!
 
             // TODO - have to check user data if they've already favorited this pet or not
             faveImage.Source = "@drawable/star_empty.png";

@@ -16,6 +16,34 @@ namespace PetInsights_all.ViewModel
         public string Name { get; set; }
         public int Age { get; set; }
 
+        // testing if this allows changes !!
+
+        private ObservableCollection<string> _media = new ObservableCollection<string>();
+
+        public ObservableCollection<string> Media
+        {
+            get { return _media; }
+            set
+            {
+                _media = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private ObservableCollection<Pet> _comments = new ObservableCollection<Pet>();
+
+        public ObservableCollection<Pet> Comments
+        {
+            get { return _comments; }
+            set
+            {
+                _comments = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+
         private DBFirebase services;
 
         private ObservableCollection<Pet> _pets = new ObservableCollection<Pet>();
