@@ -32,7 +32,7 @@ namespace PetInsights_all
 
             MessagingCenter.Subscribe<FilterModal,string>(this, "selectionChanged", (sender, genderflag) =>
             {
-                Console.WriteLine("The MESSAGE WORKED!");
+                Console.WriteLine("Message receieved");
                 lstPets.ItemsSource = filterPets(genderflag);
             });
             
@@ -43,12 +43,19 @@ namespace PetInsights_all
         public ObservableCollection<Pet> filterPets(string gender)
         {
             ObservableCollection<Pet> filteredList = new ObservableCollection<Pet>();
-            foreach (Pet pet in allPets)
+            if (gender != "Both")
             {
-                if (pet.Sex == gender)
+                foreach (Pet pet in allPets)
                 {
-                    filteredList.Add(pet);
+                    if (pet.Sex == gender)
+                    {
+                        filteredList.Add(pet);
+                    }
                 }
+            }
+            else
+            {
+                filteredList = allPets; //TODO make sure to include other filters
             }
             return filteredList;
 

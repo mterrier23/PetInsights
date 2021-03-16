@@ -18,7 +18,7 @@ namespace PetInsights_all.SearchViews
     {
         string genderflag;
         bool changeStatus;
-        ObservableCollection<Pet> filtered;
+        ObservableCollection<Pet> filtered; 
         ObservableCollection<Pet> _allPets;
 
 
@@ -29,7 +29,7 @@ namespace PetInsights_all.SearchViews
         }
 
         
-
+        //TODO Store filter choices somewhere so it stays when modal is reopened
         void OnSelectionChange(object sender, CheckedChangedEventArgs args)
         {
             if (Male.IsChecked && !Female.IsChecked)
@@ -40,13 +40,14 @@ namespace PetInsights_all.SearchViews
 
             else if (Female.IsChecked && !Male.IsChecked)
             {
-                genderflag = "Female";
+                genderflag = "";
                 changeStatus = true;
             }
 
             else
             {
-                changeStatus = false;
+                genderflag = "Both";
+                changeStatus = true;
             }
            
 
