@@ -20,6 +20,7 @@ namespace PetInsights_all
         ObservableCollection<Pet> allPets = new ObservableCollection<Pet>();
         bool newFlag;
         int check = 0;
+        List<List<string>> filters;
 
 
         public PetListView()
@@ -27,21 +28,42 @@ namespace PetInsights_all
             InitializeComponent();
             BindingContext = new PetsViewModel();
             newFlag = true;
+
+
+            List<List<string>> filters = new List<List<string>>(); // NOTE -- might not work...
+
             //ObservableCollection<Pet> allPets = lstPets.ItemsSource as ObservableCollection<Pet>;
 
 
-            MessagingCenter.Subscribe<FilterModal,string>(this, "selectionChanged", (sender, genderflag) =>
+            /* MessagingCenter.Subscribe<FilterModal,string>(this, "selectionChanged", (sender, genderflag) =>
+             {
+                 Console.WriteLine("Message receieved");
+                 lstPets.ItemsSource = filterPets(genderflag);
+             });
+            */
+
+            MessagingCenter.Subscribe<List<List<string>>>(this, "filtersChanged", (filterSet) =>
             {
                 Console.WriteLine("Message receieved");
-                lstPets.ItemsSource = filterPets(genderflag);
+                lstPets.ItemsSource = filterPets(filterSet);
             });
-            
+
         }
 
 
-
-        public ObservableCollection<Pet> filterPets(string gender)
+        // add other filters here
+        public ObservableCollection<Pet> filterPets(List<List<string>> filters)
         {
+            Console.WriteLine("in filter pets");
+            if(filters[0] != null)
+            {
+                Console.WriteLine("pet type count = " + filters[0].Count);
+            }
+            if(filters[1] == null)  // DIDN'T ENTER HERE .. WHY NOT
+            {
+                Console.WriteLine("but no genders selected");
+            }
+            string gender = "Both";
             ObservableCollection<Pet> filteredList = new ObservableCollection<Pet>();
             if (gender != "Both")
             {
@@ -99,6 +121,13 @@ namespace PetInsights_all
             }
 
             await Navigation.PushAsync(new PetDetailsPage(pet, petList));
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            MessagingCenter.Unsubscribe<App, List<List<string>>>((App)Xamarin.Forms.Application.Current, "filtersChanged");
+            GC.Collect();
         }
     }
 }
