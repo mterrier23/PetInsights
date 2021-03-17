@@ -23,24 +23,27 @@ namespace PetInsights_all
         List<List<string>> filters;
 
 
-        public PetListView()
+        public PetListView(List<List<string>> _filters, bool fromMain)
         {
             InitializeComponent();
             BindingContext = new PetsViewModel();
+
+            if (fromMain)
+                Application.Current.MainPage.Navigation.PushModalAsync(new SimpleFilterModal());
+
             newFlag = true;
 
 
-            List<List<string>> filters = new List<List<string>>(); // NOTE -- might not work...
+            // List<List<string>> filters = new List<List<string>>(); 
+            List<List<string>> filters = _filters;
 
-            //ObservableCollection<Pet> allPets = lstPets.ItemsSource as ObservableCollection<Pet>;
+            allPets = lstPets.ItemsSource as ObservableCollection<Pet>;
+
+            // TO DO - WORK ON THIS AFTERWARDS!
+            //lstPets.ItemsSource = filterPets(filters);
 
 
-            /* MessagingCenter.Subscribe<FilterModal,string>(this, "selectionChanged", (sender, genderflag) =>
-             {
-                 Console.WriteLine("Message receieved");
-                 lstPets.ItemsSource = filterPets(genderflag);
-             });
-            */
+            // NOTE -- have to call the filter function now and reassign the pet list !!
 
             MessagingCenter.Subscribe<List<List<string>>>(this, "filtersChanged", (filterSet) =>
             {
@@ -73,6 +76,8 @@ namespace PetInsights_all
                     {
                         filteredList.Add(pet);
                     }
+
+                    // TODO - ADD THE OTHER ONES HERE !!
                 }
             }
             else
@@ -96,7 +101,7 @@ namespace PetInsights_all
                 allPets = lstPets.ItemsSource as ObservableCollection<Pet>;
                 newFlag = false;
             }
-            await Navigation.PushModalAsync(new FilterModal(allPets));
+            await Navigation.PushModalAsync(new FilterModal());
         }
 
 

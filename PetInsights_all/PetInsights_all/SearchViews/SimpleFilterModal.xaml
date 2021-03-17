@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="PetInsights_all.SearchViews.FilterModal">
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PetInsights_all.SearchViews.SimpleFilterModal">
     <ContentPage.Content>
         <Frame Padding="10"
                Margin="30"
@@ -18,7 +18,8 @@
                        FontSize="Small"
                        TextColor="LightSlateGray"></Label>
                     <Slider></Slider>
-                    <Label Text="ANIMAL TYPE"
+                    
+                    <Label Text="PET TYPE"
                        TextColor="Black"
                        FontAttributes="Bold"
                        FontSize="Medium"></Label>
@@ -96,39 +97,6 @@
                                 TextColor="{Binding seniorTextColor}" 
                                 BorderColor="{Binding seniorBorderColor}"/>
                     </Grid>
-                    <Label Text="BREED"
-                       TextColor="Black"
-                       FontAttributes="Bold"
-                       FontSize="Medium"></Label>
-                    <Label Text="** make this a drop down searchable list **"
-                       FontSize="Small"
-                       TextColor="LightSlateGray"></Label>
-                    <Label Text="SIZE"
-                       TextColor="Black"
-                       FontAttributes="Bold"
-                       FontSize="Medium"></Label>
-                    <Label Text="Select the size you are interested in."
-                       FontSize="Small"
-                       TextColor="LightSlateGray"></Label>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width=".33*" />
-                            <ColumnDefinition Width=".33*" />
-                            <ColumnDefinition Width=".33*" />
-                        </Grid.ColumnDefinitions>
-                        <Button x:Name="smallButton" Grid.Column="0" Text="Small" BindingContext="small" BorderWidth="1" Clicked="PetSizeBtnClicked"
-                                BackgroundColor="{Binding smallBackgroundColor}" 
-                                TextColor="{Binding smallTextColor}" 
-                                BorderColor="{Binding smallBorderColor}"/>
-                        <Button x:Name="mediumButton" Grid.Column="1" Text="Medium" BindingContext="medium" BorderWidth="1" Clicked="PetSizeBtnClicked"
-                                BackgroundColor="{Binding mediumBackgroundColor}" 
-                                TextColor="{Binding mediumTextColor}" 
-                                BorderColor="{Binding mediumBorderColor}"/>
-                        <Button x:Name="largeButton" Grid.Column="2" Text="Large" BindingContext="large" BorderWidth="1" Clicked="PetSizeBtnClicked"
-                                BackgroundColor="{Binding largeBackgroundColor}" 
-                                TextColor="{Binding largeTextColor}" 
-                                BorderColor="{Binding largeBorderColor}"/>
-                    </Grid>
                     <Label Text="LIFESTYLE"
                        TextColor="Black"
                        FontAttributes="Bold"
@@ -150,28 +118,15 @@
                                 TextColor="{Binding energenicextColor}" 
                                 BorderColor="{Binding energenicBorderColor}"/>
                     </Grid>
-                    <Label Text="MEDICAL CONDITION"
+                    <Label Text="KEYWORD SEARCH"
                        TextColor="Black"
                        FontAttributes="Bold"
                        FontSize="Medium"></Label>
-                    <Label Text="Select if it's ok that the animal has a medical condition."
+                    <Label Text="Enter other keywords you would like to include"
                        FontSize="Small"
                        TextColor="LightSlateGray"></Label>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width=".5*" />
-                            <ColumnDefinition Width=".5*" />
-                        </Grid.ColumnDefinitions>
-                        <Button x:Name="medButton" Grid.Column="0" Text="Yes, Ok" BindingContext="med" BorderWidth="1" Clicked="PetMedicalBtnClicked"
-                                BackgroundColor="{Binding medBackgroundColor}" 
-                                TextColor="{Binding medTextColor}" 
-                                BorderColor="{Binding medBorderColor}"/>
-                        <Button x:Name="nomedButton" Grid.Column="1" Text="No" BindingContext="nomed" BorderWidth="1" Clicked="PetMedicalBtnClicked"
-                                BackgroundColor="{Binding nomedBackgroundColor}" 
-                                TextColor="{Binding nomedTextColor}" 
-                                BorderColor="{Binding nomedBorderColor}"/>
-                    </Grid>
-                    <Button Text="Filter Results"
+                    <Entry x:Name="keywordSearch" Placeholder="i.e. Hypoallergenic, blind, farm, etc." TextColor="Black"></Entry>
+                    <Button Text="GO -->"
                         TextTransform="Uppercase"
                         BackgroundColor="Orange"
                         TextColor="White"

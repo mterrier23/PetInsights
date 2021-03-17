@@ -2,18 +2,107 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PetInsights_all.MainSearch"
-             BackgroundColor="white">
+             BackgroundColor="white"
+             Title="PetInsights">
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout>
-            <Label Text="Main Search Page" TextColor="Black" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-            <Entry x:Name="location" Text="{Binding Location}" IsReadOnly="False" BackgroundColor="Gray" Completed="OnEnterPressed"/>
-            <Button Text="Show Pets on Map" BackgroundColor="Blue" Clicked="PetMapButton_OnClicked" VerticalOptions="CenterAndExpand">
-            </Button>
-            <Button Text="Show Pets in List" BackgroundColor="Blue" Clicked="PetListButton_OnClicked" VerticalOptions="CenterAndExpand">
-            </Button>
-            <Button Text="Add Pet (for testing)" BackgroundColor="Blue" Clicked="AddPetButton_OnClicked" VerticalOptions="CenterAndExpand">
-            </Button>
-            <Button Text="I'm an Org Rep" TextColor="Black" FontSize="Small" Clicked="GoToOrgSite"></Button>
+            <Label Text="Adopt Don't Shop" FontSize="30" TextColor="Black" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Padding="10"/>
+            <Frame CornerRadius="5" x:Name="searchFrame" HorizontalOptions="Start" VerticalOptions="Start" Margin="20, 0, 0, 0" HasShadow="True" Padding="10" >
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="onSearchFrame_Tapped" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <StackLayout Orientation="Horizontal" BackgroundColor="Transparent" >
+                <Image x:Name="searchImg" HeightRequest="20" Source="@drawable/ic_search.png" WidthRequest="20" HorizontalOptions="Start" BackgroundColor="Transparent"/>
+                <Label x:Name="searchBtn" Text="Search by breed, age, temperment, sex, etc..." HorizontalOptions="Start" TextColor="#000" BackgroundColor="Transparent" FontSize="16"/>
+                </StackLayout>
+            </Frame>
+                <Frame CornerRadius="5" x:Name="locationFrame" HorizontalOptions="Start" VerticalOptions="Start" Margin="20, 0, 0, 20" HasShadow="True" Padding="10" >
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="onLocationFrame_Tapped" NumberOfTapsRequired="1" />
+                </Frame.GestureRecognizers>
+                <StackLayout Orientation="Horizontal" BackgroundColor="Transparent" >
+                    <Image x:Name="locationImg" HeightRequest="15" Source="@drawable/ic_marker.png" WidthRequest="15" HorizontalOptions="Start" BackgroundColor="Transparent"/>
+                        <Label x:Name="location" Text="Current Location" HorizontalOptions="Start" TextColor="#3498DB" BackgroundColor="Transparent" FontSize="14"/>
+                </StackLayout>
+            </Frame>
+                <Grid  Padding="20,0,20,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".25*" />
+                        <ColumnDefinition Width=".25*" />
+                        <ColumnDefinition Width=".25*" />
+                        <ColumnDefinition Width=".25*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+                    <Button  Grid.Row="0" Grid.Column="0" Text="Cats" BackgroundColor="LightGray"
+                            FontSize="Micro" TextColor="Black" HorizontalOptions="StartAndExpand"></Button>
+                    <Button  Grid.Row="0" Grid.Column="1" Text="Small Dogs" BackgroundColor="LightGray"
+                            FontSize="Micro" TextColor="Black" HorizontalOptions="StartAndExpand"></Button>
+                    <Button  Grid.Row="0" Grid.Column="2" Text="Medium Dogs" BackgroundColor="LightGray"
+                            FontSize="Micro" TextColor="Black" HorizontalOptions="StartAndExpand"></Button>
+                    <Button  Grid.Row="0" Grid.Column="3" Text="Large Dogs" BackgroundColor="LightGray"
+                            FontSize="Micro" TextColor="Black" HorizontalOptions="StartAndExpand"></Button>
+                    <Button  Grid.Row="1" Grid.Column="0" Text="Exotic Animals" BackgroundColor="LightGray"
+                            FontSize="Micro" TextColor="Black" HorizontalOptions="StartAndExpand"></Button>
+                    <Button  Grid.Row="1" Grid.Column="1" Text="Chill animals" BackgroundColor="LightGray"
+                            FontSize="Micro" TextColor="Black" HorizontalOptions="StartAndExpand"></Button>
+                    <Button  Grid.Row="1" Grid.Column="2" Text="Energetic Animals" BackgroundColor="LightGray"
+                            FontSize="Micro" TextColor="Black" HorizontalOptions="StartAndExpand"></Button>
+                    <Button  Grid.Row="1" Grid.Column="3" Text="Longest on app" BackgroundColor="LightGray"
+                            FontSize="Micro" TextColor="Black" HorizontalOptions="StartAndExpand"></Button>
+                    <!-- might have to make each of this grids like above 
+                    <Label  Grid.Row="0" Grid.Column="0" Text="Cats"
+                            FontSize="Small" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                    <Label  Grid.Row="0" Grid.Column="1" Text="Small Dogs"
+                            FontSize="Small" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                    <Label  Grid.Row="0" Grid.Column="2" Text="Medium Dogs" 
+                            FontSize="Small" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                    <Label  Grid.Row="0" Grid.Column="3" Text="Large Dogs"
+                            FontSize="Small" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                    <Label  Grid.Row="1" Grid.Column="0" Text="Exotic Animals"
+                            FontSize="Small" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                    <Label  Grid.Row="1" Grid.Column="1" Text="Chill animals"
+                            FontSize="Small" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                    <Label  Grid.Row="1" Grid.Column="2" Text="Energetic Animals"
+                            FontSize="Small" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                    <Label  Grid.Row="1" Grid.Column="3" Text="Longest on app"
+                            FontSize="Small" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                    -->
+                </Grid>
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".4*" />
+                        <ColumnDefinition Width=".1*" />
+                        <ColumnDefinition Width=".4*" />
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Grid.Column="0" Padding="20,0,0,0">
+                        <BoxView HeightRequest="1"  BackgroundColor="LightGray"/>
+                    </StackLayout>
+                    <Label  Grid.Column="1" Text="OR" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,-10,0,0"
+                            FontSize="Small" TextColor="LightGray" ></Label>
+                    <StackLayout Grid.Column="2"  Padding="0,0,20,0">
+                        <BoxView HeightRequest="1"  BackgroundColor="LightGray"/>
+                    </StackLayout>
+                </Grid>
+                <Button BackgroundColor ="White" Text="Search by Shelter or Organization"  Margin="20"
+                        BorderColor="LightGray" BorderWidth="1" TextColor="Black" FontSize="Small" 
+                        Clicked="GoToOrgSite"></Button>
+                <BoxView HeightRequest="2" BackgroundColor="Black" />
+                <Label Text="How Can I Help?" FontSize="Large" TextColor="Black" HorizontalOptions="StartAndExpand"
+                       Margin="20"></Label>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".5*" />
+                        <ColumnDefinition Width=".5*" />
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="volunteerButton" Grid.Column="0" BackgroundColor="Blue" Text="Volunteer" />
+                    <Button x:Name="donateButton" Grid.Column="1" BackgroundColor="Green" Text="Donate"/>
+                </Grid>
+                <Button BackgroundColor ="White" Text="I'm an Org Representative" TextColor="LightGray" FontSize="Small" Clicked="GoToOrgSite"></Button>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

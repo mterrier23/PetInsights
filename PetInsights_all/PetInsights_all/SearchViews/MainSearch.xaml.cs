@@ -19,6 +19,8 @@ namespace PetInsights_all
         {
             InitializeComponent();
             location.Text = Application.Current.Properties["UserLocation"].ToString();
+
+            // = "Current Location = Application.Current.Properties["UserLocation"].ToString();
         }
 
         // code already exists in GetLocation.xaml.cs
@@ -52,25 +54,22 @@ namespace PetInsights_all
             Application.Current.SavePropertiesAsync();
         }
 
-        async void PetMapButton_OnClicked(object sender, EventArgs e)
-        {
-            await Application.Current.MainPage.Navigation.PushAsync(new PetMapView()); 
-        }
-
-        async void PetListButton_OnClicked(object sender, EventArgs e)
-        {
-            await Application.Current.MainPage.Navigation.PushAsync(new PetListView());
-            //await Application.Current.MainPage.Navigation.PushAsync(new templist());
-        }
-
-        async void AddPetButton_OnClicked(object sender, EventArgs e)
-        {
-            await Application.Current.MainPage.Navigation.PushAsync(new AddPet()); 
-        }
-
+  
         async void GoToOrgSite(object sender, EventArgs e)
         {
             await Application.Current.MainPage.Navigation.PushAsync(new OrgSignInPage());
+        }
+
+        async void onSearchFrame_Tapped(object sender, EventArgs e)
+        {
+            // await Application.Current.MainPage.Navigation.PushModalAsync(new SimpleFilterModal());
+            // temporary fix :)
+            await Application.Current.MainPage.Navigation.PushAsync(new PetListView(null, true));
+        }
+
+        async void onLocationFrame_Tapped(object sender, EventArgs e)
+        {
+            // let user change location (not implementing for demo
         }
 
 

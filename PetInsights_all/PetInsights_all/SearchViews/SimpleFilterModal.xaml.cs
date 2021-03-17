@@ -11,34 +11,30 @@ using PetInsights_all.Search;
 using System.Collections.ObjectModel;
 using PetInsights_all.SearchViews;
 
-
 namespace PetInsights_all.SearchViews
 {
-    public partial class FilterModal : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class SimpleFilterModal : ContentPage
     {
         string genderflag;
         bool changeStatus;
-        ObservableCollection<Pet> filtered; 
+        ObservableCollection<Pet> filtered;
         //ObservableCollection<Pet> _allPets;
         List<string> _petTypeFilter; // dog, cat, or exotic
         List<string> _petGenderFilter; // male, female
         List<string> _petAgeFilter; // newborn, young, adult, senior
-        List<string> _petSizeFilter; // small, medium, large
         List<string> _petTempermentFilter; // calm, energenic
-        List<string> _petMedicalFilter; // Yes, No
         List<List<string>> _petFilters; // all filters
 
 
         /* public FilterModal(ObservableCollection<Pet> allPets) */
-        public FilterModal()
+        public SimpleFilterModal()
         {
             //_allPets = allPets;
             _petTypeFilter = new List<string>();
             _petGenderFilter = new List<string>();
             _petAgeFilter = new List<string>();
-            _petSizeFilter = new List<string>();
             _petTempermentFilter = new List<string>();
-            _petMedicalFilter = new List<string>();
             _petFilters = new List<List<string>>();
 
             InitializeComponent();
@@ -67,7 +63,6 @@ namespace PetInsights_all.SearchViews
             femaleButton.BackgroundColor = Color.White;
             femaleButton.BorderColor = Color.LightGray;
             femaleButton.TextColor = Color.Black;
-
 
             // petAge
             newbornButton.BackgroundColor = Color.White;
@@ -122,7 +117,7 @@ namespace PetInsights_all.SearchViews
             }
         }
 
-        
+
         private async void PetGenderBtnClicked(object sender, EventArgs e)
         {
             string buttonName = ((Button)sender).BindingContext as string; // potential binding contexts = male, female
@@ -167,29 +162,6 @@ namespace PetInsights_all.SearchViews
             }
         }
 
-        private async void PetSizeBtnClicked(object sender, EventArgs e)
-        {
-            string buttonName = ((Button)sender).BindingContext as string; // potential binding contexts = small, medium, large
-            if (_petSizeFilter.Contains(buttonName))
-            {
-                // was already selected, so now we have to unselect it + remove from the list
-                _petSizeFilter.Remove(buttonName);
-                (sender as Button).BackgroundColor = Color.White;
-                (sender as Button).TextColor = Color.Black;
-                (sender as Button).BorderColor = Color.LightGray;
-            }
-
-            else
-            {
-                // hasn't been selected yet
-                _petSizeFilter.Add(buttonName);
-                (sender as Button).BackgroundColor = Color.Blue;
-                (sender as Button).TextColor = Color.White;
-                (sender as Button).BorderColor = Color.Blue;
-            }
-        }
-
-
         private async void PetTempermentBtnClicked(object sender, EventArgs e)
         {
             string buttonName = ((Button)sender).BindingContext as string; // potential binding contexts = calm, energenic
@@ -212,84 +184,17 @@ namespace PetInsights_all.SearchViews
             }
         }
 
-
-        // NOTE -- if user selects yes, add both yes and no to the list -- COMPLETE LATER !!
-        private async void PetMedicalBtnClicked(object sender, EventArgs e)
-        {
-           /* string buttonName = ((Button)sender).BindingContext as string; // potential binding contexts = med, nomed (convert to Yes, No
-
-            if (_petAgeFilter.Contains(buttonName) && buttonName.Equals("med"))
-            {
-                // do something
-            }
-
-            if ((sender as Button).BackgroundColor == Color.White)
-            {
-                (sender as Button).BackgroundColor = Color.Blue;
-                _petType = buttonName;
-                if (buttonName != medButton.BindingContext as string)
-                {
-                    medButton.BackgroundColor = Color.White;
-                }
-                if (buttonName != nomedButton.BindingContext as string)
-                {
-                    nomedButton.BackgroundColor = Color.White;
-                }
-            }
-            else if ((sender as Button).BackgroundColor == Color.Blue)
-            {
-                (sender as Button).BackgroundColor = Color.White;
-                _petType = null;
-            }
-           */
-    }
-
-
-
-
-
-
-
-    //TODO Store filter choices somewhere so it stays when modal is reopened
-    /*
-    void OnSelectionChange(object sender, CheckedChangedEventArgs args)
-    {
-        if (Male.IsChecked && !Female.IsChecked)
-        {
-            genderflag = "Male";
-        }
-
-        else if (Female.IsChecked && !Male.IsChecked)
-        {
-            genderflag = "Female";
-        }
-
-        else
-        {
-            genderflag = "Both";
-        }
-
-        changeStatus = true;
-
-    }
-    */
-
-
-    async void OnDismissButtonClicked(object sender, EventArgs args)
+        async void OnDismissButtonClicked(object sender, EventArgs args)
         {
             _petFilters.Add(_petTypeFilter);
             _petFilters.Add(_petGenderFilter);
             _petFilters.Add(_petAgeFilter);
+            _petFilters.Add(_petTempermentFilter);
             Console.WriteLine("sending pet filter over! - count = " + _petFilters.Count);
-            MessagingCenter.Send(_petFilters, "filtersChanged");
-            /*
-            if (changeStatus == true)
-            {
-               MessagingCenter.Send<FilterModal, string>(this, "selectionChanged", genderflag);
-            }
-            */
-            
-            await Application.Current.MainPage.Navigation.PopModalAsync();
+
+            // inserting page before caused some issues...
+            await Application.Current.MainPage.Navigation.PopModalAsync(); // testing something new
         }
     }
+
 }
