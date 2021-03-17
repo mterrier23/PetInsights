@@ -60,6 +60,11 @@ namespace PetInsights_all
             await Application.Current.MainPage.Navigation.PushAsync(new OrgSignInPage());
         }
 
+        async void GoToOrgListView(object sender, EventArgs e)
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new OrgListView());
+        }
+
         async void onSearchFrame_Tapped(object sender, EventArgs e)
         {
             // await Application.Current.MainPage.Navigation.PushModalAsync(new SimpleFilterModal());

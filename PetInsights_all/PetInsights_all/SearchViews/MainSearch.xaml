@@ -89,7 +89,7 @@
                 </Grid>
                 <Button BackgroundColor ="White" Text="Search by Shelter or Organization"  Margin="20"
                         BorderColor="LightGray" BorderWidth="1" TextColor="Black" FontSize="Small" 
-                        Clicked="GoToOrgSite"></Button>
+                        Clicked="GoToOrgListView"></Button>
                 <BoxView HeightRequest="2" BackgroundColor="Black" />
                 <Label Text="How Can I Help?" FontSize="Large" TextColor="Black" HorizontalOptions="StartAndExpand"
                        Margin="20"></Label>

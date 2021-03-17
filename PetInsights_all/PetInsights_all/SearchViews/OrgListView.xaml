@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PetInsights_all.SearchViews.OrgListView"
+             BackgroundColor="White">
+    <ContentPage.Content >
+        <ScrollView>
+            <StackLayout Margin="10, 20, 10, 0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".8*" />
+                        <ColumnDefinition Width=".2*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="Animal Friends Humane Society" FontAttributes="Bold" TextColor="Black" FontSize="Medium"></Label>
+                    <Label Grid.Column="1" Text="1.2 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
+                </Grid>
+                <Label Text="Cats, Dogs, Exotic" TextColor="Black"></Label>
+                <Grid Margin="0, 0, 30, 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130" />
+                        <ColumnDefinition Width="130" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Column="0" Padding="-20" BackgroundColor="Blue" Text="Volunteers OK" FontSize="Micro" TextColor="White" />
+                    <Button Grid.Column="1" Padding="-20" BackgroundColor="LightGray" Text="Donations Needed" FontSize="Micro" TextColor="DarkGray"/>
+                </Grid>
+                <Label Text="123 Wallaway Street, Cincinnati, Ohio" TextColor="Black"></Label>
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".25*" />
+                        <ColumnDefinition Width=".25*" />
+                        <ColumnDefinition Width=".25*" />
+                        <ColumnDefinition Width=".25*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <Frame CornerRadius="20" Grid.Column="0"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <Image Source="@drawable/ic_pets.png"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    </Frame>
+                    <Frame CornerRadius="20" Grid.Column="1"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <Image Source="@drawable/ic_pets.png"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    </Frame>
+                    <Frame CornerRadius="20" Grid.Column="2"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <Image Source="@drawable/ic_pets.png"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    </Frame>
+                    <Frame CornerRadius="20" Grid.Column="3"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <Image Source="@drawable/ic_pets.png"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    </Frame>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

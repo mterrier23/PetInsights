@@ -40,7 +40,7 @@ namespace PetInsights_all
             // TODO Might implement later -- still researching solution
             //updateDistanceonPets(location.Text);      
             location.Text = string.Empty;
-            await Application.Current.MainPage.Navigation.PushAsync(new MainTabbed()); // NOTE - was pushmodalasync
+            await Application.Current.MainPage.Navigation.PushModalAsync(new MainTabbed()); // NOTE - was pushmodalasync
         }
 
         private bool ConfirmLocation(string location)
@@ -64,7 +64,7 @@ namespace PetInsights_all
 
         private async void GoToOrgSite(object sender, EventArgs e)
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new OrgSignInPage());    // NOTE -- was PushModalAsync
+            await Application.Current.MainPage.Navigation.PushModalAsync(new OrgSignInPage());    // NOTE -- was PushModalAsync
         }
     }
 }
