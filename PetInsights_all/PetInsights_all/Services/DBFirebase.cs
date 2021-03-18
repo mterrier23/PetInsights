@@ -20,11 +20,11 @@ namespace PetInsights_all.Services
 
         // NOTE - temporary values for testing
         //string _ageRange = "0 - 6 months";
-        string _address = "Fairfield, Ohio";
+        string _address = "Cincinnati, Ohio";
         string _hypoallergenic = "No";
         string _sheds = "Yes";
-        string _maintenance = "Moderate";
-        string _affiliation = "Fairfield Farm Friends";
+        string _maintenance = "Low";
+        string _affiliation = "SAAP";
 
         public DBFirebase()
         {

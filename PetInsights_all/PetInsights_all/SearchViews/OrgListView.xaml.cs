@@ -16,5 +16,10 @@ namespace PetInsights_all.SearchViews
         {
             InitializeComponent();
         }
+
+        async void OnFilterButtonClicked(object sender, EventArgs e)
+        {
+            // let them change location if needed
+        }
     }
 }

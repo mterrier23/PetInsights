@@ -2,12 +2,83 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PetInsights_all.MainFaves"
-			 IconImageSource="ic_star_border.png"
-			 Title="Faves"
              BackgroundColor="white">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Favorites Page" TextColor="Black" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout>
+        <Frame BackgroundColor="White"
+               CornerRadius="20"
+               Margin="10"
+               Padding="10,10,5,10">
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="ic_searchfilter.png"
+                         HeightRequest="25"
+                         Aspect="AspectFit"
+                         BackgroundColor="White"
+                         HorizontalOptions="Start"></ImageButton>
+
+                <Label Text="Filter your favorites by breed, age, etc." TextColor="Gray" Padding="5"></Label>
+            </StackLayout>
+        </Frame>
+
+        <CollectionView Margin="10,0,10,10" ItemsSource="{Binding Pets}"
+                    x:Name="lstPets"
+                    ItemSizingStrategy="MeasureAllItems"
+                    SelectionMode="Single"
+                    SelectionChanged="lstPets_SelectionChanged">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical"
+                             Span="2"                             
+                             VerticalItemSpacing="10"
+                             HorizontalItemSpacing="10">
+                </GridItemsLayout>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <Frame Padding="15"
+                           Margin="10"
+                           CornerRadius="5"
+                           BorderColor="LightBlue">
+
+                        <StackLayout>
+                            <Image HeightRequest="120" Source="{Binding ImgIcon}" Aspect="AspectFill" BackgroundColor="LightGray"></Image>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Name}"
+                     HorizontalOptions="StartAndExpand"
+                     FontSize="24"
+                     TextColor="Black"
+                     VerticalTextAlignment="End"
+                     FontAttributes="Bold"></Label>
+
+                                <Label Text="x mi."
+                          HorizontalOptions="End"
+                          FontSize="16"
+                          TextColor="Orange"
+                          Margin="0,5,0,0"
+                          FontAttributes="Bold"
+                          ></Label>
+
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Breed}"
+                      HorizontalOptions="StartAndExpand"
+                      TextColor="Black"
+                      FontSize="Small"></Label>
+
+
+                                <!-- Gender ICON
+                  <Image Source="femaleicon.png"
+                     HeightRequest="18"
+                     ></Image>-->
+                            </StackLayout>
+
+                            <Label Text="{Binding Age, StringFormat='Age: {0:F0}'}"
+                       TextColor="Black"
+                       FontSize="Small"></Label>
+                        </StackLayout>
+
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
 </ContentPage>

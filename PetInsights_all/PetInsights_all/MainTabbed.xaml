@@ -17,9 +17,24 @@
             <petinsights_all:MainSearch />
         </x:Arguments>
     </NavigationPage>
-    <petinsights_all:MainFaves/>
+    <NavigationPage Title="Faves" IconImageSource="ic_star_border.png">
+        <x:Arguments>
+            <petinsights_all:MainFaves />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Breeds" IconImageSource="ic_pets.png">
+        <x:Arguments>
+            <petinsights_all:MainBreeds />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Profile" IconImageSource="ic_person_outline.png">
+        <x:Arguments>
+            <petinsights_all:MainProfile />
+        </x:Arguments>
+    </NavigationPage>
+    <!--<petinsights_all:MainFaves/>
     <petinsights_all:MainBreeds/>
-    <petinsights_all:MainProfile/>
+    <petinsights_all:MainProfile/>-->
 
 
 </TabbedPage>

@@ -26,7 +26,7 @@ namespace PetInsights_all
         public PetListView(List<List<string>> _filters, bool fromMain)
         {
             if (fromMain)
-                Application.Current.MainPage.Navigation.PushModalAsync(new SimpleFilterModal());
+                Application.Current.MainPage.Navigation.PushAsync(new SimpleFilterModal());
 
             InitializeComponent();
             BindingContext = new PetsViewModel();
@@ -116,7 +116,7 @@ namespace PetInsights_all
         async void lstPets_SelectionChanged(System.Object sender, Xamarin.Forms.SelectionChangedEventArgs e)
         {
             ObservableCollection<Pet> petList = lstPets.ItemsSource as ObservableCollection<Pet>;
-
+            Console.WriteLine("ListView petlist count = " + petList.Count);
             var pet = e.CurrentSelection.First() as Pet;
 
             if (pet == null)

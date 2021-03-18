@@ -18,6 +18,7 @@ namespace PetInsights_all
         public MainSearch()
         {
             InitializeComponent();
+            searchFrame.BackgroundColor = Color.White;
             location.Text = Application.Current.Properties["UserLocation"].ToString();
 
             // = "Current Location = Application.Current.Properties["UserLocation"].ToString();
@@ -73,7 +74,10 @@ namespace PetInsights_all
 
             //await Application.Current.MainPage.Navigation.PushAsync(new PetListView(null, true));
             // temporary fix :)
+            searchFrame.BackgroundColor = Color.LightGray;
+            await Task.Delay(500);
             await Navigation.PushAsync(new PetListView(null, true));
+            searchFrame.BackgroundColor = Color.White;
         }
 
         async void onLocationFrame_Tapped(object sender, EventArgs e)

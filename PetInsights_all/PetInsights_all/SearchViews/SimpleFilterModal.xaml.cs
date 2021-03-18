@@ -193,7 +193,8 @@ namespace PetInsights_all.SearchViews
             Console.WriteLine("sending pet filter over! - count = " + _petFilters.Count);
 
             // inserting page before caused some issues...
-            await Application.Current.MainPage.Navigation.PopModalAsync(); // testing something new
+            //await Application.Current.MainPage.Navigation.PopModalAsync(); // testing something new
+            await Application.Current.MainPage.Navigation.PopAsync();
         }
     }
 

@@ -3,18 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PetInsights_all.MainSearch"
              BackgroundColor="white"
-             Title="Adopt Don't Shop">
+             Title="PetInsights">
     <ContentPage.Content>
         <ScrollView>
         <StackLayout>
             <Label Text="Adopt Don't Shop" FontSize="30" TextColor="Black" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Padding="10"/>
-            <Frame CornerRadius="5" x:Name="searchFrame" HorizontalOptions="Start" VerticalOptions="Start" Margin="20, 0, 0, 0" HasShadow="True" Padding="10" >
+            <Frame CornerRadius="5" x:Name="searchFrame" HorizontalOptions="Start" VerticalOptions="Start" Margin="20, 0, -10, 0" HasShadow="True" Padding="10" BackgroundColor="{Binding searchBar}" >
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Tapped="onSearchFrame_Tapped" NumberOfTapsRequired="1" />
                 </Frame.GestureRecognizers>
                 <StackLayout Orientation="Horizontal" BackgroundColor="Transparent" >
                 <Image x:Name="searchImg" HeightRequest="20" Source="@drawable/ic_search.png" WidthRequest="20" HorizontalOptions="Start" BackgroundColor="Transparent"/>
-                <Label x:Name="searchBtn" Text="Search by breed, age, temperment, sex, etc..." HorizontalOptions="Start" TextColor="#000" BackgroundColor="Transparent" FontSize="16"/>
+                <Label x:Name="searchBtn" Text="Search by breed, age, temperment, etc..." HorizontalOptions="Start" TextColor="#000" BackgroundColor="Transparent" FontSize="16"/>
                 </StackLayout>
             </Frame>
                 <Frame CornerRadius="5" x:Name="locationFrame" HorizontalOptions="Start" VerticalOptions="Start" Margin="20, 0, 0, 20" HasShadow="True" Padding="10" >
@@ -98,8 +98,8 @@
                         <ColumnDefinition Width=".5*" />
                         <ColumnDefinition Width=".5*" />
                     </Grid.ColumnDefinitions>
-                    <Button x:Name="volunteerButton" Grid.Column="0" BackgroundColor="Blue" Text="Volunteer" />
-                    <Button x:Name="donateButton" Grid.Column="1" BackgroundColor="Green" Text="Donate"/>
+                    <Button x:Name="volunteerButton" Grid.Column="0" BackgroundColor="Blue" Margin="20,0,0,0" Text="Volunteer" />
+                    <Button x:Name="donateButton" Grid.Column="1" BackgroundColor="Green" Margin="0,0,20,0" Text="Donate"/>
                 </Grid>
                 <Button BackgroundColor ="White" Text="I'm an Org Representative" TextColor="LightGray" FontSize="Small" Clicked="GoToOrgSite"></Button>
         </StackLayout>
