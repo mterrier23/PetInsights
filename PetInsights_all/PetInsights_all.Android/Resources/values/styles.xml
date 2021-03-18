@@ -2,7 +2,9 @@
 <resources>
 
   <style name="MainTheme" parent="MainTheme.Base">
-    <!-- As of Xamarin.Forms 4.6 the theme has moved into the Forms binary -->
+	  <item name="toolbarNavigationButtonStyle">@style/homeToolbarNavigationButtonStyle</item>
+	  <item name="toolbarStyle">@style/homeToolbarStyle</item>
+	  <!-- As of Xamarin.Forms 4.6 the theme has moved into the Forms binary -->
     <!-- If you want to override anything you can do that here. -->
     <!-- Underneath are a couple of entries to get you started. -->
 
@@ -15,4 +17,18 @@
          which is used to tint widgets -->
     <!--<item name="colorAccent">#FF4081</item>-->
   </style>
+
+	<style name="homeToolbarStyle" parent="@style/Widget.AppCompat.Toolbar">
+		<item name="windowActionModeOverlay">true</item>
+		<item name="contentInsetLeft">12dp</item>
+		<item name="contentInsetStart">12dp</item>
+		<item name="contentInsetStartWithNavigation">0dp</item>
+		<item name="android:paddingLeft">10dp</item>
+	</style>
+	<style name="homeToolbarNavigationButtonStyle"
+         parent="@style/Widget.AppCompat.Toolbar.Button.Navigation">
+		<item name="android:minWidth">0dp</item>
+		<item name="android:paddingRight">5dp</item>
+		<item name="android:scaleType">centerInside</item>
+	</style>
 </resources>

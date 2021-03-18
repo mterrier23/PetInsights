@@ -25,11 +25,11 @@ namespace PetInsights_all
 
         public PetListView(List<List<string>> _filters, bool fromMain)
         {
-            InitializeComponent();
-            BindingContext = new PetsViewModel();
-
             if (fromMain)
                 Application.Current.MainPage.Navigation.PushModalAsync(new SimpleFilterModal());
+
+            InitializeComponent();
+            BindingContext = new PetsViewModel();
 
             newFlag = true;
 

@@ -14708,6 +14708,12 @@ namespace PetInsights_all.Droid
 			// aapt resource value: 0x7F0E01FE
 			public const int collectionViewTheme = 2131624446;
 			
+			// aapt resource value: 0x7F0E01FF
+			public const int homeToolbarNavigationButtonStyle = 2131624447;
+			
+			// aapt resource value: 0x7F0E0200
+			public const int homeToolbarStyle = 2131624448;
+			
 			// aapt resource value: 0x7F0E00C7
 			public const int MainTheme = 2131624135;
 			
@@ -14807,11 +14813,11 @@ namespace PetInsights_all.Droid
 			// aapt resource value: 0x7F0E00E7
 			public const int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = 2131624167;
 			
-			// aapt resource value: 0x7F0E01FF
-			public const int scrollViewScrollBars = 2131624447;
+			// aapt resource value: 0x7F0E0201
+			public const int scrollViewScrollBars = 2131624449;
 			
-			// aapt resource value: 0x7F0E0200
-			public const int scrollViewTheme = 2131624448;
+			// aapt resource value: 0x7F0E0202
+			public const int scrollViewTheme = 2131624450;
 			
 			// aapt resource value: 0x7F0E00E8
 			public const int TextAppearance_AppCompat = 2131624168;
