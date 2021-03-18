@@ -6,8 +6,12 @@
             BarBackgroundColor="White"
             SelectedTabColor="LightBlue"
             UnselectedTabColor ="LightGray"
+            NavigationPage.HasNavigationBar="False"
             x:Class="PetInsights_all.MainTabbed">
-  <!--Pages can be added as references or inline-->
+    <!--" NavigationPage.TitleView>
+        to personalize your navigation title 
+        <Label Text="PetInsights" HorizontalOptions="Center"/>
+    </-->
     <NavigationPage Title="Search" IconImageSource="ic_search.png">
         <x:Arguments>
             <petinsights_all:MainSearch />

@@ -11,7 +11,7 @@ namespace PetInsights_all
             //InitializeComponent(); // was here originally
 
             // If user previously used app, we skip location page
-            if (Application.Current.Properties.ContainsKey("UserLocation"))
+             if (Application.Current.Properties.ContainsKey("UserLocation"))
             {
                 MainPage = new NavigationPage(new MainTabbed()); 
             }
@@ -19,7 +19,7 @@ namespace PetInsights_all
             {
                 MainPage = new NavigationPage(new GetLocation()); 
             }
-
+            
         }
 
         protected override void OnStart()

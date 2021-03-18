@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PetInsights_all.OrgSide.OrgSignInPage">
+             x:Class="PetInsights_all.OrgSide.OrgSignInPage"
+             Title="Sign In">
     <ContentPage.Content>
         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
             <Label Margin="0, 50, 0, 0" Text="Organization Name" FontSize="Large"  FontAttributes="Bold"></Label>

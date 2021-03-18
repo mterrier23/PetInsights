@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PetInsights_all.MainSearch"
              BackgroundColor="white"
-             Title="PetInsights">
+             Title="Adopt Don't Shop">
     <ContentPage.Content>
         <ScrollView>
         <StackLayout>

@@ -3,8 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PetInsights_all.PetListView"
              x:Name="TileView"
-             Title="Pet Results"
-             BackgroundColor="LightBlue"> 
+             BackgroundColor="LightBlue">
+    <NavigationPage.TitleView>
+        <Frame BackgroundColor="White"
+               CornerRadius="20"
+               Margin="10"
+               Padding="10,10,5,10">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped= "OnFilterButtonClicked"></TapGestureRecognizer>
+            </Frame.GestureRecognizers>
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="ic_searchfilter.png"
+                         HeightRequest="25"
+                         Aspect="AspectFit"
+                         Clicked="OnFilterButtonClicked"
+                         BackgroundColor="White"
+                         HorizontalOptions="Start"></ImageButton>
+
+                <Label Text="Filter results by breed, age, etc." TextColor="Gray" Padding="5"></Label>
+            </StackLayout>
+        </Frame>
+    </NavigationPage.TitleView>
     <StackLayout>
         <Frame BackgroundColor="White"
                CornerRadius="20"
