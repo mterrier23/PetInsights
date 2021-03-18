@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PetInsights_all.SearchViews.SimpleFilterModal">
     <ContentPage.Content>
-        <Frame Padding="10"
-               Margin="30"
-               BackgroundColor="AntiqueWhite">
+        <Frame Padding="20"
+               Margin="20"
+               BackgroundColor="White">
 
             <ScrollView>
                 <StackLayout>
@@ -13,15 +13,17 @@
                     <Label Text="SEARCH RADIUS"
                        TextColor="Black"
                        FontAttributes="Bold"
-                       FontSize="Medium"></Label>
+                       FontSize="Medium"
+                       Margin="0,10,0,0"></Label>
                     <Label Text="Adjust search radius by moving the slider."
                        FontSize="Small"
                        TextColor="LightSlateGray"></Label>
-                    <Slider></Slider>
+                    <Slider ThumbColor="Orange" MaximumTrackColor="Gray" MinimumTrackColor="Orange"></Slider>
                     
                     <Label Text="PET TYPE"
                        TextColor="Black"
                        FontAttributes="Bold"
+                       Margin="0,10,0,0"
                        FontSize="Medium"></Label>
                     <Label Text="Select what animals you are interested in."
                        FontSize="Small"
@@ -48,7 +50,8 @@
                     <Label Text="GENDER"
                        TextColor="Black"
                        FontAttributes="Bold"
-                       FontSize="Medium"></Label>
+                       FontSize="Medium"
+                       Margin="0,10,0,0"></Label>
                     <Label Text="Select what genders of pets you are interested in."
                        FontSize="Small"
                        TextColor="LightSlateGray"></Label>
@@ -69,7 +72,8 @@
                     <Label Text="AGE RANGE"
                        TextColor="Black"
                        FontAttributes="Bold"
-                       FontSize="Medium"></Label>
+                       FontSize="Medium"
+                       Margin="0,10,0,0"></Label>
                     <Label Text="Select what age range you are interested in."
                        FontSize="Small"
                        TextColor="LightSlateGray"></Label>
@@ -99,6 +103,7 @@
                     </Grid>
                     <Label Text="LIFESTYLE"
                        TextColor="Black"
+                        Margin="0,10,0,0"
                        FontAttributes="Bold"
                        FontSize="Medium"></Label>
                     <Label Text="Select which temperment you are interested in"
@@ -119,6 +124,7 @@
                                 BorderColor="{Binding energenicBorderColor}"/>
                     </Grid>
                     <Label Text="KEYWORD SEARCH"
+                        Margin="0,10,0,0"
                        TextColor="Black"
                        FontAttributes="Bold"
                        FontSize="Medium"></Label>
@@ -126,10 +132,11 @@
                        FontSize="Small"
                        TextColor="LightSlateGray"></Label>
                     <Entry x:Name="keywordSearch" Placeholder="i.e. Hypoallergenic, blind, farm, etc." TextColor="Black"></Entry>
-                    <Button Text="GO -->"
+                    <Button Text="search"
                         TextTransform="Uppercase"
                         BackgroundColor="Orange"
                         TextColor="White"
+                        Margin="0,20,0,0"
                         Clicked="OnDismissButtonClicked"></Button>
                 </StackLayout>
             </ScrollView>
