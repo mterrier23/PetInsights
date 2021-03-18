@@ -134,6 +134,7 @@
                        TextColor="LightSlateGray"></Label>
                     <Entry x:Name="keywordSearch" Placeholder="i.e. Hypoallergenic, blind, farm, etc." TextColor="Black"></Entry>
                     <Button Text="search"
+                            
                         TextTransform="Uppercase"
                         BackgroundColor="Orange"
                         TextColor="White"
