@@ -27,7 +27,8 @@ namespace PetInsights_all.SearchViews
         {
             string comment = Comment.Text;
             await services.AddPetComment(pet, comment);
-            await Application.Current.MainPage.Navigation.PopAsync();
+            //await Application.Current.MainPage.Navigation.PopAsync(); // broke the nav bar maybe
+            await Navigation.PopAsync();
         }
         
     }

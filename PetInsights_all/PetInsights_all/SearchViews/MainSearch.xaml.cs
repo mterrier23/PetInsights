@@ -62,14 +62,18 @@ namespace PetInsights_all
 
         async void GoToOrgListView(object sender, EventArgs e)
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new OrgListView());
+            //await Application.Current.MainPage.Navigation.PushAsync(new OrgListView()); // possibly broke nav bar
+            await Navigation.PushAsync(new OrgListView());
+
         }
 
         async void onSearchFrame_Tapped(object sender, EventArgs e)
         {
-            // await Application.Current.MainPage.Navigation.PushModalAsync(new SimpleFilterModal());
+            // await Navigation.PushModalAsync(new SimpleFilterModal());
+
+            //await Application.Current.MainPage.Navigation.PushAsync(new PetListView(null, true));
             // temporary fix :)
-            await Application.Current.MainPage.Navigation.PushAsync(new PetListView(null, true));
+            await Navigation.PushAsync(new PetListView(null, true));
         }
 
         async void onLocationFrame_Tapped(object sender, EventArgs e)
