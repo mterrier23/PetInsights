@@ -6,28 +6,32 @@
              Title="{Binding Name}">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Margin="20">
+            <StackLayout Margin="25">
                 <CarouselView x:Name="TheCarousel" ItemsSource="{Binding Media}" IndicatorView="indicatorView"
-                              HeightRequest="400">
+                              HeightRequest="400" BackgroundColor="White">
                     <CarouselView.ItemTemplate>
                         <DataTemplate>
-                            <Image Source="{Binding .}"/>
+                            
+                            <Image Source="{Binding .}" Aspect="AspectFill"/>
+                              
                         </DataTemplate>
                     </CarouselView.ItemTemplate>
                 </CarouselView>
                 <IndicatorView x:Name="indicatorView"
-                   IndicatorColor="LightGray"
-                   SelectedIndicatorColor="DarkGray"
-                   HorizontalOptions="Center" />
-                <Grid>
+                   IndicatorColor="LightBlue"
+                   SelectedIndicatorColor="Orange"
+                   IndicatorSize="7" 
+                   HorizontalOptions="Center"
+                   Margin="0,5,0,20"/>
+                <Grid Margin="0,5,0,5">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width=".5*" />
-                        <ColumnDefinition Width=".25*" />
-                        <ColumnDefinition Width=".25*" />
+                        <ColumnDefinition Width=".8*" />
+                        <ColumnDefinition Width=".10*" />
+                        <ColumnDefinition Width=".10*" />
                     </Grid.ColumnDefinitions>
-                    <Label  Grid.Column="0" Text="{Binding Name}" FontAttributes="Bold" 
+                    <Label  Grid.Column="0" Text="{Binding Name}" FontAttributes="Bold"
                             FontSize="Title" TextColor="Black"></Label>
-                    <Button x:Name= "sharePet" Grid.Column="1" Text="S" />
+                    <ImageButton x:Name= "sharePet" Grid.Column="1" Source="ic_share.png" HeightRequest="18" BackgroundColor="White" />
                     <Image x:Name="faveImage" Grid.Column="2" Source="{Binding favImage}">
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer
@@ -52,66 +56,73 @@
                             FontSize="Medium" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
                     <Label  Grid.Row="0" Grid.Column="1" Text="{Binding Breed}"
                             FontSize="Medium" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
-                    <Label  Grid.Row="1" Grid.Column="0" Text="Age"
+                    <Label  Grid.Row="1" Grid.Column="0" Text="Age: "
                             FontSize="Medium" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
                     <Label  Grid.Row="1" Grid.Column="1" Text="{Binding Age}"
                             FontSize="Medium" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
-                    <Label  Grid.Row="2" Grid.Column="0" Text="Sex"
+                    <Label  Grid.Row="2" Grid.Column="0" Text="Sex: "
                             FontSize="Medium" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
                     <Label  Grid.Row="2" Grid.Column="1" Text="{Binding Sex}"
                             FontSize="Medium" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
-                    <Label  Grid.Row="3" Grid.Column="0" Text="Place"
+                    <Label  Grid.Row="3" Grid.Column="0" Text="Place: "
                             FontSize="Medium" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
                     <Label  Grid.Row="3" Grid.Column="1" Text="{Binding Name}"
                             FontSize="Medium" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
                 </Grid>
-                <Grid BackgroundColor="LightGray">
+                <Grid BackgroundColor="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"></RowDefinition>
+                    </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
-                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="2" />
                         <ColumnDefinition />
-                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="2"/>
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Text="Leave a Comment"  Clicked="BtnAddComment" FontSize="Micro"></Button>
-                    <Label Grid.Column="1" Text="|" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center"></Label>
-                    <Button Grid.Column="2" Text="Add Photo" Clicked="BtnAddMedia"></Button>
-                    <Label Grid.Column="3" Text="|" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center"></Label>
-                    <Button Grid.Column="4" Text="Favorite"/>
+                    <Button BackgroundColor="Orange" TextColor="White" BorderColor="Orange" BorderWidth="2"  Grid.Column="0" Text="Comment"  Clicked="BtnAddComment"></Button>
+                    <!--<Label Grid.Column="1" Text="|" TextColor="Gray" HorizontalOptions="Center" VerticalOptions="Center"></Label>-->
+                    <Button BackgroundColor="Orange" TextColor="White" BorderColor="Orange" BorderWidth="2"  Grid.Column="2" Text="Add Photo" Clicked="BtnAddMedia"></Button>
+                    <!--<Label Grid.Column="3" Text="|" TextColor="Gray" HorizontalOptions="Center" VerticalOptions="Center"></Label>-->
+                    <Button BackgroundColor="FloralWhite" BorderColor="Orange" BorderWidth="2" TextColor="Orange" Text="Update" Clicked="BtnUpdate_Pet" Grid.Column="4"></Button>
+
+                    <!--<Button CornerRadius="5" BackgroundColor="LightBlue"  Text="Favorite" />-->
                 </Grid>
-                <Button Text="Update" Clicked="BtnUpdate_Pet"></Button>
-                <Label Text="Comments" TextColor="Black" FontSize="Medium" HorizontalOptions="Start"></Label>
-                <StackLayout HeightRequest="50">
-                    <Label x:Name="hasNoComments" Text="This pet has no comments yet" TextColor="Black" IsVisible="{Binding ifHasComments}"/>
-                </StackLayout>
-                <ListView x:Name="lstComments" ItemsSource="{Binding Comments}" Margin="0,-30,0,0" IsVisible="{Binding showComments}" HeightRequest="200"
-                  SeparatorVisibility="Default" IsEnabled = "false">
+
+                <BoxView HeightRequest="1" BackgroundColor="LightBlue" Margin="0,20,0,0"/>
+                                         
+                <Label Text="Comments" TextColor="Black" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="Start" Margin="0,10,0,0"></Label>
+                <Label x:Name="hasNoComments" Text="This pet has no comments yet" TextColor="Black" IsVisible="{Binding ifHasComments}"></Label>
+                <StackLayout VerticalOptions="Fill" HorizontalOptions="StartAndExpand">
+                <ListView x:Name="lstComments" ItemsSource="{Binding Comments}" IsVisible="{Binding showComments}" 
+                  SeparatorVisibility="Default" IsEnabled = "true" VerticalOptions="FillAndExpand" RowHeight="60">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout>
-                                    <Label Text="{Binding .}" TextColor="Black"/>
-                                    <BoxView 
-                                         HeightRequest="1"
-                                         BackgroundColor="LightGray"/>
+                                    <Label Text="{Binding .}" Padding="0,10,0,10" TextColor="Black"/>
+                                   
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <Button x:Name="SeeComments" IsVisible="{Binding isVisibleBtn}" Text="See All" Clicked="BtnSeeComments"/>
-                <Label x:Name="shelteredWithLabel" TextColor="Black" FontSize="Medium"></Label>
-                <CollectionView Grid.Column="0" ItemsSource="{Binding SharedPets}"
+                </StackLayout>
+                <Button x:Name="SeeComments" IsVisible="{Binding isVisibleBtn}" Padding="0"  HorizontalOptions="StartAndExpand" TextColor="Orange" Text="See All Comments" Clicked="BtnSeeComments" BackgroundColor="White"/>
+                <BoxView HeightRequest="1" BackgroundColor="LightBlue" Margin="0,10,0,0"/>
+
+                <Label x:Name="shelteredWithLabel" TextColor="Black" FontSize="Medium" FontAttributes="Italic" Margin="0,20,0,20"></Label>
+                <CollectionView ItemsSource="{Binding SharedPets}" VerticalOptions="Start" ItemSizingStrategy="MeasureAllItems"
                     x:Name="lstSharedPets"
                     SelectionMode="Single"
                     SelectionChanged="lstPets_SelectionChanged">
                         <CollectionView.ItemsLayout>
-                            <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="10" HorizontalItemSpacing="10"></GridItemsLayout>
+                            <GridItemsLayout Orientation="Horizontal" Span="4" VerticalItemSpacing="10" HorizontalItemSpacing="10"></GridItemsLayout>
                         </CollectionView.ItemsLayout>
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <Frame Padding="15" Margin="10" HasShadow="True">
-                                    <StackLayout>
+                                <Frame Padding="15" Margin="10" HasShadow="True" CornerRadius="5" BackgroundColor="White" BorderColor="LightBlue">
+                                    <StackLayout VerticalOptions="Fill">
                                         <Image HeightRequest="120" Source="{Binding ImgIcon}" Aspect="AspectFill"></Image>
                                     <Grid>
                                         <Grid.ColumnDefinitions>
@@ -127,6 +138,8 @@
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>
+                 <BoxView HeightRequest="3" BackgroundColor="LightBlue" Margin="0,20,0,0"/>
+
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

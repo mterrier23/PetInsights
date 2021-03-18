@@ -1,25 +1,28 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="PetInsights_all.SearchViews.FilterModal">
+             x:Class="PetInsights_all.SearchViews.FilterModal"
+             BackgroundColor="LightBlue">
     <ContentPage.Content>
-        <Frame Padding="10"
-               Margin="30"
-               BackgroundColor="AntiqueWhite">
+        <Frame Padding="20"
+               Margin="20"
+               BackgroundColor="White">
 
             <ScrollView>
                 <StackLayout>
 
                     <Label Text="SEARCH RADIUS"
+                       Margin="0,10,0,0"
                        TextColor="Black"
                        FontAttributes="Bold"
                        FontSize="Medium"></Label>
                     <Label Text="Adjust search radius by moving the slider."
                        FontSize="Small"
                        TextColor="LightSlateGray"></Label>
-                    <Slider></Slider>
+                    <Slider ThumbColor="Orange" MaximumTrackColor="Gray" MinimumTrackColor="Orange"></Slider>
                     <Label Text="ANIMAL TYPE"
-                       TextColor="Black"
+                       Margin="0,10,0,0"
+                           TextColor="Black"
                        FontAttributes="Bold"
                        FontSize="Medium"></Label>
                     <Label Text="Select what animals you are interested in."
@@ -45,6 +48,7 @@
                                 BorderColor="{Binding exoticBorderColor}"/>
                     </Grid>
                     <Label Text="GENDER"
+                       Margin="0,10,0,0"
                        TextColor="Black"
                        FontAttributes="Bold"
                        FontSize="Medium"></Label>
@@ -66,6 +70,7 @@
                                 BorderColor="{Binding femaleBorderColor}"/>
                     </Grid>
                     <Label Text="AGE RANGE"
+                       Margin="0,10,0,0"
                        TextColor="Black"
                        FontAttributes="Bold"
                        FontSize="Medium"></Label>
@@ -97,6 +102,7 @@
                                 BorderColor="{Binding seniorBorderColor}"/>
                     </Grid>
                     <Label Text="BREED"
+                       Margin="0,10,0,0"
                        TextColor="Black"
                        FontAttributes="Bold"
                        FontSize="Medium"></Label>
@@ -130,6 +136,7 @@
                                 BorderColor="{Binding largeBorderColor}"/>
                     </Grid>
                     <Label Text="LIFESTYLE"
+                       Margin="0,10,0,0"
                        TextColor="Black"
                        FontAttributes="Bold"
                        FontSize="Medium"></Label>
@@ -151,6 +158,7 @@
                                 BorderColor="{Binding energenicBorderColor}"/>
                     </Grid>
                     <Label Text="MEDICAL CONDITION"
+                       Margin="0,10,0,0"
                        TextColor="Black"
                        FontAttributes="Bold"
                        FontSize="Medium"></Label>

@@ -37,10 +37,8 @@ namespace PetInsights_all.SearchViews
             _petTempermentFilter = new List<string>();
             _petFilters = new List<List<string>>();
 
-            InitializeComponent();
-
-
             /* initialize the UI */
+            InitializeComponent();
 
             // petType
             dogButton.BackgroundColor = Color.White;
@@ -90,6 +88,8 @@ namespace PetInsights_all.SearchViews
             energenicButton.BackgroundColor = Color.White;
             energenicButton.BorderColor = Color.LightGray;
             energenicButton.TextColor = Color.Black;
+
+            
 
         }
 

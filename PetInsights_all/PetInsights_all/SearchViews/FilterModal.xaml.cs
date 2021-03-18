@@ -41,8 +41,8 @@ namespace PetInsights_all.SearchViews
             _petMedicalFilter = new List<string>();
             _petFilters = new List<List<string>>();
 
-            InitializeComponent();
 
+            InitializeComponent();
 
             /* initialize the UI */
 
@@ -96,6 +96,7 @@ namespace PetInsights_all.SearchViews
             energenicButton.BorderColor = Color.LightGray;
             energenicButton.TextColor = Color.Black;
 
+            
         }
 
 
@@ -116,9 +117,9 @@ namespace PetInsights_all.SearchViews
             {
                 // hasn't been selected yet
                 _petTypeFilter.Add(buttonName);
-                (sender as Button).BackgroundColor = Color.Blue;
+                (sender as Button).BackgroundColor = Color.Orange;
                 (sender as Button).TextColor = Color.White;
-                (sender as Button).BorderColor = Color.Blue;
+                (sender as Button).BorderColor = Color.Orange;
             }
         }
 
@@ -139,9 +140,9 @@ namespace PetInsights_all.SearchViews
             {
                 // hasn't been selected yet
                 _petGenderFilter.Add(buttonName);
-                (sender as Button).BackgroundColor = Color.Blue;
+                (sender as Button).BackgroundColor = Color.Orange;
                 (sender as Button).TextColor = Color.White;
-                (sender as Button).BorderColor = Color.Blue;
+                (sender as Button).BorderColor = Color.Orange;
             }
         }
 
@@ -161,9 +162,9 @@ namespace PetInsights_all.SearchViews
             {
                 // hasn't been selected yet
                 _petAgeFilter.Add(buttonName);
-                (sender as Button).BackgroundColor = Color.Blue;
+                (sender as Button).BackgroundColor = Color.Orange;
                 (sender as Button).TextColor = Color.White;
-                (sender as Button).BorderColor = Color.Blue;
+                (sender as Button).BorderColor = Color.Orange;
             }
         }
 
@@ -183,9 +184,9 @@ namespace PetInsights_all.SearchViews
             {
                 // hasn't been selected yet
                 _petSizeFilter.Add(buttonName);
-                (sender as Button).BackgroundColor = Color.Blue;
+                (sender as Button).BackgroundColor = Color.Orange;
                 (sender as Button).TextColor = Color.White;
-                (sender as Button).BorderColor = Color.Blue;
+                (sender as Button).BorderColor = Color.Orange;
             }
         }
 
@@ -206,9 +207,9 @@ namespace PetInsights_all.SearchViews
             {
                 // hasn't been selected yet
                 _petTempermentFilter.Add(buttonName);
-                (sender as Button).BackgroundColor = Color.Blue;
+                (sender as Button).BackgroundColor = Color.Orange;
                 (sender as Button).TextColor = Color.White;
-                (sender as Button).BorderColor = Color.Blue;
+                (sender as Button).BorderColor = Color.Orange;
             }
         }
 
@@ -225,7 +226,7 @@ namespace PetInsights_all.SearchViews
 
             if ((sender as Button).BackgroundColor == Color.White)
             {
-                (sender as Button).BackgroundColor = Color.Blue;
+                (sender as Button).BackgroundColor = Color.Orange;
                 _petType = buttonName;
                 if (buttonName != medButton.BindingContext as string)
                 {
@@ -236,7 +237,7 @@ namespace PetInsights_all.SearchViews
                     nomedButton.BackgroundColor = Color.White;
                 }
             }
-            else if ((sender as Button).BackgroundColor == Color.Blue)
+            else if ((sender as Button).BackgroundColor == Color.Orange)
             {
                 (sender as Button).BackgroundColor = Color.White;
                 _petType = null;
