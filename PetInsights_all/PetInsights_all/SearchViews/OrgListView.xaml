@@ -231,7 +231,7 @@
                         <ColumnDefinition Width=".2*" />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Text="Save the Animals Foundation" FontAttributes="Bold" TextColor="Black" FontSize="Medium"></Label>
-                    <Label Grid.Column="1" Text="1.2 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
+                    <Label Grid.Column="1" Text="15.4 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
                 </Grid>
 
                 <Label Text="Cats, Dogs, Exotic" TextColor="Black"></Label>
@@ -296,7 +296,7 @@
                         <ColumnDefinition Width=".2*" />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Text="Heartt Animal Refuge" FontAttributes="Bold" TextColor="Black" FontSize="Medium"></Label>
-                    <Label Grid.Column="1" Text="1.2 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
+                    <Label Grid.Column="1" Text="22.3 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
                 </Grid>
 
                 <Label Text="Cats, Dogs, Exotic" TextColor="Black"></Label>

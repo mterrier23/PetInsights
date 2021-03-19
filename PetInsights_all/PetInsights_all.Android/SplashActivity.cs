@@ -20,7 +20,7 @@ namespace PetInsights_all.Droid
         {
             base.OnCreate(savedInstanceState);
             System.Threading.Thread.Sleep(1000);
-            StartActivity(typeof(MainActivity));s
+            StartActivity(typeof(MainActivity));
 
             // Create your application here
         }
