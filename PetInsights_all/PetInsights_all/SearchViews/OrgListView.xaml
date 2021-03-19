@@ -27,6 +27,7 @@
     <ContentPage.Content >
         <ScrollView>
             <StackLayout Margin="10, 20, 10, 0">
+            <!-- ORG NAME-->
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width=".8*" />
@@ -35,7 +36,9 @@
                     <Label Grid.Column="0" Text="Animal Friends Humane Society" FontAttributes="Bold" TextColor="Black" FontSize="Medium"></Label>
                     <Label Grid.Column="1" Text="1.2 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
                 </Grid>
+
                 <Label Text="Cats, Dogs, Exotic" TextColor="Black"></Label>
+                <!--ORG label deets-->
                 <Grid Margin="0, 0, 30, 0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="130" />
@@ -48,6 +51,7 @@
                     <Button Grid.Column="1" Padding="-20" BackgroundColor="LightGray" Text="Donations Needed" FontSize="Micro" TextColor="DarkGray"/>
                 </Grid>
                 <Label Text="123 Wallaway Street, Cincinnati, Ohio" TextColor="Black"></Label>
+                    <!-- image layout-->
                 <Grid >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width=".25*" />
@@ -56,33 +60,295 @@
                         <ColumnDefinition Width=".25*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Frame Grid.Column="0"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <Image Source="@drawable/Lrag.jpeg"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    </Frame>
+                    <Frame Grid.Column="1"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <Image Source="@drawable/test.jpeg"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    </Frame>
+                    <Frame Grid.Column="2"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <Image Source="@drawable/chicken.jpeg"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    </Frame>
+                    <Frame Grid.Column="3"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <Image Source="@drawable/hamster.jpeg"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    </Frame>
+                </Grid>
+
+                <!-- ORG NAME 2-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".8*" />
+                        <ColumnDefinition Width=".2*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="Best Friends Animal Society" FontAttributes="Bold" TextColor="Black" FontSize="Medium"></Label>
+                    <Label Grid.Column="1" Text="3.5 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
+                </Grid>
+
+                <Label Text="Cats, Dogs, Exotic" TextColor="Black"></Label>
+                <!--ORG label deets 2-->
+                <Grid Margin="0, 0, 30, 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130" />
+                        <ColumnDefinition Width="130" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
                         <RowDefinition Height="30"/>
                     </Grid.RowDefinitions>
-                    <Frame CornerRadius="20" Grid.Column="0"
+                    <Button Grid.Column="0" Padding="-20" BackgroundColor="LightGray" Text="Volunteers OK" FontSize="Micro" TextColor="White" />
+                    <Button Grid.Column="1" Padding="-20" BackgroundColor="Blue" Text="Donations Needed" FontSize="Micro" TextColor="DarkGray"/>
+                </Grid>
+                <Label Text="56 Glendale Street, Cincinnati, Ohio" TextColor="Black"></Label>
+
+                <!-- image layout-->
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".25*" />
+                        <ColumnDefinition Width=".25*" />
+                        <ColumnDefinition Width=".25*" />
+                        <ColumnDefinition Width=".25*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Frame Grid.Column="0"
                            Padding="0"
                            IsClippedToBounds="True">
-                        <Image Source="@drawable/ic_pets.png"
+                        <Image Source="@drawable/Lalpaca.jpeg"
                            HorizontalOptions="Center"
                            VerticalOptions="Center" />
                     </Frame>
-                    <Frame CornerRadius="20" Grid.Column="1"
+                    <Frame Grid.Column="1"
                            Padding="0"
                            IsClippedToBounds="True">
-                        <Image Source="@drawable/ic_pets.png"
+                        <Image Source="@drawable/Lhusky.jpeg"
                            HorizontalOptions="Center"
                            VerticalOptions="Center" />
                     </Frame>
-                    <Frame CornerRadius="20" Grid.Column="2"
+                    <Frame Grid.Column="2"
                            Padding="0"
                            IsClippedToBounds="True">
-                        <Image Source="@drawable/ic_pets.png"
+                        <Image Source="@drawable/LGermanShepherds.jpeg"
                            HorizontalOptions="Center"
                            VerticalOptions="Center" />
                     </Frame>
-                    <Frame CornerRadius="20" Grid.Column="3"
+                    <Frame Grid.Column="3"
                            Padding="0"
                            IsClippedToBounds="True">
-                        <Image Source="@drawable/ic_pets.png"
+                        <Image Source="@drawable/Mrussell_terrier.jpeg"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    </Frame>
+                </Grid>
+
+             <!-- ORG NAME 3-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".8*" />
+                        <ColumnDefinition Width=".2*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="The Ohio Pet" FontAttributes="Bold" TextColor="Black" FontSize="Medium"></Label>
+                    <Label Grid.Column="1" Text="9.3 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
+                </Grid>
+
+                <Label Text="Cats, Dogs" TextColor="Black"></Label>
+                <!--ORG label deets-->
+                <Grid Margin="0, 0, 30, 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130" />
+                        <ColumnDefinition Width="130" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Column="0" Padding="-20" BackgroundColor="Blue" Text="Volunteers OK" FontSize="Micro" TextColor="White" />
+                    <Button Grid.Column="1" Padding="-20" BackgroundColor="Blue" Text="Donations Needed" FontSize="Micro" TextColor="DarkGray"/>
+                </Grid>
+                <Label Text="449 Reading Road, Cincinnati, Ohio" TextColor="Black"></Label>
+                    <!-- image layout-->
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".25*" />
+                        <ColumnDefinition Width=".25*" />
+                        <ColumnDefinition Width=".25*" />
+                        <ColumnDefinition Width=".25*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Frame Grid.Column="0"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <Image Source="@drawable/Srussell_terrier_puppy.jpeg"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    </Frame>
+                    <Frame Grid.Column="1"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <Image Source="@drawable/Mtuxedo.jpeg"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    </Frame>
+                    <Frame Grid.Column="2"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <Image Source="@drawable/Slab.jpeg"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    </Frame>
+                    <Frame Grid.Column="3"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <Image Source="@drawable/Mbeagle.jpeg"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    </Frame>
+                </Grid>
+
+
+              <!-- ORG NAME 4-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".8*" />
+                        <ColumnDefinition Width=".2*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="Save the Animals Foundation" FontAttributes="Bold" TextColor="Black" FontSize="Medium"></Label>
+                    <Label Grid.Column="1" Text="1.2 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
+                </Grid>
+
+                <Label Text="Cats, Dogs, Exotic" TextColor="Black"></Label>
+                <!--ORG label deets-->
+                <Grid Margin="0, 0, 30, 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130" />
+                        <ColumnDefinition Width="130" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Column="0" Padding="-20" BackgroundColor="LightGray" Text="Volunteers OK" FontSize="Micro" TextColor="White" />
+                    <Button Grid.Column="1" Padding="-20" BackgroundColor="Blue" Text="Donations Needed" FontSize="Micro" TextColor="DarkGray"/>
+                </Grid>
+                <Label Text="28 Willow Street, Cincinnati, Ohio" TextColor="Black"></Label>
+                    <!-- image layout-->
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".25*" />
+                        <ColumnDefinition Width=".25*" />
+                        <ColumnDefinition Width=".25*" />
+                        <ColumnDefinition Width=".25*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Frame Grid.Column="0"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <Image Source="@drawable/Mcalico_cat.jpeg"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    </Frame>
+                    <Frame Grid.Column="1"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <Image Source="@drawable/lizard.jpeg"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    </Frame>
+                    <Frame Grid.Column="2"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <Image Source="@drawable/horse.jpeg"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    </Frame>
+                    <Frame Grid.Column="3"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <Image Source="@drawable/small_pig.jpeg"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    </Frame>
+                </Grid>
+
+               <!-- ORG NAME 5-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".8*" />
+                        <ColumnDefinition Width=".2*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="Heartt Animal Refuge" FontAttributes="Bold" TextColor="Black" FontSize="Medium"></Label>
+                    <Label Grid.Column="1" Text="1.2 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
+                </Grid>
+
+                <Label Text="Cats, Dogs, Exotic" TextColor="Black"></Label>
+                <!--ORG label deets-->
+                <Grid Margin="0, 0, 30, 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130" />
+                        <ColumnDefinition Width="130" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Column="0" Padding="-20" BackgroundColor="Blue" Text="Volunteers OK" FontSize="Micro" TextColor="White" />
+                    <Button Grid.Column="1" Padding="-20" BackgroundColor="LightGray" Text="Donations Needed" FontSize="Micro" TextColor="DarkGray"/>
+                </Grid>
+                <Label Text="23 Summerville Street, Cincinnati, Ohio" TextColor="Black"></Label>
+                    <!-- image layout-->
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".25*" />
+                        <ColumnDefinition Width=".25*" />
+                        <ColumnDefinition Width=".25*" />
+                        <ColumnDefinition Width=".25*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Frame Grid.Column="0"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <Image Source="@drawable/Lhusky2.jpeg"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    </Frame>
+                    <Frame Grid.Column="1"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <Image Source="@drawable/Schihuahua.jpeg"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    </Frame>
+                    <Frame Grid.Column="2"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <Image Source="@drawable/snake.jpeg"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    </Frame>
+                    <Frame Grid.Column="3"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <Image Source="@drawable/Spitbull_puppy.jpeg"
                            HorizontalOptions="Center"
                            VerticalOptions="Center" />
                     </Frame>

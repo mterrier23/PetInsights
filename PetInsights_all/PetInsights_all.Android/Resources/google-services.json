@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "627730545489",
+    "firebase_url": "https://petinsights-4dc78-default-rtdb.firebaseio.com",
+    "project_id": "petinsights-4dc78",
+    "storage_bucket": "petinsights-4dc78.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627730545489:android:173d54080fd7c3e6e8b170",
+        "android_client_info": {
+          "package_name": "com.companyname.petinsights_all"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "627730545489-inccsvdj6gfr0pl1s329t0pjtebpp47d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGQ7TwHNR9Ov-K0dXGgW5Fhq5Xqz31vHU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "627730545489-inccsvdj6gfr0pl1s329t0pjtebpp47d.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "627730545489-g77fkirp6ranik2vtt2ko1komgcpi301.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.companyname.petinsights"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
