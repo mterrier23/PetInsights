@@ -132,8 +132,11 @@
                     <Label Text="Enter other keywords you would like to include"
                        FontSize="Small"
                        TextColor="LightSlateGray"></Label>
-                    <Entry x:Name="keywordSearch" Placeholder="i.e. Hypoallergenic, blind, farm, etc." TextColor="Black"></Entry>
-                    <Button Text="search"
+                    <Frame BorderColor="LightGray" HasShadow="False">
+                        <Editor x:Name="keywordSearch" Placeholder="i.e. Hypoallergenic, blind, farm, etc." PlaceholderColor="LightGray"
+                            FontAttributes="Italic" TextColor="Black" HeightRequest="120" Margin="-20"></Editor>
+                    </Frame>
+                     <Button Text="search"
                             
                         TextTransform="Uppercase"
                         BackgroundColor="Orange"

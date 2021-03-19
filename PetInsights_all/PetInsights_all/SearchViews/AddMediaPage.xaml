@@ -8,6 +8,7 @@
              xmlns:FFImageCache="clr-namespace:FFImageLoading.Cache;assembly=FFImageLoading"
              mc:Ignorable="d"
              Background="White"
+             Title="{Binding photoTitle}"
             x:Class="PetInsights_all.SearchViews.AddMediaPage">
 
     <ContentPage.Resources>
@@ -41,15 +42,9 @@
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Select Photos Page"
-                   HorizontalOptions="CenterAndExpand"
-                   TextColor="Black"
-                   FontSize="Large"
-                   FontAttributes="Bold" />
+        <StackLayout  Margin="40, 0, 40, 0">
             <StackLayout>
-                <Button Text="Select Images"
-                        Clicked="SelectImagesButton_Clicked"></Button>
+                <Button  Margin="20, 20, 20, 0" BackgroundColor="Orange" TextColor="White" BorderColor="Orange" BorderWidth="2"  Text="Select One or More Images" Clicked="SelectImagesButton_Clicked"></Button>
             </StackLayout>
             <!-- The CarouselView inside of a StackLayout. -->
             <StackLayout Margin="0,0,0,20" >
@@ -61,8 +56,6 @@
                     </CV:CarouselViewControl.ItemTemplate>
                 </CV:CarouselViewControl>
             </StackLayout>
-            <Button Text="Upload Images"
-                    Clicked="UploadImagesButton_Clicked"></Button>
             <!-- InfoText is optional. -->
             <Label x:Name="InfoText"
                    IsVisible="False"
@@ -71,6 +64,13 @@
                    TextColor="Black"
                    FontSize="Large"
                    FontAttributes="Bold" />
+            <StackLayout Orientation="Horizontal" VerticalOptions="End">
+                <!-- bottom controls -->
+                <Button BackgroundColor="Orange"  Margin="20, 100, 20, 0" 
+                    TextColor="White" BorderColor="Orange" BorderWidth="2"  Text="Upload" 
+                    Clicked="UploadImagesButton_Clicked" VerticalOptions="End" HorizontalOptions="Center"
+                    ></Button>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

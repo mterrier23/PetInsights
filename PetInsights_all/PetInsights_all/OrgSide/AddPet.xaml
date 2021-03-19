@@ -3,30 +3,62 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PetInsights_all.OrgSide.AddPet"
              BackgroundColor="White"
-             Title="Enter Pet Information">
+             Title="Enter New Pet Information">
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Margin="30, 30, 30, 0">
+            <Label Margin="0,0,0,-5" Text="Name" TextColor="Black" FontSize="Large" FontAttributes="Bold"></Label>
+            <Frame BorderColor="LightGray" HasShadow="False">
+                <Entry x:Name="name" Placeholder="Enter the pet's name..." PlaceholderColor="LightGray" TextColor="Black" 
+                       HeightRequest="35" Margin="-20"/>
+            </Frame>
+            <Label Margin="0,15,0,5" Text="Type" TextColor="Black" FontSize="Large" FontAttributes="Bold"></Label>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width=".3*" />
                     <ColumnDefinition Width=".3*" />
                     <ColumnDefinition Width=".3*" />
                 </Grid.ColumnDefinitions>
-                <Button x:Name="dogButton" Grid.Column="0" BackgroundColor="{Binding dogBackgroundColor}" Text="Dog" Clicked="PetTypeBtnClicked" BindingContext="dog"/>
-                <Button x:Name="catButton" Grid.Column="1" BackgroundColor="{Binding catBackgroundColor}" Text="Cat" Clicked="PetTypeBtnClicked" BindingContext="cat"/>
-                <Button x:Name="exoticButton" Grid.Column="2" BackgroundColor="{Binding exoticBackgroundColor}" Text="Exotic" Clicked="PetTypeBtnClicked" BindingContext="exotic"/>
+                <Button x:Name="dogButton" Grid.Column="0" BackgroundColor="{Binding dogBackgroundColor}" 
+                                TextColor="{Binding dogTextColor}" 
+                                BorderColor="{Binding dogBorderColor}"
+                        BorderWidth="1"
+                        Text="Dog" Clicked="PetTypeBtnClicked" BindingContext="dog"/>
+                <Button x:Name="catButton" Grid.Column="1" BackgroundColor="{Binding catBackgroundColor}"
+                        TextColor="{Binding catTextColor}" 
+                        BorderColor="{Binding catBorderColor}"
+                        BorderWidth="1" 
+                        Text="Cat" Clicked="PetTypeBtnClicked" BindingContext="cat"/>
+                <Button x:Name="exoticButton" Grid.Column="2" BackgroundColor="{Binding exoticBackgroundColor}"
+                        TextColor="{Binding exoticTextColor}" 
+                        BorderColor="{Binding exoticBorderColor}"
+                        BorderWidth="1"
+                        Text="Exotic" Clicked="PetTypeBtnClicked" BindingContext="exotic"/>
             </Grid>
-            <Entry x:Name="name" Placeholder="Pet Name" BackgroundColor="Black"></Entry>
-            <Entry x:Name="age" Placeholder="Pet Age" BackgroundColor="Black"></Entry>
-            <Entry x:Name="sex" Placeholder="Pet Sex" BackgroundColor="Black"></Entry>
-            <Image x:Name="imgChoosen" HeightRequest="200"></Image>
-            <Button x:Name="btnSelectPic" Text="Select Picture" BackgroundColor="DodgerBlue" Clicked="btnSelectPic_Clicked" TextColor="White">
+            <Label Margin="0,15,0,-5" Text="Age" TextColor="Black" FontSize="Large" FontAttributes="Bold"></Label>
+            <Frame BorderColor="LightGray" HasShadow="False">
+                <Entry x:Name="age" Placeholder="Enter the pet's age..." PlaceholderColor="LightGray" TextColor="Black" 
+                       HeightRequest="35" Margin="-20"/>
+            </Frame>
+            <Label Margin="0,15,0,-5" Text="Sex" TextColor="Black" FontSize="Large" FontAttributes="Bold"></Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".3*" />
+                    <ColumnDefinition Width=".3*" />
+                    <ColumnDefinition Width=".3*" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="maleButton" Grid.Column="0" 
+                        BorderWidth="1" BackgroundColor="{Binding maleBackgroundColor}" Text="Male" Clicked="PetSexBtnClicked" BindingContext="male"/>
+                <Button x:Name="femaleButton" Grid.Column="1" 
+                        BorderWidth="1" BackgroundColor="{Binding femaleBackgroundColor}" Text="Female" Clicked="PetSexBtnClicked" BindingContext="female"/>
+            </Grid>
+            <Button Margin="20, 20, 20, 0" x:Name="btnPic" Text="Upload Photo" BackgroundColor="FloralWhite" Clicked="btnPic_Clicked" TextColor="Orange" BorderWidth ="1" BorderColor="Orange">
             </Button>
-            <Button x:Name="btnTakePic" Text="Take Picture" BackgroundColor="DodgerBlue" Clicked="btnTakePic_Clicked" TextColor="White">
-            </Button>
-            <ActivityIndicator x:Name="uploadIndicator" IsVisible="False" IsRunning="False" Color="DodgerBlue" />
+            <!--<Entry x:Name="name" Placeholder="Pet Name" BackgroundColor="Black"></Entry>
+            <Entry x:Name="age" Placeholder="Pet Age" BackgroundColor="Black"></Entry>-->
+            <Image x:Name="imgChoosen" HeightRequest="150"></Image>
+            <ActivityIndicator x:Name="uploadIndicator" IsVisible="False" IsRunning="False" Color="Orange" />
             <!--Button Text="(OLD)Upload Image" Clicked="btnUpload_Clicked" x:Name="btnUpload" BackgroundColor="Blue" TextColor="White" />-->
-            <Button Text="Add Pet" Clicked="BtnNextPage_Clicked" x:Name="btnAddPet" BackgroundColor="Blue" TextColor="White" />
+            <Button Margin="20, 0, 20, 0" Text="Add Pet" Clicked="BtnNextPage_Clicked" x:Name="btnAddPet" BackgroundColor="Orange" TextColor="White" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage> 

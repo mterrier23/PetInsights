@@ -26,26 +26,8 @@
         </Frame>
     </NavigationPage.TitleView>
     <StackLayout>
-        <Frame BackgroundColor="White"
-               CornerRadius="20"
-               Margin="10"
-               Padding="10,10,5,10">
-            <Frame.GestureRecognizers>
-                <TapGestureRecognizer Tapped= "OnFilterButtonClicked"></TapGestureRecognizer>
-            </Frame.GestureRecognizers>
-               <StackLayout Orientation="Horizontal">
-                <ImageButton Source="ic_searchfilter.png"
-                         HeightRequest="25"
-                         Aspect="AspectFit"
-                         Clicked="OnFilterButtonClicked"
-                         BackgroundColor="White"
-                         HorizontalOptions="Start"></ImageButton>
 
-                <Label Text="Filter results by breed, age, etc." TextColor="Gray" Padding="5"></Label>
-                </StackLayout>
-        </Frame>
-
-    <CollectionView Margin="10,0,10,10" ItemsSource="{Binding Pets}"
+        <CollectionView Margin="10,10,10,10" ItemsSource="{Binding Pets}"
                     x:Name="lstPets"
                     ItemSizingStrategy="MeasureAllItems"
                     SelectionMode="Single"

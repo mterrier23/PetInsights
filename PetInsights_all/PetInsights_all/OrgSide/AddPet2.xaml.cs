@@ -102,7 +102,7 @@ namespace PetInsights_all.OrgSide
 
             if ((sender as Button).BackgroundColor == Color.LightGray)
             {
-                (sender as Button).BackgroundColor = Color.Blue;
+                (sender as Button).BackgroundColor = Color.Orange;
                 _petSize = buttonName;
                 if (buttonName != smallBtn.BindingContext as string)
                 {
@@ -117,7 +117,7 @@ namespace PetInsights_all.OrgSide
                     largeBtn.BackgroundColor = Color.LightGray;
                 }
             }
-            else if ((sender as Button).BackgroundColor == Color.Blue)
+            else if ((sender as Button).BackgroundColor == Color.Orange)
             {
                 (sender as Button).BackgroundColor = Color.LightGray;
                 _petSize = null;

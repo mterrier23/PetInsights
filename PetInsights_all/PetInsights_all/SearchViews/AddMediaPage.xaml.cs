@@ -22,6 +22,7 @@ namespace PetInsights_all.SearchViews
         public AddMediaPage(Pet _pet)
         {
             InitializeComponent();
+            Title = "Select photos of " + _pet.Name;
             pet = _pet;
             service = new DBFirebase();
             _imgStreams = new List<Stream>();

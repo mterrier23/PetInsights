@@ -1,14 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PetInsights_all.SearchViews.AddCommentPage">
+             x:Class="PetInsights_all.SearchViews.AddCommentPage"
+             Background="White"
+             Title="{Binding commentTitle}">
     <ContentPage.Content>
-        <StackLayout>
-            <Label x:Name="Intro" Text="{Binding Intro}"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Entry x:Name="Comment" IsReadOnly="False" BackgroundColor="LightGray"/>
-            <Button Text="Post Review" Clicked="BtnPostComment"/>
+        <StackLayout Margin="30, 60, 30, 0">
+            <Label x:Name="Intro" Text="{Binding Intro}" TextColor="Black"  FontSize="Large"
+                VerticalOptions="Start" FontAttributes="Bold"
+                HorizontalOptions="StartAndExpand" />
+            <Editor x:Name="Comment" IsReadOnly="False" HeightRequest="400" Placeholder="{Binding commentPlaceholder}"
+                    BackgroundColor="White" TextColor="Black" PlaceholderColor="LightGray" FontAttributes="Italic" />
+            <Button Margin="30, 0, 30, 0" Text="Post Comment" Clicked="BtnPostComment" VerticalOptions="End"
+                    BackgroundColor="Orange" TextColor="White" BorderColor="Orange" BorderWidth="2"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

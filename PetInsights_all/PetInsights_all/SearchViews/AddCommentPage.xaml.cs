@@ -20,7 +20,9 @@ namespace PetInsights_all.SearchViews
             services = new DBFirebase();
             pet = _pet;
             InitializeComponent();
-            Intro.Text = "Leave a comment on your interaction with " + pet.Name;
+            Title = "Leave a comment for " + pet.Name;
+            Intro.Text = "How was your interaction with " + pet.Name+"?";
+            Comment.Placeholder = pet.Name + " was energetic, loved to play, scared of other dogs, ...";
         }
 
         public async void BtnPostComment(object sender, EventArgs e)

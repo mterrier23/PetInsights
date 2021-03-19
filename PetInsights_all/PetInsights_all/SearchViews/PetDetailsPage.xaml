@@ -84,7 +84,7 @@
                     <!--<Label Grid.Column="1" Text="|" TextColor="Gray" HorizontalOptions="Center" VerticalOptions="Center"></Label>-->
                     <Button BackgroundColor="Orange" TextColor="White" BorderColor="Orange" BorderWidth="2"  Grid.Column="2" Text="Add Photo" Clicked="BtnAddMedia"></Button>
                     <!--<Label Grid.Column="3" Text="|" TextColor="Gray" HorizontalOptions="Center" VerticalOptions="Center"></Label>-->
-                    <Button BackgroundColor="FloralWhite" BorderColor="Orange" BorderWidth="2" TextColor="Orange" Text="Update" Clicked="BtnUpdate_Pet" Grid.Column="4"></Button>
+                    <Button BackgroundColor="Orange" BorderColor="Orange" BorderWidth="2" TextColor="White" Text="Favorite" Clicked="BtnUpdate_Pet" Grid.Column="4"></Button>
 
                     <!--<Button CornerRadius="5" BackgroundColor="LightBlue"  Text="Favorite" />-->
                 </Grid>
