@@ -98,8 +98,8 @@
                         <ColumnDefinition Width=".5*" />
                         <ColumnDefinition Width=".5*" />
                     </Grid.ColumnDefinitions>
-                    <Button x:Name="volunteerButton" Grid.Column="0" BackgroundColor="Blue" Margin="20,0,0,0" Text="Volunteer" />
-                    <Button x:Name="donateButton" Grid.Column="1" BackgroundColor="Green" Margin="0,0,20,0" Text="Donate"/>
+                    <Button x:Name="volunteerButton" Grid.Column="0" BackgroundColor="Blue" Margin="20,0,0,0" Text="Volunteer" Clicked="GoToVolunteer" />
+                    <Button x:Name="donateButton" Grid.Column="1" BackgroundColor="Green" Margin="0,0,20,0" Text="Donate" Clicked="GoToDonate"/>
                 </Grid>
                 <Button BackgroundColor ="White" Text="I'm an Org Representative" TextColor="LightGray" FontSize="Small" Clicked="GoToOrgSite"></Button>
         </StackLayout>

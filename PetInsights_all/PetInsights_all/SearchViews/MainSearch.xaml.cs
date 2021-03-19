@@ -61,6 +61,16 @@ namespace PetInsights_all
             await Application.Current.MainPage.Navigation.PushAsync(new OrgSignInPage());
         }
 
+        async void GoToVolunteer(object sender, EventArgs e)
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new VolunteerPage());
+        }
+
+        async void GoToDonate(object sender, EventArgs e)
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new DonatePage());
+        }
+
         async void GoToOrgListView(object sender, EventArgs e)
         {
             //await Application.Current.MainPage.Navigation.PushAsync(new OrgListView()); // possibly broke nav bar

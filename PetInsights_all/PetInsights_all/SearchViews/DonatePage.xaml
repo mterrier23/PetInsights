@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PetInsights_all.SearchViews.DonatePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".5*" />
+                    <ColumnDefinition Width=".5*" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="volunteerButton" Grid.Column="0" BackgroundColor="{Binding volunteerBackgroundColor}" 
+                                TextColor="{Binding volunteerTextColor}" 
+                                BorderColor="{Binding volunteerBorderColor}"
+                        BorderWidth="1"
+                        Text="Volunteer"  BindingContext="volunteer"/>
+                <Button x:Name="donateButton" Grid.Column="1" BackgroundColor="{Binding donateBackgroundColor}"
+                        TextColor="{Binding donateTextColor}" 
+                        BorderColor="{Binding donateBorderColor}"
+                        BorderWidth="1" 
+                        Text="Donate"  BindingContext="donate"/>
+            </Grid>
+            <!-- fill this out with sample grids of shelters with donate options -->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
