@@ -57,6 +57,8 @@ namespace PetInsights_all.OrgSide
             femaleButton.BorderColor = Color.LightGray;
             femaleButton.TextColor = Color.Black;
 
+            imgChoosen.HeightRequest = 0;
+
         }
 
 
@@ -70,7 +72,10 @@ namespace PetInsights_all.OrgSide
             });
 
             if (file != null)
+            {
+                imgChoosen.HeightRequest = 150;
                 imgChoosen.Source = ImageSource.FromStream(() => { return file.GetStream(); });
+            }
         }
 
         private async void btnPic_Clicked(object sender, EventArgs e)
@@ -105,6 +110,7 @@ namespace PetInsights_all.OrgSide
                 });
                 if (file == null)
                     return;
+                imgChoosen.HeightRequest = 150;
                 imgChoosen.Source = ImageSource.FromStream(() =>
                 {
                     var imageStram = file.GetStream();

@@ -25,7 +25,7 @@
             </StackLayout>
         </Frame>
     </NavigationPage.TitleView>
-    <StackLayout>
+    <StackLayout x:Name="showPets" IsVisible="{Binding showpets}">
 
         <CollectionView Margin="10,10,10,10" ItemsSource="{Binding Pets}"
                     x:Name="lstPets"
@@ -39,56 +39,46 @@
                              HorizontalItemSpacing="10">
             </GridItemsLayout>
         </CollectionView.ItemsLayout>
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
                     <Frame Padding="15"
                            Margin="10"
                            CornerRadius="5"
                            BorderColor="LightBlue">
-                                         
-           <StackLayout>
-               <Image HeightRequest="120" Source="{Binding ImgIcon}" Aspect="AspectFill" BackgroundColor="LightGray"></Image>
-               <StackLayout Orientation="Horizontal">
-                   <Label Text="{Binding Name}"
-                     HorizontalOptions="StartAndExpand"
-                     FontSize="24"
-                     TextColor="Black"
-                     VerticalTextAlignment="End"
-                     FontAttributes="Bold"></Label>
+                        <StackLayout>
+                            <Image HeightRequest="120" Source="{Binding ImgIcon}" Aspect="AspectFill" BackgroundColor="LightGray"></Image>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Name}"
+                                     HorizontalOptions="StartAndExpand"
+                                     FontSize="24"
+                                     TextColor="Black"
+                                     VerticalTextAlignment="End"
+                                     FontAttributes="Bold"></Label>
 
-                   <Label Text="x mi."
-                          HorizontalOptions="End"
-                          FontSize="16"
-                          TextColor="Orange"
-                          Margin="0,5,0,0"
-                          FontAttributes="Bold"
-                          ></Label>
-
-               </StackLayout>
-              <StackLayout Orientation="Horizontal">
-               <Label Text="{Binding Breed}"
-                      HorizontalOptions="StartAndExpand"
-                      TextColor="Black"
-                      FontSize="Small"></Label>
-
-                
-              <!-- Gender ICON
-                  <Image Source="femaleicon.png"
-                     HeightRequest="18"
-                     ></Image>-->
-              </StackLayout>
-
-               <Label Text="{Binding Age, StringFormat='Age: {0:F0}'}"
-                       TextColor="Black"
-                       FontSize="Small"></Label>
-           </StackLayout>
-
-       </Frame>    
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-
-
-    </CollectionView>
+                                <Label Text="x mi."
+                                  HorizontalOptions="End"
+                                  FontSize="16"
+                                  TextColor="Orange"
+                                  Margin="0,5,0,0"
+                                  FontAttributes="Bold"
+                                  ></Label>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Breed}"
+                                          HorizontalOptions="StartAndExpand"
+                                          TextColor="Black"
+                                          FontSize="Small"></Label>
+                                        <!-- Gender ICON
+                                    <Image Source="femaleicon.png"
+                                         HeightRequest="18"></Image>-->
+                            </StackLayout>
+                            <Label Text="{Binding Age, StringFormat='Age: {0:F0}'}"
+                                   TextColor="Black"
+                                   FontSize="Small"></Label>
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
    </StackLayout>
 </ContentPage>

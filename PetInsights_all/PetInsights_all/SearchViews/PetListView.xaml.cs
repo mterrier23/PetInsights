@@ -29,8 +29,10 @@ namespace PetInsights_all
                 Application.Current.MainPage.Navigation.PushAsync(new SimpleFilterModal());
 
             InitializeComponent();
-            BindingContext = new PetsViewModel();
 
+            showPets.IsVisible = true;
+            BindingContext = new PetsViewModel();
+            
             newFlag = true;
 
 
@@ -55,9 +57,10 @@ namespace PetInsights_all
 
         public PetListView(string filter)
         {
+            
             InitializeComponent();
+            showPets.IsVisible = false;
             BindingContext = new PetsViewModel();
-
 
             filterQuickPets(filter);
             //lstPets.ItemsSource gets reassigned within the above method
@@ -159,6 +162,8 @@ namespace PetInsights_all
                     }
                 }
             }
+
+            showPets.IsVisible = true;
             lstPets.ItemsSource = filteredList;
         }
 
