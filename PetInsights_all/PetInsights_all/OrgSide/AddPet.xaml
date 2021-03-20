@@ -42,9 +42,8 @@
             <Label Margin="0,15,0,-5" Text="Sex" TextColor="Black" FontSize="Large" FontAttributes="Bold"></Label>
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width=".3*" />
-                    <ColumnDefinition Width=".3*" />
-                    <ColumnDefinition Width=".3*" />
+                    <ColumnDefinition Width=".5*" />
+                    <ColumnDefinition Width=".5*" />
                 </Grid.ColumnDefinitions>
                 <Button x:Name="maleButton" Grid.Column="0" 
                         BorderWidth="1" BackgroundColor="{Binding maleBackgroundColor}" Text="Male" Clicked="PetSexBtnClicked" BindingContext="male"/>

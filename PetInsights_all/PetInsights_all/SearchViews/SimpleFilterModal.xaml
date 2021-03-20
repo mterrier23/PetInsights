@@ -86,7 +86,7 @@
                             <ColumnDefinition Width=".25*" />
                         </Grid.ColumnDefinitions>
                         <Button x:Name="newbornButton" Grid.Column="0" Text="Newborn" BindingContext="newborn" BorderWidth="1" Clicked="PetAgeBtnClicked"
-                                BackgroundColor="{Binding newbornBackgroundColor}" 
+                                BackgroundColor="{Binding newbornBackgroundColor}"  Padding="-10,0,-10,0"
                                 TextColor="{Binding newbornTextColor}" 
                                 BorderColor="{Binding newbornBorderColor}"/>
                         <Button x:Name="youngButton" Grid.Column="1" Text="Young" BindingContext="young" BorderWidth="1" Clicked="PetAgeBtnClicked"

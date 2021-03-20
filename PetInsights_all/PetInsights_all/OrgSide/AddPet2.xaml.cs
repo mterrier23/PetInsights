@@ -27,6 +27,9 @@ namespace PetInsights_all.OrgSide
         int age;
         string sex;
         string _petSize;
+        string _medCond;
+        string _pottyTrained;
+        string _apartmentFriendly;
         MediaFile file;
 
 
@@ -35,6 +38,7 @@ namespace PetInsights_all.OrgSide
         {
             InitializeComponent();
             services = new DBFirebase();
+            petName.Text = "Tell us a little bit about "+_name+"'s personality ";
 
             // Pass over previous page's info
             petType = _petType;
@@ -44,9 +48,37 @@ namespace PetInsights_all.OrgSide
             file = _file;
 
             // initialize the button colors
-            smallBtn.BackgroundColor = Color.LightGray;
-            mediumBtn.BackgroundColor = Color.LightGray;
-            largeBtn.BackgroundColor = Color.LightGray;
+            smallBtn.BackgroundColor = Color.White;
+            smallBtn.BorderColor = Color.LightGray;
+            smallBtn.TextColor = Color.Black;
+
+
+            mediumBtn.BackgroundColor = Color.White;
+            mediumBtn.BorderColor = Color.LightGray;
+            mediumBtn.TextColor = Color.Black;
+
+            largeBtn.BackgroundColor = Color.White;
+            largeBtn.BorderColor = Color.LightGray;
+            largeBtn.TextColor = Color.Black;
+
+            yesMedBtn.BackgroundColor = Color.White;
+            yesMedBtn.BorderColor = Color.LightGray;
+            yesMedBtn.TextColor = Color.Black;
+
+            noMedBtn.BackgroundColor = Color.White;
+            noMedBtn.BorderColor = Color.LightGray;
+            noMedBtn.TextColor = Color.Black;
+
+            medicalConditionDetails.IsVisible = false;
+            medicalConditionDetails.HeightRequest = 0;
+
+            pottyTrained.BackgroundColor = Color.White;
+            pottyTrained.BorderColor = Color.LightGray;
+            pottyTrained.TextColor = Color.Black;
+
+            apartmentFriendly.BackgroundColor = Color.White;
+            apartmentFriendly.BorderColor = Color.LightGray;
+            apartmentFriendly.TextColor = Color.Black;
         }
 
 
@@ -62,11 +94,11 @@ namespace PetInsights_all.OrgSide
                 url,
                 breed.Text,
                 _petSize,
-                medicalCondition.Text,
+                _medCond,
                 medicalConditionDetails.Text,
                 personality.Text,
-                pottyTrained.Text,
-                apartmentFriendly.Text
+                _pottyTrained,
+                _apartmentFriendly
                 ); ;
 
             NotBusy();
@@ -100,27 +132,115 @@ namespace PetInsights_all.OrgSide
         {
             string buttonName = ((Button)sender).BindingContext as string; // potential binding contexts = small, medium, large
 
-            if ((sender as Button).BackgroundColor == Color.LightGray)
+            if ((sender as Button).BackgroundColor == Color.White)
             {
                 (sender as Button).BackgroundColor = Color.Orange;
+                (sender as Button).TextColor = Color.White;
+                (sender as Button).BorderColor = Color.Orange;
                 _petSize = buttonName;
                 if (buttonName != smallBtn.BindingContext as string)
                 {
-                    smallBtn.BackgroundColor = Color.LightGray;
+                    smallBtn.BackgroundColor = Color.White;
+                    smallBtn.TextColor = Color.Black;
+                    smallBtn.BorderColor = Color.LightGray;
                 }
                 if (buttonName != mediumBtn.BindingContext as string)
                 {
-                    mediumBtn.BackgroundColor = Color.LightGray;
+                    mediumBtn.BackgroundColor = Color.White;
+                    mediumBtn.TextColor = Color.Black;
+                    mediumBtn.BorderColor = Color.LightGray;
                 }
                 if (buttonName != largeBtn.BindingContext as string)
                 {
-                    largeBtn.BackgroundColor = Color.LightGray;
+                    largeBtn.BackgroundColor = Color.White;
+                    largeBtn.TextColor = Color.Black;
+                    largeBtn.BorderColor = Color.LightGray;
+
                 }
             }
             else if ((sender as Button).BackgroundColor == Color.Orange)
             {
-                (sender as Button).BackgroundColor = Color.LightGray;
+                (sender as Button).BackgroundColor = Color.White;
+                (sender as Button).TextColor = Color.Black;
+                (sender as Button).BorderColor = Color.LightGray;
                 _petSize = null;
+            }
+        }
+
+        private async void PetMedBtnClicked(object sender, EventArgs e)
+        {
+            string buttonName = ((Button)sender).BindingContext as string; // potential binding contexts = yes, no
+            if (buttonName.Equals("yes"))
+            {
+                medicalConditionDetails.IsVisible = true;
+                medicalConditionDetails.HeightRequest = 50;
+            }
+
+            if ((sender as Button).BackgroundColor == Color.White)
+            {
+                (sender as Button).BackgroundColor = Color.Orange;
+                (sender as Button).TextColor = Color.White;
+                (sender as Button).BorderColor = Color.Orange;
+                _medCond = buttonName;
+                if (buttonName != yesMedBtn.BindingContext as string)
+                {
+                    yesMedBtn.BackgroundColor = Color.White;
+                    yesMedBtn.TextColor = Color.Black;
+                    yesMedBtn.BorderColor = Color.LightGray;
+                }
+                else if (buttonName != noMedBtn.BindingContext as string)
+                {
+                    noMedBtn.BackgroundColor = Color.White;
+                    noMedBtn.TextColor = Color.Black;
+                    noMedBtn.BorderColor = Color.LightGray;
+                }
+            }
+            else if ((sender as Button).BackgroundColor == Color.Orange)
+            {
+                (sender as Button).BackgroundColor = Color.White;
+                (sender as Button).TextColor = Color.Black;
+                (sender as Button).BorderColor = Color.LightGray;
+                _medCond = null;
+            }
+        }
+
+
+        private async void PottyTrainedBtnClicked(object sender, EventArgs e)
+        {
+
+            if ((sender as Button).BackgroundColor == Color.White)
+            {
+                (sender as Button).BackgroundColor = Color.Orange;
+                (sender as Button).TextColor = Color.White;
+                (sender as Button).BorderColor = Color.Orange;
+                _pottyTrained = "yes";
+            }
+            else if ((sender as Button).BackgroundColor == Color.Orange)
+            {
+                (sender as Button).BackgroundColor = Color.White;
+                (sender as Button).TextColor = Color.Black;
+                (sender as Button).BorderColor = Color.LightGray;
+                _pottyTrained = "no";
+            }
+        }
+
+        
+        private async void ApartmentFriendlyClicked(object sender, EventArgs e)
+        {
+
+            if ((sender as Button).BackgroundColor == Color.White)
+            {
+                (sender as Button).BackgroundColor = Color.Orange;
+                (sender as Button).TextColor = Color.White;
+                (sender as Button).BorderColor = Color.Orange;
+                _apartmentFriendly = "yes";
+            }
+            else if ((sender as Button).BackgroundColor == Color.Orange)
+            {
+                (sender as Button).BackgroundColor = Color.White;
+                (sender as Button).TextColor = Color.Black;
+                (sender as Button).BorderColor = Color.LightGray;
+                _apartmentFriendly = "no";
             }
         }
 

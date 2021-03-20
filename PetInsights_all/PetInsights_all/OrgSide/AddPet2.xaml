@@ -5,27 +5,71 @@
              BackgroundColor="White"
              Title="Enter Optional Pet Information">
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
-            <Label Margin="0,0,0,10" Text="Optional Information" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
-            <Entry x:Name="breed" Placeholder="Pet Breed" BackgroundColor="Black"></Entry>
-            <Label x:Name="size" Text="Pet Size" TextColor="Black"></Label>
+        <ScrollView>
+        <StackLayout Margin="30,20,30,0" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+            <Label Margin="0,0,0,0" Text="Optional Information" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                <Label Margin="0,0,0,15" Text="Leave blank or unselected if details aren't known" FontSize="Small" TextColor="LightGray" HorizontalTextAlignment="Center" ></Label>
+                <Label Grid.Column="0" Text="Breed" TextColor="Black" FontSize="Medium" VerticalOptions="End" FontAttributes="Bold"/>
+            <Frame BorderColor="LightGray" HasShadow="False">
+                    <Editor x:Name="breed" Placeholder="Pet Breed" PlaceholderColor="LightGray" FontSize="Medium"
+                            TextColor="Black"  Margin="-20"></Editor>
+            </Frame>
+            <Label x:Name="size" Text="Pet Size" Margin="0,20,0,0" FontAttributes="Bold" FontSize="Medium" TextColor="Black"></Label>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width=".3*" />
                     <ColumnDefinition Width=".3*" />
                     <ColumnDefinition Width=".3*" />
                 </Grid.ColumnDefinitions>
-                <Button x:Name="smallBtn" Grid.Column="0" BackgroundColor="{Binding smallBackgroundColor}" Text="Small" Clicked="PetSizeBtnClicked" BindingContext="small"/>
-                <Button x:Name="mediumBtn" Grid.Column="1" BackgroundColor="{Binding mediumBackgroundColor}" Text="Medium" Clicked="PetSizeBtnClicked" BindingContext="medium"/>
-                <Button x:Name="largeBtn" Grid.Column="2" BackgroundColor="{Binding largeBackgroundColor}" Text="Large" Clicked="PetSizeBtnClicked" BindingContext="large"/>
+                <Button x:Name="smallBtn" Grid.Column="0" 
+                        BackgroundColor="{Binding smallBackgroundColor}" TextColor="{Binding smallTextC}" BorderColor="{Binding smallBorder}"
+                        Text="Small" Clicked="PetSizeBtnClicked" BindingContext="small" BorderWidth="1"/>
+                <Button x:Name="mediumBtn" Grid.Column="1" 
+                        BackgroundColor="{Binding mediumBackgroundColor}" TextColor="{Binding medTextC}" BorderColor="{Binding medBorder}"
+                        Text="Medium" Clicked="PetSizeBtnClicked" BindingContext="medium" BorderWidth="1"/>
+                <Button x:Name="largeBtn" Grid.Column="2" 
+                        BackgroundColor="{Binding largeBackgroundColor}" TextColor="{Binding bigTextC}" BorderColor="{Binding bigBorder}"
+                        Text="Large" Clicked="PetSizeBtnClicked" BindingContext="large" BorderWidth="1"/>
             </Grid>
-            <Entry x:Name="medicalCondition" Placeholder="Has a Medical Condition" BackgroundColor="Black"></Entry>
-            <Entry x:Name="medicalConditionDetails" Placeholder="Please enter details of the medical condition" BackgroundColor="Black"></Entry>
-            <Entry x:Name="personality" Placeholder="Please enter traits separated by ," BackgroundColor="Black"></Entry>
-            <Entry x:Name="pottyTrained" Placeholder="Is Potty Trained" BackgroundColor="Black"></Entry>
-            <Entry x:Name="apartmentFriendly" Placeholder="Is Apartment Friendly" BackgroundColor="Black"></Entry>
-            <Button Text="Add Pet" Clicked="BtnAdd_Clicked" x:Name="btnAddPet" BackgroundColor="Blue" TextColor="White" />
-            <ActivityIndicator x:Name="uploadIndicator" IsVisible="False" IsRunning="False" Color="DodgerBlue" />
+
+            <Label Grid.Column="0" Margin="0,20,0,0" Text="Has a Medical Condition?" TextColor="Black" FontAttributes="Bold" FontSize="Medium"></Label>
+            <Grid>
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width=".4*" />
+                    <ColumnDefinition Width=".4*"/>
+                    <ColumnDefinition Width=".2*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="yesMedBtn" Grid.Column="0" BorderWidth="1" 
+                        BackgroundColor="{Binding medYesBackgroundColor}" TextColor="{Binding medYesTextC}" BorderColor="{Binding medYesBorder}"
+                        Text="Yes" Clicked="PetMedBtnClicked" BindingContext="yes"/>
+                <Button x:Name="noMedBtn" Grid.Column="1" BorderWidth="1" 
+                        BackgroundColor="{Binding medNoBackgroundColor}" TextColor="{Binding medNoTextC}" BorderColor="{Binding medNoBorder}"
+                        Text="No" Clicked="PetMedBtnClicked" BindingContext="no"/>
+            </Grid>
+            <Editor x:Name="medicalConditionDetails" Placeholder="Please enter details of the medical condition" PlaceholderColor="LightGray" TextColor="Black"
+                    HeightRequest="{Binding medHeight}" IsVisible="{Binding medShow}"></Editor>
+            <Label x:Name="petName" Grid.Column="0" Margin="0,20,0,0" Text="{Binding petName}" TextColor="Black" FontAttributes="Bold" FontSize="Medium"></Label>
+
+            <Frame BorderColor="LightGray" HasShadow="False">
+                <Editor x:Name="personality" Placeholder="Please enter traits separated by ," PlaceholderColor="LightGray"
+                            FontAttributes="Italic" TextColor="Black" HeightRequest="120" Margin="-20"></Editor>
+            </Frame>
+            <Grid Margin="0,20,0,0">
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width=".5*"/>
+                    <ColumnDefinition Width=".5*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="pottyTrained" Grid.Column="0" 
+                        BackgroundColor="{Binding largeBackgroundColor}" TextColor="{Binding bigTextC}" BorderColor="{Binding bigBorder}"
+                        Text="Is Potty Trained" Clicked="PottyTrainedBtnClicked" BindingContext="large" BorderWidth="1"/>
+                <Button x:Name="apartmentFriendly" Grid.Column="1" Padding="0, -10, 0, -10"
+                        BackgroundColor="{Binding largeBackgroundColor}" TextColor="{Binding bigTextC}" BorderColor="{Binding bigBorder}"
+                        Text="Is Apartment Friendly" Clicked="ApartmentFriendlyClicked" BindingContext="large" BorderWidth="1"/>
+
+            </Grid>
+           <Button Text="Add Pet" Clicked="BtnAdd_Clicked" Margin="20,30,20,30" x:Name="btnAddPet" BackgroundColor="FloralWhite" BorderColor="Orange" BorderWidth="2" TextColor="Orange" />
+            <ActivityIndicator x:Name="uploadIndicator" IsVisible="False" IsRunning="False" Color="Black" />
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
