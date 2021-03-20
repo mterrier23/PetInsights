@@ -37,7 +37,7 @@
                     <Label Grid.Column="1" Text="1.2 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
                 </Grid>
 
-                <Label Text="Cats, Dogs, Exotic" TextColor="Black"></Label>
+                <Label Text="Cats, Dogs, Exotic" TextColor="Gray"></Label>
                 <!--ORG label deets-->
                 <Grid Margin="0, 0, 30, 0">
                     <Grid.ColumnDefinitions>
@@ -47,8 +47,8 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="30"/>
                     </Grid.RowDefinitions>
-                    <Button Grid.Column="0" Padding="-20" BackgroundColor="Blue" Text="Volunteers OK" FontSize="Micro" TextColor="White" />
-                    <Button Grid.Column="1" Padding="-20" BackgroundColor="LightGray" Text="Donations Needed" FontSize="Micro" TextColor="DarkGray"/>
+                    <Button Grid.Column="0" Padding="-20" BackgroundColor="Blue" Text="Volunteers OK" FontSize="Micro" TextColor="White"/>
+                    <Button Grid.Column="1" Padding="-20" BackgroundColor="Green" Text="Donations Needed" FontSize="Micro" TextColor="White"/>
                 </Grid>
                 <Label Text="123 Wallaway Street, Cincinnati, Ohio" TextColor="Black"></Label>
                     <!-- image layout-->
@@ -60,37 +60,27 @@
                         <ColumnDefinition Width=".25*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="50"/>
+                    <RowDefinition Height="80"/>
                     </Grid.RowDefinitions>
-                    <Frame Grid.Column="0"
-                           Padding="0"
-                           IsClippedToBounds="True">
-                        <Image Source="@drawable/Lrag.jpeg"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center" />
+                    <Frame Grid.Row="0" Grid.Column="0" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
+                        <Image  Source="@drawable/small_chihuahua.jpeg" Aspect="AspectFill" />
                     </Frame>
-                    <Frame Grid.Column="1"
-                           Padding="0"
-                           IsClippedToBounds="True">
-                        <Image Source="@drawable/test.jpeg"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center" />
+                    
+                     <Frame Grid.Row="0" Grid.Column="1" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
+                        <Image  Source="@drawable/test.jpeg" Aspect="AspectFill" />
                     </Frame>
-                    <Frame Grid.Column="2"
-                           Padding="0"
-                           IsClippedToBounds="True">
-                        <Image Source="@drawable/chicken.jpeg"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center" />
+                     <Frame Grid.Row="0" Grid.Column="2" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
+                        <Image  Source="@drawable/chicken.jpeg" Aspect="AspectFill" />
                     </Frame>
-                    <Frame Grid.Column="3"
-                           Padding="0"
-                           IsClippedToBounds="True">
-                        <Image Source="@drawable/hamster.jpeg"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center" />
+                     <Frame Grid.Row="0" Grid.Column="3" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
+                        <Image  Source="@drawable/hamster.jpeg" Aspect="AspectFill" />
                     </Frame>
                 </Grid>
+
+                <BoxView Color="LightGray"
+                     CornerRadius="10"
+                     HeightRequest="2"
+                     Margin = "0,0,40,0" />
 
                 <!-- ORG NAME 2-->
                 <Grid>
@@ -102,7 +92,7 @@
                     <Label Grid.Column="1" Text="3.5 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
                 </Grid>
 
-                <Label Text="Cats, Dogs, Exotic" TextColor="Black"></Label>
+                <Label Text="Cats, Dogs, Exotic" TextColor="Gray"></Label>
                 <!--ORG label deets 2-->
                 <Grid Margin="0, 0, 30, 0">
                     <Grid.ColumnDefinitions>
@@ -112,8 +102,8 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="30"/>
                     </Grid.RowDefinitions>
-                    <Button Grid.Column="0" Padding="-20" BackgroundColor="LightGray" Text="Volunteers OK" FontSize="Micro" TextColor="White" />
-                    <Button Grid.Column="1" Padding="-20" BackgroundColor="Blue" Text="Donations Needed" FontSize="Micro" TextColor="DarkGray"/>
+                    <Button Grid.Column="0" Padding="-20" BackgroundColor="LightGray" Text="Volunteers OK" FontSize="Micro" TextColor="DarkGray" />
+                    <Button Grid.Column="1" Padding="-20" BackgroundColor="Green" Text="Donations Needed" FontSize="Micro" TextColor="White"/>
                 </Grid>
                 <Label Text="56 Glendale Street, Cincinnati, Ohio" TextColor="Black"></Label>
 
@@ -126,37 +116,29 @@
                         <ColumnDefinition Width=".25*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="50"/>
+                    <RowDefinition Height="80"/>
                     </Grid.RowDefinitions>
-                    <Frame Grid.Column="0"
-                           Padding="0"
-                           IsClippedToBounds="True">
-                        <Image Source="@drawable/Lalpaca.jpeg"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center" />
+                    <Frame Grid.Row="0" Grid.Column="0" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
+                        <Image Source="@drawable/Lalpaca.jpeg" Aspect="AspectFill"/>
                     </Frame>
-                    <Frame Grid.Column="1"
-                           Padding="0"
-                           IsClippedToBounds="True">
+                    <Frame Grid.Row="0" Grid.Column="1" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
                         <Image Source="@drawable/Lhusky.jpeg"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center" />
+                           Aspect="AspectFill" />
                     </Frame>
-                    <Frame Grid.Column="2"
-                           Padding="0"
-                           IsClippedToBounds="True">
+                    <Frame Grid.Row="0" Grid.Column="2" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
                         <Image Source="@drawable/LGermanShepherds.jpeg"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center" />
+                           Aspect="AspectFill" />
                     </Frame>
-                    <Frame Grid.Column="3"
-                           Padding="0"
-                           IsClippedToBounds="True">
+                   <Frame Grid.Row="0" Grid.Column="3" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
                         <Image Source="@drawable/Mrussell_terrier.jpeg"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center" />
+                           Aspect="AspectFill" />
                     </Frame>
                 </Grid>
+
+                 <BoxView Color="LightGray"
+                     CornerRadius="10"
+                     HeightRequest="2"
+                     Margin = "0,0,40,0" />
 
              <!-- ORG NAME 3-->
                 <Grid>
@@ -168,7 +150,7 @@
                     <Label Grid.Column="1" Text="9.3 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
                 </Grid>
 
-                <Label Text="Cats, Dogs" TextColor="Black"></Label>
+                <Label Text="Cats, Dogs" TextColor="Gray"></Label>
                 <!--ORG label deets-->
                 <Grid Margin="0, 0, 30, 0">
                     <Grid.ColumnDefinitions>
@@ -179,7 +161,7 @@
                         <RowDefinition Height="30"/>
                     </Grid.RowDefinitions>
                     <Button Grid.Column="0" Padding="-20" BackgroundColor="Blue" Text="Volunteers OK" FontSize="Micro" TextColor="White" />
-                    <Button Grid.Column="1" Padding="-20" BackgroundColor="Blue" Text="Donations Needed" FontSize="Micro" TextColor="DarkGray"/>
+                    <Button Grid.Column="1" Padding="-20" BackgroundColor="Green" Text="Donations Needed" FontSize="Micro" TextColor="White"/>
                 </Grid>
                 <Label Text="449 Reading Road, Cincinnati, Ohio" TextColor="Black"></Label>
                     <!-- image layout-->
@@ -191,38 +173,30 @@
                         <ColumnDefinition Width=".25*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="80"/>
                     </Grid.RowDefinitions>
-                    <Frame Grid.Column="0"
-                           Padding="0"
-                           IsClippedToBounds="True">
+                    <Frame Grid.Row="0" Grid.Column="0" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
                         <Image Source="@drawable/Srussell_terrier_puppy.jpeg"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center" />
+                           Aspect="AspectFill" />
                     </Frame>
-                    <Frame Grid.Column="1"
-                           Padding="0"
-                           IsClippedToBounds="True">
+                    <Frame Grid.Row="0" Grid.Column="1" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
                         <Image Source="@drawable/Mtuxedo.jpeg"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center" />
+                           Aspect="AspectFill" />
                     </Frame>
-                    <Frame Grid.Column="2"
-                           Padding="0"
-                           IsClippedToBounds="True">
+                    <Frame Grid.Row="0" Grid.Column="2" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
                         <Image Source="@drawable/Slab.jpeg"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center" />
+                           Aspect="AspectFill" />
                     </Frame>
-                    <Frame Grid.Column="3"
-                           Padding="0"
-                           IsClippedToBounds="True">
+                    <Frame Grid.Row="0" Grid.Column="3" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
                         <Image Source="@drawable/Mbeagle.jpeg"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center" />
+                            Aspect="AspectFill" />
                     </Frame>
                 </Grid>
 
+             <BoxView Color="LightGray"
+                     CornerRadius="10"
+                     HeightRequest="2"
+                     Margin = "0,0,40,0" />
 
               <!-- ORG NAME 4-->
                 <Grid>
@@ -234,7 +208,7 @@
                     <Label Grid.Column="1" Text="15.4 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
                 </Grid>
 
-                <Label Text="Cats, Dogs, Exotic" TextColor="Black"></Label>
+                <Label Text="Cats, Dogs, Exotic" TextColor="Gray"></Label>
                 <!--ORG label deets-->
                 <Grid Margin="0, 0, 30, 0">
                     <Grid.ColumnDefinitions>
@@ -244,8 +218,8 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="30"/>
                     </Grid.RowDefinitions>
-                    <Button Grid.Column="0" Padding="-20" BackgroundColor="LightGray" Text="Volunteers OK" FontSize="Micro" TextColor="White" />
-                    <Button Grid.Column="1" Padding="-20" BackgroundColor="Blue" Text="Donations Needed" FontSize="Micro" TextColor="DarkGray"/>
+                    <Button Grid.Column="0" Padding="-20" BackgroundColor="LightGray" Text="Volunteers OK" FontSize="Micro" TextColor="DarkGray" />
+                    <Button Grid.Column="1" Padding="-20" BackgroundColor="Green" Text="Donations Needed" FontSize="Micro" TextColor="White"/>
                 </Grid>
                 <Label Text="28 Willow Street, Cincinnati, Ohio" TextColor="Black"></Label>
                     <!-- image layout-->
@@ -257,37 +231,30 @@
                         <ColumnDefinition Width=".25*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="80"/>
                     </Grid.RowDefinitions>
-                    <Frame Grid.Column="0"
-                           Padding="0"
-                           IsClippedToBounds="True">
+                   <Frame Grid.Row="0" Grid.Column="0" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
                         <Image Source="@drawable/Mcalico_cat.jpeg"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center" />
+                           Aspect="AspectFill" />
                     </Frame>
-                    <Frame Grid.Column="1"
-                           Padding="0"
-                           IsClippedToBounds="True">
+                   <Frame Grid.Row="0" Grid.Column="1" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
                         <Image Source="@drawable/lizard.jpeg"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center" />
+                           Aspect="AspectFill" />
                     </Frame>
-                    <Frame Grid.Column="2"
-                           Padding="0"
-                           IsClippedToBounds="True">
+                    <Frame Grid.Row="0" Grid.Column="2" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
                         <Image Source="@drawable/horse.jpeg"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center" />
+                           Aspect="AspectFill" />
                     </Frame>
-                    <Frame Grid.Column="3"
-                           Padding="0"
-                           IsClippedToBounds="True">
+                   <Frame Grid.Row="0" Grid.Column="3" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
                         <Image Source="@drawable/small_pig.jpeg"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center" />
+                           Aspect="AspectFill" />
                     </Frame>
                 </Grid>
+
+                 <BoxView Color="LightGray"
+                     CornerRadius="10"
+                     HeightRequest="2"
+                     Margin = "0,0,40,0" />
 
                <!-- ORG NAME 5-->
                 <Grid>
@@ -299,7 +266,7 @@
                     <Label Grid.Column="1" Text="22.3 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
                 </Grid>
 
-                <Label Text="Cats, Dogs, Exotic" TextColor="Black"></Label>
+                <Label Text="Cats, Dogs, Exotic" TextColor="Gray"></Label>
                 <!--ORG label deets-->
                 <Grid Margin="0, 0, 30, 0">
                     <Grid.ColumnDefinitions>
@@ -322,35 +289,23 @@
                         <ColumnDefinition Width=".25*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="80"/>
                     </Grid.RowDefinitions>
-                    <Frame Grid.Column="0"
-                           Padding="0"
-                           IsClippedToBounds="True">
+                   <Frame Grid.Row="0" Grid.Column="0" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
                         <Image Source="@drawable/Lhusky2.jpeg"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center" />
+                           Aspect="AspectFill" />
                     </Frame>
-                    <Frame Grid.Column="1"
-                           Padding="0"
-                           IsClippedToBounds="True">
+                  <Frame Grid.Row="0" Grid.Column="1" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
                         <Image Source="@drawable/Schihuahua.jpeg"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center" />
+                           Aspect="AspectFill" />
                     </Frame>
-                    <Frame Grid.Column="2"
-                           Padding="0"
-                           IsClippedToBounds="True">
+                    <Frame Grid.Row="0" Grid.Column="2" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
                         <Image Source="@drawable/snake.jpeg"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center" />
+                           Aspect="AspectFill" />
                     </Frame>
-                    <Frame Grid.Column="3"
-                           Padding="0"
-                           IsClippedToBounds="True">
+               <Frame Grid.Row="0" Grid.Column="3" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
                         <Image Source="@drawable/Spitbull_puppy.jpeg"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center" />
+                           Aspect="AspectFill" />
                     </Frame>
                 </Grid>
             </StackLayout>
