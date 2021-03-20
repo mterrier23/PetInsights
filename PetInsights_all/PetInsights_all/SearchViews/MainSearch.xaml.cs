@@ -20,14 +20,14 @@ namespace PetInsights_all
             InitializeComponent();
             searchFrame.BackgroundColor = Color.White;
             location.Text = Application.Current.Properties["UserLocation"].ToString();
-            transparentColor0.BackgroundColor = new Color(255, 140, 0, 0.7);
-            transparentColor1.BackgroundColor = new Color(255, 140, 0, 0.7);
-            transparentColor2.BackgroundColor = new Color(255, 140, 0, 0.7);
-            transparentColor3.BackgroundColor = new Color(255, 140, 0, 0.7);
-            transparentColor4.BackgroundColor = new Color(255, 140, 0, 0.7);
-            transparentColor5.BackgroundColor = new Color(255, 140, 0, 0.7);
-            transparentColor6.BackgroundColor = new Color(255, 140, 0, 0.7);
-            transparentColor7.BackgroundColor = new Color(255, 140, 0);
+            transparentColor0.BackgroundColor = new Color(1, 1, 1, 0.7);
+            transparentColor1.BackgroundColor = new Color(1, 1, 1, 0.7);
+            transparentColor2.BackgroundColor = new Color(1, 1, 1, 0.7);
+            transparentColor3.BackgroundColor = new Color(1, 1, 1, 0.7);
+            transparentColor4.BackgroundColor = new Color(1, 1, 1, 0.7);
+            transparentColor5.BackgroundColor = new Color(1, 1, 1, 0.7);
+            transparentColor6.BackgroundColor = new Color(1, 1, 1, 0.7);
+            transparentColor7.BackgroundColor = new Color(1, 1, 1, 0.7);
 
             // = "Current Location = Application.Current.Properties["UserLocation"].ToString();
         }
