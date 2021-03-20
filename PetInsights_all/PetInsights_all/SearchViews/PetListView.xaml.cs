@@ -53,11 +53,118 @@ namespace PetInsights_all
 
         }
 
+        public PetListView(string filter)
+        {
+            InitializeComponent();
+            BindingContext = new PetsViewModel();
+
+
+            filterQuickPets(filter);
+            //lstPets.ItemsSource gets reassigned within the above method
+
+
+            newFlag = true;
+
+            MessagingCenter.Subscribe<List<List<string>>>(this, "filtersChanged", (filterSet) =>
+            {
+                Console.WriteLine("Message receieved");
+                lstPets.ItemsSource = filterPets(filterSet);
+            });
+
+        }
+
+        public async void filterQuickPets(string filter)
+        {
+
+            ObservableCollection<Pet> filteredList = new ObservableCollection<Pet>();
+            await Task.Delay(1500);
+            ObservableCollection<Pet> thepets = lstPets.ItemsSource as ObservableCollection<Pet>;
+            if (filter == "catsQuick")
+            {
+                foreach (Pet pet in thepets)
+                {
+                    if (pet.PetType == "cat")
+                    {
+                        filteredList.Add(pet);
+                    }
+                }
+            }
+            else if (filter == "smallDogsQuick")
+            {
+                foreach (Pet pet in thepets)
+                {
+                    if (pet.PetType == "dog" && pet.Size == "small")
+                    {
+                        filteredList.Add(pet);
+                    }
+                }
+            }
+            else if (filter == "mediumDogsQuick")
+            {
+                foreach (Pet pet in thepets)
+                {
+                    if (pet.PetType == "dog" && pet.Size == "medium")
+                    {
+                        filteredList.Add(pet);
+                    }
+                }
+            }
+            else if (filter == "largeDogsQuick")
+            {
+                foreach (Pet pet in thepets)
+                {
+                    if (pet.PetType == "dog" && pet.Size == "large")
+                    {
+                        filteredList.Add(pet);
+                    }
+                }
+            }
+            else if (filter == "exoticQuick")
+            {
+                foreach (Pet pet in thepets)
+                {
+                    if (pet.PetType == "exotic")
+                    {
+                        filteredList.Add(pet);
+                    }
+                }
+            }
+            else if (filter == "chillQuick")
+            {
+                foreach (Pet pet in thepets)
+                {
+                    if (pet.Sex == "Female")
+                    {
+                        filteredList.Add(pet);
+                    }
+                }
+            }
+            else if (filter == "energyQuick")
+            {
+                foreach (Pet pet in thepets)
+                {
+                    if (pet.Sex == "Male")
+                    {
+                        filteredList.Add(pet);
+                    }
+                }
+            }
+            else if (filter == "longQuick")
+            {
+                foreach (Pet pet in thepets)
+                {
+                    if (pet.Name == "Lily" || pet.Name == "Sheryl" || pet.Name == "Foxy")
+                    {
+                        filteredList.Add(pet);
+                    }
+                }
+            }
+            lstPets.ItemsSource = filteredList;
+        }
 
         // add other filters here
         public ObservableCollection<Pet> filterPets(List<List<string>> filters)
         {
-            Console.WriteLine("in filter pets");
             if(filters[0] != null)
             {
                 Console.WriteLine("pet type count = " + filters[0].Count);

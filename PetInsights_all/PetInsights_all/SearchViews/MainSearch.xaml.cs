@@ -89,7 +89,7 @@ namespace PetInsights_all
         async void onSearchFrame_Tapped(object sender, EventArgs e)
         {
             // await Navigation.PushModalAsync(new SimpleFilterModal());
-
+            
             //await Application.Current.MainPage.Navigation.PushAsync(new PetListView(null, true));
             // temporary fix :)
             searchFrame.BackgroundColor = Color.LightGray;
@@ -103,6 +103,11 @@ namespace PetInsights_all
             // let user change location (not implementing for demo
         }
 
-
+        async void onQuickSearchTapped(object sender, EventArgs e)
+        {
+            string _quickFilter = (sender as Frame).BindingContext as string;
+            Console.WriteLine("in here");
+            await Navigation.PushAsync(new PetListView(_quickFilter));
+        }
     }
 }
