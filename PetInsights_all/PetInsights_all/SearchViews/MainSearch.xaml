@@ -7,7 +7,7 @@
     <ContentPage.Content>
         <ScrollView>
         <StackLayout>
-            <Label Text="Adopt Don't Shop" FontSize="30" TextColor="Black" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Padding="10"/>
+            <Image Margin="15" Source="project_logo.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Image>
             <Frame CornerRadius="5" x:Name="searchFrame" HorizontalOptions="Start" VerticalOptions="Start" Margin="20, 0, -10, 0" HasShadow="True" Padding="10" BackgroundColor="{Binding searchBar}" >
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Tapped="onSearchFrame_Tapped" NumberOfTapsRequired="1" />
