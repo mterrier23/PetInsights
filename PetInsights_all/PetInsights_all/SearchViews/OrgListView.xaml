@@ -20,13 +20,13 @@
                          BackgroundColor="White"
                          HorizontalOptions="Start"></ImageButton>
 
-                <Label Text="Filter results by breed, age, etc." TextColor="Gray" Padding="5"></Label>
+                <Label Text="Filter results volunteers, animals, etc." TextColor="Gray" Padding="5"></Label>
             </StackLayout>
         </Frame>
     </NavigationPage.TitleView>
     <ContentPage.Content >
         <ScrollView>
-            <StackLayout Margin="10, 20, 10, 0">
+            <StackLayout Margin="20, 20, 20, 0">
             <!-- ORG NAME-->
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -37,7 +37,7 @@
                     <Label Grid.Column="1" Text="1.2 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
                 </Grid>
 
-                <Label Text="Cats, Dogs, Exotic" TextColor="Gray"></Label>
+                <Label Margin="0, -3, 0, 2" Text="Cats, Dogs, Exotic" TextColor="Gray" VerticalOptions="Start" VerticalTextAlignment="Start"></Label>
                 <!--ORG label deets-->
                 <Grid Margin="0, 0, 30, 0">
                     <Grid.ColumnDefinitions>
@@ -79,8 +79,8 @@
 
                 <BoxView Color="LightGray"
                      CornerRadius="10"
-                     HeightRequest="2"
-                     Margin = "0,0,40,0" />
+                     HeightRequest="1"
+                     Margin = "0,20,0,20" />
 
                 <!-- ORG NAME 2-->
                 <Grid>
@@ -92,7 +92,7 @@
                     <Label Grid.Column="1" Text="3.5 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
                 </Grid>
 
-                <Label Text="Cats, Dogs, Exotic" TextColor="Gray"></Label>
+                <Label Margin="0, -3, 0, 2" Text="Cats, Dogs, Exotic" TextColor="Gray"></Label>
                 <!--ORG label deets 2-->
                 <Grid Margin="0, 0, 30, 0">
                     <Grid.ColumnDefinitions>
@@ -137,8 +137,8 @@
 
                  <BoxView Color="LightGray"
                      CornerRadius="10"
-                     HeightRequest="2"
-                     Margin = "0,0,40,0" />
+                     HeightRequest="1"
+                     Margin = "0,20,0,20" />
 
              <!-- ORG NAME 3-->
                 <Grid>
@@ -150,7 +150,7 @@
                     <Label Grid.Column="1" Text="9.3 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
                 </Grid>
 
-                <Label Text="Cats, Dogs" TextColor="Gray"></Label>
+                <Label Margin="0, -3, 0, 2" Text="Cats, Dogs" TextColor="Gray"></Label>
                 <!--ORG label deets-->
                 <Grid Margin="0, 0, 30, 0">
                     <Grid.ColumnDefinitions>
@@ -195,8 +195,8 @@
 
              <BoxView Color="LightGray"
                      CornerRadius="10"
-                     HeightRequest="2"
-                     Margin = "0,0,40,0" />
+                     HeightRequest="1"
+                     Margin = "0,20,0,20" />
 
               <!-- ORG NAME 4-->
                 <Grid>
@@ -208,7 +208,7 @@
                     <Label Grid.Column="1" Text="15.4 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
                 </Grid>
 
-                <Label Text="Cats, Dogs, Exotic" TextColor="Gray"></Label>
+                <Label Margin="0, -3, 0, 2" Text="Cats, Dogs, Exotic" TextColor="Gray"></Label>
                 <!--ORG label deets-->
                 <Grid Margin="0, 0, 30, 0">
                     <Grid.ColumnDefinitions>
@@ -253,8 +253,8 @@
 
                  <BoxView Color="LightGray"
                      CornerRadius="10"
-                     HeightRequest="2"
-                     Margin = "0,0,40,0" />
+                     HeightRequest="1"
+                     Margin = "0,20,0,20" />
 
                <!-- ORG NAME 5-->
                 <Grid>
@@ -266,7 +266,7 @@
                     <Label Grid.Column="1" Text="22.3 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
                 </Grid>
 
-                <Label Text="Cats, Dogs, Exotic" TextColor="Gray"></Label>
+                <Label Margin="0, -3, 0, 2" Text="Cats, Dogs, Exotic" TextColor="Gray"></Label>
                 <!--ORG label deets-->
                 <Grid Margin="0, 0, 30, 0">
                     <Grid.ColumnDefinitions>
@@ -308,6 +308,10 @@
                            Aspect="AspectFill" />
                     </Frame>
                 </Grid>
+                <BoxView Color="LightGray"
+                     CornerRadius="10"
+                     HeightRequest="1"
+                     Margin = "0,20,0,20" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
