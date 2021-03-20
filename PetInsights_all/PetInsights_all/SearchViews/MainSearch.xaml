@@ -45,37 +45,43 @@
                     <Frame Grid.Row="0" Grid.Column="1" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
                         <Image  Source="@drawable/small_chihuahua.jpeg" Aspect="AspectFill" />
                     </Frame>
-                    <Button  x:Name="transparentColor1" Grid.Row="0" Grid.Column="1" Text="Small Dogs" BackgroundColor="{Binding transparentColor1}" VerticalOptions="Center" Padding="0" HeightRequest="20" WidthRequest="50"
+                    <Button  x:Name="transparentColor1" Grid.Row="0" Grid.Column="1" Text="Small Dogs" BackgroundColor="{Binding transparentColor1}" VerticalOptions="Center" Padding="0" HeightRequest="30" WidthRequest="50"
                             FontSize="Micro" TextColor="Black" HorizontalOptions="Center" FontAttributes="Bold"></Button>
                     <Frame Grid.Row="0" Grid.Column="2" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
                         <Image  Source="@drawable/medium_beagle.jpeg" Aspect="AspectFill" />
                     </Frame>
-                    <Button  x:Name="transparentColor2" Grid.Row="0" Grid.Column="2" Text="Medium Dogs" BackgroundColor="{Binding transparentColor2}" VerticalOptions="Center" Padding="0" HeightRequest="20" WidthRequest="50"
+                    <Button  x:Name="transparentColor2" Grid.Row="0" Grid.Column="2" Text="Medium Dogs" BackgroundColor="{Binding transparentColor2}" VerticalOptions="Center" Padding="0" HeightRequest="30" WidthRequest="50"
                             FontSize="Micro" TextColor="Black" HorizontalOptions="Center" FontAttributes="Bold"></Button>
                     <Frame Grid.Row="0" Grid.Column="3" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
                         <Image Source="@drawable/large_husky.jpeg" Aspect="AspectFill" />
                     </Frame>
-                    <Button  x:Name="transparentColor3" Grid.Row="0" Grid.Column="3" Text="Large Dogs" BackgroundColor="{Binding transparentColor3}" VerticalOptions="Center" Padding="0" HeightRequest="20" WidthRequest="50"
+                    <Button  x:Name="transparentColor3" Grid.Row="0" Grid.Column="3" Text="Large Dogs" BackgroundColor="{Binding transparentColor3}" VerticalOptions="Center" Padding="0" HeightRequest="30" WidthRequest="50"
                             FontSize="Micro" TextColor="Black" HorizontalOptions="Center" FontAttributes="Bold"></Button>
                     <Frame Grid.Row="1" Grid.Column="0" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
                         <Image Source="@drawable/lizard_2.jpeg" Aspect="AspectFill" />
                     </Frame>
-                    <Button  x:Name="transparentColor4" Grid.Row="1" Grid.Column="0" Text="Exotic Animals" BackgroundColor="{Binding transparentColor4}" VerticalOptions="Center" Padding="0" HeightRequest="20" WidthRequest="50"
+                    <Button  x:Name="transparentColor4" Grid.Row="1" Grid.Column="0" Text="Exotic Animals" BackgroundColor="{Binding transparentColor4}" VerticalOptions="Center" Padding="0" HeightRequest="30" WidthRequest="50"
                             FontSize="Micro" TextColor="Black" HorizontalOptions="Center" FontAttributes="Bold"></Button>
                     <Frame Grid.Row="1" Grid.Column="1" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
                         <Image Source="@drawable/medium_calico_cat.jpeg" Aspect="AspectFill" />
                     </Frame>
-                    <Button x:Name="transparentColor5" Grid.Row="1" Grid.Column="1" Text="Chill animals" BackgroundColor="{Binding transparentColor5}" VerticalOptions="Center" Padding="0" HeightRequest="20" WidthRequest="50"
+                    <Button x:Name="transparentColor5" 
+                            Grid.Row="1" Grid.Column="1" 
+                            Text="Chill animals" 
+                            BackgroundColor="{Binding transparentColor5}" VerticalOptions="Center" Padding="0" HeightRequest="30" WidthRequest="50"
                             FontSize="Micro" TextColor="Black" HorizontalOptions="Center" FontAttributes="Bold"></Button>
                     <Frame Grid.Row="1" Grid.Column="2" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
                         <Image  Source="@drawable/large_pitbull.jpeg" Aspect="AspectFill" />
                     </Frame>
-                    <Button x:Name="transparentColor6" Grid.Row="1" Grid.Column="2" Text="Energetic Animals" BackgroundColor="{Binding transparentColor6}" VerticalOptions="Center" Padding="0" HeightRequest="20" WidthRequest="50"
-                            FontSize="Micro" TextColor="Black" HorizontalOptions="StartAndExpand" FontAttributes="Bold"></Button>
-                    <Frame Grid.Row="1" Grid.Column="2" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
+                    <Button x:Name="transparentColor6" 
+                            Grid.Row="1" Grid.Column="2" 
+                            Text="Energetic Animals" 
+                            BackgroundColor="{Binding transparentColor6}" VerticalOptions="Center" Padding="0" HeightRequest="30" WidthRequest="55"
+                            FontSize="Micro" TextColor="Black" HorizontalOptions="Center" FontAttributes="Bold"></Button>
+                    <Frame Grid.Row="1" Grid.Column="3" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True">
                         <Image Source="@drawable/medium_Mackerel_tabby.jpeg" Aspect="AspectFill" />
                     </Frame>
-                    <Button x:Name="transparentColor7" Grid.Row="1" Grid.Column="3" Text="Longest on app" BackgroundColor="{Binding transparentColor7}" VerticalOptions="Center" Padding="0" HeightRequest="20" WidthRequest="50"
+                    <Button x:Name="transparentColor7" Grid.Row="1" Grid.Column="3" Text="Longest on app" BackgroundColor="{Binding transparentColor7}" VerticalOptions="Center" Padding="0" HeightRequest="30" WidthRequest="50"
                             FontSize="Micro" TextColor="Black" HorizontalOptions="Center" FontAttributes="Bold"></Button>
                     <!-- might have to make each of this grids like above 
                     <Label  Grid.Row="0" Grid.Column="0" Text="Cats"
