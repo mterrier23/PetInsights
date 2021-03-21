@@ -11,7 +11,8 @@
             <ScrollView>
                 <StackLayout>
 
-                    <Label Text="SEARCH RADIUS"
+                    <Label Text="{Binding sliderText}"
+                           x:Name="sliderText"
                        Margin="0,10,0,0"
                        TextColor="Black"
                        FontAttributes="Bold"
@@ -19,7 +20,12 @@
                     <Label Text="Adjust search radius by moving the slider."
                        FontSize="Small"
                        TextColor="LightSlateGray"></Label>
-                    <Slider ThumbColor="Orange" MaximumTrackColor="Gray" MinimumTrackColor="Orange"></Slider>
+                    <Slider ThumbColor="Orange" 
+                             Maximum="40"
+                             Minimum="2"
+                            MaximumTrackColor="Gray" 
+                            MinimumTrackColor="Orange" 
+                            ValueChanged="OnSliderValueChanged" ></Slider>
                     <Label Text="ANIMAL TYPE"
                        Margin="0,10,0,0"
                            TextColor="Black"
@@ -87,29 +93,26 @@
                         <Button x:Name="newbornButton" Grid.Column="0" Text="Newborn" BindingContext="newborn" BorderWidth="1" Clicked="PetAgeBtnClicked"
                                 BackgroundColor="{Binding newbornBackgroundColor}" 
                                 TextColor="{Binding newbornTextColor}" 
+                                FontSize="12" Padding="-2"
                                 BorderColor="{Binding newbornBorderColor}"/>
                         <Button x:Name="youngButton" Grid.Column="1" Text="Young" BindingContext="young" BorderWidth="1" Clicked="PetAgeBtnClicked"
                                 BackgroundColor="{Binding youngBackgroundColor}" 
                                 TextColor="{Binding youngTextColor}" 
+                                FontSize="12" Padding="-2"
                                 BorderColor="{Binding youngBorderColor}"/>
                         <Button x:Name="adultButton" Grid.Column="2" Text="Adult" BindingContext="adult" BorderWidth="1" Clicked="PetAgeBtnClicked"
                                 BackgroundColor="{Binding adultBackgroundColor}" 
                                 TextColor="{Binding adultTextColor}" 
+                                FontSize="12" Padding="-2"
                                 BorderColor="{Binding adultBorderColor}"/>
                         <Button x:Name="seniorButton" Grid.Column="3" Text="Senior" BindingContext="senior" BorderWidth="1" Clicked="PetAgeBtnClicked"
                                 BackgroundColor="{Binding seniorBackgroundColor}" 
                                 TextColor="{Binding seniorTextColor}" 
+                                FontSize="12" Padding="-2"
                                 BorderColor="{Binding seniorBorderColor}"/>
                     </Grid>
-                    <Label Text="BREED"
-                       Margin="0,10,0,0"
-                       TextColor="Black"
-                       FontAttributes="Bold"
-                       FontSize="Medium"></Label>
-                    <Label Text="** make this a drop down searchable list **"
-                       FontSize="Small"
-                       TextColor="LightSlateGray"></Label>
                     <Label Text="SIZE"
+                       Margin="0,10,0,0"
                        TextColor="Black"
                        FontAttributes="Bold"
                        FontSize="Medium"></Label>
@@ -162,7 +165,7 @@
                        TextColor="Black"
                        FontAttributes="Bold"
                        FontSize="Medium"></Label>
-                    <Label Text="Select if it's ok that the animal has a medical condition."
+                    <Label Text="Select your animal preferences."
                        FontSize="Small"
                        TextColor="LightSlateGray"></Label>
                     <Grid>
@@ -180,6 +183,7 @@
                                 BorderColor="{Binding nomedBorderColor}"/>
                     </Grid>
                     <Button Text="Filter Results"
+                       Margin="0,30,0,0"
                         TextTransform="Uppercase"
                         BackgroundColor="Orange"
                         TextColor="White"

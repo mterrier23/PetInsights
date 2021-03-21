@@ -135,19 +135,19 @@ namespace PetInsights_all.Services
             string rng = "";
             if (age >= 0 && age <= .5)
             {
-                rng = "0 - 6 months"; // puppy/kitten
+                rng = "newborn"; // puppy/kitten
             }
             else if (age > .5 && age <= 2)
             {
-                rng = "6 months - 2 years"; // young
+                rng = "young"; // young
             }
             else if (age > 2 && age <= 8)
             {
-                rng = "2 years - 8 years"; // middle age
+                rng = "adult"; // middle age
             }
             else if (age > 8)
             {
-                rng = "8 years +"; // senior
+                rng = "senior"; // senior
             }
             return rng;
         }

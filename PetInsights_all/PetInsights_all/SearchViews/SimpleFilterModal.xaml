@@ -11,7 +11,8 @@
             <ScrollView>
                 <StackLayout>
 
-                    <Label Text="SEARCH RADIUS"
+                    <Label Text="{Binding sliderText}"
+                           x:Name="sliderText"
                        TextColor="Black"
                        FontAttributes="Bold"
                        FontSize="Medium"
@@ -19,7 +20,12 @@
                     <Label Text="Adjust search radius by moving the slider."
                        FontSize="Small"
                        TextColor="LightSlateGray"></Label>
-                    <Slider ThumbColor="Orange" MaximumTrackColor="Gray" MinimumTrackColor="Orange"></Slider>
+                    <Slider ThumbColor="Orange" 
+                             Maximum="40"
+                             Minimum="2"
+                            MaximumTrackColor="Gray" 
+                            MinimumTrackColor="Orange" 
+                            ValueChanged="OnSliderValueChanged" ></Slider>
                     
                     <Label Text="PET TYPE"
                        TextColor="Black"
@@ -87,19 +93,19 @@
                         </Grid.ColumnDefinitions>
                         <Button x:Name="newbornButton" Grid.Column="0" Text="Newborn" BindingContext="newborn" BorderWidth="1" Clicked="PetAgeBtnClicked"
                                 BackgroundColor="{Binding newbornBackgroundColor}"  Padding="-10,0,-10,0"
-                                TextColor="{Binding newbornTextColor}" 
+                                TextColor="{Binding newbornTextColor}" FontSize="12"
                                 BorderColor="{Binding newbornBorderColor}"/>
                         <Button x:Name="youngButton" Grid.Column="1" Text="Young" BindingContext="young" BorderWidth="1" Clicked="PetAgeBtnClicked"
                                 BackgroundColor="{Binding youngBackgroundColor}" 
-                                TextColor="{Binding youngTextColor}" 
+                                TextColor="{Binding youngTextColor}" FontSize="12"
                                 BorderColor="{Binding youngBorderColor}"/>
                         <Button x:Name="adultButton" Grid.Column="2" Text="Adult" BindingContext="adult" BorderWidth="1" Clicked="PetAgeBtnClicked"
                                 BackgroundColor="{Binding adultBackgroundColor}" 
-                                TextColor="{Binding adultTextColor}" 
+                                TextColor="{Binding adultTextColor}" FontSize="12"
                                 BorderColor="{Binding adultBorderColor}"/>
                         <Button x:Name="seniorButton" Grid.Column="3" Text="Senior" BindingContext="senior" BorderWidth="1" Clicked="PetAgeBtnClicked"
                                 BackgroundColor="{Binding seniorBackgroundColor}" 
-                                TextColor="{Binding seniorTextColor}" 
+                                TextColor="{Binding seniorTextColor}" FontSize="12"
                                 BorderColor="{Binding seniorBorderColor}"/>
                     </Grid>
                     <Label Text="LIFESTYLE"
@@ -119,7 +125,7 @@
                                 BackgroundColor="{Binding calmBackgroundColor}" 
                                 TextColor="{Binding calmTextColor}" 
                                 BorderColor="{Binding calmBorderColor}"/>
-                        <Button x:Name="energenicButton" Grid.Column="1" Text="Energenic" BindingContext="energenic" BorderWidth="1" Clicked="PetTempermentBtnClicked"
+                        <Button x:Name="energenicButton" Grid.Column="1" Text="Energetic" BindingContext="energenic" BorderWidth="1" Clicked="PetTempermentBtnClicked"
                                 BackgroundColor="{Binding energenicBackgroundColor}" 
                                 TextColor="{Binding energenicextColor}" 
                                 BorderColor="{Binding energenicBorderColor}"/>

@@ -26,10 +26,10 @@ namespace PetInsights_all.SearchViews
         List<string> _petTempermentFilter; // calm, energenic
         List<List<string>> _petFilters; // all filters
 
-
-        /* public FilterModal(ObservableCollection<Pet> allPets) */
         public SimpleFilterModal()
         {
+
+
             //_allPets = allPets;
             _petTypeFilter = new List<string>();
             _petGenderFilter = new List<string>();
@@ -39,6 +39,8 @@ namespace PetInsights_all.SearchViews
 
             /* initialize the UI */
             InitializeComponent();
+
+            sliderText.Text = "SEARCH RADIUS: 2 miles";
 
             // petType
             dogButton.BackgroundColor = Color.White;
@@ -93,9 +95,15 @@ namespace PetInsights_all.SearchViews
 
         }
 
+        void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
+        {
+            sliderText.Text = "SEARCH RADIUS: " +  (int)args.NewValue + " miles";
+            
+        }
 
-        // User can select as many as they want!
-        private async void PetTypeBtnClicked(object sender, EventArgs e)
+
+            // User can select as many as they want!
+            private async void PetTypeBtnClicked(object sender, EventArgs e)
         {
             string buttonName = ((Button)sender).BindingContext as string; // potential binding contexts = dog, cat, exotic
             if (_petTypeFilter.Contains(buttonName))

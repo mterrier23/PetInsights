@@ -55,7 +55,7 @@
                                      VerticalTextAlignment="End"
                                      FontAttributes="Bold"></Label>
 
-                                <Label Text="x mi."
+                                <Label Text="{Binding ApartmentFriendly}"
                                   HorizontalOptions="End"
                                   FontSize="16"
                                   TextColor="Orange"

@@ -20,13 +20,21 @@ namespace PetInsights_all
         ObservableCollection<Pet> allPets = new ObservableCollection<Pet>();
         bool newFlag;
         int check = 0;
-        List<List<string>> filters;
+        List<string>[] allFilters = new List<string>[10];
+        // testing to replace filters, and each position represents a type of filter
+        //List<List<string>> filters;
 
 
-        public PetListView(List<List<string>> _filters, bool fromMain)
+        // Constructor for the filter modals
+        public PetListView(List<string>[] _allfilters, bool fromMain)
         {
+            // NOTE -- _allFilters is always null at this point
+
             if (fromMain)
+            {                    
                 Application.Current.MainPage.Navigation.PushAsync(new SimpleFilterModal());
+            }
+
 
             InitializeComponent();
 
@@ -36,25 +44,36 @@ namespace PetInsights_all
             newFlag = true;
 
 
-            // List<List<string>> filters = new List<List<string>>(); 
-            List<List<string>> filters = _filters;
+            //List<List<string>> filters = _filters;
+
+            allFilters = _allfilters;
 
             allPets = lstPets.ItemsSource as ObservableCollection<Pet>;
 
             // TO DO - WORK ON THIS AFTERWARDS!
-            //lstPets.ItemsSource = filterPets(filters);
+            //lstPets.ItemsSource = filterPets(null);
+            filterPets(null);
 
+
+            MessagingCenter.Subscribe<List<string>[]>(this, "filtersChanged", (filterSet) =>
+            {
+                Console.WriteLine("Message receieved");
+                //lstPets.ItemsSource = filterPets(filterSet);
+                filterPets(filterSet);
+            });
 
             // NOTE -- have to call the filter function now and reassign the pet list !!
 
-            MessagingCenter.Subscribe<List<List<string>>>(this, "filtersChanged", (filterSet) =>
-            {
-                Console.WriteLine("Message receieved");
-                lstPets.ItemsSource = filterPets(filterSet);
-            });
+            /* MessagingCenter.Subscribe<List<List<string>>>(this, "filtersChanged", (filterSet) =>
+             {
+                 Console.WriteLine("Message receieved");
+                 lstPets.ItemsSource = filterPets(filterSet);
+             });
+            */
 
         }
 
+        // Constructor for the quick search views
         public PetListView(string filter)
         {
             
@@ -67,12 +86,6 @@ namespace PetInsights_all
 
 
             newFlag = true;
-
-            MessagingCenter.Subscribe<List<List<string>>>(this, "filtersChanged", (filterSet) =>
-            {
-                Console.WriteLine("Message receieved");
-                lstPets.ItemsSource = filterPets(filterSet);
-            });
 
         }
 
@@ -168,23 +181,46 @@ namespace PetInsights_all
         }
 
         // add other filters here
-        public ObservableCollection<Pet> filterPets(List<List<string>> filters)
+         public async void filterPets(List<string>[] filters) {
+             ObservableCollection<Pet> filteredList = new ObservableCollection<Pet>();
+
+            ObservableCollection<Pet> thepets = lstPets.ItemsSource as ObservableCollection<Pet>;
+            await Task.Delay(1500);
+            if (filters is null)
+            {
+                Console.WriteLine("filters is null");
+                foreach (Pet pet in thepets)
+                {
+                   /* if (pet.AgeRange.Equals("young") || pet.AgeRange.Equals("adult") || pet.PetType.Equals("cat") 
+                        || pet.PetType.Equals("exotic") || pet.Sex.Equals("Female"))
+                    {
+                        filteredList.Add(pet);
+                    }*/
+                    if ((pet.AgeRange.Equals("young") || pet.AgeRange.Equals("adult")) && pet.Sex.Equals("Female") &&
+                        (pet.PetType.Equals("cat") || pet.PetType.Equals("exotic")) )
+                    {
+                        filteredList.Add(pet);
+                    }
+                }
+            }
+            lstPets.ItemsSource = filteredList;
+
+          }
+
+        /*
+        public ObservableCollection<Pet> filterPets(List<string>[] filters)
         {
             if(filters[0] != null)
             {
-                Console.WriteLine("pet type count = " + filters[0].Count);
+                // Distance
             }
-            if(filters[1] == null)  // DIDN'T ENTER HERE .. WHY NOT
-            {
-                Console.WriteLine("but no genders selected");
-            }
-            string gender = "Both";
-            ObservableCollection<Pet> filteredList = new ObservableCollection<Pet>();
-            if (gender != "Both")
+
+            // Age Range (newborn, young, adult, senior are the values stored)
+            if(filters[1].Contains("newborn") && filters[1].Contains("young") && filters[1].Contains("adult") && filters[1].Contains("senior"))
             {
                 foreach (Pet pet in allPets)
                 {
-                    if (pet.Sex == gender)
+                    if (pet.AgeRange.Equals("newborn" || pet.AgeRange.Equals(")
                     {
                         filteredList.Add(pet);
                     }
@@ -192,13 +228,8 @@ namespace PetInsights_all
                     // TODO - ADD THE OTHER ONES HERE !!
                 }
             }
-            else
-            {
-                filteredList = allPets; //TODO make sure to include other filters
-            }
-            return filteredList;
-
         }
+        */
 
 
         async void OnBackButtonClicked(object sender, EventArgs e)
