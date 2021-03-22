@@ -64,9 +64,9 @@
                             FontSize="Medium" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
                     <Label  Grid.Row="2" Grid.Column="1" Text="{Binding Sex}"
                             FontSize="Medium" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
-                    <Label  Grid.Row="3" Grid.Column="0" Text="Place: "
+                    <Label  Grid.Row="3" Grid.Column="0" Text="Location: "
                             FontSize="Medium" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
-                    <Label  Grid.Row="3" Grid.Column="1" Text="{Binding Name}"
+                    <Label  Grid.Row="3" Grid.Column="1" Text="{Binding Affiliation}"
                             FontSize="Medium" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
                 </Grid>
                 <Grid BackgroundColor="White">

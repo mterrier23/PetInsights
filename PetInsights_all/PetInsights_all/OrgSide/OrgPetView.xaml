@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PetInsights_all.OrgSide.OrgPetView"
-             Title="Hamilton County Humane Society Pets"
+             Title="Cincinnati SAAP Pets"
              BackgroundColor="LightBlue">
     <ContentPage.Content>
         <StackLayout>
@@ -40,22 +40,13 @@
            <StackLayout>
                <Image HeightRequest="120" Source="{Binding ImgIcon}" Aspect="AspectFill" BackgroundColor="LightGray"></Image>
                <StackLayout Orientation="Horizontal">
-                   <Label Text="{Binding Name}"
+                                    <Label Text="{Binding Name}"
                      HorizontalOptions="StartAndExpand"
                      FontSize="24"
                      TextColor="Black"
                      VerticalTextAlignment="End"
                      FontAttributes="Bold"></Label>
-
-                   <Label Text="x mi."
-                          HorizontalOptions="End"
-                          FontSize="16"
-                          TextColor="Orange"
-                          Margin="0,5,0,0"
-                          FontAttributes="Bold"
-                          ></Label>
-
-               </StackLayout>
+                                </StackLayout>
               <StackLayout Orientation="Horizontal">
                <Label Text="{Binding Breed}"
                       HorizontalOptions="StartAndExpand"

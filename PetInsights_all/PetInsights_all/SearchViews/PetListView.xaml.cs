@@ -191,14 +191,19 @@ namespace PetInsights_all
                 Console.WriteLine("filters is null");
                 foreach (Pet pet in thepets)
                 {
-                   /* if (pet.AgeRange.Equals("young") || pet.AgeRange.Equals("adult") || pet.PetType.Equals("cat") 
-                        || pet.PetType.Equals("exotic") || pet.Sex.Equals("Female"))
-                    {
-                        filteredList.Add(pet);
-                    }*/
-                    if ((pet.AgeRange.Equals("young") || pet.AgeRange.Equals("adult")) && pet.Sex.Equals("Female") &&
+                    /* if (pet.AgeRange.Equals("young") || pet.AgeRange.Equals("adult") || pet.PetType.Equals("cat") 
+                         || pet.PetType.Equals("exotic") || pet.Sex.Equals("Female"))
+                     {
+                         filteredList.Add(pet);
+                     }*/
+
+                    Console.WriteLine("checking "+ pet.Name);
+                    if ((pet.AgeRange.Equals("young") || pet.AgeRange.Equals("adult")) && pet.Sex.Equals("female") &&
                         (pet.PetType.Equals("cat") || pet.PetType.Equals("exotic")) )
                     {
+                        if (pet.ApartmentFriendly.Equals("Not Known"))
+                            pet.ApartmentFriendly = "8 mi.";
+                        Console.WriteLine(pet.Name + " matches!");
                         filteredList.Add(pet);
                     }
                 }

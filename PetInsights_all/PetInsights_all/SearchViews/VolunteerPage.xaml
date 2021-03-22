@@ -24,12 +24,9 @@
                         BorderWidth="1" 
                         Text="Donate" BindingContext="donate"/>
             </Grid>
-            <StackLayout Margin="20,20,20,20">
-            <Label Text="If under age of 18 please fill out the parental consent form on the shelter website!" Padding="2"
-                   Margin="10" FontAttributes="Bold" TextColor="DarkRed" FontSize="Medium" HorizontalTextAlignment="Center" />
-
-            <Label Text="These shelters require volunteers in the following areas:" 
-                   Margin="1" FontAttributes="Italic" TextColor="Black" FontSize="Large"/>
+            <StackLayout Margin="20,0,20,20">
+            <Label Text="If under age of 18 please fill out the parental consent form on the shelter website" Padding="2"
+                   Margin="10" FontAttributes="Italic" TextColor="DarkRed" FontSize="Small" HorizontalTextAlignment="Center" />
 
               <!--ORG NAME-->
                 <Grid>
@@ -41,10 +38,12 @@
                     <Label Grid.Column="1" Text="1.2 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
                 </Grid>
             <Label Text="Assistance with walking the pets, cleaning the kennel, teaching basic behavior, interacting with the public" 
-                     TextColor="Black" FontSize="Medium"/>
+                     TextColor="Black" FontSize="Small" Margin="10,0,10,0"/>
+            <Label Text="See more" FontAttributes="Italic"
+                     TextColor="Gray" FontSize="Small" Margin="10,0,10,0"/>
 
 
-            <BoxView Color="LightGray" CornerRadius="10" HeightRequest="1" Margin = "-20,10,-20,10" />
+                    <BoxView Color="LightGray" CornerRadius="10" HeightRequest="1" Margin = "-20,10,-20,10" />
 
 
 
@@ -59,7 +58,7 @@
                 </Grid>
 
             <Label Text="Playing with the pets, assistance with walking the pets, cleaning the kennel, teaching basic behavior, interacting with the public" 
-                    TextColor="Black" FontSize="Medium"/>
+                    TextColor="Black" FontSize="Small"/>
             <BoxView Color="LightGray" CornerRadius="10" HeightRequest="1" Margin = "-20,10,-20,10" />
 
 
@@ -73,7 +72,7 @@
                     <Label Grid.Column="1" Text="9.3 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
                 </Grid>
 
-            <Label Text="Helping organize events at the shelter, assistance with walking the pets, cleaning the kennel, teaching basic behavior, interacting with the public" TextColor="Black" FontSize="Medium"/>
+                    <Label Text="Helping organize events at the shelter, assistance with walking the pets, cleaning the kennel, teaching basic behavior, interacting with the public" TextColor="Black" FontSize="Small"/>
 
             <BoxView Color="LightGray" HeightRequest="1" Margin = "-20,10,-20,10" />
 
@@ -87,7 +86,7 @@
                     <Label Grid.Column="1" Text="15.4 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
                 </Grid>
 
-             <Label Text="Helping organize events at the shelter, assistance with taking care of the pets" TextColor="Black" FontSize="Medium"/>
+                    <Label Text="Helping organize events at the shelter, assistance with taking care of the pets" TextColor="Black" FontSize="Small"/>
                         <BoxView Color="LightGray" CornerRadius="10" HeightRequest="1" Margin = "-20,10,-20,10" />
 
               <!-- ORG NAME 5-->
@@ -100,7 +99,7 @@
                     <Label Grid.Column="1" Text="22.3 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
                 </Grid>
 
-             <Label Text="Helping cleaning the kennel, teaching basic behavior, interacting with the public" TextColor="Black" FontSize="Medium"/>
+                    <Label Text="Helping cleaning the kennel, teaching basic behavior, interacting with the public" TextColor="Black" FontSize="Small"/>
                 </StackLayout>
             </StackLayout>
             </ScrollView>
