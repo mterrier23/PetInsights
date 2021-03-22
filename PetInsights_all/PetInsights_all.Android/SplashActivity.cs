@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace PetInsights_all.Droid
 {
-    [Activity(Theme ="@style/Splash", MainLauncher =true, NoHistory =true, Label = "SplashActivity")]
+    [Activity(Theme ="@style/Splash", MainLauncher =true, NoHistory =true, Label = "PetInsights")]
     public class SplashActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

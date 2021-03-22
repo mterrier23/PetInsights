@@ -401,12 +401,6 @@
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\project_icon.png">
-      <SubType>
-      </SubType>
-      <Generator>
-      </Generator>
-    </AndroidResource>
     <AndroidResource Include="Resources\drawable\dogs.jpeg">
       <SubType>
       </SubType>
@@ -432,6 +426,10 @@
       <Generator></Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\mipmap-xxxhdpi\app_icon_xxxhdpi.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\app_icon.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
