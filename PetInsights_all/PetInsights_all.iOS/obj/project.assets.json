@@ -2641,39 +2641,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mailys Surface Pro\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "/Users/pavnibakhshi/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all.iOS\\PetInsights_all.iOS.csproj",
+      "projectUniqueName": "/Users/pavnibakhshi/Desktop/SD Project/PetInsights/PetInsights_all/PetInsights_all.iOS/PetInsights_all.iOS.csproj",
       "projectName": "PetInsights_all.iOS",
-      "projectPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all.iOS\\PetInsights_all.iOS.csproj",
-      "packagesPath": "C:\\Users\\Mailys Surface Pro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all.iOS\\obj\\",
+      "projectPath": "/Users/pavnibakhshi/Desktop/SD Project/PetInsights/PetInsights_all/PetInsights_all.iOS/PetInsights_all.iOS.csproj",
+      "packagesPath": "/Users/pavnibakhshi/.nuget/packages/",
+      "outputPath": "/Users/pavnibakhshi/Desktop/SD Project/PetInsights/PetInsights_all/PetInsights_all.iOS/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Mailys Surface Pro\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/Users/pavnibakhshi/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all\\PetInsights_all.csproj": {
-              "projectPath": "C:\\Users\\Mailys Surface Pro\\Documents\\Project\\PetInsights\\PetInsights_all\\PetInsights_all\\PetInsights_all.csproj"
+            "/Users/pavnibakhshi/Desktop/SD Project/PetInsights/PetInsights_all/PetInsights_all/PetInsights_all.csproj": {
+              "projectPath": "/Users/pavnibakhshi/Desktop/SD Project/PetInsights/PetInsights_all/PetInsights_all/PetInsights_all.csproj"
             }
           }
         }
@@ -2726,7 +2719,7 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package downgrade: Xamarin.Forms from 4.8.0.1821 to 4.8.0.1451. Reference the package directly from the project to select a different version. \r\n PetInsights_all.iOS -> CarouselView.FormsPlugin 6.0.0 -> Xamarin.Forms (>= 4.8.0.1821) \r\n PetInsights_all.iOS -> Xamarin.Forms (>= 4.8.0.1451)",
+      "message": "Detected package downgrade: Xamarin.Forms from 4.8.0.1821 to 4.8.0.1451. Reference the package directly from the project to select a different version. \n PetInsights_all.iOS -> CarouselView.FormsPlugin 6.0.0 -> Xamarin.Forms (>= 4.8.0.1821) \n PetInsights_all.iOS -> Xamarin.Forms (>= 4.8.0.1451)",
       "libraryId": "Xamarin.Forms",
       "targetGraphs": [
         "Xamarin.iOS,Version=v1.0",

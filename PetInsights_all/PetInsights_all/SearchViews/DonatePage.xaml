@@ -3,24 +3,293 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PetInsights_all.SearchViews.DonatePage">
     <ContentPage.Content>
+        <ScrollView>
+            
         <StackLayout>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width=".5*" />
                     <ColumnDefinition Width=".5*" />
                 </Grid.ColumnDefinitions>
-                <Button x:Name="volunteerButton" Grid.Column="0" BackgroundColor="{Binding volunteerBackgroundColor}" 
-                                TextColor="{Binding volunteerTextColor}" 
-                                BorderColor="{Binding volunteerBorderColor}"
+                <Button x:Name="volunteerButton" Grid.Column="0" BackgroundColor="White" 
+                                TextColor="Blue" 
+                                BorderColor="Gray"
                         BorderWidth="1"
                         Text="Volunteer"  BindingContext="volunteer"/>
-                <Button x:Name="donateButton" Grid.Column="1" BackgroundColor="{Binding donateBackgroundColor}"
-                        TextColor="{Binding donateTextColor}" 
-                        BorderColor="{Binding donateBorderColor}"
+                <Button x:Name="donateButton" Grid.Column="1" BackgroundColor="Green"
+                        TextColor="White" 
+                        BorderColor="Gray"
                         BorderWidth="1" 
                         Text="Donate"  BindingContext="donate"/>
             </Grid>
-            <!-- fill this out with sample grids of shelters with donate options -->
+
+
+           
+              <!--ORG NAME-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".8*" />
+                        <ColumnDefinition Width=".2*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="Animal Friends Humane Society" FontAttributes="Bold" TextColor="Black" FontSize="Medium" LineBreakMode="TailTruncation" ></Label>
+                    <Label Grid.Column="1" Text="1.2 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
+                </Grid>
+            
+         
+                <StackLayout Orientation ="Horizontal" >
+                    <FlexLayout Direction="Row" Wrap="Wrap" >
+               <Frame BackgroundColor="LightGray"  CornerRadius="10"  >
+               <Label Text="Blanket"  FontSize="15"  TextColor="Black" />
+               </Frame>
+
+                     
+               <Frame BackgroundColor="LightGray"   CornerRadius="10">
+               <Label Text="Toys" CharacterSpacing="0"  FontSize="15" TextColor="Black" />
+               </Frame>
+
+                <Frame BackgroundColor="LightGray"   CornerRadius="10">
+               <Label Text="Purine Soft Puppy Food"  FontSize="15" TextColor="Black" />
+               </Frame>
+
+                     
+               <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Lysol Spray"  FontSize="15" TextColor="Black" HorizontalTextAlignment="Start"/>
+               </Frame>
+
+                    <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Clorox Wipes"  FontSize="15" TextColor="Black" />
+               </Frame>
+
+                     <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Towels"  FontSize="15" TextColor="Black" />
+               </Frame>
+
+                    <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Lint Roller"  FontSize="15" TextColor="Black" HorizontalTextAlignment="Start"/>
+               </Frame>
+
+                    <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Puppy Pads"  FontSize="15" TextColor="Black" />
+               </Frame>
+
+                     <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Kitty Soft Food"  FontSize="15" TextColor="Black" />
+               </Frame>
+                        </FlexLayout>
+            </StackLayout>
+           
+            <BoxView Color="LightGray" CornerRadius="10" HeightRequest="1" Margin = "0,20,0,20" />
+           
+             <!-- ORG NAME 2-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".8*" />
+                        <ColumnDefinition Width=".2*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="Best Friends Animal Society" FontAttributes="Bold" TextColor="Black" FontSize="Medium" LineBreakMode="TailTruncation"></Label>
+                    <Label Grid.Column="1" Text="3.5 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
+                </Grid>
+           <StackLayout Orientation ="Horizontal" >
+                    <FlexLayout Direction="Row" Wrap="Wrap" >
+               <Frame BackgroundColor="LightGray"  CornerRadius="10"  >
+               <Label Text="Blanket"  FontSize="15"  TextColor="Black" />
+               </Frame>
+
+                     
+               <Frame BackgroundColor="LightGray"   CornerRadius="10">
+               <Label Text="Toys" CharacterSpacing="0"  FontSize="15" TextColor="Black" />
+               </Frame>
+
+                <Frame BackgroundColor="LightGray"   CornerRadius="10">
+               <Label Text="Purine Soft Puppy Food"  FontSize="15" TextColor="Black" />
+               </Frame>
+
+                     
+               <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Lysol Spray"  FontSize="15" TextColor="Black" HorizontalTextAlignment="Start"/>
+               </Frame>
+
+                    <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Clorox Wipes"  FontSize="15" TextColor="Black" />
+               </Frame>
+
+                     <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Towels"  FontSize="15" TextColor="Black" />
+               </Frame>
+
+                    <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Lint Roller"  FontSize="15" TextColor="Black" HorizontalTextAlignment="Start"/>
+               </Frame>
+
+                    <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Puppy Pads"  FontSize="15" TextColor="Black" />
+               </Frame>
+
+                     <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Kitty Soft Food"  FontSize="15" TextColor="Black" />
+               </Frame>
+                        </FlexLayout>
+            </StackLayout>
+            <BoxView Color="LightGray" CornerRadius="10" HeightRequest="1" Margin = "0,20,0,20" />
+
+
+
+               <!--ORG NAME 3-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".8*" />
+                        <ColumnDefinition Width=".2*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="The Ohio Pet" FontAttributes="Bold" TextColor="Black" FontSize="Medium" LineBreakMode="TailTruncation"></Label>
+                    <Label Grid.Column="1" Text="9.3 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
+                </Grid>
+
+           <StackLayout Orientation ="Horizontal" >
+                    <FlexLayout Direction="Row" Wrap="Wrap" >
+               <Frame BackgroundColor="LightGray"  CornerRadius="10"  >
+               <Label Text="Blanket"  FontSize="15"  TextColor="Black" />
+               </Frame>
+
+                     
+               <Frame BackgroundColor="LightGray"   CornerRadius="10">
+               <Label Text="Toys" CharacterSpacing="0"  FontSize="15" TextColor="Black" />
+               </Frame>
+
+                <Frame BackgroundColor="LightGray"   CornerRadius="10">
+               <Label Text="Purine Soft Puppy Food"  FontSize="15" TextColor="Black" />
+               </Frame>
+
+                     
+               <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Lysol Spray"  FontSize="15" TextColor="Black" HorizontalTextAlignment="Start"/>
+               </Frame>
+
+                    <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Clorox Wipes"  FontSize="15" TextColor="Black" />
+               </Frame>
+
+                     <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Towels"  FontSize="15" TextColor="Black" />
+               </Frame>
+
+                    <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Lint Roller"  FontSize="15" TextColor="Black" HorizontalTextAlignment="Start"/>
+               </Frame>
+
+                    <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Puppy Pads"  FontSize="15" TextColor="Black" />
+               </Frame>
+
+                     <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Kitty Soft Food"  FontSize="15" TextColor="Black" />
+               </Frame>
+                        </FlexLayout>
+            </StackLayout>
+                        <BoxView Color="LightGray" CornerRadius="10" HeightRequest="1" Margin = "0,20,0,20" />
+
+             <!--ORG NAME 4-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".8*" />
+                        <ColumnDefinition Width=".2*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="Save the Animals Foundation" FontAttributes="Bold" TextColor="Black" FontSize="Medium" LineBreakMode="TailTruncation"></Label>
+                    <Label Grid.Column="1" Text="15.4 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
+                </Grid>
+            <StackLayout Orientation ="Horizontal" >
+                    <FlexLayout Direction="Row" Wrap="Wrap" >
+               <Frame BackgroundColor="LightGray"  CornerRadius="10"  >
+               <Label Text="Blanket"  FontSize="15"  TextColor="Black" />
+               </Frame>
+
+                     
+               <Frame BackgroundColor="LightGray"   CornerRadius="10">
+               <Label Text="Toys" CharacterSpacing="0"  FontSize="15" TextColor="Black" />
+               </Frame>
+
+                <Frame BackgroundColor="LightGray"   CornerRadius="10">
+               <Label Text="Purine Soft Puppy Food"  FontSize="15" TextColor="Black" />
+               </Frame>
+
+                     
+               <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Lysol Spray"  FontSize="15" TextColor="Black" HorizontalTextAlignment="Start"/>
+               </Frame>
+
+                    <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Clorox Wipes"  FontSize="15" TextColor="Black" />
+               </Frame>
+
+                     <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Towels"  FontSize="15" TextColor="Black" />
+               </Frame>
+
+                    <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Lint Roller"  FontSize="15" TextColor="Black" HorizontalTextAlignment="Start"/>
+               </Frame>
+
+                    <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Puppy Pads"  FontSize="15" TextColor="Black" />
+               </Frame>
+
+                     <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Kitty Soft Food"  FontSize="15" TextColor="Black" />
+               </Frame>
+                        </FlexLayout>
+            </StackLayout>
+                        <BoxView Color="LightGray" CornerRadius="10" HeightRequest="1" Margin = "0,20,0,20" />
+
+            <!-- ORG NAME 5-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".8*" />
+                        <ColumnDefinition Width=".2*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="Heartt Animal Refuge" FontAttributes="Bold" TextColor="Black" FontSize="Medium" LineBreakMode="TailTruncation"></Label>
+                    <Label Grid.Column="1" Text="22.3 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
+                </Grid>
+ <StackLayout Orientation ="Horizontal" >
+                    <FlexLayout Direction="Row" Wrap="Wrap" >
+               <Frame BackgroundColor="LightGray"  CornerRadius="10"  >
+               <Label Text="Blanket"  FontSize="15"  TextColor="Black" />
+               </Frame>
+
+                     
+               <Frame BackgroundColor="LightGray"   CornerRadius="10">
+               <Label Text="Toys" CharacterSpacing="0"  FontSize="15" TextColor="Black" />
+               </Frame>
+
+                <Frame BackgroundColor="LightGray"   CornerRadius="10">
+               <Label Text="Purine Soft Puppy Food"  FontSize="15" TextColor="Black" />
+               </Frame>
+
+                     
+               <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Lysol Spray"  FontSize="15" TextColor="Black" HorizontalTextAlignment="Start"/>
+               </Frame>
+
+                    <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Clorox Wipes"  FontSize="15" TextColor="Black" />
+               </Frame>
+
+                     <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Towels"  FontSize="15" TextColor="Black" />
+               </Frame>
+
+                    <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Lint Roller"  FontSize="15" TextColor="Black" HorizontalTextAlignment="Start"/>
+               </Frame>
+
+                    <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Puppy Pads"  FontSize="15" TextColor="Black" />
+               </Frame>
+
+                     <Frame BackgroundColor="LightGray"  CornerRadius="10">
+               <Label Text="Kitty Soft Food"  FontSize="15" TextColor="Black" />
+               </Frame>
+                        </FlexLayout>
+            </StackLayout>
         </StackLayout>
+                </ScrollView>
     </ContentPage.Content>
 </ContentPage>
