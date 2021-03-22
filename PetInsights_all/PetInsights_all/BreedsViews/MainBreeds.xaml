@@ -4,9 +4,164 @@
              x:Class="PetInsights_all.MainBreeds"
              BackgroundColor="white">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Breeds page" TextColor="Black"
-                HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+    <ScrollView>
+        <StackLayout Margin="15">
+            <Label FontSize="Title" Text="Breeds" TextColor="Black" FontAttributes="Bold" Margin="0,10,0,0"></Label>
+                        <Label FontSize="Subtitle" Text="Learn more about different breeds and how to care for them." TextColor="Gray"></Label>
+            <BoxView HeightRequest="1" BackgroundColor="LightBlue" Margin="0,20,0,0"/>
+            <Label Text="Dogs" TextColor="Black" FontAttributes="Bold" Margin="0,10,0,5"></Label>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.25*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.25*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.25*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.25*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="120"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Frame Grid.Column="0" Margin="0" Padding="0" CornerRadius="5" IsClippedToBounds="True">
+                    <Image Source="small_chihuahua" Aspect="AspectFill"></Image>
+                </Frame>
+                <Button  x:Name="transparentColor0" Margin="5" Grid.Row="0" Grid.Column="0" Text="Small Dogs" BackgroundColor="{Binding transparentColor1}" VerticalOptions="End" Padding="0" HeightRequest="30"
+                 FontSize="Micro" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"></Button>
+
+
+
+                <Frame Grid.Column="1" Margin="0" Padding="0" CornerRadius="5" IsClippedToBounds="True">
+                    <Image Source="Mrussell_terrier" Aspect="AspectFill"></Image>
+                </Frame>
+                <Button  x:Name="transparentColor1" Margin="5" Grid.Row="0" Grid.Column="1" Text="Medium Dogs" BackgroundColor="{Binding transparentColor1}" VerticalOptions="End" Padding="0" HeightRequest="30" 
+                 FontSize="Micro" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"></Button>
+
+
+
+
+                <Frame Grid.Column="2" Margin="0" Padding="0" CornerRadius="5" IsClippedToBounds="True">
+                    <Image Source="large_husky" Aspect="AspectFill"></Image>
+                </Frame>
+                 <Button  x:Name="transparentColor2" Grid.Row="0" Grid.Column="2" Text="Large Dogs" BackgroundColor="{Binding transparentColor1}" VerticalOptions="End" Padding="0" HeightRequest="30" 
+                 FontSize="Micro" TextColor="Black" Margin="5" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"></Button>
+
+                <Frame Grid.Column="3" Margin="0" Padding="0" CornerRadius="5" IsClippedToBounds="True">
+                    <Image Source="@drawable/dogs" Aspect="AspectFill"></Image>
+                </Frame>
+                 <Button  x:Name="transparentColor3" Grid.Row="0" Grid.Column="3" Text="All Dogs" BackgroundColor="{Binding transparentColor1}" VerticalOptions="End" Padding="0" HeightRequest="30" 
+                 FontSize="Micro" TextColor="Black" Margin="5" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"></Button>
+
+
+            </Grid>
+
+            <BoxView HeightRequest="1" BackgroundColor="LightBlue" Margin="0,20,0,0"/>
+            <Label Text="Cats" TextColor="Black" FontAttributes="Bold" Margin="0,10,0,5"></Label>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.25*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.25*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.25*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.25*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="120"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Frame Grid.Column="0" Margin="0" Padding="0" CornerRadius="5" IsClippedToBounds="True">
+                    <Image Source="Sragdoll" Aspect="AspectFill"></Image>
+                </Frame>
+                 <Button  x:Name="transparentColor4" Grid.Row="0" Grid.Column="0" Text="Indoor Cats" BackgroundColor="{Binding transparentColor1}" VerticalOptions="End" Padding="0" HeightRequest="30" 
+                 FontSize="Micro" TextColor="Black" Margin="5" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"></Button>
+
+
+                <Frame Grid.Column="1" Margin="0" Padding="0" CornerRadius="5" IsClippedToBounds="True">
+                    <Image Source="Stabby_kitten" Aspect="AspectFill"></Image>
+                </Frame>
+                 <Button  x:Name="transparentColor5" Grid.Row="0" Grid.Column="1" Text="Outdoor Cats" BackgroundColor="{Binding transparentColor1}" VerticalOptions="End" Padding="0" HeightRequest="30" 
+                 FontSize="Micro" TextColor="Black" Margin="5" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"></Button>
+
+
+                <Frame Grid.Column="2" Margin="0" Padding="0" CornerRadius="5" IsClippedToBounds="True">
+                    <Image Source="catlitter" Aspect="AspectFill"></Image>
+                </Frame>
+                 <Button  x:Name="transparentColor6" Grid.Row="0" Grid.Column="2" Text="All Cats" BackgroundColor="{Binding transparentColor1}" VerticalOptions="End" Padding="0" HeightRequest="30" 
+                 FontSize="Micro" TextColor="Black" Margin="5" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"></Button>
+
+
+
+            </Grid>
+
+
+
+            <BoxView HeightRequest="1" BackgroundColor="LightBlue" Margin="0,20,0,0"/>
+            <Label Text="Exotic" TextColor="Black" FontAttributes="Bold" Margin="0,10,0,5"></Label>
+
+                        <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.25*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.25*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.25*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.25*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="120"></RowDefinition>
+                    <RowDefinition Height="120"></RowDefinition>
+
+                </Grid.RowDefinitions>
+
+                <Frame Grid.Column="0" Margin="0" Padding="0" CornerRadius="5" IsClippedToBounds="True">
+                    <Image Source="hamster" Aspect="AspectFill"></Image>
+                </Frame>
+                 <Button  x:Name="transparentColor7" Margin="5" Grid.Row="0" Grid.Column="0" Text="Hamsters" BackgroundColor="{Binding transparentColor1}" VerticalOptions="End" Padding="0" HeightRequest="30"
+                 FontSize="Micro" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"></Button>
+
+
+                <Frame Grid.Column="1" Margin="0" Padding="0" CornerRadius="5" IsClippedToBounds="True">
+                    <Image Source="small_pig" Aspect="AspectFill"></Image>
+                </Frame>
+                 <Button  x:Name="transparentColor8" Margin="5" Grid.Row="0" Grid.Column="1" Text="Guinea Pigs" BackgroundColor="{Binding transparentColor1}" VerticalOptions="End" Padding="0" HeightRequest="30" 
+                 FontSize="Micro" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"></Button>
+
+
+
+                <Frame Grid.Column="2" Margin="0" Padding="0" CornerRadius="5" IsClippedToBounds="True">
+                    <Image Source="horse" Aspect="AspectFill"></Image>
+                </Frame>
+                 <Button  x:Name="transparentColor9" Margin="5" Grid.Row="0" Grid.Column="2" Text="Horses" BackgroundColor="{Binding transparentColor1}" VerticalOptions="End" Padding="0" HeightRequest="30" 
+                 FontSize="Micro" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"></Button>
+
+
+
+                <Frame Grid.Column="3" Margin="0" Padding="0" CornerRadius="5" IsClippedToBounds="True">
+                    <Image Source="snake2" Aspect="AspectFill"></Image>
+                </Frame>
+                 <Button  x:Name="transparentColor10" Margin="5" Grid.Row="0" Grid.Column="3" Text="Snakes" BackgroundColor="{Binding transparentColor1}" VerticalOptions="End" Padding="0" HeightRequest="30"
+                 FontSize="Micro" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"></Button>
+
+
+
+                <Frame Grid.Column="0" Margin="0" Grid.Row="1" Padding="0" CornerRadius="5" IsClippedToBounds="True">
+                    <Image Source="lizard" Aspect="AspectFill"></Image>
+                </Frame>
+                 <Button  x:Name="transparentColor11" Margin="5" Grid.Row="1" Grid.Column="0" Text="Reptiles" BackgroundColor="{Binding transparentColor1}" VerticalOptions="End" Padding="0" HeightRequest="30"
+                 FontSize="Micro" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"></Button>
+
+
+
+                <Frame Grid.Column="1" Grid.Row="1" Margin="0" Padding="0" CornerRadius="5" IsClippedToBounds="True">
+                    <Image Source="Lalpaca" Aspect="AspectFill"></Image>
+                </Frame>
+                 <Button  x:Name="transparentColor12" Margin="5" Grid.Row="1" Grid.Column="1" Text="more" BackgroundColor="{Binding transparentColor1}" VerticalOptions="End" Padding="0" HeightRequest="30" WidthRequest="50"
+                 FontSize="Micro" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"></Button>
+
+
+            </Grid>
+
+
+
+            <BoxView HeightRequest="1" BackgroundColor="LightBlue" Margin="0,20,0,0"/>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

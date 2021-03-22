@@ -7,14 +7,14 @@
     <ContentPage.Content>
         <ScrollView>
         <StackLayout>
-            <Image Margin="15" Source="project_logo.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Image>
-            <Frame CornerRadius="5" x:Name="searchFrame" HorizontalOptions="Start" VerticalOptions="Start" Margin="20, 0, -10, 0" HasShadow="True" Padding="10" BackgroundColor="{Binding searchBar}" >
+            <Image  Source="project_icon.png" Margin="20,20,0,10" HeightRequest="60" HorizontalOptions="Start"></Image>
+            <Frame CornerRadius="5" x:Name="searchFrame" HorizontalOptions="StartAndExpand" VerticalOptions="Start" Margin="20, 0, -10, 0" HasShadow="True" Padding="10" BackgroundColor="{Binding searchBar}" >
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Tapped="onSearchFrame_Tapped" NumberOfTapsRequired="1" />
                 </Frame.GestureRecognizers>
                 <StackLayout Orientation="Horizontal" BackgroundColor="Transparent" >
-                <Image x:Name="searchImg" HeightRequest="20" Source="@drawable/ic_search.png" WidthRequest="20" HorizontalOptions="Start" BackgroundColor="Transparent"/>
-                <Label x:Name="searchBtn" Text="Search by breed, age, temperment, etc..." HorizontalOptions="Start" TextColor="#000" BackgroundColor="Transparent" FontSize="16"/>
+                <Image x:Name="searchImg" HeightRequest="20" Source="@drawable/ic_search.png" WidthRequest="20" HorizontalOptions="StartAndExpand" BackgroundColor="Transparent"/>
+                <Label x:Name="searchBtn" Text="Search by breed, age, temperament, etc..." HorizontalOptions="StartAndExpand" TextColor="#000" BackgroundColor="Transparent" FontSize="16"/>
                 </StackLayout>
             </Frame>
                 <Frame CornerRadius="5" x:Name="locationFrame" HorizontalOptions="Start" VerticalOptions="Start" Margin="20, 0, 0, 20" HasShadow="True" Padding="10" >
@@ -152,8 +152,8 @@
                         <ColumnDefinition Width=".5*" />
                         <ColumnDefinition Width=".5*" />
                     </Grid.ColumnDefinitions>
-                    <Button x:Name="volunteerButton" Grid.Column="0" BackgroundColor="Blue" Margin="20,0,0,0" Text="Volunteer" Clicked="GoToVolunteer" />
-                    <Button x:Name="donateButton" Grid.Column="1" BackgroundColor="Green" Margin="0,0,20,0" Text="Donate" Clicked="GoToDonate"/>
+                    <Button x:Name="volunteerButton" Grid.Column="0" TextColor="AntiqueWhite" BackgroundColor="Blue" Margin="20,0,0,0" Text="Volunteer" Clicked="GoToVolunteer" />
+                    <Button x:Name="donateButton" Grid.Column="1" TextColor="AntiqueWhite" BackgroundColor="Green" Margin="0,0,20,0" Text="Donate" Clicked="GoToDonate"/>
                 </Grid>
                 <Button BackgroundColor ="White" Text="I'm an Org Representative" TextColor="LightGray" FontSize="Small" Clicked="GoToOrgSite"></Button>
         </StackLayout>
