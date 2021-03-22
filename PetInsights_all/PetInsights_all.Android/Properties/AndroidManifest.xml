@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.petinsights_all" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="29" />
-	<application android:label="PetInsights_all.Android" android:theme="@style/MainTheme">
+	<application android:label="Pet Insights" android:theme="@style/MainTheme" android:icon="@drawable/app_icon_drawable">
 		<meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/google_api_key" />
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 		<uses-library android:name="org.apache.http.legacy" android:required="false" />
