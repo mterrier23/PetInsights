@@ -58,7 +58,12 @@
                 </Grid>
 
             <Label Text="Playing with the pets, assistance with walking the pets, cleaning the kennel, teaching basic behavior, interacting with the public" 
-                    TextColor="Black" FontSize="Small"/>
+                    TextColor="Black" FontSize="Small" Margin="10,0,10,0"/>
+
+                <Label Text="See more" FontAttributes="Italic"
+                     TextColor="Gray" FontSize="Small" Margin="10,0,10,0"/>
+
+
             <BoxView Color="LightGray" CornerRadius="10" HeightRequest="1" Margin = "-20,10,-20,10" />
 
 
@@ -72,8 +77,11 @@
                     <Label Grid.Column="1" Text="9.3 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
                 </Grid>
 
-                    <Label Text="Helping organize events at the shelter, assistance with walking the pets, cleaning the kennel, teaching basic behavior, interacting with the public" TextColor="Black" FontSize="Small"/>
+                    <Label Text="Helping organize events at the shelter, assistance with walking the pets, cleaning the kennel, teaching basic behavior, interacting with the public" TextColor="Black"
+                           Margin="10,0,10,0" FontSize="Small"/>
 
+                 <Label Text="See more" FontAttributes="Italic"
+                     TextColor="Gray" FontSize="Small" Margin="10,0,10,0"/>
             <BoxView Color="LightGray" HeightRequest="1" Margin = "-20,10,-20,10" />
 
             <!--ORG NAME 4-->
@@ -86,7 +94,12 @@
                     <Label Grid.Column="1" Text="15.4 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
                 </Grid>
 
-                    <Label Text="Helping organize events at the shelter, assistance with taking care of the pets" TextColor="Black" FontSize="Small"/>
+                    <Label Text="Helping organize events at the shelter, assistance with taking care of the pets"
+                          Margin="10,0,10,0" TextColor="Black" FontSize="Small"/>
+
+                 <Label Text="See more" FontAttributes="Italic"
+                     TextColor="Gray" FontSize="Small" Margin="10,0,10,0"/>
+
                         <BoxView Color="LightGray" CornerRadius="10" HeightRequest="1" Margin = "-20,10,-20,10" />
 
               <!-- ORG NAME 5-->
@@ -99,7 +112,11 @@
                     <Label Grid.Column="1" Text="22.3 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
                 </Grid>
 
-                    <Label Text="Helping cleaning the kennel, teaching basic behavior, interacting with the public" TextColor="Black" FontSize="Small"/>
+                    <Label Text="Helping cleaning the kennel, teaching basic behavior, interacting with the public"
+                           Margin="10,0,10,0" TextColor="Black" FontSize="Small"/>
+                 <Label Text="See more" FontAttributes="Italic"
+                     TextColor="Gray" FontSize="Small" Margin="10,0,10,0"/>
+
                 </StackLayout>
             </StackLayout>
             </ScrollView>
