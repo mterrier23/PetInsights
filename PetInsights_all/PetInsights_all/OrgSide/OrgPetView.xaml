@@ -11,13 +11,13 @@
                     <ColumnDefinition Width=".5*"/>
                     <ColumnDefinition Width=".5*"/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Margin="10, 20, 0, 20" x:Name="btnAddPet" BackgroundColor="Orange" TextColor="White" 
+                <Button Grid.Column="0" Margin="10, 20, -5, 20" x:Name="btnAddPet" BackgroundColor="Orange" TextColor="White" 
                     BorderColor="Orange" BorderWidth="2"  Text="Add Pet" Clicked="btnAddPet_clicked"></Button>
-                <Button Grid.Column="1" Margin="0, 20, 10, 20" x:Name="btnEdit" BackgroundColor="Orange" TextColor="White" 
+                <Button Grid.Column="1" Margin="5, 20, 10, 20" x:Name="btnEdit" BackgroundColor="Orange" TextColor="White" 
                     BorderColor="Orange" BorderWidth="2"  Text="Edit Information"></Button>
 
             </Grid>
-        <CollectionView Margin="10,10,10,10" ItemsSource="{Binding Pets}"
+        <CollectionView Margin="10,0,10,10" ItemsSource="{Binding Pets}"
                     x:Name="lstPets"
                     ItemSizingStrategy="MeasureAllItems"
                     SelectionMode="Single"

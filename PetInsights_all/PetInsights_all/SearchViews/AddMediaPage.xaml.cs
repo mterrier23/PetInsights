@@ -107,7 +107,7 @@ namespace PetInsights_all.SearchViews
             }      
 
             // Change info text. (Optional)
-            InfoText.Text = "Uploading to Firebase...";
+            InfoText.Text = "Uploading...";
 
             for (int i = 0; i < imagePaths.Count; i++)
             {

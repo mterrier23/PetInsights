@@ -64,11 +64,11 @@
                    TextColor="Black"
                    FontSize="Large"
                    FontAttributes="Bold" />
-            <StackLayout Orientation="Horizontal" VerticalOptions="End">
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="Center" VerticalOptions="End">
                 <!-- bottom controls -->
                 <Button BackgroundColor="Orange"  Margin="20, 100, 20, 0" 
                     TextColor="White" BorderColor="Orange" BorderWidth="2"  Text="Upload" 
-                    Clicked="UploadImagesButton_Clicked" VerticalOptions="End" HorizontalOptions="Center"
+                    Clicked="UploadImagesButton_Clicked" VerticalOptions="End" HorizontalOptions="Center" 
                     ></Button>
             </StackLayout>
         </StackLayout>
