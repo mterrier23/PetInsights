@@ -15,7 +15,7 @@ Advised by Dr. Nan Niu.</em>
 7. [Self-Assessments][7]
 8. [Professional Biographies][8]
 9. [Budget][9]
-10. [UI Specifications]
+10. [UI Specifications][12]
 11. [User Manual][10]
 12. [Appendix][11]
 
@@ -28,5 +28,6 @@ Advised by Dr. Nan Niu.</em>
 [7]: https://github.com/mterrier23/PetInsights/tree/master/Project%20Report/Self%20Assessments
 [8]: https://github.com/mterrier23/PetInsights/tree/master/Project%20Report/Biographies
 [9]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/Expense%20Report.md
+[12]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/UI%20Specifications.pdf
 [10]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/User%20Docs%20-%20Asgn%232.pdf
 [11]: https://github.com/mterrier23/PetInsights/tree/master/Project%20Report/Appendix
