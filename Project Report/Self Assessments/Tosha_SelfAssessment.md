@@ -1,6 +1,5 @@
-# Individual Capstone Assessment
-### 14.09.2020
-
+# Individual Assessment
+### Initial Assessment
 
 My senior design project is an application focused on **improving the adoption process at local animal shelters** and bridging the gap between adopters and the animals.
 
@@ -21,3 +20,9 @@ This project is very exciting to me for many reasons. I have volunteered a coupl
 
 
 We will spend the first phase of our project doing research on the obstacles shelters and people looking to adopt face. Once we have discovered the problems needed to be solved, we will begin prototyping what basic features the web application will have. The next few phases will consist of iterative development, after which we will add more features if we have time and resources to do so.
+
+### Final Assessment
+
+For our senior design project, PetInsights, I contributed the high fidelity designs of the app,and developed parts of the app features. I started the project taking on the roles of UX Designer and a Developer. To design the app itself, we split it out into different features and subsequent flows. We laid out eat of the steps users would have to take to accomplish a certain goal, and then created interfaces for each of those steps. Once we had the design for the main screens, we were able to develop the front end of the app relatively easily. In the development aspect, I supported the team by programming multiple front end screens and associated functions. This also included solving the puzzles that came with Xamarin forms and hacking it to make it do what we wanted. I also helped establish the visual identity of the app by creating the logo and otherdesign elements.
+
+I was able to learn more about the challenges that come with the relationship between design and development. It was also really interesting to see that I was able to understand how to structure my front end better after designing the screen, and vice versa. Doing one helped me understand the other one better. This was also my first time doing mobile app development and working with Xamarin Forms. Although the framework posed many challenges, it helped me learn critical and logical thinking skills.  
