@@ -7,18 +7,19 @@ Advised by Dr. Nan Niu.</em>
 
 ## Table of Contents
 1. [Project Description][2]
-2. [User Stories][3]
-3. [Design Diagrams][1]
-4. [Project Tasks + Timeline][4]
-5. [ABET Concerns][5]
-6. [Project Presentation][6]
-7. [Self-Assessments][7]
-8. [Professional Biographies][8]
-9. [Budget][9]
-10. [UI Specifications][12]
-11. [User Manual][10]
-12. [Test Plan][11]
-13. [Appendix][12]
+2. [Project Poster][13]
+3. [Project Presentation][6]
+4. [UI Specifications][12]
+5. [User Manual][10]
+6. [Test Plan][11]
+7. [User Stories][3]
+8. [Design Diagrams][1]
+9. [Project Tasks + Timeline][4]
+10. [ABET Concerns][5]
+11. [Self-Assessments][7]
+13. [Professional Biographies][8]
+14. [Budget][9]
+15. [Appendix][12]
 
 [2]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/PetInsight%20Project%20Proposal.docx
 [3]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/UserStories.md
@@ -33,3 +34,4 @@ Advised by Dr. Nan Niu.</em>
 [10]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/User%20Docs%20-%20Asgn%232.pdf
 [11]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/Test%20Plan.pdf
 [12]: https://github.com/mterrier23/PetInsights/tree/master/Project%20Report/Appendix
+[13]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/Presentation%20Poster.pdf
