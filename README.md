@@ -11,7 +11,7 @@ Advised by Dr. Nan Niu.</em>
 3. [Design Diagrams][1]
 4. [Project Tasks + Timeline][4]
 5. [ABET Concerns][5]
-6. [Powerpoint Presentation][6]
+6. [Project Presentation][6]
 7. [Self-Assessments][7]
 8. [Professional Biographies][8]
 9. [Budget][9]
@@ -25,7 +25,7 @@ Advised by Dr. Nan Niu.</em>
 [1]: https://github.com/mterrier23/PetInsights/tree/master/Project%20Report/DesignDiagrams
 [4]: https://github.com/mterrier23/PetInsights/tree/master/Project%20Report/Milestones%2C%20Timeline%2C%20Effort%20Matrix
 [5]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/Project%20Constraints.md
-[6]: https://docs.google.com/presentation/d/1Gy6DCWhOjE2iJGElW2_49zUsKKXQ_7DmXo7aEqvGyrA/edit?usp=sharing
+[6]: https://www.youtube.com/watch?v=3MRGXLOR9Io&ab_channel=PavniBakhshi
 [7]: https://github.com/mterrier23/PetInsights/tree/master/Project%20Report/Self%20Assessments
 [8]: https://github.com/mterrier23/PetInsights/tree/master/Project%20Report/Biographies
 [9]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/Expense%20Report.md
