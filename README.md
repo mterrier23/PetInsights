@@ -17,6 +17,7 @@ Advised by Dr. Nan Niu.</em>
 9. [Project Tasks + Timeline][4]
 10. [ABET Concerns][5]
 11. [Self-Assessments][7]
+12. [Summary of Hours][14]
 13. [Professional Biographies][8]
 14. [Budget][9]
 15. [Appendix][12]
@@ -35,3 +36,4 @@ Advised by Dr. Nan Niu.</em>
 [11]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/Test%20Plan.pdf
 [12]: https://github.com/mterrier23/PetInsights/tree/master/Project%20Report/Appendix
 [13]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/Presentation%20Poster.pdf
+[14]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/Milestones%2C%20Timeline%2C%20Effort%20Matrix/SummaryOfHours.md
