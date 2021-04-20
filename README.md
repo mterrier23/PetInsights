@@ -8,7 +8,7 @@ Advised by Dr. Nan Niu.</em>
 ## Table of Contents
 1. [Project Description][2]
 2. [User Stories][3]
-3. [Design Diagrams][11]
+3. [Design Diagrams][1]
 4. [Project Tasks + Timeline][4]
 5. [ABET Concerns][5]
 6. [Powerpoint Presentation][6]
@@ -17,11 +17,12 @@ Advised by Dr. Nan Niu.</em>
 9. [Budget][9]
 10. [UI Specifications][12]
 11. [User Manual][10]
-12. [Appendix][11]
+12. [Test Plan][11]
+13. [Appendix][12]
 
 [2]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/PetInsight%20Project%20Proposal.docx
 [3]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/UserStories.md
-[11]: https://github.com/mterrier23/PetInsights/tree/master/Project%20Report/DesignDiagrams
+[1]: https://github.com/mterrier23/PetInsights/tree/master/Project%20Report/DesignDiagrams
 [4]: https://github.com/mterrier23/PetInsights/tree/master/Project%20Report/Milestones%2C%20Timeline%2C%20Effort%20Matrix
 [5]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/Project%20Constraints.md
 [6]: https://docs.google.com/presentation/d/1Gy6DCWhOjE2iJGElW2_49zUsKKXQ_7DmXo7aEqvGyrA/edit?usp=sharing
@@ -30,4 +31,5 @@ Advised by Dr. Nan Niu.</em>
 [9]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/Expense%20Report.md
 [12]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/UI%20Specifications.pdf
 [10]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/User%20Docs%20-%20Asgn%232.pdf
-[11]: https://github.com/mterrier23/PetInsights/tree/master/Project%20Report/Appendix
+[11]: https://github.com/mterrier23/PetInsights/blob/master/Project%20Report/Test%20Plan.pdf
+[12]: https://github.com/mterrier23/PetInsights/tree/master/Project%20Report/Appendix
