@@ -17,7 +17,28 @@ I also spent many of these hours doing Project Management duties such as rearran
 ## Tosha Bapat
 ### Fall Semester
 
+|**Activity**|**Hours Spent**  |
+|--|--|
+| Front End Dev Course | 12 - 15 hours |
+| Meetings | 15 hours |
+| Assignments | 12 hours |
+| Research | 15 hours |
+| **Total** | 54 - 57 hours |
+
 ### Spring Semester
+
+|**Activity**|**Hours Spent**  |
+|--|--|
+| UI Design | 12 - 15 hours |
+| Meetings | 15 hours |
+| Development | 35 - 45 hours |
+| Logo Design + Branding | 8 hours |
+| Final Presentation/Poster | 12 hours |
+| **Total** | 88 - 101 hours |
+
+For this project, I had a combination of responsibilities. I worked on the UI (low fidelity as some high fidelity screens), developed a few features out in the app as well as did some logo design. For all the UI development, I went through a iterative design process.
+
+I also worked on developing certain features for the app, like the front end design for many of the screens, and hacking through Xamarin to get the result we wanted. This was the first time working with Xamarin as well as mobile app development, so I did a lot of research and troubleshooting in the development process as well.
 
 ## Pavni Bakhshi
 ### Fall Semester
