@@ -21,8 +21,12 @@ I also spent many of these hours doing Project Management duties such as rearran
 
 ## Pavni Bakhshi
 ### Fall Semester
+4 hours per week * 15 weeks =  about 60 hours on overall project work. 
+A majority of my fall semester time was spent on the research on shelters along with assignments
 
 ### Spring Semester
+Early weeks - research on methods for the app and filtering pets through the database - about 45 hours
+Later weeks - developing features of the app and other assignments - at least 70 hours
 
 ## Team Total
 ### Fall Semester
