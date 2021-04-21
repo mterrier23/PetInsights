@@ -1,4 +1,4 @@
-# Individual Capstone Assessment
+# Initial Capstone Assessment
 
 This project focuses on creating a mobile application or a web development application that would help support local animal shelters for temporary and long term adoptions. The application would have two focus areas: the shelter side and the customer/user side. We would have a database set up for customers to see which animals they would like to adopt. We would also set up a way for shelters to recieve donations and volunteer help. We can have seperate accounts set up for users who would like to foster animals or the animals that they are interested in. If the users would like to return their pets, because they feel like their pet is not adjusting well with them and would be better suited with another family, we could have a functionality set up, that would help them connect with other users that would be happy to adopt them. 
 
@@ -9,3 +9,8 @@ For my first co-op term, I worked at Signalysis, and for my second and third co-
 Some of the preliminary research will be on what the website should look like. We will discuss and divide different tasks - such as designing and developing. We will work on creating a solid base for the shelters so that we can focus on developing the code for it first. Then we will work on the customer side similarly. I feel that I will have done a good job if the application is completed to a basic level that can be used. It will be a project that can then be continuously improved upon. Our expected results are creating a working application and getting as close to that as possible.
 
 I am really excited to work on this project as it will be the culmination of everything I have learned so far. I feel that there is a huge scope for programming and designing the look and feel of the website in this project. I am also excited at the prospect of creating a fully functional application. It is going to help many animals and shelters in need of such services. 
+
+# Final Capstone Assessment
+I worked on the project as a researcher and a developer. I researched pet shelters and their operations and how to best combine the app features with our vision. I developed some of the features on the app on the organization side as well using xamarin forms. One of the obstacles I faced was being able to mangage my time efficiently while working on the senior design and with other course work. I learned how much work building an app from the ground work requires and how team work is so important in making sure we are able to meet our goals. 
+
+Our team made sure to meet at least once a week to discuss our deliverables and issues that we were facing. This would ensure that we were having regular communication on the progress of the project apart from our regular communication while working on our respective tasks.
