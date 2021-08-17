@@ -7,7 +7,7 @@ Advised by Dr. Nan Niu.</em>
 
 ### Demo of Home Page
 
-![Main Page](https://user-images.githubusercontent.com/26881556/129703412-b986a194-0f7d-4cdd-a83c-6a8da538fadd.gif)
+![Main Page](https://user-images.githubusercontent.com/26881556/129704541-e6f10275-4c28-43c0-9f1c-2e61655569f5.gif)
 
 ### Demo of Pet Page
 
