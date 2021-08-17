@@ -6,7 +6,9 @@ PetInsight is a crowd-sourced web application that will help support local anima
 Advised by Dr. Nan Niu.</em>
 
 
-![Alt Text](https://user-images.githubusercontent.com/26881556/129701607-e955cff7-977e-4486-9535-0024955f0a3d.gif)
+![Main Page](https://user-images.githubusercontent.com/26881556/129702251-f2e6af6b-83dc-4b87-89cf-272b37c60b73.gif)
+![Pet Page](https://user-images.githubusercontent.com/26881556/129702214-e38ba545-e858-4afe-abd6-aca4d697a2b1.gif)
+
 
 ## Table of Contents
 1. [Project Description][2]
