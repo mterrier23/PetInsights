@@ -5,6 +5,10 @@ PetInsight is a crowd-sourced web application that will help support local anima
 <em>Project done by Tosha Bapat, Maïlys Terrier and Pavni Bakhshi.
 Advised by Dr. Nan Niu.</em>
 
+
+https://user-images.githubusercontent.com/26881556/129700952-74682aeb-d5dd-4390-b001-875eb5590d5a.mp4
+https://user-images.githubusercontent.com/26881556/129700966-033d7f61-9bb4-42ea-ae05-6ccfc3903338.mp4
+
 ## Table of Contents
 1. [Project Description][2]
 2. [Project Poster][13]
